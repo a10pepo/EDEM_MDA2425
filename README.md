@@ -71,15 +71,13 @@ Entregas Fin de Semana
 <table>
 <tr><th>Alumno</th>
 <th>DOCKER</th>
+<th>APIS</th>
 <th>PYTHON</th>
-<th>LINUX</th>
-<th>AHORCADO</th>
-<th>SQL</th>
-<th>FLASK</th>
+<th>DBT</th>
+<th>PYSPARK</th>
 <th>KAFKA</th>
-<th>SPARK</th>
-<th>DATAFLOW</th>
-<th>CLOUD</th>
+<th>LINUX</th>
+<th>SQL</th>
 </tr>
 <tr>
 <td> Modulos </td>
@@ -98,15 +96,13 @@ Entregas Entre Semana
 <table>
 <tr><th>Alumno</th>
 <th>DOCKER</th>
+<th>APIS</th>
 <th>PYTHON</th>
-<th>LINUX</th>
-<th>AHORCADO</th>
-<th>SQL</th>
-<th>FLASK</th>
+<th>DBT</th>
+<th>PYSPARK</th>
 <th>KAFKA</th>
-<th>SPARK</th>
-<th>DATAFLOW</th>
-<th>CLOUD</th>
+<th>LINUX</th>
+<th>SQL</th>
 </tr>
 <tr>
 <td> Modulos </td>
