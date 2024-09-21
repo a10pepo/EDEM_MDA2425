@@ -24,7 +24,7 @@ jobs:
         run: |
           ls -la          
           python3 .github/code/check.py
-          echo hola >> README.md
+          cat README.md
           
 
 
