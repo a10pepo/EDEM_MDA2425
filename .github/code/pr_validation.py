@@ -1,6 +1,7 @@
 import os
 
 def validate_folder_structure(path):
+    print("Current directory: ", os.getcwd())
     deliverable_names=os.listdir("PROFESORES")
     for file in os.listdir(path):
         full_path = os.path.join(path, file)
