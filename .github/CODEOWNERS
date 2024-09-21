@@ -1,0 +1,33 @@
+# List of codeowners based on project team
+
+* @a10pepo
+
+/Alumnos/FS/*/DOCKER/** @alhercan @a10pepo
+/Alumnos/ES/*/DOCKER/** @alhercan @a10pepo
+
+/Alumnos/FS/*/PYTHON/** @martinImagina @a10pepo
+/Alumnos/ES/*/PYTHON/** @martinImagina @a10pepo
+
+/Alumnos/FS/*/SQL/** @gavaldanatalia @a10pepo @gavnatalia
+/Alumnos/ES/*/SQL/** @gavaldanatalia @a10pepo @gavnatalia
+
+/Alumnos/FS/*/NIFI/** @echiner @a10pepo
+/Alumnos/ES/*/NIFI/** @echiner @a10pepo
+
+
+/Alumnos/FS/*/AHORCADO/** @a10pepo
+/Alumnos/ES/*/AHORCADO/** @a10pepo
+
+/Alumnos/FS/*/FLASK/** @a10pepo 
+/Alumnos/ES/*/FLASK/** @a10pepo 
+
+/Alumnos/FS/*/KAFKA/** @a10pepo @rusansor
+/Alumnos/ES/*/KAFKA/** @a10pepo @rusansor
+
+/Alumnos/FS/*/SPARK/** @a10pepo 
+/Alumnos/ES/*/SPARK/** @a10pepo 
+
+/Alumnos/FS/*/TERRAFORM/** @a10pepo
+/Alumnos/ES/*/TERRAFORM/** @a10pepo
+
+

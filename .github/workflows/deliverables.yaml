@@ -1,0 +1,38 @@
+name: "Entregables"
+
+on:  # yamllint disable-line rule:truthy
+  push:
+    branches:
+      - main
+jobs:
+  entregables:
+    if: github.event.commits[0].author.username != 'github-actions[bot]' && github.event.commits[0].author.username != 'a10pepo'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout Git repository
+        uses: actions/checkout@v3
+        with:
+          lfs: true
+      - name: Run Deliverables
+        run: |
+          ls -la .github
+          python3 .github/code/check.py
+          echo github.event.commits[0].author.username
+          # git config --global user.name 'Pedro Nieto'
+          # git config --global user.email 'a10pepo@github.com'
+          # git commit -am "Automated report"
+          # git push       
+      
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: Calculando entregables
+          branch: estado_entregables
+          title: 'Actualizando Estado de Entregables'
+          body: >
+            Esta PR es autogenerado con los cambios, por favor acepta los cambios en readme
+
