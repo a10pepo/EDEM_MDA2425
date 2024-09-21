@@ -36,7 +36,7 @@ def check_names(folder_path):
 
 
 def generate_table(clase,alumnos):
-    
+    print("Generating Table")
     try:
         table="<table>\n<tr><th>Alumno</th>"
         for element in deliverables:
@@ -67,11 +67,13 @@ def generate_table(clase,alumnos):
     return table
 
 def modify_readme():
+    print("Modifying README.md")
     with open(os.path.join(os.getcwd(),'README.md'), 'r') as file:
         data = file.read()
         parts = data.split('### Estado de las entregas')
 
     with open(os.path.join(os.getcwd(),'README.md'), 'w') as file:
+        print("Writing README.md")
         try: 
             file.write(parts[0])
             file.write('### Estado de las entregas\n')
@@ -83,6 +85,7 @@ def modify_readme():
             file.write(generate_table("ES",check_class('Alumnos/ES')))
             file.write('\n')
         except:
+            print("Error writing file")
             file.close()
             with open(os.path.join(os.getcwd(),'README.md'), 'w') as file_recov:
                 file_recov.write(data)
