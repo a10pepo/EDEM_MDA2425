@@ -20,15 +20,6 @@ jobs:
         run: |
           ls -la 
           python3 .github/code/check.py
-      
-      
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v7
-        with:
-#          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: Calculando entregables
-          branch: estado_entregables
-          title: 'Actualizando Estado de Entregables'
-          body: >
-            Esta PR es autogenerado con los cambios, por favor acepta los cambios en readme
+          git status
+
 
