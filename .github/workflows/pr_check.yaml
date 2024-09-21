@@ -1,0 +1,25 @@
+name: "Validar PR"
+
+on:  # yamllint disable-line rule:truthy
+  pull_request:
+    branches:
+      - '*'
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - edited
+jobs:
+  entregables:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout Git repository
+        uses: actions/checkout@v3
+        with:
+          lfs: true
+      - name: Comprobar Carpetas
+        run: |
+          python3 .github/code/pr_validation.py
