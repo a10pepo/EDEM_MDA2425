@@ -67,11 +67,11 @@ def generate_table(clase,alumnos):
     return table
 
 def modify_readme():
-    with open('README.md', 'r') as file:
+    with open(os.path.join(os.getcwd(),'README.md'), 'r') as file:
         data = file.read()
         parts = data.split('### Estado de las entregas')
 
-    with open('README.md', 'w') as file:
+    with open(os.path.join(os.getcwd(),'README.md'), 'w') as file:
         try: 
             file.write(parts[0])
             file.write('### Estado de las entregas\n')
@@ -84,7 +84,7 @@ def modify_readme():
             file.write('\n')
         except:
             file.close()
-            with open('README.md', 'w') as file_recov:
+            with open(os.path.join(os.getcwd(),'README.md'), 'w') as file_recov:
                 file_recov.write(data)
         
 
