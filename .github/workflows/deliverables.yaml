@@ -24,7 +24,8 @@ jobs:
         run: |
           ls -la          
           python3 .github/code/check.py
-          git add README.md
+          echo hola >> README.md
+          
 
 
       - name: Push changes
