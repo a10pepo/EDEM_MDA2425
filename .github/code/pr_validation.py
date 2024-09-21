@@ -14,20 +14,7 @@ def validate_folder_structure(path):
                         exit(1)
                 else:
                     print("Elimina el fichero fuera de la carpeta del usuario: ", user_path)
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
+     
 
 if __name__ == "__main__":
     # iterate over all the files in the folder
