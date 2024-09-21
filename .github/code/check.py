@@ -78,11 +78,11 @@ def modify_readme():
             file.write(parts[0])
             file.write('### Estado de las entregas\n')
             file.write('Entregas Fin de Semana\n')
-            file.write(generate_table("FS",check_class('Alumnos/FS')))
+            file.write(generate_table("FS",check_class(os.path.join(os.getcwd(), "ALUMNOS/FS"))))
             file.write('\n')
             file.write('\n')
             file.write('Entregas Entre Semana\n')
-            file.write(generate_table("ES",check_class('Alumnos/ES')))
+            file.write(generate_table("ES",check_class(os.path.join(os.getcwd(), "ALUMNOS/ES"))))
             file.write('\n')
         except Exception as e:
             print("Error writing file")
