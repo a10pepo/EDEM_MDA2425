@@ -2,27 +2,7 @@ import os
 
 
 
-deliverables=["DOCKER","PYTHON","LINUX","AHORCADO","SQL","FLASK","KAFKA","SPARK","DATAFLOW","CLOUD"]
-allowed=["DOCKER","PYTHON","LINUX","AHORCADO","SQL","README.MD","CHUCK","FLASK", "SPARK", "KAFKA", "VALENBISI","CLOUD"]
-
-alias_dict = {
-    "DOCKER":["DOCKER"],
-    "PYTHON":["PYTHON"],
-    "LINUX":["LINUX"],
-    "NOTEBOOKS":["NOTEBOOKS"],
-    "AHORCADO":["AHORCADO"],
-    "SQL":["SQL"],
-    "MACHINELEARNING":["MACHINE_LEARNING"],
-    "MACHINE LEARNING":["MACHINE_LEARNING"],
-    "MACHINE_LEARNING":["MACHINE_LEARNING"],
-    "ML": ["MACHINE_LEARNING"],
-    "DEEP LEARNING":["DEEP_LEARNING"],
-    "DEEPLEARNING":["DEEP_LEARNING"],
-    "DEEPLEARNING_FULLYCONNECTED":["DEEP_LEARNING"],
-    "REDES_NEURONALES":["DEEP_LEARNING"],
-}
-
-
+deliverables=os.listdir(os.path.join(os.getcwd(), "PROFESORES"))
 
 def check_class(folder_path):
     alumnos={}
@@ -33,7 +13,7 @@ def check_class(folder_path):
             alumnos[alumno]=delivs
             for element in deliverables:
                 #print(file_path+"/"+element)
-                if (os.path.exists(file_path+"/"+element) & os.path.isdir(file_path+"/"+element)) or (os.path.exists(file_path+"/"+element.capitalize()) & os.path.isdir(file_path+"/"+element.capitalize())):
+                if os.path.exists(file_path+"/"+element) & os.path.isdir(file_path+"/"+element):
                     if "Pending" in os.listdir(file_path+"/"+element) or "pending" in os.listdir(file_path+"/"+element):
                         alumnos[alumno][element]=False
                     alumnos[alumno][element]=True    
@@ -48,36 +28,12 @@ def check_names(folder_path):
             # list all files in directory
             files = os.listdir(file_path)
             for element in files:
-                if element.upper() not in allowed:
-                    #print("File not allowed "+file_path+" Elment: "+element)
-                    if element.upper() in alias_dict:
-                         #print("Alias found: "+element+" -> "+str(alias_dict[element.upper()]))
-                         if os.path.exists(file_path+"/"+alias_dict[element.upper()][0]):
-                            print("File already exists "+file_path+"/"+alias_dict[element.upper()][0])
-                         else:   
-                            os.rename(file_path+"/"+element,file_path+"/"+alias_dict[element.upper()][0])
+                print(element)
                          
 
                     # else:
                     #     print("File not allowed "+file_path+" Elment: "+element.upper())             
 
-
-def getcolor(element):
-    if element in ["DOCKER","PYTHON","LINUX","NOTEBOOKS","AHORCADO"]:
-        return "#dee2d0"
-    
-    if element in ["SQL","FLASK" ]:
-        return "#a5cbaa"
-    if element in [ "SPARK", "KAFKA"]:
-        return "#9bc99e"
-    if element in ["DATAFLOW","CLOUD","DEVSECOPS"]:
-        return "#779777"
-    if element in ["ESTADISTICA"]:
-        return "#5f7b6e"
-    if element in ["DEEP_LEARNING","MACHINE_LEARNING", "DEPLOYMENT"]:
-        return "#4d5e5b"
-    else:
-        return "#ffc1b1"
 
 def generate_table(clase,alumnos):
     
@@ -99,11 +55,10 @@ def generate_table(clase,alumnos):
         for alumno in sorted(alumnos):
             table+="<tr>\n<td><a href='https://github.com/a10pepo/EDEM_MDA2324/tree/main/Alumnos/"+clase+"/"+alumno+"'>"+str.capitalize(alumno)+"</a></td>"
             for element in deliverables:
-                color=getcolor(element)
                 if alumnos[alumno][element]:
-                    table+="\n<td bgcolor='"+color+"'>✅</td>"
+                    table+="\n<td>✅</td>"
                 else:
-                    table+="\n<td bgcolor='"+color+"'>❌</td>"
+                    table+="\n<td>❌</td>"
             table+="\n</tr>\n"
         table+="</table>\n"
     except:
