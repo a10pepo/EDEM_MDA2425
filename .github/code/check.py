@@ -84,8 +84,9 @@ def modify_readme():
             file.write('Entregas Entre Semana\n')
             file.write(generate_table("ES",check_class('Alumnos/ES')))
             file.write('\n')
-        except:
+        except Exception as e:
             print("Error writing file")
+            print(e)
             file.close()
             with open(os.path.join(os.getcwd(),'README.md'), 'w') as file_recov:
                 file_recov.write(data)
