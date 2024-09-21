@@ -1,6 +1,9 @@
 name: "Validar PR"
 
 on:  # yamllint disable-line rule:truthy
+  push:
+    branches:
+      - main
   pull_request:
     branches:
       - '*'
@@ -20,6 +23,11 @@ jobs:
         uses: actions/checkout@v3
         with:
           lfs: true
+      - name: List Files
+        run: |
+          pwd
+          ls -la
+
       - name: Comprobar Carpetas
         run: |
           python3 .github/code/pr_validation.py

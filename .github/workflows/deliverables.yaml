@@ -18,13 +18,9 @@ jobs:
           lfs: true
       - name: Run Deliverables
         run: |
-          ls -la .github
+          ls -la 
           python3 .github/code/check.py
-          echo github.event.commits[0].author.username
-          # git config --global user.name 'Pedro Nieto'
-          # git config --global user.email 'a10pepo@github.com'
-          # git commit -am "Automated report"
-          # git push       
+      
       
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5

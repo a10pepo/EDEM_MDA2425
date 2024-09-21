@@ -135,8 +135,8 @@ def modify_readme():
 
 
 if __name__ == '__main__':  
-    check_names('Alumnos/ES')
-    check_names('Alumnos/FS')
+    check_names(os.path.join(os.getcwd(), "ALUMNOS/ES"))
+    check_names(os.path.join(os.getcwd(), "ALUMNOS/FS"))
     modify_readme()    
     print("README.md updated")
 
