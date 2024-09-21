@@ -21,5 +21,15 @@ jobs:
           ls -la 
           python3 .github/code/check.py
           git status
-
+      - name: Configure Git user
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+      - name: Push changes
+        run: |
+          git add .
+          git commit -m "Automated commit by GitHub Actions"
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
