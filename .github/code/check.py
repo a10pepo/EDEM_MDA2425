@@ -1,5 +1,5 @@
 import os
-
+import datetime
 
 
 deliverables=os.listdir(os.path.join(os.getcwd(), "PROFESORES"))
@@ -61,6 +61,7 @@ def generate_table(clase,alumnos):
                     table+="\n<td>❌</td>"
             table+="\n</tr>\n"
         table+="</table>\n"
+        table+="Last Checked: "+datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     except:
         print("error")
     return table
