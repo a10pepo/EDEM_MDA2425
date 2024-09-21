@@ -16,16 +16,17 @@ jobs:
         uses: actions/checkout@v3
         with:
           lfs: true
-      - name: Run Deliverables
-        run: |
-          ls -la 
-          python3 .github/code/check.py
-          cat README.md
-
       - name: Configure Git user
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+      - name: Run Deliverables
+        run: |
+          ls -la          
+          python3 .github/code/check.py
+          git add README.md
+
+
       - name: Push changes
         run: |
           git add .
