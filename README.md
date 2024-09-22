@@ -70,30 +70,28 @@ En resumen, este bloque les dará una base sólida para ocupar puestos de Data E
 Entregas Fin de Semana
 <table>
 <tr><th>Alumno</th>
-<th>DOCKER</th>
-<th>APIS</th>
-<th>PYTHON</th>
-<th>DBT</th>
-<th>PYSPARK</th>
 <th>KAFKA</th>
-<th>LINUX</th>
+<th>PYSPARK</th>
+<th>DOCKER</th>
 <th>SQL</th>
+<th>APIS</th>
+<th>LINUX</th>
+<th>PYTHON</th>
 </tr>
 <tr>
 </table>
-Last Checked: 2024-09-22 07:20:26
+Last Checked: 2024-09-22 15:08:59
 
 Entregas Entre Semana
 <table>
 <tr><th>Alumno</th>
-<th>DOCKER</th>
-<th>APIS</th>
-<th>PYTHON</th>
-<th>DBT</th>
-<th>PYSPARK</th>
 <th>KAFKA</th>
-<th>LINUX</th>
+<th>PYSPARK</th>
+<th>DOCKER</th>
 <th>SQL</th>
+<th>APIS</th>
+<th>LINUX</th>
+<th>PYTHON</th>
 </tr>
 <tr>
 <tr>
@@ -101,11 +99,10 @@ Entregas Entre Semana
 <td>✅</td>
 <td>❌</td>
 <td>❌</td>
-<td>❌</td>
-<td>❌</td>
 <td>✅</td>
 <td>❌</td>
-<td>✅</td>
+<td>❌</td>
+<td>❌</td>
 </tr>
 </table>
-Last Checked: 2024-09-22 07:20:26
+Last Checked: 2024-09-22 15:08:59
