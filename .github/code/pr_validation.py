@@ -1,7 +1,6 @@
 import os
 
 def validate_folder_structure(path):
-    print("Current directory: ", os.getcwd())
     deliverable_names=os.listdir(os.path.join(os.getcwd(), "PROFESORES"))
     for file in os.listdir(path):
         full_path = os.path.join(path, file)
@@ -13,13 +12,14 @@ def validate_folder_structure(path):
                         print("Esta Carpeta no es correcta, comprueba el nombre exacto de la carpeta: ", user_file)
                         exit(1)
                     else:
-                        print("Carpeta correcta: ", user_file)
+                        print("Carpeta correcta: ", user_file, " para el usuario ", file)
                 else:
-                    print("Elimina el fichero fuera de la carpeta del usuario: ", user_path)
+                    if "README.md" not in user_file:
+                        print("Elimina el fichero fuera de la carpeta del usuario (solo README.md esta permitido): ", user_path)
      
 
 if __name__ == "__main__":
     # iterate over all the files in the folder
     # check if the file is a directory
     validate_folder_structure(os.path.join(os.getcwd(), "ALUMNOS/ES"))
-    validate_folder_structure(os.path.join(os.getcwd(), "ALUMNOS/ES"))
+    validate_folder_structure(os.path.join(os.getcwd(), "ALUMNOS/FS"))
