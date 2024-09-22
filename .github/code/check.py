@@ -53,7 +53,7 @@ def generate_table(clase,alumnos):
         # table+="</tr>\n"
         table+="<tr>\n"  
         for alumno in sorted(alumnos):
-            table+="<tr>\n<td><a href='https://github.com/a10pepo/EDEM_MDA2324/tree/main/Alumnos/"+clase+"/"+alumno+"'>"+str.capitalize(alumno)+"</a></td>"
+            table+="<tr>\n<td><a href='https://github.com/a10pepo/EDEM_MDA2324/tree/main/Alumnos/"+clase+"/"+alumno+"'>"+str.upper(alumno)+"</a></td>"
             for element in deliverables:
                 if alumnos[alumno][element]:
                     table+="\n<td>✅</td>"
