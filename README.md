@@ -80,7 +80,7 @@ Entregas Fin de Semana
 </tr>
 <tr>
 </table>
-Last Checked: 2024-09-22 15:10:38
+Last Checked: 2024-09-22 15:12:30
 
 Entregas Entre Semana
 <table>
@@ -95,7 +95,7 @@ Entregas Entre Semana
 </tr>
 <tr>
 <tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2324/tree/main/Alumnos/ES/PEDRO_NIETO'>PEDRO_NIETO</a></td>
+<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/Alumnos/ES/PEDRO_NIETO'>PEDRO_NIETO</a></td>
 <td>✅</td>
 <td>❌</td>
 <td>❌</td>
@@ -105,4 +105,4 @@ Entregas Entre Semana
 <td>❌</td>
 </tr>
 </table>
-Last Checked: 2024-09-22 15:10:38
+Last Checked: 2024-09-22 15:12:30
