@@ -14,10 +14,10 @@ def check_class(folder_path):
             for element in deliverables:
                 #print(file_path+"/"+element)
                 if os.path.exists(file_path+"/"+element) & os.path.isdir(file_path+"/"+element):
-                    if "Pending" in os.listdir(file_path+"/"+element) or "pending" in os.listdir(file_path+"/"+element):
-                        alumnos[alumno][element]=False
+                    print("Entregable "+element+" Existe para el alumno "+alumno)
                     alumnos[alumno][element]=True    
                 else:
+                    print("Entregable "+element+" NO Existe para el alumno "+alumno)
                     alumnos[alumno][element]=False
     return alumnos
 
