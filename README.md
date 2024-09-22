@@ -79,17 +79,8 @@ Entregas Fin de Semana
 <th>PYTHON</th>
 </tr>
 <tr>
-<td> Modulos </td>
-<td color='#dee2d0' style='text-align: center;font-weight: bold' colspan='5'> M0 - Fundamentos </td>
-<td color='#a5cbaa' style='text-align: center;font-weight: bold' colspan='2'> M1.1 - Tratamiento Tradicional </td>
-<td color='#9bc99e' style='text-align: center;font-weight: bold' colspan='2'> M1.2 - Streaming On Prem </td>
-<td color='#779777' style='text-align: center;font-weight: bold' colspan='3'> M1.3 - Cloud Approach </td>
-<td color='#5f7b6e' style='text-align: center;font-weight: bold' colspan='1'> M2.1 - Estadística </td>
-<td color='#5f7b6e' style='text-align: center;font-weight: bold' colspan='2'> M2.2 - ML / DL </td>
-</tr>
-<tr>
 </table>
-Last Checked: 2024-09-22 07:10:26
+Last Checked: 2024-09-22 07:11:53
 
 Entregas Entre Semana
 <table>
@@ -103,14 +94,5 @@ Entregas Entre Semana
 <th>PYTHON</th>
 </tr>
 <tr>
-<td> Modulos </td>
-<td color='#dee2d0' style='text-align: center;font-weight: bold' colspan='5'> M0 - Fundamentos </td>
-<td color='#a5cbaa' style='text-align: center;font-weight: bold' colspan='2'> M1.1 - Tratamiento Tradicional </td>
-<td color='#9bc99e' style='text-align: center;font-weight: bold' colspan='2'> M1.2 - Streaming On Prem </td>
-<td color='#779777' style='text-align: center;font-weight: bold' colspan='3'> M1.3 - Cloud Approach </td>
-<td color='#5f7b6e' style='text-align: center;font-weight: bold' colspan='1'> M2.1 - Estadística </td>
-<td color='#5f7b6e' style='text-align: center;font-weight: bold' colspan='2'> M2.2 - ML / DL </td>
-</tr>
-<tr>
 </table>
-Last Checked: 2024-09-22 07:10:26
+Last Checked: 2024-09-22 07:11:53
