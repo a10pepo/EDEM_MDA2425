@@ -70,34 +70,43 @@ En resumen, este bloque les dará una base sólida para ocupar puestos de Data E
 Entregas Grupo MIA
 <table>
 <tr><th>Alumno</th>
-<th>DEMO</th>
-<th>DOCKER</th>
-<th>APIS</th>
-<th>PYTHON</th>
-<th>DBT</th>
-<th>PYSPARK</th>
 <th>KAFKA</th>
-<th>LINUX</th>
+<th>PYSPARK</th>
+<th>DOCKER</th>
 <th>SQL</th>
+<th>DEMO</th>
+<th>APIS</th>
+<th>LINUX</th>
+<th>PYTHON</th>
 </tr>
 <tr>
+<tr>
+<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/FS/JORGE_MOLTO'>JORGE_MOLTO</a></td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
 </table>
 
-Last Checked: 2024-10-02 11:32:08
+Last Checked: 2024-10-02 16:31:33
 
 
 Entregas Grupo MDA A
 <table>
 <tr><th>Alumno</th>
-<th>DEMO</th>
-<th>DOCKER</th>
-<th>APIS</th>
-<th>PYTHON</th>
-<th>DBT</th>
-<th>PYSPARK</th>
 <th>KAFKA</th>
-<th>LINUX</th>
+<th>PYSPARK</th>
+<th>DOCKER</th>
 <th>SQL</th>
+<th>DEMO</th>
+<th>APIS</th>
+<th>LINUX</th>
+<th>PYTHON</th>
 </tr>
 <tr>
 <tr>
@@ -105,33 +114,31 @@ Entregas Grupo MDA A
 <td>✅</td>
 <td>❌</td>
 <td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
 <td>✅</td>
 <td>❌</td>
-<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
 </tr>
 </table>
 
-Last Checked: 2024-10-02 11:32:08
+Last Checked: 2024-10-02 16:31:33
 
 Entregas Grupo MDA B
 <table>
 <tr><th>Alumno</th>
-<th>DEMO</th>
-<th>DOCKER</th>
-<th>APIS</th>
-<th>PYTHON</th>
-<th>DBT</th>
-<th>PYSPARK</th>
 <th>KAFKA</th>
-<th>LINUX</th>
+<th>PYSPARK</th>
+<th>DOCKER</th>
 <th>SQL</th>
+<th>DEMO</th>
+<th>APIS</th>
+<th>LINUX</th>
+<th>PYTHON</th>
 </tr>
 <tr>
 </table>
 
-Last Checked: 2024-10-02 11:32:08
+Last Checked: 2024-10-02 16:31:33
 
 HOLA MUNDO
