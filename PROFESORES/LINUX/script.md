@@ -5,7 +5,7 @@
 En este ejercicio vamos a desarrollar un script en Bash que nos permita realizar una serie de tareas de forma automática. Para ello, vamos a utilizar los conocimientos adquiridos en el módulo de Linux. Para realizar este ejercicio separaremos la forma de probar dichos ejercicios en dos grupos de alumnos (Mac y Windows). 
 Antes de empezar recordemos las bases del ejercicio:
 
-1) Las carpetas deben crearse en la carpeta de Usuario de cada alumno dentro de linux (Nota: Directorio de Trabajo)
+1) Las carpetas deben crearse en la carpeta de Usuario de cada alumno dentro de LINUX (Nota: Directorio de Trabajo)
 2) El script debe ser capaz de crear las carpetas y los archivos necesarios para realizar las tareas sin intervención del usuario más allá de su ejecución
 3) El script debe ser reejecutable sin necesidad de modificarlo, por lo que debe borrar al inicio lo creado en la ejecución anterior
 4) El script debe mostrar una leyenda al inicio de cada tarea indicando que tarea se va a realizar (Nota: echo)

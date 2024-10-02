@@ -61,7 +61,7 @@ def generate_table(clase,alumnos):
                     table+="\n<td>❌</td>"
             table+="\n</tr>\n"
         table+="</table>\n"
-        table+="Last Checked: "+datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        table+="\nLast Checked: "+datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")+"\n"
     except:
         print("error")
     return table
@@ -77,13 +77,16 @@ def modify_readme():
         try: 
             file.write(parts[0])
             file.write('### Estado de las entregas\n')
-            file.write('Entregas Fin de Semana\n')
-            file.write(generate_table("FS",check_class(os.path.join(os.getcwd(), "ALUMNOS/FS"))))
+            file.write('Entregas Grupo MIA\n')
+            file.write(generate_table("FS",check_class(os.path.join(os.getcwd(), "ALUMNOS/MIA"))))
             file.write('\n')
             file.write('\n')
-            file.write('Entregas Entre Semana\n')
-            file.write(generate_table("ES",check_class(os.path.join(os.getcwd(), "ALUMNOS/ES"))))
+            file.write('Entregas Grupo MDA A\n')
+            file.write(generate_table("MDAA",check_class(os.path.join(os.getcwd(), "ALUMNOS/MDAA"))))
             file.write('\n')
+            file.write('Entregas Grupo MDA B\n')
+            file.write(generate_table("MDAB",check_class(os.path.join(os.getcwd(), "ALUMNOS/MDAB"))))
+            file.write('\n')            
         except Exception as e:
             print("Error writing file")
             print(e)
@@ -95,8 +98,9 @@ def modify_readme():
 
 
 if __name__ == '__main__':  
-    check_names(os.path.join(os.getcwd(), "ALUMNOS/ES"))
-    check_names(os.path.join(os.getcwd(), "ALUMNOS/FS"))
+    check_names(os.path.join(os.getcwd(), "ALUMNOS/MDAA"))
+    check_names(os.path.join(os.getcwd(), "ALUMNOS/MDAB"))
+    check_names(os.path.join(os.getcwd(), "ALUMNOS/MIA"))
     modify_readme()    
     print("README.md updated")
 

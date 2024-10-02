@@ -21,5 +21,6 @@ def validate_folder_structure(path):
 if __name__ == "__main__":
     # iterate over all the files in the folder
     # check if the file is a directory
-    validate_folder_structure(os.path.join(os.getcwd(), "ALUMNOS/ES"))
-    validate_folder_structure(os.path.join(os.getcwd(), "ALUMNOS/FS"))
+    validate_folder_structure(os.path.join(os.getcwd(), "ALUMNOS/MDAA"))
+    validate_folder_structure(os.path.join(os.getcwd(), "ALUMNOS/MDAB"))
+    validate_folder_structure(os.path.join(os.getcwd(), "ALUMNOS/MIA"))

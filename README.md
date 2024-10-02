@@ -67,42 +67,70 @@ En resumen, este bloque les dará una base sólida para ocupar puestos de Data E
 
 
 ### Estado de las entregas
-Entregas Fin de Semana
+Entregas Grupo MIA
 <table>
 <tr><th>Alumno</th>
-<th>KAFKA</th>
-<th>PYSPARK</th>
+<th>DEMO</th>
 <th>DOCKER</th>
-<th>SQL</th>
 <th>APIS</th>
-<th>LINUX</th>
 <th>PYTHON</th>
+<th>DBT</th>
+<th>PYSPARK</th>
+<th>KAFKA</th>
+<th>LINUX</th>
+<th>SQL</th>
 </tr>
 <tr>
 </table>
-Last Checked: 2024-09-22 15:13:58
 
-Entregas Entre Semana
+Last Checked: 2024-10-02 11:32:08
+
+
+Entregas Grupo MDA A
 <table>
 <tr><th>Alumno</th>
-<th>KAFKA</th>
-<th>PYSPARK</th>
+<th>DEMO</th>
 <th>DOCKER</th>
-<th>SQL</th>
 <th>APIS</th>
-<th>LINUX</th>
 <th>PYTHON</th>
+<th>DBT</th>
+<th>PYSPARK</th>
+<th>KAFKA</th>
+<th>LINUX</th>
+<th>SQL</th>
 </tr>
 <tr>
 <tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/ES/PEDRO_NIETO'>PEDRO_NIETO</a></td>
+<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAA/PEDRO_NIETO'>PEDRO_NIETO</a></td>
 <td>✅</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
 <td>✅</td>
 <td>❌</td>
-<td>❌</td>
-<td>❌</td>
+<td>✅</td>
 </tr>
 </table>
-Last Checked: 2024-09-22 15:13:58
+
+Last Checked: 2024-10-02 11:32:08
+
+Entregas Grupo MDA B
+<table>
+<tr><th>Alumno</th>
+<th>DEMO</th>
+<th>DOCKER</th>
+<th>APIS</th>
+<th>PYTHON</th>
+<th>DBT</th>
+<th>PYSPARK</th>
+<th>KAFKA</th>
+<th>LINUX</th>
+<th>SQL</th>
+</tr>
+<tr>
+</table>
+
+Last Checked: 2024-10-02 11:32:08
+
