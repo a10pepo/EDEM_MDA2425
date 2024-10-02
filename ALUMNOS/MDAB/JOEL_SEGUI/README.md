@@ -1,135 +1,19 @@
-# EDEM_MDA2324
-Common Repository for 2024-2025 Data Master
+<p align="center">
+  <img alig src="https://github.com/joel1091/joel1091/blob/main/about.gif" />
+</p>
 
-<div align=center><img src="https://edem.eu/wp-content/uploads/2019/11/peces_edem.png" /></div>
+<img align="right" src="https://github-readme-stats.vercel.app/api?username=joel1091&show_icons=true&icon_color=CE1D2D&text_color=718096&bg_color=00000000&hide_title=true&hide_border=true" />
 
-El objetivo de este repositorio es servir de guía y de punto de comunicación entre alumnos y profesorado. Los alumnos deberán seguir las instrucciones que se indican en este documento para realizar las entregas de los trabajos y proyectos que se vayan solicitando a lo largo del curso.
+### Hi there，I'm Joel Seguí 🙋‍♂️
 
-## Instrucciones para la entrega de trabajos y proyectos
+- Artificial intelligence is something I'm interested in.
+- DataScience is an area I'm focusing on right now. <br> <br><br>
+[![](https://visitcount.itsvg.in/api?id=joel1091&icon=0&color=2)](https://visitcount.itsvg.in)
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/joelsf_pdg) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/joel-segui-far-68232a298/) 
 
-### 1. Usando vuestra cuenta de Github
+<div align="center">
+    <img src="https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white" alt="R">
+    <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python">
+    <img src="https://img.shields.io/badge/Google%20Cloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white" alt="Google Cloud">
+</div>
 
-### 2. Crear una carpeta con vuestro nombre y apellidos
-
-Alumnos/PedroNieto/
-
-### 3. Crear una carpeta por cada trabajo o proyecto
-
-Alumnos/PedroNieto/Trabajo1/
-
-### 4. Subir los archivos correspondientes a cada trabajo o proyecto
-
-En cada commit, vuestro código será evaluado automáticamente por Github Actions. Si el código no pasa las pruebas, el commit será rechazado y no se podrá realizar la entrega. Si el código pasa las pruebas, el commit será aceptado y se podrá realizar la entrega.
-
-
-### 5. Crear un Pull Request para que el profesor pueda revisar vuestros trabajos
-
-Para crear un Pull Request, deberéis hacer click en el botón Pull Request que aparece en la parte superior derecha de la página. Esto creará una petición para que el profesor revise vuestros trabajos. En el título del Pull Request deberéis indicar vuestro nombre y apellidos para que sea revisado por el profesor correspondiente.
-
-Para realizar la entrega de los trabajos y proyectos, deberéis crear una pull request en estado de Draft hasta que esté disponible para ser entregada. Una vez esté lista para ser entregada, deberéis cambiar el estado de la pull request a Ready for review. El profesor revisará vuestros trabajos y os indicará si es necesario realizar alguna corrección mediante conversaciones que tendréis que resolver para ser aceptada.
-
-## Indice de Contenidos del Máster
-
-Este máster está divido en tres grandes módulos, que permitirán al alumno adquirir los conocimientos en el ecosistema de Datos de una manera incremental desde lo más básico a lo menos básico ;-).
-
-### Modulo 0 - Introducción 
-Durante este bloque, los alumnos se centrarán en adquirir conocimientos básicos sobre datos, programación y despliegue de la tecnología necesaria para poder ejecutar el trabajo futuro. Descubrirán los controles de Linux, notebooks, aprenderán a trabajar en el lenguaje de programación Python junto con servicios de contenedores como Docker.
-
-En resumen, este bloque les proporcionará una base sólida que les permitirá avanzar con naturalidad en su aprendizaje.
-
-- Python
-
-- Linux
-
-- Git
-
-- Containers (Docker)
-
-- Notebooks
-
-### Modulo 1 - Tratamiento del Dato
-Durante este bloque, los alumnos se sumergirán en el perfil del Data Engineer: el profesional enfocado en el diseño, desarrollo y mantenimiento de los sistemas de procesamiento de datos dentro de un proyecto big data. Su función es dejar disponible el conjunto de datos validos con el que es necesario obtener, depurar y preparar los datos para su explotación.
-
-Para ello, descubrirán el origen de los datos y su tipología, el manejo de grandes volúmenes de datos con SQL y NoSQL, creación de dashborads con su posterior creación en Tableau, el uso de tecnologías como Flask API’s, Kafka, Spark Streaming, Cloud, IAC Terraform y Localización, además de comprender el fujo de datos, su calidad y el gobierno de datos.
-
-En resumen, este bloque les dará una base sólida para ocupar puestos de Data Engineer que se asegure de definir e implementar un flujo de datos desde su origen hasta su exploración de una forma controlada y automatizada.
-
-- SQL
-- NoSQL
-- Tableau
-- Flask API’s
-- Kafka
-- Spark Streaming
-- Cloud
-- IAC Terraform
-
-
-
-
-### Estado de las entregas
-Entregas Grupo MIA
-<table>
-<tr><th>Alumno</th>
-<th>DEMO</th>
-<th>DOCKER</th>
-<th>APIS</th>
-<th>PYTHON</th>
-<th>DBT</th>
-<th>PYSPARK</th>
-<th>KAFKA</th>
-<th>LINUX</th>
-<th>SQL</th>
-</tr>
-<tr>
-</table>
-
-Last Checked: 2024-10-02 11:32:08
-
-
-Entregas Grupo MDA A
-<table>
-<tr><th>Alumno</th>
-<th>DEMO</th>
-<th>DOCKER</th>
-<th>APIS</th>
-<th>PYTHON</th>
-<th>DBT</th>
-<th>PYSPARK</th>
-<th>KAFKA</th>
-<th>LINUX</th>
-<th>SQL</th>
-</tr>
-<tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAA/PEDRO_NIETO'>PEDRO_NIETO</a></td>
-<td>✅</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>✅</td>
-</tr>
-</table>
-
-Last Checked: 2024-10-02 11:32:08
-
-Entregas Grupo MDA B
-<table>
-<tr><th>Alumno</th>
-<th>DEMO</th>
-<th>DOCKER</th>
-<th>APIS</th>
-<th>PYTHON</th>
-<th>DBT</th>
-<th>PYSPARK</th>
-<th>KAFKA</th>
-<th>LINUX</th>
-<th>SQL</th>
-</tr>
-<tr>
-</table>
-
-Last Checked: 2024-10-02 11:32:08
