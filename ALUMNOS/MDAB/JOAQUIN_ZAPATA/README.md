@@ -1,134 +1,74 @@
-# EDEM_MDA2324
-Common Repository for 2024-2025 Data Master
+<h1 align="center">Hi there, I'm <a href="https://www.blackcater.win/" target="_blank">Joaquin Zapata</a> <img
+src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32" /></h1>
 
-<div align=center><img src="https://edem.eu/wp-content/uploads/2019/11/peces_edem.png" /></div>
+<br />
 
-El objetivo de este repositorio es servir de guía y de punto de comunicación entre alumnos y profesorado. Los alumnos deberán seguir las instrucciones que se indican en este documento para realizar las entregas de los trabajos y proyectos que se vayan solicitando a lo largo del curso.
+<a href="https://www.blackcater.com" alt="blackcater's blog" target="_blank">
+  <img src="https://github.com/blackcater/blackcater/raw/main/images/social-blog.svg" height="40" />
+</a>
+<a href="joaquinzapata99@gmail.com">
+  <img src="https://github.com/blackcater/blackcater/raw/main/images/social-gmail.svg" height="40" />
+</a>
+<a href="https://leetcode-cn.com/u/blackcater/">
+  <img src="https://github.com/blackcater/blackcater/raw/main/images/social-leetcode.svg" height="40" />
+</a>
 
-## Instrucciones para la entrega de trabajos y proyectos
+<br />
+<br />
 
-### 1. Usando vuestra cuenta de Github
+Hi, I'm Joaquin Zapata, a Big Data & Cloud Master's Degree student in Valencia ES.
 
-### 2. Crear una carpeta con vuestro nombre y apellidos
+<a href="#"><img align="right" src="https://github.com/blackcater/blackcater/raw/main/images/banner.gif" width="200 " height="200" /></a>
 
-Alumnos/PedroNieto/
+## ✏️ Recent Blog
 
-### 3. Crear una carpeta por cada trabajo o proyecto
+- <a href='http://www.blackcater.win/2019/05-18/let-your-static-page-support-https' target='_blank'>让你的静态页面支持 https</a> - 2019-05-18
+- <a href='http://www.blackcater.win/2019/01-01/javascript-engine-shapes-ics' target='_blank'>JavaScript引擎基础：形与行内缓存（翻译）</a> - 2019-05-01
+- <a href='http://www.blackcater.win/2019/04-09/iview-usage-experience' target='_blank'>iview 使用经验总结</a> - 2019-04-09
+- <a href='http://www.blackcater.win/2019/03-01/deploy-your-own-npm-registry' target='_blank'>搭建私有npm镜像</a> - 2019-03-01
+- <a href='http://www.blackcater.win/2019/02-08/mini-program-usage-experience-for-finger' target='_blank'>“Finger 音乐课堂”小程序开发总结</a> - 2019-02-08
 
-Alumnos/PedroNieto/Trabajo1/
+<!-- blog_plugin_start -->
 
-### 4. Subir los archivos correspondientes a cada trabajo o proyecto
+<!-- blog_plugin_end -->
 
-En cada commit, vuestro código será evaluado automáticamente por Github Actions. Si el código no pasa las pruebas, el commit será rechazado y no se podrá realizar la entrega. Si el código pasa las pruebas, el commit será aceptado y se podrá realizar la entrega.
+<!-- github_plugin_start -->
 
+## ⛳️ Project Release
 
-### 5. Crear un Pull Request para que el profesor pueda revisar vuestros trabajos
+- <a href='https://github.com/blackcater/blackcater/releases/tag/v1.0.4' target='_blank'>blackcater@v1.0.4</a> - 2021-05-04
+  <br/> Support pre-release.
+- <a href='https://github.com/blackcater/tailwind-plugin-tokens/releases/tag/3.2.2' target='_blank'>tailwind-plugin-tokens@3.2.2</a> - 2024-09-26
+  <br/> Release 3.2.2
+- <a href='https://github.com/blackcater-labs/unisite/releases/tag/v0.1.0-alpha.3' target='_blank'>unisite@v0.1.0-alpha.3<sup>pre-release</sup></a> - 2021-04-29
+  <br/> Migrate to windicss.
+- <a href='https://github.com/blackcater/gatsby-plugin-windicss/releases/tag/0.1.0' target='_blank'>gatsby-plugin-windicss@0.1.0</a> - 2021-05-14
+  <br/> Support windicss@3
+- <a href='https://github.com/blackcater/LeetCodeCN-Dark/releases/tag/v1.4.3' target='_blank'>LeetCodeCN-Dark@v1.4.3</a> - 2021-02-07
 
-Para crear un Pull Request, deberéis hacer click en el botón Pull Request que aparece en la parte superior derecha de la página. Esto creará una petición para que el profesor revise vuestros trabajos. En el título del Pull Request deberéis indicar vuestro nombre y apellidos para que sea revisado por el profesor correspondiente.
+<!-- github_plugin_end -->
 
-Para realizar la entrega de los trabajos y proyectos, deberéis crear una pull request en estado de Draft hasta que esté disponible para ser entregada. Una vez esté lista para ser entregada, deberéis cambiar el estado de la pull request a Ready for review. El profesor revisará vuestros trabajos y os indicará si es necesario realizar alguna corrección mediante conversaciones que tendréis que resolver para ser aceptada.
+<!-- wakatime_plugin_start -->
 
-## Indice de Contenidos del Máster
-
-Este máster está divido en tres grandes módulos, que permitirán al alumno adquirir los conocimientos en el ecosistema de Datos de una manera incremental desde lo más básico a lo menos básico ;-).
-
-### Modulo 0 - Introducción 
-Durante este bloque, los alumnos se centrarán en adquirir conocimientos básicos sobre datos, programación y despliegue de la tecnología necesaria para poder ejecutar el trabajo futuro. Descubrirán los controles de Linux, notebooks, aprenderán a trabajar en el lenguaje de programación Python junto con servicios de contenedores como Docker.
-
-En resumen, este bloque les proporcionará una base sólida que les permitirá avanzar con naturalidad en su aprendizaje.
-
-- Python
-
-- Linux
-
-- Git
-
-- Containers (Docker)
-
-- Notebooks
-
-### Modulo 1 - Tratamiento del Dato
-Durante este bloque, los alumnos se sumergirán en el perfil del Data Engineer: el profesional enfocado en el diseño, desarrollo y mantenimiento de los sistemas de procesamiento de datos dentro de un proyecto big data. Su función es dejar disponible el conjunto de datos validos con el que es necesario obtener, depurar y preparar los datos para su explotación.
-
-Para ello, descubrirán el origen de los datos y su tipología, el manejo de grandes volúmenes de datos con SQL y NoSQL, creación de dashborads con su posterior creación en Tableau, el uso de tecnologías como Flask API’s, Kafka, Spark Streaming, Cloud, IAC Terraform y Localización, además de comprender el fujo de datos, su calidad y el gobierno de datos.
-
-En resumen, este bloque les dará una base sólida para ocupar puestos de Data Engineer que se asegure de definir e implementar un flujo de datos desde su origen hasta su exploración de una forma controlada y automatizada.
-
-- SQL
-- NoSQL
-- Tableau
-- Flask API’s
-- Kafka
-- Spark Streaming
-- Cloud
-- IAC Terraform
+## 🌗 Weekly Development Breakdown
 
 
+<!-- wakatime_plugin_end -->
 
+**Languages and Tools:**
 
-### Estado de las entregas
-Entregas Grupo MIA
-<table>
-<tr><th>Alumno</th>
-<th>DEMO</th>
-<th>DOCKER</th>
-<th>APIS</th>
-<th>PYTHON</th>
-<th>DBT</th>
-<th>PYSPARK</th>
-<th>KAFKA</th>
-<th>LINUX</th>
-<th>SQL</th>
-</tr>
-<tr>
-</table>
+<p>
+<img src="https://github.com/blackcater/blackcater/raw/main/images/logo-javascript.svg" height="40" style="vertical-align:down; margin:4px" alt="javascript">
+<img src="https://github.com/blackcater/blackcater/raw/main/images/logo-typescript.svg" height="40" style="vertical-align:down; margin:4px" alt="typescript">
+<img src="https://github.com/blackcater/blackcater/raw/main/images/logo-nodejs.svg" height="40" style="vertical-align:down; margin:4px" alt="nodejs">
+<img src="https://github.com/blackcater/blackcater/raw/main/images/logo-golang.svg" height="40" style="vertical-align:down; margin:4px" alt="golang">
+</p>
 
-Last Checked: 2024-10-02 11:32:08
+<!-- badge_plugin_start -->
 
+---
 
-Entregas Grupo MDA A
-<table>
-<tr><th>Alumno</th>
-<th>DEMO</th>
-<th>DOCKER</th>
-<th>APIS</th>
-<th>PYTHON</th>
-<th>DBT</th>
-<th>PYSPARK</th>
-<th>KAFKA</th>
-<th>LINUX</th>
-<th>SQL</th>
-</tr>
-<tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAA/PEDRO_NIETO'>PEDRO_NIETO</a></td>
-<td>✅</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>✅</td>
-</tr>
-</table>
+<a href="https://github.com/blackcater" alt="https://github.com/blackcater"><img src="https://img.shields.io/static/v1?style=for-the-badge&label=CREATED%20BY&message=blackcater&color=000000"></a>
+<a href="https://github.com/blackcater/blackcater/blob/main/LICENSE" alt="https://github.com/blackcater/blackcater/blob/main/LICENSE"><img src="https://img.shields.io/static/v1?style=for-the-badge&label=LICENSE&message=MIT&color=000000"></a>
 
-Last Checked: 2024-10-02 11:32:08
-
-Entregas Grupo MDA B
-<table>
-<tr><th>Alumno</th>
-<th>DEMO</th>
-<th>DOCKER</th>
-<th>APIS</th>
-<th>PYTHON</th>
-<th>DBT</th>
-<th>PYSPARK</th>
-<th>KAFKA</th>
-<th>LINUX</th>
-<th>SQL</th>
-</tr>
-<tr>
-</table>
-
+<!-- badge_plugin_end -->
