@@ -74,6 +74,7 @@ Entregas Grupo MIA
 <th>PYSPARK</th>
 <th>DOCKER</th>
 <th>SQL</th>
+<th>DEMO</th>
 <th>APIS</th>
 <th>LINUX</th>
 <th>PYTHON</th>
@@ -88,10 +89,11 @@ Entregas Grupo MIA
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
 </tr>
 </table>
 
-Last Checked: 2024-10-02 16:22:26
+Last Checked: 2024-10-02 16:31:33
 
 
 Entregas Grupo MDA A
@@ -101,6 +103,7 @@ Entregas Grupo MDA A
 <th>PYSPARK</th>
 <th>DOCKER</th>
 <th>SQL</th>
+<th>DEMO</th>
 <th>APIS</th>
 <th>LINUX</th>
 <th>PYTHON</th>
@@ -115,10 +118,11 @@ Entregas Grupo MDA A
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
 </tr>
 </table>
 
-Last Checked: 2024-10-02 16:22:26
+Last Checked: 2024-10-02 16:31:33
 
 Entregas Grupo MDA B
 <table>
@@ -127,6 +131,7 @@ Entregas Grupo MDA B
 <th>PYSPARK</th>
 <th>DOCKER</th>
 <th>SQL</th>
+<th>DEMO</th>
 <th>APIS</th>
 <th>LINUX</th>
 <th>PYTHON</th>
@@ -134,5 +139,5 @@ Entregas Grupo MDA B
 <tr>
 </table>
 
-Last Checked: 2024-10-02 16:22:26
+Last Checked: 2024-10-02 16:31:33
 
