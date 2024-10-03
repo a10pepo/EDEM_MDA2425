@@ -81,7 +81,7 @@ Entregas Grupo MIA
 </tr>
 <tr>
 <tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/FS/ALEJANDRO_VEINTIMILLA'>ALEJANDRO_VEINTIMILLA</a></td>
+<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/ALEJANDRO_VEINTIMILLA'>ALEJANDRO_VEINTIMILLA</a></td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
@@ -92,7 +92,7 @@ Entregas Grupo MIA
 <td>❌</td>
 </tr>
 <tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/FS/ANDREU_PICORNELL'>ANDREU_PICORNELL</a></td>
+<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/ANDREU_PICORNELL'>ANDREU_PICORNELL</a></td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
@@ -103,7 +103,7 @@ Entregas Grupo MIA
 <td>❌</td>
 </tr>
 <tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/FS/COKE_STUYCK'>COKE_STUYCK</a></td>
+<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/COKE_STUYCK'>COKE_STUYCK</a></td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
@@ -114,7 +114,7 @@ Entregas Grupo MIA
 <td>❌</td>
 </tr>
 <tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/FS/Eduardo_Abad'>EDUARDO_ABAD</a></td>
+<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/Eduardo_Abad'>EDUARDO_ABAD</a></td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
@@ -125,7 +125,7 @@ Entregas Grupo MIA
 <td>❌</td>
 </tr>
 <tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/FS/GONZALO_LOPEZ'>GONZALO_LOPEZ</a></td>
+<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/GONZALO_LOPEZ'>GONZALO_LOPEZ</a></td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
@@ -136,7 +136,7 @@ Entregas Grupo MIA
 <td>❌</td>
 </tr>
 <tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/FS/JORGE_MOLTO'>JORGE_MOLTO</a></td>
+<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/JORGE_MOLTO'>JORGE_MOLTO</a></td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
@@ -147,7 +147,7 @@ Entregas Grupo MIA
 <td>❌</td>
 </tr>
 <tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/FS/PABLO_ESTEBAN'>PABLO_ESTEBAN</a></td>
+<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/PABLO_ESTEBAN'>PABLO_ESTEBAN</a></td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
@@ -159,7 +159,7 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2024-10-03 06:36:50
+Last Checked: 2024-10-03 07:18:38
 
 
 Entregas Grupo MDA A
@@ -188,7 +188,7 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2024-10-03 06:36:50
+Last Checked: 2024-10-03 07:18:38
 
 Entregas Grupo MDA B
 <table>
@@ -226,7 +226,7 @@ Entregas Grupo MDA B
 <td>❌</td>
 </tr>
 <tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/Claudia'>CLAUDIA</a></td>
+<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/CLAUDIA_'>CLAUDIA_</a></td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
@@ -260,5 +260,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2024-10-03 06:36:50
+Last Checked: 2024-10-03 07:18:38
 
