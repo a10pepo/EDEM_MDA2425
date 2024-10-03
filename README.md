@@ -81,6 +81,17 @@ Entregas Grupo MIA
 </tr>
 <tr>
 <tr>
+<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/FS/ALEJANDRO_VEINTIMILLA'>ALEJANDRO_VEINTIMILLA</a></td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/FS/COKE_STUYCK'>COKE_STUYCK</a></td>
 <td>❌</td>
 <td>❌</td>
@@ -126,7 +137,7 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2024-10-03 06:14:27
+Last Checked: 2024-10-03 06:22:05
 
 
 Entregas Grupo MDA A
@@ -155,7 +166,7 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2024-10-03 06:14:27
+Last Checked: 2024-10-03 06:22:05
 
 Entregas Grupo MDA B
 <table>
@@ -183,5 +194,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2024-10-03 06:14:27
+Last Checked: 2024-10-03 06:22:05
 
