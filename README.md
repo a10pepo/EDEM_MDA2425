@@ -97,7 +97,7 @@ Entregas Grupo MIA
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
-<td>❌</td>
+<td>✅</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
@@ -147,6 +147,17 @@ Entregas Grupo MIA
 <td>❌</td>
 </tr>
 <tr>
+<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/MAURO_BALAGUER'>MAURO_BALAGUER</a></td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/PABLO_ESTEBAN'>PABLO_ESTEBAN</a></td>
 <td>❌</td>
 <td>❌</td>
@@ -159,7 +170,7 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2024-10-03 15:53:42
+Last Checked: 2024-10-03 15:54:18
 
 
 Entregas Grupo MDA A
@@ -188,7 +199,7 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2024-10-03 15:53:42
+Last Checked: 2024-10-03 15:54:18
 
 Entregas Grupo MDA B
 <table>
@@ -271,5 +282,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2024-10-03 15:53:42
+Last Checked: 2024-10-03 15:54:18
 
