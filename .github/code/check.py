@@ -78,7 +78,7 @@ def modify_readme():
             file.write(parts[0])
             file.write('### Estado de las entregas\n')
             file.write('Entregas Grupo MIA\n')
-            file.write(generate_table("FS",check_class(os.path.join(os.getcwd(), "ALUMNOS/MIA"))))
+            file.write(generate_table("MIA",check_class(os.path.join(os.getcwd(), "ALUMNOS/MIA"))))
             file.write('\n')
             file.write('\n')
             file.write('Entregas Grupo MDA A\n')
