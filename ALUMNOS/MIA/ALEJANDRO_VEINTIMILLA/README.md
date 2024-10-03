@@ -19,7 +19,7 @@
 
 - 3D priting lover (specialy resin printing)
    
-- Capable of speaking English and Spanish fluently
+- Capable of speaking English(B2) and Spanish(Native) fluently
   
 
 <!--  -->
