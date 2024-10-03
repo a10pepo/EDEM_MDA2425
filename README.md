@@ -92,6 +92,17 @@ Entregas Grupo MIA
 <td>❌</td>
 </tr>
 <tr>
+<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/FS/GONZALO_LOPEZ'>GONZALO_LOPEZ</a></td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/FS/JORGE_MOLTO'>JORGE_MOLTO</a></td>
 <td>❌</td>
 <td>❌</td>
@@ -115,7 +126,7 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2024-10-02 17:06:40
+Last Checked: 2024-10-03 06:14:27
 
 
 Entregas Grupo MDA A
@@ -144,7 +155,7 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2024-10-02 17:06:40
+Last Checked: 2024-10-03 06:14:27
 
 Entregas Grupo MDA B
 <table>
@@ -159,7 +170,18 @@ Entregas Grupo MDA B
 <th>PYTHON</th>
 </tr>
 <tr>
+<tr>
+<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/VALENTIN_VECHER'>VALENTIN_VECHER</a></td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
 </table>
 
-Last Checked: 2024-10-02 17:06:40
+Last Checked: 2024-10-03 06:14:27
 
