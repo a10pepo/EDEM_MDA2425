@@ -1,8 +1,8 @@
-# EDEM_MDA2425
+# EDEM_MDA2324
 Common Repository for 2024-2025 Data Master
 
 <div align=center><img src="https://edem.eu/wp-content/uploads/2019/11/peces_edem.png" /></div>
-hola
+
 El objetivo de este repositorio es servir de guía y de punto de comunicación entre alumnos y profesorado. Los alumnos deberán seguir las instrucciones que se indican en este documento para realizar las entregas de los trabajos y proyectos que se vayan solicitando a lo largo del curso.
 
 ## Instrucciones para la entrega de trabajos y proyectos
@@ -70,109 +70,34 @@ En resumen, este bloque les dará una base sólida para ocupar puestos de Data E
 Entregas Grupo MIA
 <table>
 <tr><th>Alumno</th>
-<th>KAFKA</th>
-<th>PYSPARK</th>
-<th>DOCKER</th>
-<th>SQL</th>
 <th>DEMO</th>
+<th>DOCKER</th>
 <th>APIS</th>
-<th>LINUX</th>
 <th>PYTHON</th>
+<th>DBT</th>
+<th>PYSPARK</th>
+<th>KAFKA</th>
+<th>LINUX</th>
+<th>SQL</th>
 </tr>
 <tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/ALEJANDRO_VEINTIMILLA'>ALEJANDRO_VEINTIMILLA</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/ANDREU_PICORNELL'>ANDREU_PICORNELL</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/COKE_STUYCK'>COKE_STUYCK</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/Eduardo_Abad'>EDUARDO_ABAD</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/GONZALO_LOPEZ'>GONZALO_LOPEZ</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/JORGE_MOLTO'>JORGE_MOLTO</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/PABLO_ESTEBAN'>PABLO_ESTEBAN</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
 </table>
 
-Last Checked: 2024-10-03 09:21:20
+Last Checked: 2024-10-02 11:32:08
 
 
 Entregas Grupo MDA A
 <table>
 <tr><th>Alumno</th>
-<th>KAFKA</th>
-<th>PYSPARK</th>
-<th>DOCKER</th>
-<th>SQL</th>
 <th>DEMO</th>
+<th>DOCKER</th>
 <th>APIS</th>
-<th>LINUX</th>
 <th>PYTHON</th>
+<th>DBT</th>
+<th>PYSPARK</th>
+<th>KAFKA</th>
+<th>LINUX</th>
+<th>SQL</th>
 </tr>
 <tr>
 <tr>
@@ -180,85 +105,32 @@ Entregas Grupo MDA A
 <td>✅</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
 <td>✅</td>
 <td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
+<td>✅</td>
 </tr>
 </table>
 
-Last Checked: 2024-10-03 09:21:20
+Last Checked: 2024-10-02 11:32:08
 
 Entregas Grupo MDA B
 <table>
 <tr><th>Alumno</th>
-<th>KAFKA</th>
-<th>PYSPARK</th>
-<th>DOCKER</th>
-<th>SQL</th>
 <th>DEMO</th>
+<th>DOCKER</th>
 <th>APIS</th>
-<th>LINUX</th>
 <th>PYTHON</th>
+<th>DBT</th>
+<th>PYSPARK</th>
+<th>KAFKA</th>
+<th>LINUX</th>
+<th>SQL</th>
 </tr>
 <tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/ANGEL_MARTINEZ'>ANGEL_MARTINEZ</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/CARLOS_OLIVER'>CARLOS_OLIVER</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/CLAUDIA_'>CLAUDIA_</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/MARC_CANTERO'>MARC_CANTERO</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/VALENTIN_VECHER'>VALENTIN_VECHER</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
 </table>
 
-Last Checked: 2024-10-03 09:21:20
+Last Checked: 2024-10-02 11:32:08
 
