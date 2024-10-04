@@ -170,7 +170,7 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2024-10-04 17:31:50
+Last Checked: 2024-10-04 17:33:12
 
 
 Entregas Grupo MDA A
@@ -253,6 +253,17 @@ Entregas Grupo MDA A
 <td>❌</td>
 </tr>
 <tr>
+<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAA/MAR_SOLER'>MAR_SOLER</a></td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAA/MIGUEL_TORRES'>MIGUEL_TORRES</a></td>
 <td>❌</td>
 <td>❌</td>
@@ -287,7 +298,7 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2024-10-04 17:31:50
+Last Checked: 2024-10-04 17:33:12
 
 Entregas Grupo MDA B
 <table>
@@ -381,5 +392,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2024-10-04 17:31:50
+Last Checked: 2024-10-04 17:33:12
 
