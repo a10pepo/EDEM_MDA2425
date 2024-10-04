@@ -170,7 +170,7 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2024-10-04 17:06:41
+Last Checked: 2024-10-04 17:21:50
 
 
 Entregas Grupo MDA A
@@ -186,6 +186,17 @@ Entregas Grupo MDA A
 <th>PYTHON</th>
 </tr>
 <tr>
+<tr>
+<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAA/ALEJANDRO_ESCOLANO'>ALEJANDRO_ESCOLANO</a></td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
 <tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAA/JOAN_GILABERT'>JOAN_GILABERT</a></td>
 <td>❌</td>
@@ -221,7 +232,7 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2024-10-04 17:06:41
+Last Checked: 2024-10-04 17:21:50
 
 Entregas Grupo MDA B
 <table>
@@ -304,5 +315,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2024-10-04 17:06:41
+Last Checked: 2024-10-04 17:21:50
 
