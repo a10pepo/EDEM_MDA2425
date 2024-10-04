@@ -170,7 +170,7 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2024-10-04 17:22:37
+Last Checked: 2024-10-04 17:25:04
 
 
 Entregas Grupo MDA A
@@ -243,7 +243,7 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2024-10-04 17:22:37
+Last Checked: 2024-10-04 17:25:04
 
 Entregas Grupo MDA B
 <table>
@@ -292,6 +292,17 @@ Entregas Grupo MDA B
 <td>❌</td>
 </tr>
 <tr>
+<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/FABIAN_MIULESCU'>FABIAN_MIULESCU</a></td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/JOEL_SEGUI'>JOEL_SEGUI</a></td>
 <td>❌</td>
 <td>❌</td>
@@ -326,5 +337,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2024-10-04 17:22:37
+Last Checked: 2024-10-04 17:25:04
 
