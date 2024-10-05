@@ -15,3 +15,4 @@ Aprobar el master de Big Data y Cloud en EDEM
 - 🎯 En un futuro proximo espero conseguir:
   - Aprender a programar en python
   - Y mucho mas
+  - 
