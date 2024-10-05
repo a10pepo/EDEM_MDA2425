@@ -1,6 +1,6 @@
 # List of codeowners based on project team
 
-* @a10pepo
+#* @a10pepo
 
 /Alumnos/FS/*/DOCKER/** @alhercan @a10pepo
 /Alumnos/ES/*/DOCKER/** @alhercan @a10pepo
