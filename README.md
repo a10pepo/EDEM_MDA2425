@@ -403,6 +403,10 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
+<<<<<<<<< Temporary merge branch 1
 Last Checked: 2024-10-05 nueva fecha
 
+=========
+Last Checked: 2024-10-05 08:05:29
+>>>>>>>>> Temporary merge branch 2
 
