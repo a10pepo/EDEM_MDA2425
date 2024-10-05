@@ -7,7 +7,7 @@
 # Studies
 
 - Graduated in Econoomics. University of Valencia (2020-2024) 📚	
-- Studying BigData and Cloud. EDEM
+- Studying BigData and Cloud at EDEM University
   
 ## Hobbies 
 
