@@ -22,6 +22,6 @@
 ## Other Stuff
   - [My thesis: Challenges in importing Spanish products into Finland. Case: Coffee liqueur from Alcoy](http://hdl.handle.net/10251/205575)
   - [Event Hostess](https://youtu.be/DCXU2iW8UUU?feature=shared)
-  - Tesalín Theater Activity
+  - Tesalín Theater Activity,
 
  
