@@ -1,6 +1,6 @@
 ## Hola a Todos 👋
 
-Me llamo Ign*cio Valero y estoy empezando el máster de **BIG DATA** en EDEM.
+Me llamo Ignacio Valero y estoy empezando el máster de **BIG DATA** en EDEM.
 Estoy deseando aprender nuevos conocimientos de programación, aprender a utilizar Python y entender el Cloud.
 
 Mis pasatiempos son:
