@@ -3,7 +3,7 @@
 ## 💻: Sobre mi:
 - Ingeniero de telecomunicaciones 
 - Estudiante del Master de Big Data y Cloud en EDEM
-  
+- GRAN E HISTORICO AFICIONADO DEL ALBACETE BALOMPIE MANQUEPIERDA
 
 
 ## ⬆ Que estoy haciendo
