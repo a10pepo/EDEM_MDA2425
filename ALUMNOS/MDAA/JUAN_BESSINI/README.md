@@ -36,4 +36,4 @@ Como estudiante del **Máster en Datos y Cloud** en EDEM, estoy aprendiendo habi
 - **Correo:** juangabrielbessini@gmail.com
 - **LinkedIn:** [Juan Bessini](https://www.linkedin.com/in/jbessini)
 
-Un saludo
+Un saludo del delegado
