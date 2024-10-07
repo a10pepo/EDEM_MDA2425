@@ -16,4 +16,4 @@
   - A calculator project implemented in C, designed to perform basic arithmetic operations with a focus on efficiency and simplicity. Ideal for understanding control structures and system interaction.
 
 ### ⚡ More about me
-I am a software engineer specializing in embedded systems, with experience using Python for test automation and C for low-level software development. In my projects, I strive to create efficient solutions with a focus on scalability and code maintainability.
+I am a software engineer specializing in embedded systems, with experience using Python for test automation and C for low-level software development. In my projects, I strive to create efficient solutions with a focus on scalability and code maintainability. I also have an interest in AI.
