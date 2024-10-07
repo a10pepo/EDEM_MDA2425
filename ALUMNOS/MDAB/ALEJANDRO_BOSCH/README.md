@@ -3,7 +3,7 @@
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=alejbc27" alt="alejbc27" /></a> </p>
 
-- 🔭 I’m currently working on **EDEM**
+- 🔭 I’m currently studying on **EDEM**
 
 - 🌱 I’m currently learning **Big Data & Cloud**
 
