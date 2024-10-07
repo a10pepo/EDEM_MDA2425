@@ -15,4 +15,4 @@ Talk to me about:
 - 💬 Ask me about anything an everything.
 - 🎯 Graphic Design Portfolio site: [Portfolio](https://cokestuyck.webflow.io/).
 - 👾 Front End playground: [Playground](https://github.com/cokecancook/cokecancook.github.io/).
-- ⚡ Fun fact: Internet users blink less than usual.
+- 🏀 I love playing basketball!
