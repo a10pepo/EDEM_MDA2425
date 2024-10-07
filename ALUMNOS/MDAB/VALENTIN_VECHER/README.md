@@ -28,4 +28,7 @@
 
 - Client Manager om Vicky Foods (4 months)
 - Treasury and management assistant in EMIMET (4 months) 
+
+
 ### Nueva linea en el readme 
+- nueva linea
