@@ -47,5 +47,6 @@ But it’s not all about work… I was a professional athlete until 2021! 🏃�
 I’m always looking for new challenges and opportunities. If you have an exciting project (or just want to talk about data, tech, productivity, or music), feel free to reach out!
 
 ---
+Jorge Moltó
 
 [More details on my personal website](https://notanproductivo.com)
