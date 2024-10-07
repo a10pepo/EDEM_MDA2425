@@ -119,13 +119,24 @@ Entregas Grupo MIA
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
-<td>❌</td>
+<td>✅</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
 </tr>
 <tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/GONZALO_LOPEZ'>GONZALO_LOPEZ</a></td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/JAIRO_NAVARRO'>JAIRO_NAVARRO</a></td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
@@ -181,7 +192,7 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2024-10-05 17:54:14
+Last Checked: 2024-10-06 14:00:56
 
 
 Entregas Grupo MDA A
@@ -320,7 +331,7 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2024-10-05 17:54:14
+Last Checked: 2024-10-06 14:00:56
 
 Entregas Grupo MDA B
 <table>
@@ -402,6 +413,17 @@ Entregas Grupo MDA B
 <td>❌</td>
 </tr>
 <tr>
+<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/TING_WANG'>TING_WANG</a></td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/VALENTIN_VECHER'>VALENTIN_VECHER</a></td>
 <td>❌</td>
 <td>❌</td>
@@ -414,5 +436,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2024-10-05 17:54:14
+Last Checked: 2024-10-06 14:00:56
 
