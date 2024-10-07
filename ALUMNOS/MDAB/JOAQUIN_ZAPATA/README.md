@@ -16,7 +16,7 @@ src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32
 <br />
 <br />
 
-Hi, I'm Joaquin Zapata, a Big Data & Cloud Master's Degree student in Valencia ES.
+Hi, I'm Joaquin Zapata, a Big Data & Cloud Master's Degree student in Valencia ES..
 
 <a href="#"><img align="right" src="https://github.com/blackcater/blackcater/raw/main/images/banner.gif" width="200 " height="200" /></a>
 
