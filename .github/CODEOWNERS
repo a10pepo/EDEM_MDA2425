@@ -1,33 +1,45 @@
 # List of codeowners based on project team
 
-* @a10pepo
+#* @a10pepo
 
-/Alumnos/FS/*/DOCKER/** @alhercan @a10pepo
-/Alumnos/ES/*/DOCKER/** @alhercan @a10pepo
+/Alumnos/MDAA/*/DOCKER/** @a10pepo
+/Alumnos/MDAB/*/DOCKER/** @a10pepo
+/Alumnos/MIA/*/DOCKER/** @a10pepo
 
-/Alumnos/FS/*/PYTHON/** @martinImagina @a10pepo
-/Alumnos/ES/*/PYTHON/** @martinImagina @a10pepo
+/Alumnos/MDAA/*/LINUX/** @a10pepo
+/Alumnos/MDAB/*/LINUX/** @a10pepo
+/Alumnos/MIA/*/LINUX/** @a10pepo
 
-/Alumnos/FS/*/SQL/** @gavaldanatalia @a10pepo @gavnatalia
-/Alumnos/ES/*/SQL/** @gavaldanatalia @a10pepo @gavnatalia
+/Alumnos/MDAA/*/PYTHON/** @martinImagina @a10pepo
+/Alumnos/MDAB/*/PYTHON/** @martinImagina @a10pepo
+/Alumnos/MIA/*/PYTHON/** @martinImagina @a10pepo
 
-/Alumnos/FS/*/NIFI/** @echiner @a10pepo
-/Alumnos/ES/*/NIFI/** @echiner @a10pepo
+/Alumnos/MDAA/*/SQL/** @gavaldanatalia @a10pepo @gavnatalia
+/Alumnos/MDAB/*/SQL/** @gavaldanatalia @a10pepo @gavnatalia
+/Alumnos/MIA/*/SQL/** @gavaldanatalia @a10pepo @gavnatalia
 
+/Alumnos/MDAA/*/NIFI/** @echiner @a10pepo
+/Alumnos/MDAB/*/NIFI/** @echiner @a10pepo
+/Alumnos/MIA/*/NIFI/** @echiner @a10pepo
 
-/Alumnos/FS/*/AHORCADO/** @a10pepo
-/Alumnos/ES/*/AHORCADO/** @a10pepo
+/Alumnos/MDAA/*/AHORCADO/** @a10pepo
+/Alumnos/MDAB/*/AHORCADO/** @a10pepo
+/Alumnos/MIA/*/AHORCADO/** @a10pepo
 
-/Alumnos/FS/*/FLASK/** @a10pepo 
-/Alumnos/ES/*/FLASK/** @a10pepo 
+/Alumnos/MDAA/*/APIS/** @a10pepo 
+/Alumnos/MDAB/*/APIS/** @a10pepo 
+/Alumnos/MIA/*/APIS/** @a10pepo
 
-/Alumnos/FS/*/KAFKA/** @a10pepo @rusansor
-/Alumnos/ES/*/KAFKA/** @a10pepo @rusansor
+/Alumnos/MDAA/*/KAFKA/** @a10pepo @rusansor
+/Alumnos/MDAB/*/KAFKA/** @a10pepo @rusansor
+/Alumnos/MIA/*/KAFKA/** @a10pepo @rusansor
 
-/Alumnos/FS/*/SPARK/** @a10pepo 
-/Alumnos/ES/*/SPARK/** @a10pepo 
+/Alumnos/MDAA/*/PYSPARK/** @a10pepo 
+/Alumnos/MDAB/*/PYSPARK/** @a10pepo 
+/Alumnos/MIA/*/PYSPARK/** @a10pepo
 
-/Alumnos/FS/*/TERRAFORM/** @a10pepo
-/Alumnos/ES/*/TERRAFORM/** @a10pepo
+/Alumnos/MDAA/*/TERRAFORM/** @a10pepo
+/Alumnos/MDAB/*/TERRAFORM/** @a10pepo
+/Alumnos/MIA/*/TERRAFORM/** @a10pepo
 
 
