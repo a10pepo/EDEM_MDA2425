@@ -192,7 +192,7 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2024-10-06 14:00:56
+Last Checked: 2024-10-07 14:17:15
 
 
 Entregas Grupo MDA A
@@ -331,7 +331,7 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2024-10-06 14:00:56
+Last Checked: 2024-10-07 14:17:15
 
 Entregas Grupo MDA B
 <table>
@@ -402,6 +402,17 @@ Entregas Grupo MDA B
 <td>❌</td>
 </tr>
 <tr>
+<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/LARA_RUBIO'>LARA_RUBIO</a></td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/MARC_CANTERO'>MARC_CANTERO</a></td>
 <td>❌</td>
 <td>❌</td>
@@ -436,5 +447,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2024-10-06 14:00:56
+Last Checked: 2024-10-07 14:17:15
 
