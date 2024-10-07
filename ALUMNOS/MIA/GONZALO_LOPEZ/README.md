@@ -28,7 +28,7 @@
   <br>
   🎓 I graduated from Sydney's Albright University, Department of English (Advanced Level Certificated).
   <br>
-  🎓 I graduated from Erzurum İbrahim Hakkı Science High School
+
   <br>
   💻 I love writing code and learn anythings about it
   <br>
@@ -36,7 +36,7 @@
   <br>
   💬 Ask me anything about from <a href="https://github.com/zumrudu-anka/zumrudu-anka/issues" title="Issues">Here</a>
   <br>
-  📫 How to reach me: <a href="mailto: osmandurdag@hotmail.com">osmandurdag@hotmail.com</a>
+  📫 How to reach me: <a href="g.lopezblanquer@gmail.com">g.lopezblanquer@gmail.com</a>
 </p>
 
 <hr>
