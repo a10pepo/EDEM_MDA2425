@@ -3,6 +3,7 @@ Common Repository for 2024-2025 Data Master
 
 <div align=center><img src="https://edem.eu/wp-content/uploads/2019/11/peces_edem.png" /></div>
 hola
+
 El objetivo de este repositorio es servir de guía y de punto de comunicación entre alumnos y profesorado. Los alumnos deberán seguir las instrucciones que se indican en este documento para realizar las entregas de los trabajos y proyectos que se vayan solicitando a lo largo del curso.
 
 ## Instrucciones para la entrega de trabajos y proyectos
@@ -203,7 +204,7 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2024-10-07 14:32:55
+Last Checked: 1900-10-07 14:32:55
 
 
 Entregas Grupo MDA A
@@ -432,17 +433,6 @@ Entregas Grupo MDA B
 <td>✅</td>
 <td>❌</td>
 <td>✅</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/LARA_RUBIO'>LARA_RUBIO</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
 <td>❌</td>
 </tr>
 <tr>
