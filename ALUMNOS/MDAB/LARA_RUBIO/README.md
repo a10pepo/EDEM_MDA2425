@@ -1,9 +1,9 @@
 > 👨🏻‍💻 Web Front-end Developer
 
-### Tech Stack
+### Studies
 
-- 🛠 Lang & Framework: Vue/React, Javascript
-- ⛏ Interest: Svelte, Typescript
+- Graduated in International Business from the University of Valencia
+- Bachelor in Business Administration from the University of North Florida
 
 ### Latest posts from 📝 [xiaozhu.dev](https://xiaozhu.dev)
 
