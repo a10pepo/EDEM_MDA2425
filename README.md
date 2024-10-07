@@ -333,7 +333,7 @@ Entregas Grupo MDA A
 
 Last Checked: 2024-10-06 14:00:56
 
-Entregas Grupo MDA Buymj  yj
+Entregas Grupo MDA B
 <table>
 <tr><th>Alumno</th>
 <th>KAFKA</th>
