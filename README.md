@@ -1,440 +1,49 @@
-# EDEM_MDA2425
-Common Repository for 2024-2025 Data Master
+<h1 align="center">👋 Hi, I'm Nacho Martínez</h1>
 
-<div align=center><img src="https://edem.eu/wp-content/uploads/2019/11/peces_edem.png" /></div>
+<h2 align="center">A passionate Front End Developer with + than 3 years of experience</h2> 
 
-El objetivo de este repositorio es servir de guía y de punto de comunicación entre alumnos y profesorado. Los alumnos deberán seguir las instrucciones que se indican en este documento para realizar las entregas de los trabajos y proyectos que se vayan solicitando a lo largo del curso.
+- 🔭 I’m working as a **Front End Developer** at <i>Softo</i> with **Next.js**, **React**, **TypeScript**, **MaterialUI**, **Styled-Components**, **React Hook Form** and **Cypress**.
 
-## Instrucciones para la entrega de trabajos y proyectos
-
-### 1. Usando vuestra cuenta de Github
-
-### 2. Crear una carpeta con vuestro nombre y apellidos
-
-Alumnos/PedroNieto/
-
-### 3. Crear una carpeta por cada trabajo o proyecto
-
-Alumnos/PedroNieto/Trabajo1/
-
-### 4. Subir los archivos correspondientes a cada trabajo o proyecto
-
-En cada commit, vuestro código será evaluado automáticamente por Github Actions. Si el código no pasa las pruebas, el commit será rechazado y no se podrá realizar la entrega. Si el código pasa las pruebas, el commit será aceptado y se podrá realizar la entrega.
+- 🌱 At 2024, moved to Spain and continue with **React**, **TypeScript**, **Next.js** and learning **VUE.js**. Worked in some freelance jobs for KQSS (developed 2 MVP with React and the landing page of Veritec: https://veritec.ai) and DG SMART GROUP (developed the landing page: https://dgsmartgroup.com).
 
 
-### 5. Crear un Pull Request para que el profesor pueda revisar vuestros trabajos
+- 🌱 In 2023 I studied: **React** and **UX/UI Design** with Codo a Codo and get my **Programming degree** at **UTN** (Universidad Tecnológica Nacional).
 
-Para crear un Pull Request, deberéis hacer click en el botón Pull Request que aparece en la parte superior derecha de la página. Esto creará una petición para que el profesor revise vuestros trabajos. En el título del Pull Request deberéis indicar vuestro nombre y apellidos para que sea revisado por el profesor correspondiente.
+- 🌱 In 2022: <strong>Full Stack: React & Node.js</strong> in <i>Numen Academy</i>, <strong>Full Stack: JavaScript & Node.js</strong> with <i>Codo a Codo</i>.
 
-Para realizar la entrega de los trabajos y proyectos, deberéis crear una pull request en estado de Draft hasta que esté disponible para ser entregada. Una vez esté lista para ser entregada, deberéis cambiar el estado de la pull request a Ready for review. El profesor revisará vuestros trabajos y os indicará si es necesario realizar alguna corrección mediante conversaciones que tendréis que resolver para ser aceptada.
+- 🌱 In 2021: <strong> Full Stack </strong> with <strong> Java </strong> in <i>Egg</i> , <i>Silicon Misiones</i> and <i>Codo a Codo</i> and I was working as a <strong> Java Back End Developer </strong> for 5 months, but since 2022 I'm back with <img src="https://img.icons8.com/clouds/24/000000/like--v1.png"/> ... <strong>#JavaScript</strong>.
 
-## Indice de Contenidos del Máster
+- 👨‍💻 Here is my portfolio:  [portfolio-mec.netlify.app/](https://portfolio-mec.netlify.app/)
 
-Este máster está divido en tres grandes módulos, que permitirán al alumno adquirir los conocimientos en el ecosistema de Datos de una manera incremental desde lo más básico a lo menos básico ;-).
+- 📫 How to reach me by: e-mail: <a href="mailto:costamariaeugenia1">costamariaeugenia1@gmail.com </a> or  <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="maríaeugeniacosta" height="20" width="20" /> at <a href="https://www.linkedin.com/in/maria-eugenia-costa/" target="blank"> maria-eugenia-costa</a>.</p>
 
-### Modulo 0 - Introducción 
-Durante este bloque, los alumnos se centrarán en adquirir conocimientos básicos sobre datos, programación y despliegue de la tecnología necesaria para poder ejecutar el trabajo futuro. Descubrirán los controles de Linux, notebooks, aprenderán a trabajar en el lenguaje de programación Python junto con servicios de contenedores como Docker.
+- I speak:  <img width="28" height="28" src="https://img.icons8.com/emoji/28/united-states-emoji.png" alt="united-states-emoji" width="28" height="28" style="margin-left: 100px; margin-right: 100px;" />  English, <img width="28" height="28" src="https://img.icons8.com/color/28/spain.png" alt="spain" width="28" height="28" style="margin-left: 100px;"/> Spanish and  <img width="28" height="28" src="https://img.icons8.com/color/28/brazil.png" alt="brazil" width="28" height="28" style="margin-left: 100px;"/> Portuguese
 
-En resumen, este bloque les proporcionará una base sólida que les permitirá avanzar con naturalidad en su aprendizaje.
+---
 
-- Python
+<h3 align="left">Languages and Tools:</h3>
 
-- Linux
+| Front End | 
+| --------- | 
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5"  width="40" height="40" style="margin-left: 100px;" title="HTML5" />  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40" style="margin-left: 100px;" title="CSS3" />  <img src="https://github.com/devicons/devicon/blob/master/icons/bootstrap/bootstrap-original-wordmark.svg" alt="bootstrap" title="bootstrap" width="40" height="40" style="margin-left: 100px;" /> <img src="https://github.com/devicons/devicon/blob/master/icons/bulma/bulma-plain.svg" alt="Bulma" title="Bulma" width="40" height="40" style="margin-left: 100px;" />  <img src="https://github.com/devicons/devicon/blob/master/icons/materializecss/materializecss-original.svg" alt="MaterializeCSS" title="MaterializeCSS" width="40" height="40" style="margin-left: 100px;" />  <img src="https://github.com/devicons/devicon/blob/master/icons/tailwindcss/tailwindcss-original.svg" alt="TailwindCSS" title="TailwindCSS"  width="40" height="40" style="margin-left: 100px;" /> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40" style="margin-left: 100px;" title="JavaScript" /> <img src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg" alt="typrscript" title="typrscript" width="40" height="40" style="margin-left: 100px;" /> <br/>  <img src="https://github.com/devicons/devicon/blob/master/icons/axios/axios-plain-wordmark.svg" alt="axios" title="Axios" width="40" height="40" style="margin-left: 100px;" /> <img src="https://github.com/devicons/devicon/blob/master/icons/vitejs/vitejs-original.svg" alt="Vite" title="Vite" width="40" height="40" style="margin-left: 100px;" />   <br/>  <img src="https://github.com/devicons/devicon/blob/master/icons/astro/astro-original-wordmark.svg" alt="Astro" title="Astro" width="40" height="40" style="margin-left: 100px;" /> <br/> <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg" alt="React" title="React" width="40" height="40" style="margin-left: 100px;" /> <img src="https://github.com/devicons/devicon/blob/master/icons/reactbootstrap/reactbootstrap-original.svg" alt="React Bootstrap" title="REact Bootstrap" width="40" height="40" style="margin-left: 100px;" />  <img src="https://github.com/devicons/devicon/blob/master/icons/materialui/materialui-original.svg" alt="material ui" title="Material UI" width="40" height="40" style="margin-left: 100px;" /> <img src="https://github.com/devicons/devicon/blob/master/icons/reactrouter/reactrouter-original.svg" alt="rReact Router" title="React Router" width="40" height="40"/> <img src="https://github.com/devicons/devicon/blob/master/icons/redux/redux-original.svg" alt="redux" title="Redux" width="40" height="40"/> <img src="https://github.com/devicons/devicon/blob/master/icons/postman/postman-original.svg" alt="Postman" title="Postman" width="40" height="40"/> <img src="https://github.com/devicons/devicon/blob/master/icons/swagger/swagger-original.svg" alt="Swagger" title="Swagger" width="40" height="40"/>  <img src="https://github.com/devicons/devicon/blob/master/icons/firebase/firebase-plain.svg" alt="Firebase" title="Firebase" width="40" height="40" style="margin-left: 100px;" /> | 
 
-- Git
+| Front End Frameworks |
+| -------------------- |
+|  <img src="https://github.com/devicons/devicon/blob/master/icons/nextjs/nextjs-original.svg" alt="Nextjs" title="Nextjs"  width="40" height="40" style="margin-left: 100px;" /> <img src="https://github.com/devicons/devicon/blob/master/icons/prisma/prisma-original.svg" alt="Prisma" title="Prisma"  width="40" height="40" style="margin-left: 100px;" />  <img src="https://github.com/devicons/devicon/blob/master/icons/supabase/supabase-original.svg" alt="Supabase" title="Supabase"  width="40" height="40" style="margin-left: 100px;" />   <br /> <img src="https://github.com/devicons/devicon/blob/master/icons/vuejs/vuejs-original-wordmark.svg" alt="Vue.js" title="Vue.js" width="40" height="40" style="margin-left: 100px;" />  <img width="40" height="40" src="https://img.icons8.com/keek/40/pineapple.png" style="margin-left: 100px;" alt="Pinia" title="Pinia"/> |
 
-- Containers (Docker)
-
-- Notebooks
-
-### Modulo 1 - Tratamiento del Dato
-Durante este bloque, los alumnos se sumergirán en el perfil del Data Engineer: el profesional enfocado en el diseño, desarrollo y mantenimiento de los sistemas de procesamiento de datos dentro de un proyecto big data. Su función es dejar disponible el conjunto de datos validos con el que es necesario obtener, depurar y preparar los datos para su explotación.
-
-Para ello, descubrirán el origen de los datos y su tipología, el manejo de grandes volúmenes de datos con SQL y NoSQL, creación de dashborads con su posterior creación en Tableau, el uso de tecnologías como Flask API’s, Kafka, Spark Streaming, Cloud, IAC Terraform y Localización, además de comprender el fujo de datos, su calidad y el gobierno de datos.
-
-En resumen, este bloque les dará una base sólida para ocupar puestos de Data Engineer que se asegure de definir e implementar un flujo de datos desde su origen hasta su exploración de una forma controlada y automatizada.
-
-- SQL
-- NoSQL
-- Tableau
-- Flask API’s
-- Kafka
-- Spark Streaming
-- Cloud
-- IAC Terraform
+| Back End | Data Base |
+| -------- | --------- |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java" title="Java" width="40" height="40" style="margin-left: 100px;" /> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" title="Node.js" width="50" height="50" style="margin-left: 100px;" /> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" title="Python" width="40" height="40" style="margin-left: 100px;" /> |  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="MySQL" title="MySQL" width="50" height="50" style="margin-left: 100px;"  /> <img src="https://github.com/devicons/devicon/blob/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" title="postgresql" width="50" height="50" style="margin-left: 100px;" /> <img src="https://github.com/devicons/devicon/blob/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" title="MongoDB" width="50" height="50" style="margin-left: 100px;" /> <img src="https://github.com/devicons/devicon/blob/master/icons/mongoose/mongoose-original-wordmark.svg" alt="Mongoose" title="Mongoose" width="50" height="50" style="margin-left: 100px;" /> |
 
 
+| Control version | Extra |
+| --------------- | ----- |
+| <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-original.svg" alt="git" title="Git" width="40" height="40" style="margin-left: 100px;" /> <img src="https://github.com/devicons/devicon/blob/master/icons/subversion/subversion-original-wordmark.svg" alt="subversion" title="subversion" width="40" height="40" style="margin-left: 100px;" /> <img src="https://github.com/devicons/devicon/blob/master/icons/github/github-original.svg" alt="github" title="GitHub" width="40" height="40" style="margin-left: 100px;" /> <img src="https://github.com/devicons/devicon/blob/master/icons/gitlab/gitlab-original.svg" alt="gitlab" title="GitLab" width="40" height="40" style="margin-left: 100px;" /> | <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" title="Figma" width="45" height="45" style="margin-left: 100px;" /> <img src="https://github.com/devicons/devicon/blob/master/icons/canva/canva-original.svg" alt="canva" title="Canva" width="40" height="40" style="margin-left: 100px;" /> <img src="https://github.com/devicons/devicon/blob/master/icons/markdown/markdown-original.svg" alt="mark down" title="MarkDown" width="40" height="40" style="margin-left: 100px;" /> <img src="https://github.com/devicons/devicon/blob/master/icons/npm/npm-original-wordmark.svg" alt="npm" title="npm" width="40" height="40" style="margin-left: 100px;" /> <img src="https://github.com/devicons/devicon/blob/master/icons/pnpm/pnpm-original.svg" alt="pnpm" title="pnpm" width="40" height="40" style="margin-left: 100px;" />  <img src="https://github.com/devicons/devicon/blob/master/icons/yarn/yarn-original.svg" alt="yarn" title="yarn" width="40" height="40" style="margin-left: 100px;" /> <img src="https://github.com/devicons/devicon/blob/master/icons/eslint/eslint-original.svg" alt="ESLint" title="ESLint" width="40" height="40" style="margin-left: 100px;" /> <img src="https://github.com/devicons/devicon/blob/master/icons/filezilla/filezilla-plain.svg" alt="FileZilla" title="FileZilla" width="40" height="40" style="margin-left: 100px;" /> <img src="https://github.com/devicons/devicon/blob/master/icons/netlify/netlify-original-wordmark.svg" alt="Netlify" title="Netlify" width="40" height="40" style="margin-left: 100px;" /> |
 
+| Ágile |  IDE | Browsers |
+| ----- | --- | -------- |
+| <img src="https://github.com/devicons/devicon/blob/master/icons/jira/jira-original-wordmark.svg" alt="jira" title="Jira" width="40" height="40" style="margin-left: 100px;" /> <img src="https://github.com/devicons/devicon/blob/master/icons/trello/trello-plain-wordmark.svg" alt="trello" title="Trello" width="50" height="50" style="margin-left: 100px;" /> <img src="https://github.com/devicons/devicon/blob/master/icons/slack/slack-original-wordmark.svg" alt="slack" title="Slack" width="60" height="60" style="margin-left: 100px;" /> | <img src="https://github.com/devicons/devicon/blob/master/icons/vscode/vscode-original-wordmark.svg" alt="Visual Studio Code" title="Visual Studio Code" width="40" height="40" style="margin-left: 100px;" /> <img src="https://github.com/devicons/devicon/blob/master/icons/intellij/intellij-original.svg" alt="intellij" title="intellij" width="70" height="70" style="margin-left: 100px;" />  | <img src="https://github.com/devicons/devicon/blob/master/icons/chrome/chrome-original.svg" alt="chrome"  title="Chrome" width="40" height="40" style="margin-left: 100px;" /> <img src="https://github.com/devicons/devicon/blob/master/icons/firefox/firefox-original.svg" alt="FireFox" title="FireFox" width="40" height="40" style="margin-left: 100px;" /> <img src="https://github.com/devicons/devicon/blob/master/icons/opera/opera-original.svg" alt="Opera" title="Opera" width="40" height="40" style="margin-left: 100px;" /> <img src="https://github.com/devicons/devicon/blob/master/icons/safari/safari-original.svg" alt="Safari" title="Safari" width="40" height="40" style="margin-left: 100px;" /> |
 
-### Estado de las entregas
-Entregas Grupo MIA
-<table>
-<tr><th>Alumno</th>
-<th>KAFKA</th>
-<th>PYSPARK</th>
-<th>DOCKER</th>
-<th>SQL</th>
-<th>DEMO</th>
-<th>APIS</th>
-<th>LINUX</th>
-<th>PYTHON</th>
-</tr>
-<tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/ALEJANDRO_VEINTIMILLA'>ALEJANDRO_VEINTIMILLA</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/ANDREU_PICORNELL'>ANDREU_PICORNELL</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/COKE_STUYCK'>COKE_STUYCK</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/Eduardo_Abad'>EDUARDO_ABAD</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/GONZALO_LOPEZ'>GONZALO_LOPEZ</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/JAIRO_NAVARRO'>JAIRO_NAVARRO</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/JORGE_MOLTO'>JORGE_MOLTO</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/Jairo_Navarro'>JAIRO_NAVARRO</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/MAURO_BALAGUER'>MAURO_BALAGUER</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/PABLO_ESTEBAN'>PABLO_ESTEBAN</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-</table>
-
-Last Checked: 2024-10-06 14:00:56
-
-
-Entregas Grupo MDA A
-<table>
-<tr><th>Alumno</th>
-<th>KAFKA</th>
-<th>PYSPARK</th>
-<th>DOCKER</th>
-<th>SQL</th>
-<th>DEMO</th>
-<th>APIS</th>
-<th>LINUX</th>
-<th>PYTHON</th>
-</tr>
-<tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAA/ALEJANDRO_ESCOLANO'>ALEJANDRO_ESCOLANO</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAA/ALEX_REVERT'>ALEX_REVERT</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAA/ANTONI_MOLLA'>ANTONI_MOLLA</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAA/IGNACIO_VALERO'>IGNACIO_VALERO</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAA/JOAN_GILABERT'>JOAN_GILABERT</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAA/JUAN_BESSINI'>JUAN_BESSINI</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAA/MARTA_MIRO'>MARTA_MIRO</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAA/MAR_SOLER'>MAR_SOLER</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAA/MIGUEL_TORRES'>MIGUEL_TORRES</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAA/PEDRO_NIETO'>PEDRO_NIETO</a></td>
-<td>✅</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAA/VICENTE_MARTI'>VICENTE_MARTI</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-</table>
-
-Last Checked: 2024-10-06 14:00:56
-
-Entregas Grupo MDA B
-<table>
-<tr><th>Alumno</th>
-<th>KAFKA</th>
-<th>PYSPARK</th>
-<th>DOCKER</th>
-<th>SQL</th>
-<th>DEMO</th>
-<th>APIS</th>
-<th>LINUX</th>
-<th>PYTHON</th>
-</tr>
-<tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/ANGEL_MARTINEZ'>ANGEL_MARTINEZ</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/CARLOS_OLIVER'>CARLOS_OLIVER</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/CLAUDIA_'>CLAUDIA_</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/FABIAN_MIULESCU'>FABIAN_MIULESCU</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/JOEL_SEGUI'>JOEL_SEGUI</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/MARC_CANTERO'>MARC_CANTERO</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/TING_WANG'>TING_WANG</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/VALENTIN_VECHER'>VALENTIN_VECHER</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-</table>
-
-Last Checked: 2024-10-06 14:00:56
-
+| Test |
+| ---- |
+| <img src="https://github.com/devicons/devicon/blob/master/icons/cypressio/cypressio-original-wordmark.svg" alt="Cypress" title="Cypress" width="40" height="40" style="margin-left: 100px;"/> |
