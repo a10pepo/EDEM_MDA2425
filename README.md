@@ -70,15 +70,14 @@ En resumen, este bloque les dará una base sólida para ocupar puestos de Data E
 Entregas Grupo MIA
 <table>
 <tr><th>Alumno</th>
-<th>DEMO</th>
-<th>DOCKER</th>
-<th>APIS</th>
-<th>PYTHON</th>
-<th>DBT</th>
-<th>PYSPARK</th>
 <th>KAFKA</th>
-<th>LINUX</th>
+<th>PYSPARK</th>
+<th>DOCKER</th>
 <th>SQL</th>
+<th>DEMO</th>
+<th>APIS</th>
+<th>LINUX</th>
+<th>PYTHON</th>
 </tr>
 <tr>
 <tr>
@@ -236,6 +235,17 @@ Entregas Grupo MIA
 <td>❌</td>
 </tr>
 <tr>
+<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/PABLO_ARNAU'>PABLO_ARNAU</a></td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/PABLO_ESTEBAN'>PABLO_ESTEBAN</a></td>
 <td>❌</td>
 <td>❌</td>
@@ -270,21 +280,20 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2024-10-07 17:35:59
+Last Checked: 2024-10-07 17:37:14
 
 
 Entregas Grupo MDA A
 <table>
 <tr><th>Alumno</th>
-<th>DEMO</th>
-<th>DOCKER</th>
-<th>APIS</th>
-<th>PYTHON</th>
-<th>DBT</th>
-<th>PYSPARK</th>
 <th>KAFKA</th>
-<th>LINUX</th>
+<th>PYSPARK</th>
+<th>DOCKER</th>
 <th>SQL</th>
+<th>DEMO</th>
+<th>APIS</th>
+<th>LINUX</th>
+<th>PYTHON</th>
 </tr>
 <tr>
 <tr>
@@ -391,12 +400,11 @@ Entregas Grupo MDA A
 <td>✅</td>
 <td>❌</td>
 <td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
 <td>✅</td>
 <td>❌</td>
-<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
 </tr>
 <tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAA/VICENTE_MARTI'>VICENTE_MARTI</a></td>
@@ -411,20 +419,19 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2024-10-07 17:35:59
+Last Checked: 2024-10-07 17:37:14
 
 Entregas Grupo MDA B
 <table>
 <tr><th>Alumno</th>
-<th>DEMO</th>
-<th>DOCKER</th>
-<th>APIS</th>
-<th>PYTHON</th>
-<th>DBT</th>
-<th>PYSPARK</th>
 <th>KAFKA</th>
-<th>LINUX</th>
+<th>PYSPARK</th>
+<th>DOCKER</th>
 <th>SQL</th>
+<th>DEMO</th>
+<th>APIS</th>
+<th>LINUX</th>
+<th>PYTHON</th>
 </tr>
 <tr>
 <tr>
@@ -572,5 +579,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2024-10-07 17:35:59
+Last Checked: 2024-10-07 17:37:14
 
