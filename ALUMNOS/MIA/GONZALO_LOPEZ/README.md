@@ -28,7 +28,7 @@
   <br>
   🎓 I graduated from Sydney's Albright University, Department of English (Advanced Level Certificated).
   <br>
-  🎓 I graduated from Erzurum İbrahim Hakkı Science High School
+  
   <br>
   💻 I love writing code and learn anythings about it
   <br>
