@@ -1,134 +1,39 @@
-# EDEM_MDA2324
-Common Repository for 2024-2025 Data Master
-<div align=center><img src="https://edem.eu/wp-content/uploads/2019/11/peces_edem.png" /></div>
-El objetivo de este repositorio es servir de guía y de punto de comunicación entre alumnos y profesorado. Los alumnos deberán seguir las instrucciones que se indican en este documento para realizar las entregas de los trabajos y proyectos que se vayan solicitando a lo largo del curso.
+# Hey, what's up? 👋🏻
 
-## Instrucciones para la entrega de trabajos y proyectos
+[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-477acd?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/pedroo-nietoo/)](https://www.linkedin.com/in/pedroo-nietoo/)
+[![Gmail Badge](https://img.shields.io/badge/-pedronieto.2005@gmail.com-477acd?style=flat-square&logo=Gmail&logoColor=white&link=mailto:pedronieto.2005@gmail.com)](mailto:pedronieto.2005@gmail.com)
+[![Discord Badge](https://img.shields.io/badge/-Discord-477acd?style=flat-square&logo=Discord&logoColor=white&link=https://discordapp.com/channels/@me/705496526289371208)](https://discordapp.com/channels/@me/705496526289371208)
 
-### 1. Usando vuestra cuenta de Github
-
-### 2. Crear una carpeta con vuestro nombre y apellidos
-
-Alumnos/PedroNieto/
-
-### 3. Crear una carpeta por cada trabajo o proyecto
-
-Alumnos/PedroNieto/Trabajo1/
-
-### 4. Subir los archivos correspondientes a cada trabajo o proyecto
-
-En cada commit, vuestro código será evaluado automáticamente por Github Actions. Si el código no pasa las pruebas, el commit será rechazado y no se podrá realizar la entrega. Si el código pasa las pruebas, el commit será aceptado y se podrá realizar la entrega.
+Passionate Full-Stack Developer focused on building scalable, robust and high-performance applications for modern businesses. With experience in technologies such as NestJS, TypeScript and PrismaORM, and a preference for backend development, I look forward to contributing to innovative projects at cutting-edge companies.
 
 
-### 5. Crear un Pull Request para que el profesor pueda revisar vuestros trabajos
+- Check out my [website](https://devtree-pedro-nieto.vercel.app/) to access my links.
+- Check out my [VSCode Configuration](https://gist.github.com/Pedroo-Nietoo/a20bf9b1ee512aeb97421f3bd5b7eb29) for development optimization.
+- In my [LinkedIn](https://www.linkedin.com/in/pedroo-nietoo/), I share my achievements and certificates.
 
-Para crear un Pull Request, deberéis hacer click en el botón Pull Request que aparece en la parte superior derecha de la página. Esto creará una petición para que el profesor revise vuestros trabajos. En el título del Pull Request deberéis indicar vuestro nombre y apellidos para que sea revisado por el profesor correspondiente.
+</br>
 
-Para realizar la entrega de los trabajos y proyectos, deberéis crear una pull request en estado de Draft hasta que esté disponible para ser entregada. Una vez esté lista para ser entregada, deberéis cambiar el estado de la pull request a Ready for review. El profesor revisará vuestros trabajos y os indicará si es necesario realizar alguna corrección mediante conversaciones que tendréis que resolver para ser aceptada.
+🌱 Constantly learning new technologies and best practices to stay at the forefront of software development.  
+🎯 Focused on creating efficient, secure, and scalable solutions for real-world problems.
 
-## Indice de Contenidos del Máster
+</br>
+ 
+## 📦 Toolbox
 
-Este máster está divido en tres grandes módulos, que permitirán al alumno adquirir los conocimientos en el ecosistema de Datos de una manera incremental desde lo más básico a lo menos básico ;-).
+**Frontend Development:** `React.js` `React Native` `Next.js` `Angular.js` `Bootstrap` `Tailwind` `Sass`
 
-### Modulo 0 - Introducción 
-Durante este bloque, los alumnos se centrarán en adquirir conocimientos básicos sobre datos, programación y despliegue de la tecnología necesaria para poder ejecutar el trabajo futuro. Descubrirán los controles de Linux, notebooks, aprenderán a trabajar en el lenguaje de programación Python junto con servicios de contenedores como Docker.
+**Backend Development:** `TypeScript` `Express` `Fastify` `Node.js` `Nest.js` `Java` `Spring`
 
-En resumen, este bloque les proporcionará una base sólida que les permitirá avanzar con naturalidad en su aprendizaje.
+**Database and ORM:** `PostgreSQL` `MySQL` `SQLite` `PrismaORM` `TypeORM`
 
-- Python
+**Testing:** `Jest` `Cypress` `JUnit`
 
-- Linux
+**Cloud Services:** `AWS - EC2, S3, CloudWatch, IAM` `Vercel`
 
-- Git
+**Others:** `Swagger` `Compodoc` `Storybook` `Bash` `Scrum`
+ 
+</br>
 
-- Containers (Docker)
-
-- Notebooks
-
-### Modulo 1 - Tratamiento del Dato
-Durante este bloque, los alumnos se sumergirán en el perfil del Data Engineer: el profesional enfocado en el diseño, desarrollo y mantenimiento de los sistemas de procesamiento de datos dentro de un proyecto big data. Su función es dejar disponible el conjunto de datos validos con el que es necesario obtener, depurar y preparar los datos para su explotación.
-
-Para ello, descubrirán el origen de los datos y su tipología, el manejo de grandes volúmenes de datos con SQL y NoSQL, creación de dashborads con su posterior creación en Tableau, el uso de tecnologías como Flask API’s, Kafka, Spark Streaming, Cloud, IAC Terraform y Localización, además de comprender el fujo de datos, su calidad y el gobierno de datos.
-
-En resumen, este bloque les dará una base sólida para ocupar puestos de Data Engineer que se asegure de definir e implementar un flujo de datos desde su origen hasta su exploración de una forma controlada y automatizada.
-
-- SQL
-- NoSQL
-- Tableau
-- Flask API’s
-- Kafka
-- Spark Streaming
-- Cloud
-- IAC Terraform
-
-
-
-
-### Estado de las entregas
-Entregas Grupo MIA
-<table>
-<tr><th>Alumno</th>
-<th>DEMO</th>
-<th>DOCKER</th>
-<th>APIS</th>
-<th>PYTHON</th>
-<th>DBT</th>
-<th>PYSPARK</th>
-<th>KAFKA</th>
-<th>LINUX</th>
-<th>SQL</th>
-</tr>
-<tr>
-</table>
-
-Last Checked: 2024-10-02 11:32:08
-
-
-Entregas Grupo MDA A
-<table>
-<tr><th>Alumno</th>
-<th>DEMO</th>
-<th>DOCKER</th>
-<th>APIS</th>
-<th>PYTHON</th>
-<th>DBT</th>
-<th>PYSPARK</th>
-<th>KAFKA</th>
-<th>LINUX</th>
-<th>SQL</th>
-</tr>
-<tr>
-<tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAA/PEDRO_NIETO'>PEDRO_NIETO</a></td>
-<td>✅</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>❌</td>
-<td>✅</td>
-</tr>
-</table>
-
-Last Checked: 2024-10-02 11:32:08
-
-Entregas Grupo MDA B
-<table>
-<tr><th>Alumno</th>
-<th>DEMO</th>
-<th>DOCKER</th>
-<th>APIS</th>
-<th>PYTHON</th>
-<th>DBT</th>
-<th>PYSPARK</th>
-<th>KAFKA</th>
-<th>LINUX</th>
-<th>SQL</th>
-</tr>
-<tr>
-</table>
-
-Last Checked: 2024-10-02 11:32:08
+## 📫 Contact
+For a quick response, DM me on [LinkedIn](https://www.linkedin.com/in/pedroo-nietoo/) or send me an [e-mail](mailto:pedronieto.2005@gmail.com).
 
