@@ -480,5 +480,9 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
+<<<<<<< Updated upstream
 Last Checked: 2024-10-07 14:39:48
+=======
+Last Checked: 1995-10-07 14:32:55
+>>>>>>> Stashed changes
 
