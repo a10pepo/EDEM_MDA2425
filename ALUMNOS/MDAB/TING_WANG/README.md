@@ -10,7 +10,7 @@
 [![Instagram Badge](https://img.shields.io/badge/-Instagram-e4405f?style=flat-square&logo=Instagram&logoColor=white&link=https://www.instagram.com/_elenitka/)](https://www.instagram.com/_elenitka/)
 
 ## About me
-Studied Economics, specialised in sustainability and climate change. Work as a EU-funded Project Manager, and now I'm here <img src = "https://media.tenor.com/nPJiULZnc-8AAAAi/github-sticker.gif" width = 40px>
+Studied Economics, specialised in sustainability and climate change. Working as a EU-funded Project Manager, and now I'm here <img src = "https://media.tenor.com/nPJiULZnc-8AAAAi/github-sticker.gif" width = 40px>
 <br>
 
 ## Languages & Tools I'm currently learning <img src = "https://i.pinimg.com/originals/3b/4c/b4/3b4cb4b20017c7036583d70b9a17ff95.gif" width = 50px>
