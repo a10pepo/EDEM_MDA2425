@@ -10,13 +10,15 @@
 [![Instagram Badge](https://img.shields.io/badge/-Instagram-e4405f?style=flat-square&logo=Instagram&logoColor=white&link=https://www.instagram.com/_elenitka/)](https://www.instagram.com/_elenitka/)
 
 ## About me
-
+Studied Economics, specialised in sustainability and climate change. Work as a EU-funded Project Manager, and now I'm here <img src = "https://media.tenor.com/nPJiULZnc-8AAAAi/github-sticker.gif" width = 40px>
 <br>
 
-## Languages & Tools (learning)
- 
-
+## Languages & Tools I'm currently learning <img src = "https://i.pinimg.com/originals/3b/4c/b4/3b4cb4b20017c7036583d70b9a17ff95.gif" width = 50px>
+![python](https://img.shields.io/static/v1?logo=python&label=&message=python&color=36465D&logoColor=AAA&style=flat-square&link=)
+![docker](https://img.shields.io/static/v1?logo=docker&label=&message=docker&color=36465D&logoColor=AAA&style=flat-square)
+![git](https://img.shields.io/static/v1?logo=git&label=&message=git&color=36465D&logoColor=AAA&style=flat-square)
 <br>
+
 
  ##  My GitHub Stats <img src = "https://i.pinimg.com/originals/65/c4/f4/65c4f452571be1261e9c623f7da488ac.gif" width = 35px>
  <p align="center" >   
