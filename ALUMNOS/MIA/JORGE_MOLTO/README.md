@@ -48,4 +48,4 @@ I’m always looking for new challenges and opportunities. If you have an exciti
 
 ---
 
-[More details on my personal website](https://notanproducti.com)
+[More details on my personal website](https://notanproductivo.com)
