@@ -22,7 +22,7 @@ I'm Marton, a 20 years old web developer from Hungary.
 - 💽 MySQL, SQL, Mongo
 + a lot more :D
 
-## Contact
+## Contact 😎👌🔥🤑
 - [marton.lederer.hu](https://marton.lederer.hu)
 - [@martonlederer](https://twitter.com/martonlederer) on Twitter
 - [@martonlederer](./) on Discord
