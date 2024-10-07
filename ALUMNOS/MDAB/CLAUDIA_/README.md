@@ -9,7 +9,7 @@ I’m 25 years old and I’m from Valencia. After exploring the world of audiovi
 <p align="center">
 This world is huge and can sometimes be a bit overwhelming, but I’m excited to discover it little by little 🌍
 <p align="center">
-Additionally, I love music, video games, and binge-watching series/movies 🎶🎮🍿
+Additionally, I love pop music, video games, and binge-watching series/movies 🎶🎮🍿
 
 <br>
 
