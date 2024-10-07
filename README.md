@@ -158,6 +158,17 @@ Entregas Grupo MIA
 <td>❌</td>
 </tr>
 <tr>
+<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/JOSE_BARBERO'>JOSE_BARBERO</a></td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/Jairo_Navarro'>JAIRO_NAVARRO</a></td>
 <td>❌</td>
 <td>❌</td>
@@ -190,9 +201,20 @@ Entregas Grupo MIA
 <td>❌</td>
 <td>❌</td>
 </tr>
+<tr>
+<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/PAU_JORQUES'>PAU_JORQUES</a></td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
 </table>
 
-Last Checked: 2024-10-06 14:00:56
+Last Checked: 2024-10-07 17:06:14
 
 
 Entregas Grupo MDA A
@@ -331,7 +353,7 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2024-10-06 14:00:56
+Last Checked: 2024-10-07 17:06:14
 
 Entregas Grupo MDA B
 <table>
@@ -346,6 +368,17 @@ Entregas Grupo MDA B
 <th>PYTHON</th>
 </tr>
 <tr>
+<tr>
+<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/ALEJANDRO_BOSCH'>ALEJANDRO_BOSCH</a></td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
 <tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/ANGEL_MARTINEZ'>ANGEL_MARTINEZ</a></td>
 <td>❌</td>
@@ -391,6 +424,17 @@ Entregas Grupo MDA B
 <td>❌</td>
 </tr>
 <tr>
+<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/JOAQUIN_ZAPATA'>JOAQUIN_ZAPATA</a></td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/JOEL_SEGUI'>JOEL_SEGUI</a></td>
 <td>❌</td>
 <td>❌</td>
@@ -399,6 +443,17 @@ Entregas Grupo MDA B
 <td>✅</td>
 <td>❌</td>
 <td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/LARA_RUBIO'>LARA_RUBIO</a></td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
 <td>❌</td>
 </tr>
 <tr>
@@ -436,5 +491,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2024-10-06 14:00:56
+Last Checked: 2024-10-07 17:06:14
 
