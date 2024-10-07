@@ -8,4 +8,6 @@ AI student at  <a href="https://edem.eu/" >Edem</a> . </em>
 Check my 
 <a href="https://www.linkedin.com/in/jairo-navarro-9b65b1170?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" >Linkedin</a> . </em>
 
+LÍNEA AGREGADA POR EJERCICIO
+
 
