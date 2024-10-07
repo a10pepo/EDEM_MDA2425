@@ -70,14 +70,15 @@ En resumen, este bloque les dará una base sólida para ocupar puestos de Data E
 Entregas Grupo MIA
 <table>
 <tr><th>Alumno</th>
-<th>KAFKA</th>
-<th>PYSPARK</th>
-<th>DOCKER</th>
-<th>SQL</th>
 <th>DEMO</th>
+<th>DOCKER</th>
 <th>APIS</th>
-<th>LINUX</th>
 <th>PYTHON</th>
+<th>DBT</th>
+<th>PYSPARK</th>
+<th>KAFKA</th>
+<th>LINUX</th>
+<th>SQL</th>
 </tr>
 <tr>
 <tr>
@@ -275,14 +276,15 @@ Last Checked: 2024-10-07 17:35:59
 Entregas Grupo MDA A
 <table>
 <tr><th>Alumno</th>
-<th>KAFKA</th>
-<th>PYSPARK</th>
-<th>DOCKER</th>
-<th>SQL</th>
 <th>DEMO</th>
+<th>DOCKER</th>
 <th>APIS</th>
-<th>LINUX</th>
 <th>PYTHON</th>
+<th>DBT</th>
+<th>PYSPARK</th>
+<th>KAFKA</th>
+<th>LINUX</th>
+<th>SQL</th>
 </tr>
 <tr>
 <tr>
@@ -389,11 +391,12 @@ Entregas Grupo MDA A
 <td>✅</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
 <td>✅</td>
 <td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
+<td>✅</td>
 </tr>
 <tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAA/VICENTE_MARTI'>VICENTE_MARTI</a></td>
@@ -413,14 +416,15 @@ Last Checked: 2024-10-07 17:35:59
 Entregas Grupo MDA B
 <table>
 <tr><th>Alumno</th>
-<th>KAFKA</th>
-<th>PYSPARK</th>
-<th>DOCKER</th>
-<th>SQL</th>
 <th>DEMO</th>
+<th>DOCKER</th>
 <th>APIS</th>
-<th>LINUX</th>
 <th>PYTHON</th>
+<th>DBT</th>
+<th>PYSPARK</th>
+<th>KAFKA</th>
+<th>LINUX</th>
+<th>SQL</th>
 </tr>
 <tr>
 <tr>
