@@ -2,7 +2,7 @@
 Common Repository for 2024-2025 Data Master
 
 <div align=center><img src="https://edem.eu/wp-content/uploads/2019/11/peces_edem.png" /></div>
-
+hola buenas
 El objetivo de este repositorio es servir de guía y de punto de comunicación entre alumnos y profesorado. Los alumnos deberán seguir las instrucciones que se indican en este documento para realizar las entregas de los trabajos y proyectos que se vayan solicitando a lo largo del curso.
 
 ## Instrucciones para la entrega de trabajos y proyectos
