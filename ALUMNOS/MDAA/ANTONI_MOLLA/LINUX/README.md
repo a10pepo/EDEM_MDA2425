@@ -17,7 +17,7 @@ Ejercicio de comandos en la consola de linux.
     
   3.Listar todos los archivos del directorio etc que empiecen por t 
     
-    
+    ls -l /etc/ | grep * t
   
   4.Listar todos los archivos del directorio dev que empiecen por tty.
     
