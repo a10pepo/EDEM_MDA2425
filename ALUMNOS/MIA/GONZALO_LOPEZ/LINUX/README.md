@@ -7,7 +7,7 @@ Una vez completado, debes subirlo a vuestro repositorio remoto de GitHub y reali
 Ejercicio de comandos en la consola de linux.
 
   1.Listar todos los archivos del directorio bin. 
-  	Ls bin
+  	Ls  bin
     
      
     
