@@ -9,6 +9,7 @@ print("[X] Salir")
 aux: str  = input()
 
 while(aux != "X" and aux != "1"):
+    print("Valor introducido incorrecto.")
     print("[1] Calcular una inversión")
     print("[X] Salir")
     aux: str = input()
@@ -45,6 +46,7 @@ while(aux != "X"):
         print("[X] Salir")
         aux: str = input()        
     else:
+        print("Valor introducido incorrecto.")
         print("[1] Calcular una nueva inversión")
         print("[X] Salir")
         aux: str = input()

@@ -41,20 +41,13 @@ class ListaAlumnos:
         telefono: str = input("Telefono: ")
         email: str = input("Email: ")
         while(True):
-            aux: str = input("¿Aprobado? [Y/n]: ")
-            if (aux.upper == "Y"):
+            aux: str = input("¿Aprobado? [Y/n]: ").upper()
+            if (aux == "Y"):
                 aprobado: bool = True
                 break
-            elif (aux.upper == "N"):
+            elif (aux == "N"):
                 aprobado: bool = False
                 break
-        aux: str = None
-        while (aux.upper != "Y" and aux.upper != "N"):
-            aux: str = input("¿Aprobado? [Y/n]: ")
-        if (aux.upper == "Y"):
-            aprobado: bool = True
-        else:
-            aprobado: bool = False
         self.lista_alumnos.append(Alumno(nif, nombre, apellidos, telefono, email, aprobado))
 
     def buscar_alumno_nif(self, nif) -> Alumno:
@@ -84,47 +77,50 @@ class ListaAlumnos:
         alumno: Alumno = self.buscar_alumno_nif(nif)
         if (alumno != None):
 
-            cambio: str = input(f"¿Quieres modificar el nombre del alumno con NIF: {nif}? [Y/n]:  ")
-            while(cambio.upper != "Y" and cambio.upper != "N"):
+            cambio: str = input(f"¿Quieres modificar el nombre del alumno con NIF: {nif}? [Y/n]:  ").upper()
+            while(cambio != "Y" and cambio != "N"):
                 cambio: str = input(f'''No has introducido un valor valido.
-                                    ¿Quieres modificar el nombre del alumno con NIF: {nif}? [Y/n]:  ''')
-            if (cambio.upper == "Y"):
+                                    ¿Quieres modificar el nombre del alumno con NIF: {nif}? [Y/n]:  ''').upper()
+            if (cambio == "Y"):
                 aux: str = input("¿Cual es el nombre nuevo?: ")
                 alumno.nombre = aux
             
-            cambio: str = input(f"¿Quieres modificar los apellidos del alumno con NIF: {nif}? [Y/n]:  ")
-            while(cambio.upper != "Y" and cambio.upper != "N"):
+            cambio: str = input(f"¿Quieres modificar los apellidos del alumno con NIF: {nif}? [Y/n]:  ").upper()
+            while(cambio != "Y" and cambio != "N"):
                 cambio: str = input(f'''No has introducido un valor valido.
-                                    ¿Quieres modificar los apellidos del alumno con NIF: {nif}? [Y/n]:  ''')
-            if (cambio.upper == "Y"):
+                                    ¿Quieres modificar los apellidos del alumno con NIF: {nif}? [Y/n]:  ''').upper()
+            if (cambio == "Y"):
                 aux: str = input("¿Cuales son los apellidos nuevos?: ")
                 alumno.apellidos = aux
 
-            cambio: str = input(f"¿Quieres modificar el telefono del alumno con NIF: {nif}? [Y/n]:  ")
-            while(cambio.upper != "Y" and cambio.upper != "N"):
+            cambio: str = input(f"¿Quieres modificar el telefono del alumno con NIF: {nif}? [Y/n]:  ").upper()
+            while(cambio != "Y" and cambio != "N"):
                 cambio: str = input(f'''No has introducido un valor valido.
-                                    ¿Quieres modificar el telefono del alumno con NIF: {nif}? [Y/n]:  ''')
-            if (cambio.upper == "Y"):
+                                    ¿Quieres modificar el telefono del alumno con NIF: {nif}? [Y/n]:  ''').upper()
+            if (cambio == "Y"):
                 aux: str = input("¿Cual es el telefono nuevo?: ")
                 alumno.telefono = aux
             
-            cambio: str = input(f"¿Quieres modificar el email del alumno con NIF: {nif}? [Y/n]:  ")
-            while(cambio.upper != "Y" and cambio.upper != "N"):
+            cambio: str = input(f"¿Quieres modificar el email del alumno con NIF: {nif}? [Y/n]:  ").upper()
+            while(cambio != "Y" and cambio != "N"):
                 cambio: str = input(f'''No has introducido un valor valido.
-                                    ¿Quieres modificar el email del alumno con NIF: {nif}? [Y/n]:  ''')
-            if (cambio.upper == "Y"):
+                                    ¿Quieres modificar el email del alumno con NIF: {nif}? [Y/n]:  ''').upper()
+            if (cambio == "Y"):
                 aux: str = input("¿Cual es el email nuevo?: ")
                 alumno.email = aux
 
-            cambio: str = input(f"¿Quieres modificar el aprobado del alumno con NIF: {nif}? [Y/n]:  ")
-            while(cambio.upper != "Y" and cambio.upper != "N"):
+            cambio: str = input(f"¿Quieres modificar el aprobado del alumno con NIF: {nif}? [Y/n]:  ").upper()
+            while(cambio != "Y" and cambio != "N"):
                 cambio: str = input(f'''No has introducido un valor valido.
-                                    ¿Quieres modificar el aprobado del alumno con NIF: {nif}? [Y/n]:  ''')
+                                    ¿Quieres modificar el aprobado del alumno con NIF: {nif}? [Y/n]:  ''').upper()
             if (cambio.upper == "Y"):
-                aux: str = input("¿Ha aprobado? [Y/n]: ")
-                if (aux.upper == "Y"):
+                aux: str = input("¿Ha aprobado? [Y/n]: ").upper()
+                while (aux != "Y" and aux != "N"):
+                    aux: str = input(f'''No has introducido un valor valido.
+                                    ¿Ha aprobado el alumno con NIF: {nif}? [Y/n]:  ''').upper()
+                if (aux == "Y"):
                     alumno.aprobado = True
-                if(aux.upper == "N"):
+                else:
                     alumno.aprobado = False
 
         else:

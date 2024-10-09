@@ -7,3 +7,4 @@ print("¿Cuántos años vas a mantener la inversión?")
 años: int = input()
 resultado: int = cantidad * (1 + interes)**años
 print(f"En {años} años habrás recibido {resultado}€ de interés")
+

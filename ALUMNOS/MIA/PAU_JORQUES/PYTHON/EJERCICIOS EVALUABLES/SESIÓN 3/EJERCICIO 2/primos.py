@@ -13,16 +13,4 @@ def mostrar_primos(inf, sup):
 
 
 if __name__=="__main__":
-    print("Dime un intervalo de valores.")
-
-    num1: int = int(input("Num 1: "))
-    num2: int = int(input("Num 2: "))
-
-    if(num1>num2):
-        sup: int = num1
-        inf: int = num2
-    else:
-        sup: int = num2
-        inf: int = num1
-    
-    mostrar_primos(inf,sup)
+    mostrar_primos(1,100)
