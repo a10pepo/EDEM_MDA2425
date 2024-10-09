@@ -82,13 +82,13 @@ Ejercicio de comandos en la consola de linux.
     
   18.Copiar el archivo /etc/motd a un archivo llamado mensaje de vuestro directorio PRUEBA.
     
-    cp /etc/mtab /tmp/PRUEBA/mensaje
+    cp /etc/mtab /tmp/PRUEBA/mensaje (No existe el motd en mi pc)
 
   19.Copiar mensaje en dir1, dir2 y dir3.
     
     cp tmp/PRUEBA/mensaje /tmp/PRUEBA/dir1/ 
-    cp tmp/PRUEBA/mensaje/tmp/PRUEBA/dir2/ 
-    cp tmp/PRUEBA/mensaje/tmp/PRUEBA/dir3/
+    cp tmp/PRUEBA/mensaje /tmp/PRUEBA/dir2/ 
+    cp tmp/PRUEBA/mensaje /tmp/PRUEBA/dir3/
     
   20.Comprobar el ejercicio anterior mediante un solo comando.
     
