@@ -70,14 +70,14 @@ En resumen, este bloque les dará una base sólida para ocupar puestos de Data E
 Entregas Grupo MIA
 <table>
 <tr><th>Alumno</th>
-<th>KAFKA</th>
 <th>PYSPARK</th>
-<th>DOCKER</th>
-<th>SQL</th>
-<th>DEMO</th>
-<th>APIS</th>
-<th>LINUX</th>
 <th>PYTHON</th>
+<th>DOCKER</th>
+<th>APIS</th>
+<th>SQL</th>
+<th>KAFKA</th>
+<th>DEMO</th>
+<th>LINUX</th>
 </tr>
 <tr>
 <tr>
@@ -97,9 +97,9 @@ Entregas Grupo MIA
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
+<td>❌</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
 <td>❌</td>
 </tr>
 <tr>
@@ -108,9 +108,9 @@ Entregas Grupo MIA
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
+<td>❌</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
 <td>❌</td>
 </tr>
 <tr>
@@ -130,9 +130,9 @@ Entregas Grupo MIA
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
+<td>❌</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
 <td>❌</td>
 </tr>
 <tr>
@@ -141,9 +141,9 @@ Entregas Grupo MIA
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
+<td>❌</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
 <td>❌</td>
 </tr>
 <tr>
@@ -152,13 +152,13 @@ Entregas Grupo MIA
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
+<td>❌</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
 <td>❌</td>
 </tr>
 <tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/IGNACIO MARTINEZ'>IGNACIO MARTINEZ</a></td>
+<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/IGNACIO_MARTINEZ'>IGNACIO_MARTINEZ</a></td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
@@ -174,9 +174,9 @@ Entregas Grupo MIA
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
+<td>❌</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
 <td>❌</td>
 </tr>
 <tr>
@@ -185,9 +185,9 @@ Entregas Grupo MIA
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
+<td>❌</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
 <td>❌</td>
 </tr>
 <tr>
@@ -207,9 +207,9 @@ Entregas Grupo MIA
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
+<td>❌</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
 <td>❌</td>
 </tr>
 <tr>
@@ -229,9 +229,9 @@ Entregas Grupo MIA
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
+<td>❌</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
 <td>❌</td>
 </tr>
 <tr>
@@ -251,9 +251,9 @@ Entregas Grupo MIA
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
+<td>❌</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
 <td>❌</td>
 </tr>
 <tr>
@@ -262,9 +262,9 @@ Entregas Grupo MIA
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
+<td>❌</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
 <td>❌</td>
 </tr>
 <tr>
@@ -280,20 +280,20 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2024-10-07 17:37:14
+Last Checked: 2024-10-10 13:28:39
 
 
 Entregas Grupo MDA A
 <table>
 <tr><th>Alumno</th>
-<th>KAFKA</th>
 <th>PYSPARK</th>
-<th>DOCKER</th>
-<th>SQL</th>
-<th>DEMO</th>
-<th>APIS</th>
-<th>LINUX</th>
 <th>PYTHON</th>
+<th>DOCKER</th>
+<th>APIS</th>
+<th>SQL</th>
+<th>KAFKA</th>
+<th>DEMO</th>
+<th>LINUX</th>
 </tr>
 <tr>
 <tr>
@@ -302,9 +302,9 @@ Entregas Grupo MDA A
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
+<td>❌</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
 <td>❌</td>
 </tr>
 <tr>
@@ -324,9 +324,9 @@ Entregas Grupo MDA A
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
+<td>❌</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
 <td>❌</td>
 </tr>
 <tr>
@@ -335,9 +335,9 @@ Entregas Grupo MDA A
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
+<td>❌</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
 <td>❌</td>
 </tr>
 <tr>
@@ -346,9 +346,9 @@ Entregas Grupo MDA A
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
+<td>❌</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
 <td>❌</td>
 </tr>
 <tr>
@@ -357,9 +357,9 @@ Entregas Grupo MDA A
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
+<td>❌</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
 <td>❌</td>
 </tr>
 <tr>
@@ -368,9 +368,9 @@ Entregas Grupo MDA A
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
+<td>❌</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
 <td>❌</td>
 </tr>
 <tr>
@@ -379,9 +379,9 @@ Entregas Grupo MDA A
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
+<td>❌</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
 <td>❌</td>
 </tr>
 <tr>
@@ -390,19 +390,19 @@ Entregas Grupo MDA A
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
+<td>❌</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
 <td>❌</td>
 </tr>
 <tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAA/PEDRO_NIETO'>PEDRO_NIETO</a></td>
-<td>✅</td>
+<td>❌</td>
+<td>❌</td>
 <td>❌</td>
 <td>❌</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
+<td>✅</td>
 <td>❌</td>
 <td>❌</td>
 </tr>
@@ -412,26 +412,26 @@ Entregas Grupo MDA A
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
+<td>❌</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
 <td>❌</td>
 </tr>
 </table>
 
-Last Checked: 2024-10-07 17:37:14
+Last Checked: 2024-10-10 13:28:39
 
 Entregas Grupo MDA B
 <table>
 <tr><th>Alumno</th>
-<th>KAFKA</th>
 <th>PYSPARK</th>
-<th>DOCKER</th>
-<th>SQL</th>
-<th>DEMO</th>
-<th>APIS</th>
-<th>LINUX</th>
 <th>PYTHON</th>
+<th>DOCKER</th>
+<th>APIS</th>
+<th>SQL</th>
+<th>KAFKA</th>
+<th>DEMO</th>
+<th>LINUX</th>
 </tr>
 <tr>
 <tr>
@@ -443,7 +443,7 @@ Entregas Grupo MDA B
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
-<td>❌</td>
+<td>✅</td>
 </tr>
 <tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/ANGEL_MARTINEZ'>ANGEL_MARTINEZ</a></td>
@@ -462,9 +462,9 @@ Entregas Grupo MDA B
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
+<td>❌</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
 <td>❌</td>
 </tr>
 <tr>
@@ -506,10 +506,10 @@ Entregas Grupo MDA B
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
-<td>✅</td>
+<td>❌</td>
 <td>❌</td>
 <td>✅</td>
-<td>❌</td>
+<td>✅</td>
 </tr>
 <tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/JUAN_MONTOLIU'>JUAN_MONTOLIU</a></td>
@@ -517,9 +517,9 @@ Entregas Grupo MDA B
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
+<td>❌</td>
 <td>✅</td>
-<td>❌</td>
-<td>❌</td>
 <td>❌</td>
 </tr>
 <tr>
@@ -563,7 +563,7 @@ Entregas Grupo MDA B
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
-<td>❌</td>
+<td>✅</td>
 <td>❌</td>
 </tr>
 <tr>
@@ -579,5 +579,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2024-10-07 17:37:14
+Last Checked: 2024-10-10 13:28:39
 
