@@ -56,7 +56,7 @@ Ejercicio de comandos en la consola de linux.
 
   13.Con un solo comando posicionarse en el directorio $HOME.
     
-  root@76e0c2c4ed1d:/# cd /home  
+  root@76e0c2c4ed1d:/tmp# cd $HOME  
  
   14.Verificar que se está en él.
     
@@ -68,7 +68,7 @@ Ejercicio de comandos en la consola de linux.
 
   16.Borrar todos los archivos y directorios visibles de vuestro directorio PRUEBA.
     
-  root@76e0c2c4ed1d:/tmp/PRUEBA# rm -rR  
+  root@76e0c2c4ed1d:/tmp# rm -r PRUEBA  
 
   17.Crear los directorios dir1, dir2 y dir3 en el directorio PRUEBA. Dentro de dir1 crear el directorio dir11. Dentro del directorio 
   dir3 crear el directorio dir31. Dentro del directorio dir31, crear los directorios dir311 y dir312.
