@@ -54,7 +54,7 @@ Ejercicio de comandos en la consola de linux.
 
   12.Mostrar el día y la hora actual.
     
-    
+    date
 
   13.Con un solo comando posicionarse en el directorio $HOME.
     
@@ -62,7 +62,7 @@ Ejercicio de comandos en la consola de linux.
  
   14.Verificar que se está en él.
     
-    
+   
 
   15.Listar todos los ficheros del directorio HOME mostrando sus permisos.
     
