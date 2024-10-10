@@ -1,9 +1,11 @@
-> 👨🏻‍💻 Web Front-end Developer
+v> 👨🏻‍💻 Web Front-end Developer
 
-### Studies
+### Jaime
+Hi, my name is Jaime Olano, currently studying a master in Artificial Inteligence at EDEM, in Valencia, where I live
 
-- Graduated in International Business from the University of Valencia
-- Bachelor in Business Administration from the University of North Florida
+
+- 🛠 Lang & Framework: Vue/React, Javascript
+- ⛏ Interest: Svelte, Typescript
 
 ### Latest posts from 📝 [xiaozhu.dev](https://xiaozhu.dev)
 
@@ -33,5 +35,3 @@
 ![build](https://github.com/mopig/mopig/workflows/build/badge.svg)
 ![GitHub last commit](https://img.shields.io/github/last-commit/mopig/mopig)
 ![pv](https://pageview.vercel.app/?github_user=mopig)
-
-LARA RUBIO
