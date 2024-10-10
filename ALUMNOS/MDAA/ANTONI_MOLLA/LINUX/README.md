@@ -33,19 +33,20 @@ Ejercicio de comandos en la consola de linux.
 
   7.Listar todos los archivos, incluidos los ocultos, del directorio raíz.
     
-    
+    ls -al /
     
   8.Listar todos los archivos del directorio etc que no empiecen por t.
     
-    
+    ls -l /etc/ | grep-v ^t
 
   9.Listar todos los archivos del directorio usr y sus subdirectorios.
     
-    
+ find /usr/ -ls
 
   10.Cambiarse al directorio tmp, crear directorio PRUEBA.
     
-    
+    cd /tmp/
+    mkdir Prueba
 
   11.Verificar que el directorio actual ha cambiado.
     
