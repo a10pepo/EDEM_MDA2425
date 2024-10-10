@@ -32,7 +32,7 @@ Ejercicio de comandos en la consola de linux.
 
   7.Listar todos los archivos, incluidos los ocultos, del directorio raíz.
     
-    ls -al
+    ls -al /
     
   8.Listar todos los archivos del directorio etc que no empiecen por t.
     
@@ -95,8 +95,6 @@ Ejercicio de comandos en la consola de linux.
     
   20.Comprobar el ejercicio anterior mediante un solo comando.
     
-    chmod 777 ./script.sh
-  ./script.sh
-
+    ls /tmp/PRUEBA/*
     
    
