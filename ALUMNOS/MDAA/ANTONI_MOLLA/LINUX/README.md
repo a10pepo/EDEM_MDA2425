@@ -66,7 +66,7 @@ Ejercicio de comandos en la consola de linux.
 
   15.Listar todos los ficheros del directorio HOME mostrando sus permisos.
     
-    
+
 
   16.Borrar todos los archivos y directorios visibles de vuestro directorio PRUEBA.
     
@@ -75,7 +75,12 @@ Ejercicio de comandos en la consola de linux.
   17.Crear los directorios dir1, dir2 y dir3 en el directorio PRUEBA. Dentro de dir1 crear el directorio dir11. Dentro del directorio 
   dir3 crear el directorio dir31. Dentro del directorio dir31, crear los directorios dir311 y dir312.
     
-    
+    mkdir /tmp/Prueba/dir1
+    mkdir /tmp/Prueba/dir2
+    mkdir /tmp/Prueba/dir3
+    mkdir /tmp/Prueba/dir1/dir11
+    mkdir /tmp/Prueba/dir3/dir31/dir311
+    mkdir /tmp/Prueba/dir3/dir31/dir312
     
   18.Copiar el archivo /etc/motd a un archivo llamado mensaje de vuestro directorio PRUEBA.
     
