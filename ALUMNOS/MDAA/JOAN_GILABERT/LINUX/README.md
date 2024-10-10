@@ -38,7 +38,7 @@ Ejercicio de comandos en la consola de linux.
 
   7.Listar todos los archivos, incluidos los ocultos, del directorio raíz.
     
-    ls -la /root
+    ls -la /
     
 
     
