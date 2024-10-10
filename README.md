@@ -169,6 +169,17 @@ Entregas Grupo MIA
 <td>❌</td>
 </tr>
 <tr>
+<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/JAIME_OLANO'>JAIME_OLANO</a></td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/JAIRO_NAVARRO'>JAIRO_NAVARRO</a></td>
 <td>❌</td>
 <td>❌</td>
@@ -280,7 +291,7 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2024-10-10 13:42:30
+Last Checked: 2024-10-10 13:45:25
 
 
 Entregas Grupo MDA A
@@ -419,7 +430,7 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2024-10-10 13:42:30
+Last Checked: 2024-10-10 13:45:25
 
 Entregas Grupo MDA B
 <table>
@@ -579,5 +590,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2024-10-10 13:42:30
+Last Checked: 2024-10-10 13:45:25
 
