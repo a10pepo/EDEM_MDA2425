@@ -21,15 +21,15 @@ Ejercicio de comandos en la consola de linux.
   
   4.Listar todos los archivos del directorio dev que empiecen por tty.
     
-    
+    ls -l /dev/tty*
     
   5.Listar todos los archivos del directorio dev que empiecen por tty y acaben en 3.
     
-    
+    ls -l /dev/tty*3
     
   6.Listar todos los archivos del directorio dev que empiecen por t y acaben en C1.
     
-    
+    ls -l /dev/t*C1
 
   7.Listar todos los archivos, incluidos los ocultos, del directorio raíz.
     
