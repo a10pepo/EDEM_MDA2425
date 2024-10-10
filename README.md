@@ -265,7 +265,7 @@ Entregas Grupo MIA
 <td>❌</td>
 <td>❌</td>
 <td>✅</td>
-<td>❌</td>
+<td>✅</td>
 </tr>
 <tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/PEPE_BARBERO'>PEPE_BARBERO</a></td>
@@ -280,7 +280,7 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2024-10-10 13:35:29
+Last Checked: 2024-10-10 13:38:09
 
 
 Entregas Grupo MDA A
@@ -419,7 +419,7 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2024-10-10 13:35:29
+Last Checked: 2024-10-10 13:38:09
 
 Entregas Grupo MDA B
 <table>
@@ -579,5 +579,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2024-10-10 13:35:29
+Last Checked: 2024-10-10 13:38:09
 
