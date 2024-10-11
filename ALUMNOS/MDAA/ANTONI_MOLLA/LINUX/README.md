@@ -84,7 +84,7 @@ Ejercicio de comandos en la consola de linux.
     
   18.Copiar el archivo /etc/motd a un archivo llamado mensaje de vuestro directorio PRUEBA.
     
-    
+    cp /etc/motd >> Prueba/mensaje de vuestro directorio.txt
 
   19.Copiar mensaje en dir1, dir2 y dir3.
     
