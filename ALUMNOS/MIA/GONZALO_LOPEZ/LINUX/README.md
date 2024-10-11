@@ -7,7 +7,7 @@ Una vez completado, debes subirlo a vuestro repositorio remoto de GitHub y reali
 Ejercicio de comandos en la consola de linux.
 
   1.Listar todos los archivos del directorio bin. 
-  	Ls  bin
+  	ls  bin
     
      
     
@@ -22,35 +22,35 @@ Ejercicio de comandos en la consola de linux.
     
   
   4.Listar todos los archivos del directorio dev que empiecen por tty.
-  	Ls /dev/tty*
+  	ls /dev/tty*
     
     
     
   5.Listar todos los archivos del directorio dev que empiecen por tty y acaben en 3.
-  	Ls /dev/tty*3
+  	ls /dev/tty*3
     
     
     
   6.Listar todos los archivos del directorio dev que empiecen por t y acaben en C1.
-  	Ls /dev/t*c1
+  	ls /dev/t*c1
     
     
 
   7.Listar todos los archivos, incluidos los ocultos, del directorio raíz.
-    	Ls -la    ( -a : mostrar archivos ocultos)
+    	ls -la    ( -a : mostrar archivos ocultos)
     
     
   8.Listar todos los archivos del directorio etc que no empiecen por t.
-  	Ls -l /etc | grep -v  ‘^T’    ;     ls /etc/[^t]*
+  	ls -l /etc | grep -v  ‘^T’    ;     ls /etc/[^t]*
     
     
 
   9.Listar todos los archivos del directorio usr y sus subdirectorios.
-    	Ls -R /usr
+    	ls -R /usr
     
 
   10.Cambiarse al directorio tmp, crear directorio PRUEBA.
-  Cd /tmp    &&   mkdir PRUEBA
+  cd /tmp    &&   mkdir PRUEBA
     
     
 
@@ -75,12 +75,12 @@ Ejercicio de comandos en la consola de linux.
     
 
   15.Listar todos los ficheros del directorio HOME mostrando sus permisos.
-  	Ls -la ~ 
+  	ls -la ~ 
     
     
 
   16.Borrar todos los archivos y directorios visibles de vuestro directorio PRUEBA.
-  Rm -rf /tmp/prueba/* 
+  rm -rf /tmp/prueba/* 
     
     
 
