@@ -68,4 +68,4 @@ Ejercicio de comandos en la consola de linux.
     cp /tmp/PRUEBA/mensaje /tmp/PRUEBA/dir3/
     
   20.Comprobar el ejercicio anterior mediante un solo comando.
-    ls /tmp/PRUEBA/dir1/mensaje /tmp/PRUEBA/dir2/mensaje /tmp/PRUEBA/dir2/mensaje
+    ls /tmp/PRUEBA/dir1/mensaje /tmp/PRUEBA/dir2/mensaje /tmp/PRUEBA/dir3/mensaje
