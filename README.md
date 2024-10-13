@@ -104,7 +104,7 @@ Entregas Grupo MIA
 </tr>
 <tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/ANDREU_PICORNELL'>ANDREU_PICORNELL</a></td>
-<td>❌</td>
+<td>✅</td>
 <td>✅</td>
 <td>❌</td>
 <td>❌</td>
@@ -291,7 +291,7 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2024-10-13 14:27:48
+Last Checked: 2024-10-13 14:28:43
 
 
 Entregas Grupo MDA A
@@ -430,7 +430,7 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2024-10-13 14:27:48
+Last Checked: 2024-10-13 14:28:43
 
 Entregas Grupo MDA B
 <table>
@@ -590,5 +590,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2024-10-13 14:27:48
+Last Checked: 2024-10-13 14:28:43
 
