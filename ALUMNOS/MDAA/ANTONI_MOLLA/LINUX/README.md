@@ -50,7 +50,7 @@ Ejercicio de comandos en la consola de linux.
 
   11.Verificar que el directorio actual ha cambiado.
     
-    
+    pwd
 
   12.Mostrar el día y la hora actual.
     
@@ -58,7 +58,7 @@ Ejercicio de comandos en la consola de linux.
 
   13.Con un solo comando posicionarse en el directorio $HOME.
     
-    
+    cd ~ 
  
   14.Verificar que se está en él.
     
