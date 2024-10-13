@@ -66,7 +66,7 @@ Ejercicio de comandos en la consola de linux.
 
   15.Listar todos los ficheros del directorio HOME mostrando sus permisos.
     
-ls -l $HOME
+   ls -l $HOME
 
   16.Borrar todos los archivos y directorios visibles de vuestro directorio PRUEBA.
     
@@ -84,14 +84,17 @@ ls -l $HOME
     
   18.Copiar el archivo /etc/motd a un archivo llamado mensaje de vuestro directorio PRUEBA.
     
-    cp /etc/motd >> Prueba/mensaje de vuestro directorio.txt
+    touch /tmp/PRUEBA/mensaje.txt
+    cp /etc/motd /tmp/PRUEBA/mensaje.txt
 
   19.Copiar mensaje en dir1, dir2 y dir3.
     
-    
+  cp /tmp/PRUEBA/mensaje.txt /tmp/PRUEBA/dir1
+  cp /tmp/PRUEBA/mensaje.txt /tmp/PRUEBA/dir2
+  cp /tmp/PRUEBA/mensaje.txt /tmp/PRUEBA/dir23
     
   20.Comprobar el ejercicio anterior mediante un solo comando.
     
-
+ ls -r PRUEBA/*/mensaje
     
    
