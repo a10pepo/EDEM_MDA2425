@@ -1,6 +1,3 @@
-#Abrir el script
-#!/bin/bash
-
 #1.Listar todos los archivos del directorio bin.
 ls /bin
 
@@ -20,7 +17,7 @@ ls /dev/tty*3
 ls /dev/t*C1
 
 #7.Listar todos los archivos, incluidos los ocultos, del directorio raíz.
-ls -a /
+ls -la /
 
 #8.Listar todos los archivos del directorio etc que no empiecen por t.
 ls /etc/[^t]*
@@ -44,8 +41,8 @@ cd $HOME
 pwd
 
 #15.Listar todos los ficheros del directorio HOME mostrando sus permisos.
-ls -l $HOME
-chmod 777
+ls -la ~
+
 
 #16.Borrar todos los archivos y directorios visibles de vuestro directorio PRUEBA.
 rm -r /tmp/PRUEBA/
@@ -62,9 +59,6 @@ cp /etc/motd /tmp/PRUEBA/mensaje
 cp /tmp/PRUEBA/mensaje /tmp/PRUEBA/dir1/ /tmp/PRUEBA/dir2/ /tmp/PRUEBA/dir3/
 
 #20.Comprobar el ejercicio anterior mediante un solo comando.
-ls /tmp/PRUEBA/dir1/mensaje /tmp/PRUEBA/dir2/mensaje /tmp/PRUEBA/dir3/mensaje
-
-chmod 777 ScriptLinuxMarta.sh
-./ScriptLinuxMarta.sh
+ls -R /tmp/PRUEBA
 
 
