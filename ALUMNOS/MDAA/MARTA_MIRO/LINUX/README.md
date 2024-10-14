@@ -62,3 +62,6 @@ cp /tmp/PRUEBA/mensaje /tmp/PRUEBA/dir1/ /tmp/PRUEBA/dir2/ /tmp/PRUEBA/dir3/
 ls -R /tmp/PRUEBA
 
 
+fin
+
+
