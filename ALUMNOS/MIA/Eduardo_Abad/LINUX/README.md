@@ -8,11 +8,11 @@ Ejercicio de comandos en la consola de linux.
 
   1.Listar todos los archivos del directorio bin.
     
-  root@76e0c2c4ed1d:/bin# ls   
+  root@76e0c2c4ed1d:~# ls /bin   
     
   2.Listar todos los archivos del directorio tmp.
    
-  root@76e0c2c4ed1d:/tmp# ls 
+  root@76e0c2c4ed1d:~# ls /tmp 
     
   3.Listar todos los archivos del directorio etc que empiecen por t 
     
@@ -24,11 +24,11 @@ Ejercicio de comandos en la consola de linux.
     
   5.Listar todos los archivos del directorio dev que empiecen por tty y acaben en 3.
     
-  root@76e0c2c4ed1d:/dev# ls tty* *3 
+  root@76e0c2c4ed1d:~# ls /dev/tty*3 
     
   6.Listar todos los archivos del directorio dev que empiecen por t y acaben en C1.
     
-  root@76e0c2c4ed1d:/dev# ls t* *C1 
+  rroot@76e0c2c4ed1d:~# ls /dev/t*C1 
 
   7.Listar todos los archivos, incluidos los ocultos, del directorio raíz.
     
