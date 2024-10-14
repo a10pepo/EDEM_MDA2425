@@ -61,5 +61,6 @@ cp /tmp/PRUEBA/mensaje /tmp/PRUEBA/dir1/ /tmp/PRUEBA/dir2/ /tmp/PRUEBA/dir3/
 #20.Comprobar el ejercicio anterior mediante un solo comando.
 ls -R /tmp/PRUEBA
 
+.
 
 
