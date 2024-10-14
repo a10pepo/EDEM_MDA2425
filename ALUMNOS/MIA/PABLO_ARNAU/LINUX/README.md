@@ -17,23 +17,19 @@ ls
 cd tmp
 ls -l
 
-  3.Listar todos los archivos del directorio etc que empiecen por t 
-cd etc 
-ls -l | grep t*
+  3.Listar todos los archivos del directorio etc que empiecen por t
+
+ls -l /etc/t*
 
  
   4.Listar todos los archivos del directorio dev que empiecen por tty. (Si listo con el ls - l me lista otro archivo que contiene tty pero no en el nombre por eso uso ls )
-cd dev
-ls | grep tty*
+
+ls -l /dev/tty*
 
 
   5.Listar todos los archivos del directorio dev que empiecen por tty y acaben en 3 (No me aparece ninguno)
-cd dev
-ls
 
-console  core  fd  full  mqueue  null  ptmx  pts  random  shm  stderr  stdin  stdout  tty  urandom  zero
-
-ls -l | grep tty*3
+ls -l /dev/tty*3
 
 
   6.Listar todos los archivos del directorio dev que empiecen por t y acaben en C1.
@@ -74,7 +70,7 @@ date
 
   13.Con un solo comando posicionarse en el directorio $HOME.
   
-cd /home
+cd $HOME
     
  
   14.Verificar que se está en él.
@@ -83,7 +79,7 @@ pwd
 
   15.Listar todos los ficheros del directorio HOME mostrando sus permisos.
     
-ls- /home
+ls -l $HOME
 
   16.Borrar todos los archivos y directorios visibles de vuestro directorio PRUEBA.
     
