@@ -1,37 +1,39 @@
-> 👨🏻‍💻 Web Front-end Developer
+<img align="right" src="https://i.pinimg.com/736x/ce/77/3b/ce773bfbb45d915f0edcf65d28a8f6e9.jpg" alt="Illustration" title="Illustration Storyset" width=450/>
+    
+<h1 align="left">Hey there 👋🏽, I'm Lara Rubio</h1>
 
-### Studies
 
-- Graduated in International Business from the University of Valencia
-- Bachelor in Business Administration from the University of North Florida
+<h3 align="left">Endless curiosity, endless growth! 🚀</h3>
 
-### Latest posts from 📝 [xiaozhu.dev](https://xiaozhu.dev)
+<div align="left">
+    <h3>👩🏻‍💻 About me:</h3>
+        <p>• 📚🎓 <b>International Business grad, Bachelor's Degree in Business Administration, and currently trying to master Big Data—just wondering if I'll stay awake long enough to finish!</b></p>
+        <b>Traveling 🧳 | Music 🎧 | Training 🏋️‍♀️ | Padel 🎾</b></p>
+        <p>• 💬 <b>Ask away! I have answers and a 50% chance of being right!</b></p>
+        <p>• 📫 <b>lara14rubio@gmail.com</b></p>
+</div><br>
 
-- [深入了解现代浏览器工作原理（二）「译」](https://xiaozhu.dev/post/inside-look-at-modern-web-browser-2/) (2022-4-24)
-- [深入了解现代浏览器工作原理（一）「译」](https://xiaozhu.dev/post/inside-look-at-modern-web-browser-1/) (2022-4-22)
-- [前端开发环境 - Mac 篇](https://xiaozhu.dev/post/web-dev-mac-env/) (2021-3-25)
+<div>
+  <h3>🧰 Languages and tools I'm learning until now:</h3><br>
+    <a href="https://"><img src="https://img.shields.io/static/v1?label=&message=python&color=%23306998&style=for-the-badge&logo=python&logoColor=whitesmoke" alt="PYTHON"></a>
+    <a href="https://"><img src="https://img.shields.io/static/v1?label=&message=Docker&color=%2328B7E2&style=for-the-badge&logo=Docker&logoColor=whitesmoke" alt="DOCKER"></a>
+    <a href="https://"><img src="https://img.shields.io/static/v1?label=&message=Linux&color=%23FFD43B&style=for-the-badge&logo=Linux&logoColor=whitesmoke" alt="LINUX"></a>
+    <a href="https://"><img src="https://img.shields.io/static/v1?label=&message=SQL&color=%234F92B6&style=for-the-badge&logo=SQL&logoColor=whitesmoke" alt="SQL"> </a>
+    <a
+    <br><br>
+    <a href="https://"><img src="https://img.shields.io/static/v1?label=&message=GIT&color=%23F05032&style=for-the-badge&logo=git&logoColor=whitesmoke" alt="GIT"></a>
+    <a href="https://"><img src="https://img.shields.io/static/v1?label=&message=GITHUB&color=%23181717&style=for-the-badge&logo=github&logoColor=whitesmoke" alt="GITHUB"></a>
+    
+</div>
 
-### TIL from 🗒 [til.xiaozhu.dev](https://til.xiaozhu.dev)
+___
 
-- [DNS 服务器分类和域名解析流程](https://til.xiaozhu.dev/network/dns-intro) (2021-9-16)
-- [Node.js 包管理器的管理器 Corepack 的介绍和使用](https://til.xiaozhu.dev/node/corepack) (2021-9-15)
-- [sticky 基本使用](https://til.xiaozhu.dev/css/position-sticky) (2021-9-11)
+<div>
+  <h3>📱 Social Media:</h3><br>
+    <a href="https://www.linkedin.com/in/lararubio/" target="_blank"><img src="https://img.shields.io/static/v1?label=&message=Linkedin&color=0A66C2&style=for-the-badge&logo=linkedin&logoColor=whitesmoke" alt="Linkedin"></a>
+    <a 
+    <a target="_blank"><img src="https://img.shields.io/static/v1?label=&message=Instagram&color=lightpink&style=for-the-badge&logo=instagram&logoColor=black" alt="Instagram"></a>
 
-### Portfolio
+</div>
 
-> *pending...*
-
-![Leo's github stats](https://github-readme-stats.vercel.app/api?username=mopig&show_icons=true&theme=dracula&hide=stars,issues)
-
-<details>
-  <summary>Click👆</summary>
-  <pre>
-  🤷‍♂️
-  </pre>
-</details>
-
-![build](https://github.com/mopig/mopig/workflows/build/badge.svg)
-![GitHub last commit](https://img.shields.io/github/last-commit/mopig/mopig)
-![pv](https://pageview.vercel.app/?github_user=mopig)
-
-LARA RUBIO
+------
