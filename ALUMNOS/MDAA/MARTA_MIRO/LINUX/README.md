@@ -41,7 +41,7 @@ cd $HOME
 pwd
 
 #15.Listar todos los ficheros del directorio HOME mostrando sus permisos.
-ls -la ~
+cd ls -l
 
 
 #16.Borrar todos los archivos y directorios visibles de vuestro directorio PRUEBA.
@@ -61,7 +61,5 @@ cp /tmp/PRUEBA/mensaje /tmp/PRUEBA/dir1/ /tmp/PRUEBA/dir2/ /tmp/PRUEBA/dir3/
 #20.Comprobar el ejercicio anterior mediante un solo comando.
 ls -R /tmp/PRUEBA
 
-
-fin
 
 
