@@ -12,27 +12,27 @@ Ejercicio de comandos en la consola de linux.
      
     
   2.Listar todos los archivos del directorio tmp.
-  ls/temp
+  ls /temp
    
     
     
   3.Listar todos los archivos del directorio etc que empiecen por t 
-  ls/etc/t*
+  ls /etc/t*
     
     
   
   4.Listar todos los archivos del directorio dev que empiecen por tty.
-  ls/dev/tty*
+  ls /dev/tty*
     
     
     
   5.Listar todos los archivos del directorio dev que empiecen por tty y acaben en 3.
-  ls/dev/tty*3
+  ls /dev/tty*3
     
     
     
   6.Listar todos los archivos del directorio dev que empiecen por t y acaben en C1.
-  ls/dev/t*C1
+  ls /dev/t*C1
     
     
 
@@ -42,12 +42,12 @@ Ejercicio de comandos en la consola de linux.
     
     
   8.Listar todos los archivos del directorio etc que no empiecen por t.
-  ls/etc/[^t]*
+  ls /etc/[^t]*
     
     
 
   9.Listar todos los archivos del directorio usr y sus subdirectorios.
-  ls – R/usr
+  ls -R /usr
     
     
 
@@ -82,7 +82,7 @@ Ejercicio de comandos en la consola de linux.
     
 
   15.Listar todos los ficheros del directorio HOME mostrando sus permisos.
-  ls – l ~
+  ls -l ~
     
     
 
@@ -109,7 +109,7 @@ Ejercicio de comandos en la consola de linux.
     
     
   20.Comprobar el ejercicio anterior mediante un solo comando.
-  ls/tmp/PRUEBA/dir{1,2,3}/mensaje
+  ls /tmp/PRUEBA/dir{1,2,3}/mensaje
     
 
     
