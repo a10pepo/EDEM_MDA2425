@@ -61,7 +61,7 @@ Ejercicio de comandos en la consola de linux.
 
 14.Verificar que se está en él.
 
-	pdw
+	pwd
 
 15.Listar todos los ficheros del directorio HOME mostrando sus permisos.
 
