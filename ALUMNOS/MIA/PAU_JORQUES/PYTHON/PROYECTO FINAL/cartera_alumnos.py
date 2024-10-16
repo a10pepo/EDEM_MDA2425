@@ -113,7 +113,7 @@ class ListaAlumnos:
             while(cambio != "Y" and cambio != "N"):
                 cambio: str = input(f'''No has introducido un valor valido.
                                     ¿Quieres modificar el aprobado del alumno con NIF: {nif}? [Y/n]:  ''').upper()
-            if (cambio.upper == "Y"):
+            if (cambio == "Y"):
                 aux: str = input("¿Ha aprobado? [Y/n]: ").upper()
                 while (aux != "Y" and aux != "N"):
                     aux: str = input(f'''No has introducido un valor valido.
@@ -178,17 +178,18 @@ def cartera():
     alumnos: ListaAlumnos = ListaAlumnos()
 
     while True:
-        print('''(1) Añadir un alumno
-(2) Eliminar alumno por NIF
-(3) Actualizar datos de un alumno por NIF
-(4) Mostrar datos de un alumno por NIF
-(5) Mostrar datos de un alumno por Email
-(6) Listar TODOS os alumnos
-(7) Aprobar Alumno por NIF
-(8) Suspender Alumno por NIF
-(9) Mostrar alumnos aprobados
-(10) Mostrar alumnos suspensos
-(X) Finalizar Programa
+        print('''
+        (1) Añadir un alumno
+        (2) Eliminar alumno por NIF
+        (3) Actualizar datos de un alumno por NIF
+        (4) Mostrar datos de un alumno por NIF
+        (5) Mostrar datos de un alumno por Email
+        (6) Listar TODOS os alumnos
+        (7) Aprobar Alumno por NIF
+        (8) Suspender Alumno por NIF
+        (9) Mostrar alumnos aprobados
+        (10) Mostrar alumnos suspensos
+        (X) Finalizar Programa
 ''')
         respuesta: str = input("Seleccione la opción: ")
         if (respuesta == "1"):
