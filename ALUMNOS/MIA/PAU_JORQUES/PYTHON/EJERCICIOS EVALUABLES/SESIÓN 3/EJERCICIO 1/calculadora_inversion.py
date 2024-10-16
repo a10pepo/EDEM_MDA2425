@@ -1,55 +1,63 @@
-def calcular_inversion(cantidad_ini, interes, años):
+def calcular_inversion(cantidad_ini, interes, años) -> float:
     return float(cantidad_ini) * (1 + float(interes))**float(años)
 
+def opciones() -> str:
+    print("[1] Calcular una inversión")
+    print("[X] Salir")
+    return input()
+
+def datos() -> tuple[int, int, int]: 
+    print("¿Cuánto quieres invertir?")
+    cantidad: int =  int(input())
+    print("¿Cuál es el interés anual?")
+    interes: float = float(input())
+    while(interes < 0 or interes >1):
+        print("El interes tiene que ir entre 0 y 1")
+        interes: float = float(input("Introduce otro valor: "))
+    print("¿Cuántos años vas a mantener la inversión?")
+    años: int = int(input())
+    return (cantidad, interes, años)
 
 print("Hola. Bienvenido al sistema de cálculo de inversiones.")
-print("[1] Calcular una inversión")
-print("[X] Salir")
 
-aux: str  = input()
+aux: str  = opciones()
 
 while(aux != "X" and aux != "1"):
     print("Valor introducido incorrecto.")
-    print("[1] Calcular una inversión")
-    print("[X] Salir")
-    aux: str = input()
+    aux: str = opciones()
 
 if(aux == "X"):
     print("¡Nos vemos!")
     exit()
 
-print("¿Cuánto quieres invertir?")
-cantidad: int =  input()
-print("¿Cuál es el interés anual?")
-interes: float = float(input())
-print("¿Cuántos años vas a mantener la inversión?")
-años: int = input()
+while True:
+    try:
+        cantidad, interes, años = datos()
+        print(f"En {años} años habrás recibido {calcular_inversion(cantidad,interes,años)}€ de interés")
+        break
+    except ValueError:
+        print("Valor introducido incorrecto. Tiene que ser números.")
+    except OverflowError:
+        print("No puedo calcular ese valor tan grande.")
 
-print(f"En {años} años habrás recibido {calcular_inversion(cantidad,interes,años)}€ de interés")
-
-print("[1] Calcular una nueva inversión")
-print("[X] Salir")
-aux: str = input()
+aux: str = opciones()
 
 while(aux != "X"):
     if(aux == "1"):
-        print("¿Cuánto quieres invertir?")
-        cantidad: int =  input()
-        print("¿Cuál es el interés anual?")
-        interes: float = float(input())
-        print("¿Cuántos años vas a mantener la inversión?")
-        años: int = input()
-
-        print(f"En {años} años habrás recibido {calcular_inversion(float(cantidad),float(interes),float(años))}€ de interés")
-
-        print("[1] Calcular una nueva inversión")
-        print("[X] Salir")
-        aux: str = input()        
+        while True:
+            try:
+                cantidad, interes, años = datos()
+                print(f"En {años} años habrás recibido {calcular_inversion(float(cantidad),float(interes),float(años))}€ de interés")
+                break
+            except ValueError:
+                print("Valor introducido incorrecto. Tiene que ser números.")
+            except OverflowError:
+                print("No puedo calcular ese valor tan grande.")
+            
+        aux: str = opciones()   
     else:
         print("Valor introducido incorrecto.")
-        print("[1] Calcular una nueva inversión")
-        print("[X] Salir")
-        aux: str = input()
+        aux: str = opciones()
 
 if(aux == "X"):
     print("¡Nos vemos!")

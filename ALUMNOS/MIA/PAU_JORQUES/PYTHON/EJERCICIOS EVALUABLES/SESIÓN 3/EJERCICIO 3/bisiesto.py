@@ -6,13 +6,20 @@ def es_bisiesto(año):
 def mostrar_bisiestos(inicio,fin):
     for año in range(inicio,fin+1):
         if es_bisiesto(año):
-            print(f"El año {año} es bisiesto")
+            print(f"El año {año} es bisiesto.")
+        else:
+            print(f"El año {año} no es bisiesto.")
 
 if __name__=="__main__":
     print("Dime un intervalo de años.")
 
-    año1: int = int(input("Dime un año: "))
-    año2: int = int(input("Dime otro año: "))
+    while True:
+        try:
+            año1: int = int(input("Dime un año: "))
+            año2: int = int(input("Dime otro año: "))
+            break
+        except ValueError:
+            print("Hay que introducir un numero.")
 
     if(año1>año2):
         sup: int = año1

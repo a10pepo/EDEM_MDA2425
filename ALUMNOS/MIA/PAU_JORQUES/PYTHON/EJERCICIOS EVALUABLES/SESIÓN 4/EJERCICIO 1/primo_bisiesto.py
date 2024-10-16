@@ -25,8 +25,13 @@ def mostrar_primos(inf, sup):
 if __name__=="__main__":
     print("Dime un intervalo de valores.")
 
-    num1: int = int(input("Num 1: "))
-    num2: int = int(input("Num 2: "))
+    while True:
+        try: 
+            num1: int = int(input("Num 1: "))
+            num2: int = int(input("Num 2: "))
+            break
+        except ValueError:
+            print("Introduce numeros.")
 
     if(num1>num2):
         sup: int = num1
@@ -39,8 +44,13 @@ if __name__=="__main__":
 
     print("Dime un intervalo de años.")
 
-    año1: int = int(input("Dime un año: "))
-    año2: int = int(input("Dime otro año: "))
+    while True:
+        try:
+            año1: int = int(input("Dime un año: "))
+            año2: int = int(input("Dime otro año: "))
+            break
+        except ValueError:
+            print("Introduce números.")
 
     if(año1>año2):
         sup: int = año1
