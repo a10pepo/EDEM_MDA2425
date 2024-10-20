@@ -44,6 +44,6 @@ jobs:
           PR_NUMBER: $(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')
         run: |
           echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }'
-          gh pr view $(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }') --json files --jq '.files.[].path'
+          gh pr view 254 --json files --jq '.files.[].path'
         
         
