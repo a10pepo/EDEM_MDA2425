@@ -5,4 +5,4 @@ LINUX:
 
 entregable:
 - changed-files:
-  - any-glob-to-any-file: '*'
+  - any-glob-to-any-file: 'ALUMNOS/MDAA/**'
