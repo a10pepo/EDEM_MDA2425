@@ -1,4 +1,4 @@
 ## Equivalent of the above mentioned configuration using another syntax
 LINUX:
 - changed-files:
-  - any-glob-to-any-file: ['/Alumnos/MDAA/*/LINUX/**']
+  - any-glob-to-any-file: ['ALUMNOS/MDAA/*/LINUX/**']
