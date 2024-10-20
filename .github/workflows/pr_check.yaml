@@ -28,3 +28,13 @@ jobs:
       - name: Comprobar Carpetas
         run: |
           python3 .github/code/pr_validation.py
+  labeler:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Label PRs
+        uses: actions/labeler@v5
+        
