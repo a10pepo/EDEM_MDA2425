@@ -43,6 +43,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.DEPLOYMENT_TOKEN }}
           PR_NUMBER: $(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')
         run: |
-          echo "PR_NUMBER: $PR_NUMBER"
+          echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }'
         
         
