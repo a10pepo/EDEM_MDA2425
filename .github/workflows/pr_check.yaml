@@ -33,17 +33,15 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
+
     steps:
       - name: Checkout Git repository
         uses: actions/checkout@v3
         with:
           lfs: true
-      - name: Label PR
-        env:
-          GITHUB_TOKEN: ${{ secrets.DEPLOYMENT_TOKEN }}
-          PR_NUMBER: $(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')
-        run: |
-          echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }'
-          gh pr view 254 --json files --jq '.files.[].path'
-        
+      - name: Label PRs
+        uses: actions/labeler@v5
+        with:
+          repo-token: ${{ secrets.DEPLOYMENT_TOKEN }}
+          configuration-path: .github/labeler.yml
         
