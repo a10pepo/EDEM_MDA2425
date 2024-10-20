@@ -43,5 +43,6 @@ jobs:
         uses: actions/labeler@v5
         with:
           repo-token: ${{ secrets.DEPLOYMENT_TOKEN }}
+          pr-number: ${{ github.event.number }}
           configuration-path: .github/labeler.yml
         
