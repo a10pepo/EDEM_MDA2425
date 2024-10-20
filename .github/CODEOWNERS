@@ -2,9 +2,9 @@
 
 #* @a10pepo
 
-/Alumnos/MDAA/*/DOCKER/** @a10pepo
-/Alumnos/MDAB/*/DOCKER/** @a10pepo
-/Alumnos/MIA/*/DOCKER/** @a10pepo
+/Alumnos/MDAA/*/DOCKER/** @a10pepo @MA-Barracas
+/Alumnos/MDAB/*/DOCKER/** @a10pepo @MA-Barracas
+/Alumnos/MIA/*/DOCKER/** @a10pepo @MA-Barracas
 
 /Alumnos/MDAA/*/LINUX/** @a10pepo
 /Alumnos/MDAB/*/LINUX/** @a10pepo

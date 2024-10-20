@@ -1,8 +1,25 @@
 ## Equivalent of the above mentioned configuration using another syntax
 LINUX:
 - changed-files:
-  - any-glob-to-any-file: ['ALUMNOS/MDAA/*/LINUX/**']
+  - any-glob-to-any-file: ['ALUMNOS/MDAA/*/LINUX/**','ALUMNOS/MDAB/*/LINUX/**','ALUMNOS/MIA/*/LINUX/**']
+
+DOCKER:
+- changed-files:
+  - any-glob-to-any-file: ['ALUMNOS/MDAA/*/DOCKER/**','ALUMNOS/MDAB/*/DOCKER/**','ALUMNOS/MIA/*/DOCKER/**']
+
+PYTHON:
+- changed-files:
+  - any-glob-to-any-file: ['ALUMNOS/MDAA/*/PYTHON/**','ALUMNOS/MDAB/*/PYTHON/**','ALUMNOS/MIA/*/PYTHON/**']
+
+SQL:
+- changed-files:
+  - any-glob-to-any-file: ['ALUMNOS/MDAA/*/SQL/**','ALUMNOS/MDAB/*/SQL/**','ALUMNOS/MIA/*/SQL/**']
+
+NIFI:
+- changed-files:
+  - any-glob-to-any-file: ['ALUMNOS/MDAA/*/NIFI/**','ALUMNOS/MDAB/*/NIFI/**','ALUMNOS/MIA/*/NIFI/**']  
 
 entregable:
 - changed-files:
-  - any-glob-to-any-file: 'ALUMNOS/MDAA/**'
+  - any-glob-to-any-file: 'ALUMNOS/**'
+
