@@ -2,3 +2,7 @@
 LINUX:
 - changed-files:
   - any-glob-to-any-file: ['ALUMNOS/MDAA/*/LINUX/**']
+
+entregable:
+- changed-files:
+  - any-glob-to-any-file: '*'
