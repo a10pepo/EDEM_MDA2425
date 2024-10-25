@@ -1,7 +1,3 @@
-# List of codeowners based on project team
-
-#* @a10pepo
-
 /Alumnos/MDAA/*/DOCKER/** @a10pepo @MA-Barracas
 /Alumnos/MDAB/*/DOCKER/** @a10pepo @MA-Barracas
 /Alumnos/MIA/*/DOCKER/** @a10pepo @MA-Barracas
@@ -14,9 +10,9 @@
 /Alumnos/MDAB/*/PYTHON/** @martinImagina @a10pepo
 /Alumnos/MIA/*/PYTHON/** @martinImagina @a10pepo
 
-/Alumnos/MDAA/*/SQL/** @gavaldanatalia @a10pepo @gavnatalia
-/Alumnos/MDAB/*/SQL/** @gavaldanatalia @a10pepo @gavnatalia
-/Alumnos/MIA/*/SQL/** @gavaldanatalia @a10pepo @gavnatalia
+/Alumnos/MDAA/*/SQL/** @a10pepo @gavnatalia
+/Alumnos/MDAB/*/SQL/** @a10pepo @gavnatalia
+/Alumnos/MIA/*/SQL/** @a10pepo @gavnatalia
 
 /Alumnos/MDAA/*/NIFI/** @echiner @a10pepo
 /Alumnos/MDAB/*/NIFI/** @echiner @a10pepo
@@ -42,4 +38,7 @@
 /Alumnos/MDAB/*/TERRAFORM/** @a10pepo
 /Alumnos/MIA/*/TERRAFORM/** @a10pepo
 
+/Alumnos/MDAA/*/DBT/** @a10pepo 
+/Alumnos/MDAB/*/DBT/** @a10pepo
+/Alumnos/MIA/*/DBT/** @a10pepo
 

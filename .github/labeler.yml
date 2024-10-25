@@ -19,6 +19,18 @@ NIFI:
 - changed-files:
   - any-glob-to-any-file: ['ALUMNOS/MDAA/*/NIFI/**','ALUMNOS/MDAB/*/NIFI/**','ALUMNOS/MIA/*/NIFI/**']  
 
+AHORCADO:
+- changed-files:
+  - any-glob-to-any-file: ['ALUMNOS/MDAA/*/AHORCADO/**','ALUMNOS/MDAB/*/AHORCADO/**','ALUMNOS/MIA/*/AHORCADO/**']  
+
+APIS:
+- changed-files:
+  - any-glob-to-any-file: ['ALUMNOS/MDAA/*/APIS/**','ALUMNOS/MDAB/*/APIS/**','ALUMNOS/MIA/*/APIS/**']  
+
+DBT:
+- changed-files:
+  - any-glob-to-any-file: ['ALUMNOS/MDAA/*/DBT/**','ALUMNOS/MDAB/*/DBT/**','ALUMNOS/MIA/*/DBT/**']  
+
 entregable:
 - changed-files:
   - any-glob-to-any-file: 'ALUMNOS/**'
