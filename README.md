@@ -302,7 +302,7 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2024-10-23 12:03:21
+Last Checked: 2024-10-25 09:01:26
 
 
 Entregas Grupo MDA A
@@ -426,7 +426,7 @@ Entregas Grupo MDA A
 <td>✅</td>
 <td>✅</td>
 <td>❌</td>
-<td>❌</td>
+<td>✅</td>
 </tr>
 <tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAA/VICENTE_MARTI'>VICENTE_MARTI</a></td>
@@ -441,7 +441,7 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2024-10-23 12:03:21
+Last Checked: 2024-10-25 09:01:26
 
 Entregas Grupo MDA B
 <table>
@@ -601,5 +601,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2024-10-23 12:03:21
+Last Checked: 2024-10-25 09:01:26
 
