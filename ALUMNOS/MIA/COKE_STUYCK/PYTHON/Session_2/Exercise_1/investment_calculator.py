@@ -5,21 +5,21 @@
 #   The number of years the investment will be held (number)
 # The program should calculate and display:
 #   The amount of the investment after the given period of time
-import time
 from termcolor import colored
 
-from functions import ask_input, loader
+from functions import ask_input, loader, make_header
 
 def calculate_investment():
+  make_header('INVESTMENT CALCULATOR', 'Calculates the results of an investment.', bg_color='green')
   print(f'''
-┌───────────────────────────────────────────────┐
-│  Investment Calculator                        │
-└───────────────────────────────────────────────┘        
-
 Hello!
-Welcome to the investment calculator.''')
 
-  initial_investment = ask_input('How much would you like to invest now?')
+Welcome to the investment calculator.''', end='')
+
+  initial_investment = ask_input('''
+-----------------------
+
+How much would you like to invest?''')
   annual_interest = ask_input('What is the annual interest rate? (%)', float)
   years = ask_input('For how many years would you like to keep the investment?')
   
@@ -32,10 +32,11 @@ Welcome to the investment calculator.''')
   print(f'''
 
 After {years} {years_literal} you'll earn''')
-  print(colored(interest, 'green'), end='')
+  print(colored(interest, 'green', attrs=['bold']), end='')
   print(''' in interest.
+
+-----------------------
 ''')
 
-# Function call removed to avoid running when being imported
-# Remove comment below to run on this file
-# calculate_investment()
+if __name__ == '__main__':
+  calculate_investment()

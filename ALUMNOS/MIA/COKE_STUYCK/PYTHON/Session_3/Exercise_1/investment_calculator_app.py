@@ -5,31 +5,24 @@
 #     [X] Exit 
 #       In this case the program should display a goodbye message and exit
 
-from session_2 import calculate_investment
 import time
 from termcolor import colored
+from functions import make_header
+from Session_2.Exercise_1.investment_calculator import calculate_investment
 
-def console():
+def investment_app():
   firstTime = True
   while True:
     if firstTime:
-      print('''
-▄▄ INVESTMENT APP ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-█                                               █
-█  Calculates the amount of an investment.      █
-█                                               █
-▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-
+      print(f'''
 What would you like to do?
-
-[1] Calculate an investment
-[X] Exit
-    ''')
+''')
       firstTime = False
     else:
       time.sleep(1)
-      print('''What do you want to do now?
-
+      print('What do you want to do now?')
+    
+    print('''      
 [1] Calculate an investment
 [X] Exit
     ''')
@@ -38,10 +31,13 @@ What would you like to do?
       calculate_investment()
     elif option == 'x':
       print('''            
-BEST WISHES WITH YOUR INVESTMENT!
+Best of luck on your investments!
+
+-----------------------
 ''')
       break
     else:
-      print(colored("Oops! That's not a valid option. Try again...", 'red'))
+      print(colored("Oops! That's not a valid option. Try again...\n", 'red'))
 
-console()
+if __name__ == '__main__':
+  investment_app()
