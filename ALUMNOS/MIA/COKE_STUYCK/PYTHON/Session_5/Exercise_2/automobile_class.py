@@ -1,3 +1,5 @@
+import time
+
 class Car:
     make: str
     model: str
@@ -42,11 +44,26 @@ class Car:
 
 def automobile_class_demo():
     car = Car("Toyota", "Camry")
+    print(f'''
+-----------------------
+''')
     print(car.make, car.model)
+    time.sleep(0.5)
     car.start()
-    car.accelerate(100)
+    time.sleep(0.5)
+    for _ in range(3):
+        car.accelerate(37)
+        time.sleep(0.5)
+    for _ in range(3):
+        car.brake(35)
+        time.sleep(0.5)
     car.brake(100)
+    time.sleep(0.5)
     car.stop()
-    
+    time.sleep(0.5)
+    print(f'''
+-----------------------
+''')
+
 if __name__ == "__main__":
     automobile_class_demo()
