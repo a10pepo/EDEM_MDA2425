@@ -17,6 +17,7 @@ from Session_4.Exercise_3.random_user import random_user_request
 from Session_5.Exercise_1.pokemon_database import pokemon_database_analysis
 from Session_5.Exercise_2.automobile_class import automobile_class_demo
 from Session_5.Exercise_3.automobile_children_classes import automobile_children_classes_demo
+from Final_Project.student_directory import student_directory_app
 
 def console():
   firstTime = True
@@ -36,7 +37,7 @@ def console():
 [12]  1.2 Hello Name
 [21]  2.1 Investment Calculator
 [31]  3.1 Investment Calculator App
-[32]  3.2 Primes 1 to 100
+[32]  3.2 Primes 1 to 100u
 [33]  3.3 Leap or Not
 [411] 4.1.1 Primes in Range
 [412] 4.1.2 Primes Checker
@@ -46,6 +47,7 @@ def console():
 [51]  5.1 Pokemon Data Analysis
 [52]  5.2 Automobile Class
 [53]  5.3 Automobile Children Classes
+[61]  6.1 Final Project: Student Directory
 [X]   Exit
     ''')
     option = input().lower()
@@ -64,6 +66,7 @@ def console():
       '51': pokemon_database_analysis,
       '52': automobile_class_demo,
       '53': automobile_children_classes_demo,
+      '61': student_directory_app,
     }
     if option in options:
       options[option]()
