@@ -42,11 +42,11 @@ def ask_input(question, var_type=int):
 #################################################
 # Loader in x seconds
 #################################################
-def loader(duration):
+def loader(duration, color='green'):
   print('''
   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░''', end='\r')
   for i in range(49):
-    print(colored('▓', 'green'), end='', flush=True)
+    print(colored('▓', color), end='', flush=True)
     interval = round(duration / 49, 2)
     time.sleep(interval)
 
