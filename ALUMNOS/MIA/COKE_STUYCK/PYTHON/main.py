@@ -12,7 +12,7 @@ from Session_3.Exercise_3.leap_or_not import leap_or_not_function
 from Session_4.Exercise_1.primes_in_range import display_primes_in_range
 from Session_4.Exercise_1.primer_checker import prime_checker_function
 from Session_4.Exercise_1.leap_checker import leap_checker_function
-from Session_4.Exercise_2.python_template import python_template_instructions
+from Session_4.Exercise_2.python_template import python_template_setup
 from Session_4.Exercise_3.random_user import random_user_request
 from Session_5.Exercise_1.pokemon_database import pokemon_database_analysis
 from Session_5.Exercise_2.automobile_class import automobile_class_demo
@@ -24,7 +24,9 @@ def console():
     if firstTime:
       make_header('EXERCISES LAUNCHER', 'Easily launch deliverable exercises.')
       firstTime = False
-      print('\nWhich exercise would you like to run?')
+      print('\033[F\033[F\033[F')
+      loader(1.2, 'blue')
+      print('\n\nWhich exercise would you like to run?')
     else:
       time.sleep(1)
       print('Which exercise would you like to run now?')
@@ -57,7 +59,7 @@ def console():
       '411': display_primes_in_range,
       '412': prime_checker_function,
       '413': leap_checker_function,
-      '42': python_template_instructions,
+      '42': python_template_setup,
       '43': random_user_request,
       '51': pokemon_database_analysis,
       '52': automobile_class_demo,
