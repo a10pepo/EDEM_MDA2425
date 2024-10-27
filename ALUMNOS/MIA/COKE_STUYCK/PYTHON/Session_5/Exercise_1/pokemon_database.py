@@ -3,9 +3,7 @@ import time
 from termcolor import colored
 from functions import make_header
 
-pokemon_data = pd.read_csv('ALUMNOS/MIA/COKE_STUYCK/PYTHON/Session_5/Exercise_1/data/pokemon_data.csv')
-names = pokemon_data['Name']
-
+pokemon_data = pd.read_csv('Session_5/Exercise_1/data/pokemon_data.csv')
 
 def pokemon_database_analysis():
     firstTime = True
@@ -16,7 +14,7 @@ def pokemon_database_analysis():
             print('\nWhat would you like to do?')
         else:
             time.sleep(1)
-            print('What would you like to do now?')
+            print('\nWhat would you like to do now?')
 
         print('''
 [1]  1 Display 
@@ -36,7 +34,7 @@ def pokemon_database_analysis():
             options[option]()
         elif option == 'x':
             print('''            
-Thank you for your time!
+Gotta catch 'em all!
 
 -----------------------
 ''')
@@ -112,20 +110,22 @@ def filter_functions():
 def modify_functions():
     while True:
         print('''
-[1] Rename 'Fire' column to 'Flame'
-[2] Rename 'Flame' column back to 'Fire'
+[1] Rename 'Name' column to 'Pokemon'
+[2] Rename 'Pokemon' column back to 'Name'
 [3] Change all legendary Pokemons type to 'Fire'
 [4] Create a new 'Total' column by adding 'HP', 'Attack', 'Defense' and 'Speed'
 [5] Drop the 'Total' column
+[6] Reset database
 [X] Exit
         ''')
         option = input().lower()
         options = {
-            '1': rename_fire_column_to_flame,
-            '2': rename_flame_column_back_to_fire,
+            '1': rename_name_column_to_pokemon,
+            '2': rename_pokemon_column_back_to_name,
             '3': change_all_legendary_pokemons_type_to_fire,
             '4': create_new_total_column,
-            '5': drop_total_column
+            '5': drop_total_column,
+            '6': reset_database
         }
         if option in options:
             options[option]()
@@ -170,140 +170,140 @@ def stats_functions():
 
 # [1][1] Display every value
 def every_value():
-    print(pokemon_data)
+    print('\n', pokemon_data)
 
 # [1][2] Display first 5 values
 def first_5_values():
-    print(pokemon_data[:5])
+    print('\n', pokemon_data[:5])
 
 # [1][3] Display last 5 values
 def last_5_values():
-    print(pokemon_data[-5:])
+    print('\n', pokemon_data[-5:])
 
 # [1][4] Display every row
 def every_row():
-    print(pokemon_data)
+    print('\n', pokemon_data)
 
 # [1][5] Display a range of rows
 def range_of_rows():
-    range_start = int(input('Enter the start of the range: '))
-    range_end = int(input('Enter the end of the range: '))
-    print(pokemon_data[range_start:range_end])
+    range_start = int(input('\nEnter the start of the range:\n'))
+    range_end = int(input('\nEnter the end of the range:\n'))
+    print('\n', pokemon_data[range_start:range_end])
 
 # [1][6] Display every column name
 def every_column_name():
     column_names = ", ".join(pokemon_data.columns)
-    print(column_names)
+    print('\n', column_names)
 
 # [1][7] Display every name
 def every_name():
     names_string = ", ".join(pokemon_data['Name'].tolist())
-    print(names_string)
+    print('\n', names_string)
 
 # [1][8] Display every name and speed
 def every_name_and_speed():
-    print(pokemon_data[['Name', 'Speed']])
+    print('\n', pokemon_data[['Name', 'Speed']])
 
 # [1][9] Display first 5 names using [::]
 def first_5_names_using_slice():
-    print(pokemon_data[['Name']][:5])
+    print('\n', pokemon_data[['Name']][:5])
 
 # [2][1] Type 1 Water Pokemons
 def type_1_water_pokemons():
-    print(pokemon_data[pokemon_data['Type 1'] == 'Water'])
+    print('\n', pokemon_data[pokemon_data['Type 1'] == 'Water'])
 
 # [2][2] Type 'Grass' or 'Poison' Pokemons
 def type_grass_or_poison_pokemons():
-    print(pokemon_data[(pokemon_data['Type 1'] == 'Grass') | (pokemon_data['Type 2'] == 'Grass')])
+    print('\n', pokemon_data[(pokemon_data['Type 1'] == 'Grass') | (pokemon_data['Type 2'] == 'Grass')])
 
 # [2][3] Type 'Fire' or 'Poison' Pokemons
 def type_fire_or_poison_pokemons():
-    print(pokemon_data[(pokemon_data['Type 1'] == 'Fire') | (pokemon_data['Type 2'] == 'Fire')])
+    print('\n', pokemon_data[(pokemon_data['Type 1'] == 'Fire') | (pokemon_data['Type 2'] == 'Fire')])
 
 # [2][4] Type 'Grass' or 'Poison' Pokemons with HP >= 70
 def type_grass_or_poison_pokemons_with_hp():
-    print(pokemon_data[(pokemon_data['Type 1'] == 'Grass') | (pokemon_data['Type 2'] == 'Grass') & (pokemon_data['HP'] >= 70)])
+    print('\n', pokemon_data[(pokemon_data['Type 1'] == 'Grass') | (pokemon_data['Type 2'] == 'Grass') & (pokemon_data['HP'] >= 70)])
 
 # [2][5] Pokemons containing 'Mega' in their name
 def pokemons_with_mega_in_name():
-    print(pokemon_data[pokemon_data['Name'].str.contains('Mega')])
+    print('\n', pokemon_data[pokemon_data['Name'].str.contains('Mega')])
 
 # [2][6] Pokemons not containing 'Mega' in their name
 def pokemons_without_mega_in_name():
-    print(pokemon_data[~pokemon_data['Name'].str.contains('Mega')])
+    print('\n', pokemon_data[~pokemon_data['Name'].str.contains('Mega')])
 
 # [2][7] Pokemons with name starting with 'Pi'
 def pokemons_with_name_starting_with_pi():
-    print(pokemon_data[pokemon_data['Name'].str.startswith('Pi')])
+    print('\n', pokemon_data[pokemon_data['Name'].str.startswith('Pi')])
     
 # [3][1] Rename 'Fire' column to 'Flame'
-def rename_fire_column_to_flame():
-    pokemon_data.rename(columns={'Fire': 'Flame'}, inplace=True)
-    print(pokemon_data)
+def rename_name_column_to_pokemon():
+    pokemon_data.rename(columns={'Name': 'Pokemon'}, inplace=True)
+    print('\n', pokemon_data)
 
 # [3][2] Rename 'Flame' column back to 'Fire'
-def rename_flame_column_back_to_fire():
-    pokemon_data.rename(columns={'Flame': 'Fire'}, inplace=True)
-    print(pokemon_data)
+def rename_pokemon_column_back_to_name():
+    pokemon_data.rename(columns={'Pokemon': 'Name'}, inplace=True)
+    print('\n', pokemon_data)
 
 # [3][3] Change all legendary pokemons type to 'Fire'
 def change_all_legendary_pokemons_type_to_fire():
     pokemon_data.loc[pokemon_data['Legendary'] == True, 'Type 1'] = 'Fire'
-    print(pokemon_data)
+    print('\n', pokemon_data)
 
 # [3][4] Create a new 'Total' column by adding 'HP', 'Attack', 'Defense' and 'Speed'
 def create_new_total_column():
     pokemon_data['Total'] = pokemon_data['HP'] + pokemon_data['Attack'] + pokemon_data['Sp. Atk'] + pokemon_data['Defense'] + pokemon_data['Sp. Def'] + pokemon_data['Speed']
-    print(pokemon_data)
+    print('\n', pokemon_data)
 
 # [3][5] Delete the 'Total' column
 def drop_total_column():
     pokemon_data.drop(columns=['Total'], inplace=True)
-    print(pokemon_data)
+    print('\n', pokemon_data)
+    
+# [3][6] Reset database
+def reset_database():
+    pokemon_data = pd.read_csv('Session_5/Exercise_1/data/pokemon_data_backup.csv')
+    
+    print('\n', pokemon_data)
+    print(f"\nDatabase reset successfully.\npokemon_data.csv restored from pokemon_data_backup.csv.")
     
 # [4][1] Stats using describe()
 def stats_describe():
-    print(pokemon_data.describe().round(1))
+    print('\n', pokemon_data.describe().round(1))
 
 # [4][2] Sort by 'Name' ascending
 def sort_by_name():
-    print(pokemon_data.sort_values('Name', ascending=True))
+    print('\n', pokemon_data.sort_values('Name', ascending=True))
     
 # [4][3] Average stats per type by defense
 def average_stats_per_type_by_defense():
     stats_mean = pokemon_data.groupby('Type 1')[['Defense', 'Attack', 'HP', 'Speed']].mean().round(1)
     stats_mean_sorted = stats_mean.sort_values(by='Defense', ascending=False)
-    print(stats_mean_sorted)
+    print('\n', stats_mean_sorted)
 # [4][4] Average stats per type by attack
 def average_stats_per_type_by_attack():
     stats_mean = pokemon_data.groupby('Type 1')[['Defense', 'Attack', 'HP', 'Speed']].mean().round(1)
     stats_mean_sorted = stats_mean.sort_values(by='Attack', ascending=False)
-    print(stats_mean_sorted)
+    print('\n', stats_mean_sorted)
 
 # [4][5] Average stats per type by hp
 def average_stats_per_type_by_hp():
     stats_mean = pokemon_data.groupby('Type 1')[['Defense', 'Attack', 'HP', 'Speed']].mean().round(1)
     stats_mean_sorted = stats_mean.sort_values(by='HP', ascending=False)
-    print(stats_mean_sorted)
+    print('\n', stats_mean_sorted)
 
 # [4][6] Sum stats per type
 def sum_stats_per_type():
-    print(pokemon_data.groupby('Type 1')[['Defense', 'Attack', 'HP', 'Speed']].sum())
+    print('\n', pokemon_data.groupby('Type 1')[['Defense', 'Attack', 'HP', 'Speed']].sum())
     
 # [4][7] Number of pokemons for each type 1 category
 def number_per_type_1_category():
-    print(pokemon_data.groupby(['Type 1']).size())
+    print('\n', pokemon_data.groupby(['Type 1']).size())
 
 # [4][8] Number of pokemons for each type 1 and type 2 category
 def number_per_type_1_and_type_2_category():
-    print(pokemon_data.groupby(['Type 1', 'Type 2']).size())
-
-
-
-# LEE EL ARCHIVO CVS SEPARÁNDOLO POR CHUNKS Y CON UN TAMAÑO DE (chunksize=5)
-# ITERA POR LOS CHUNKS Y MUÉSTRALOS POR CONSOLA
-
-
+    print('\n', pokemon_data.groupby(['Type 1', 'Type 2']).size())
 
 if __name__ == '__main__':
     pokemon_database_analysis()
