@@ -7,12 +7,5 @@ WORKDIR /app
 # Copy the Python script into the container
 COPY ahorcado.py ./
 
-# Copy the words file into the container
-COPY palabras.txt ./
-
-# Uncomment the line below if you have dependencies listed in a requirements.txt file
-# RUN pip install -r requirements.txt
-
-# Set the default command to run when the container starts
-# This allows passing an argument (the words file) when running the container
-CMD ["python", "ahorcado.py", "palabras.txt"]
+# Set the entrypoint to allow arguments to be passed directly to the script
+ENTRYPOINT ["python", "ahorcado.py"]
