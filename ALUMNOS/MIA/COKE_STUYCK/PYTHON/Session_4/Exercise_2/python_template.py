@@ -14,15 +14,21 @@ def create_python_template(project_name='project_x'):
     # Create main files
     with open(os.path.join(project_name, 'requirements.txt'), 'w') as f:
         f.write('''
+certifi==2024.8.30
+charset-normalizer==3.4.0
+Faker==30.8.1
+idna==3.10
 numpy==2.1.2
 pandas==2.2.3
 python-dateutil==2.9.0.post0
 pytz==2024.2
-requests
+requests==2.32.3
 six==1.16.0
-tabulate
+tabulate==0.9.0
 termcolor==2.5.0
+typing_extensions==4.12.2
 tzdata==2024.2
+urllib3==2.2.3
 ''')
 
     with open(os.path.join(project_name, 'README.md'), 'w') as f:
