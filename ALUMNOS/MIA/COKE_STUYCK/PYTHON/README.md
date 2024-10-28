@@ -7,7 +7,7 @@ Please, do so, as some of them won't work if run directly,
 as they import functions from 'functions.py' in the root folder.
 Yep, still figuring this out...
 
-1. From the PYTHON folder in the terminal:
+1. From the PYTHON folder in the terminal: `cd ALUMNOS/MIA/COKE_STUYCK/PYTHON`
    Run the Exercise '4.2 Python Template' via `python3 Session_4/Exercise_2/python_template.py`.
    This will create a 'project_x' folder with a virtual environment inside of it.
 
