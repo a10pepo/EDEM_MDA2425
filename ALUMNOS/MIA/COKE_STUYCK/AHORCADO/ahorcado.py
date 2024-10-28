@@ -101,18 +101,14 @@ def log_attempt(word, correct_letters, incorrect_letters, attempts):
         conn = connect_db()
         cursor = conn.cursor()
         
-        # Begin transaction explicitly
-        cursor.execute("BEGIN")
-        
         insert_query = """
         INSERT INTO attempts (palabra, letras_acertadas, letras_falladas, intentos, tiempo)
         VALUES (%s, %s, %s, %s, CURRENT_TIMESTAMP)
         RETURNING id
         """
         
-        # Execute insert with retry logic
-        execute_with_retry(cursor, insert_query, 
-                         (word, correct_letters, incorrect_letters, attempts))
+        # Execute insert with retry logic - remove explicit BEGIN
+        execute_with_retry(cursor, insert_query, params=(word, correct_letters, incorrect_letters, attempts))
         
         # Fetch the returned ID
         result = cursor.fetchone()
@@ -123,12 +119,12 @@ def log_attempt(word, correct_letters, incorrect_letters, attempts):
         
         # Verify the insert within the same transaction
         verify_query = "SELECT id FROM attempts WHERE id = %s"
-        execute_with_retry(cursor, verify_query, (inserted_id,))
+        execute_with_retry(cursor, verify_query, params=(inserted_id,))
         
         if not cursor.fetchone():
             raise Exception("Verification failed - inserted row not found")
         
-        # If we get here, everything worked, so commit the transaction
+        # If we get here, everything worked, so commit
         conn.commit()
         print(f"Successfully inserted and verified row with ID {inserted_id}")
         
