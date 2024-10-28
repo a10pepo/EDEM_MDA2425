@@ -28,7 +28,7 @@
 
 14.Verificar que se está en él. --> pwd
 
-15.Listar todos los ficheros del directorio HOME mostrando sus permisos.--> ls -l /HOME
+15. Listar todos los ficheros del directorio HOME mostrando sus permisos.--> ls -l /HOME
 
 16.Borrar todos los archivos y directorios visibles de vuestro directorio PRUEBA. --> rm -rf /HOME/PRUEBA/*
 
