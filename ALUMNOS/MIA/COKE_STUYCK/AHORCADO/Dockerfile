@@ -14,4 +14,5 @@ COPY palabras.txt ./
 # RUN pip install -r requirements.txt
 
 # Set the default command to run when the container starts
-CMD ["python", "ahorcado.py"]
+# This allows passing an argument (the words file) when running the container
+CMD ["python", "ahorcado.py", "palabras.txt"]
