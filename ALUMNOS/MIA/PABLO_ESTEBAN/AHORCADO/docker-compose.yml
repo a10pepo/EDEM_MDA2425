@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  ahorcado:
+    build:
+      context: ahorcado
+      dockerfile: Dockerfile
+    command: ["python", "jugar.py"]
+
+  db:
+    image: postgres
+    restart: always
+    shm_size: 128mb
+    environment:
+      POSTGRES_PASSWORD: example
+      POSTGRES_DB: mydatabase  # Nombre de la base de datos a crear
+    volumes:
+      - ./db/schema.sql:/docker-entrypoint-initdb.d/schema.sql  # Monta el esquema en la carpeta especial
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
