@@ -214,18 +214,6 @@ Entregas Grupo MIA
 <td>✅</td>
 </tr>
 <tr>
-<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/JOSE_BARBERO'>JOSE_BARBERO</a></td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-</tr>
-<tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/JUAN_OVIEDO'>JUAN_OVIEDO</a></td>
 <td>❌</td>
 <td>❌</td>
@@ -268,7 +256,7 @@ Entregas Grupo MIA
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
-<td>❌</td>
+<td>✅</td>
 <td>❌</td>
 <td>✅</td>
 <td>✅</td>
@@ -304,10 +292,10 @@ Entregas Grupo MIA
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>✅</td>
 <td>❌</td>
 <td>❌</td>
-<td>❌</td>
-<td>❌</td>
+<td>✅</td>
 </tr>
 <tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/RAFA_ORTEGA'>RAFA_ORTEGA</a></td>
@@ -323,7 +311,7 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2024-10-26 13:30:45
+Last Checked: 2024-10-29 14:51:21
 
 
 Entregas Grupo MDA A
@@ -474,7 +462,7 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2024-10-26 13:30:45
+Last Checked: 2024-10-29 14:51:21
 
 Entregas Grupo MDA B
 <table>
@@ -497,7 +485,7 @@ Entregas Grupo MDA B
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
-<td>❌</td>
+<td>✅</td>
 <td>❌</td>
 <td>❌</td>
 <td>✅</td>
@@ -569,7 +557,7 @@ Entregas Grupo MDA B
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
-<td>❌</td>
+<td>✅</td>
 <td>❌</td>
 <td>✅</td>
 <td>✅</td>
@@ -648,5 +636,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2024-10-26 13:30:45
+Last Checked: 2024-10-29 14:51:21
 

@@ -1,0 +1,104 @@
+--CLASE 2
+
+--CONTAR NUMERO DE PELICULAS POR RATING
+SELECT COUNT(film) AS total_film
+FROM film
+GROUP BY rating;
+
+--PRECIO MEDIO DE ALQUILER
+SELECT ROUND(AVG(rental_rate), 2) AS price_avg
+FROM film
+GROUP BY rating;
+
+--EL MÍNIMO PRECIO DE ALQUILER
+SELECT MIN(rental_rate) AS max_rental
+FROM film
+GROUP BY rating;
+
+--EL MÁXIMO PRECIO DE ALQUILER
+SELECT MAX(rental_rate) AS max_rental
+FROM film
+GROUP BY rating;
+
+--LA DURACIÓN MEDIA DE LAS PELÍCULAS
+SELECT ROUND(AVG(film.length)) AS duration_avg
+FROM film
+GROUP BY rating;
+
+--AÑO DE LA PELÍCULA MÁS ANTIGUA
+SELECT MIN(film.release_year) AS old_film
+FROM film
+GROUP BY rating;
+
+--HAY QUE USAR LA FUNCIÓN year(date) (PERO NO TIENE ESE FORMATO)
+
+--AÑO DE LA PELÍCULA MÁS NUEVA
+SELECT MAX(film.release_year) AS new_film
+FROM film
+GROUP BY rating;
+
+----CLÁUSULA HAVING----
+
+--NÚMERO DE PELIS Y QUÉDATE CON AQUELLOS 
+--rating QUE TENGAN MÁS DE 200 PELIS
+SELECT rating, COUNT(film) AS total_film
+FROM film
+GROUP BY rating
+HAVING COUNT(film) > 200;
+
+--PRECIO MEDIO DE ALQUILER Y QUEDATE UNICAMENTE CON AQUELLOS
+--rating QUE TENGA UN PRECIO MEDIO SUPERIOR A 3
+SELECT ROUND(AVG(rental_rate), 2) AS price_avg
+FROM film
+GROUP BY rating
+HAVING AVG(rental_rate) > 3;
+
+-- DURACIÓN MEDIA DE LAS PELÍCULAS Y QUÉDATE CON AQUELLOS
+--rating QUE TENGAN UNA DURACIÓN MEDIA MAYOR A 115MIN
+SELECT ROUND(AVG(film.length),2) AS duration_avg
+FROM film
+GROUP BY rating
+HAVING AVG(film.length) > 115;
+
+
+----JOINS----
+
+--UNIR FILM Y LANGUAGE CON LEFT JOIN
+SELECT a.title , b.name
+FROM film a
+LEFT JOIN language b on a.language_id = b.language_id;
+
+--UTILIZAR INNER JOIN CON 3 TABLAS A LA VEZ (les lletres son per a renombrar les columnes i acurtar el codi)
+SELECT a.title, c.first_name, c.last_name
+FROM film a
+LEFT JOIN film_actor b on a.film_id = b.film_id
+LEFT JOIN actor c on b.actor_id = c.actor_id
+
+--CONTEO POR PELICULA DE LOS ACTORES QUE PARTICIPAN EN LAS PELICULAS
+
+SELECT a.title, COUNT(c.actor_id) AS total_actores
+FROM film a
+LEFT JOIN film_actor b ON a.film_id = b.film_id
+LEFT JOIN actor c ON b.actor_id = c.actor_id
+GROUP BY a.title;
+--HAVING COUNT(c.actor_id) > 30; cero
+
+--CUANTAS PELÍCULAS HACE CADA ACTOR
+SELECT c.first_name, c.last_name, COUNT(a.film_id) AS total_pelis
+FROM film a
+LEFT JOIN film_actor b ON a.film_id = b.film_id
+LEFT JOIN actor c ON b.actor_id = c.actor_id
+GROUP BY c.actor_id;
+
+----CREATE TABLAS----
+CREATE TABLE reviews_js(
+film_id varchar(50) NOT NULL,
+customer_id INT NOT NULL,
+review_date DATE NOT NULL,
+review_description varchar(250)
+)
+
+INSERT INTO reviews_js (film_id, customer_id, review_date, review_description)
+VALUES('as54f234f', 15, '28-10-2024', 'Muy_mala');
+SELECT*
+FROM reviews_js
