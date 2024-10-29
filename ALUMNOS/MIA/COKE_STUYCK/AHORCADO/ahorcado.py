@@ -56,17 +56,21 @@ def guess_word_spanish(word):
 def main():
     # Checks if the file has been provided as an argument
     if len(sys.argv) != 2:
-        print("Usage: python3 ahorcado.py words.txt")
+        print("Usage: python3 ahorcado.py palabras.txt")
         sys.exit(1)
     
     words_file = sys.argv[1]
     words = read_words(words_file)
+    print('')
 
+    total_attempts = 0
     for word in words:
         attempts = guess_word(word)
-        print(f"\nWord: {word} - Attempts needed: {attempts}")
-        attempts_optimized = guess_word_spanish(word)
-        print(f"Word: {word} - Attempts needed: {attempts_optimized} (optimized spanish alphabet)")
+        print(f"Word: {word} - Attempts needed: {attempts}")
+        total_attempts += attempts
+
+    print(f"\nTotal attempts needed: {total_attempts}\n")
+    
 
 if __name__ == "__main__":
     main()
