@@ -1,16 +1,12 @@
 #leer lista de palabras
+
 p = open("palabras.txt", "r")
 archivo=p.read()
 lista_palabras = archivo.split(",")
-
-#leer abecedario
-a = open("abecedario.txt", "r")
-archivo=a.read()
-abecedario = archivo.split(" ")
+abecedario = "abcdefghijklmnñopqrstuvwxyz"
 
 intentos=0
-letras_correctas=[]
-letras_incorrects=[]
+aciertos=0
 #Acceder a cada palabra del de la lista
 for palabra in lista_palabras:
     NLC=0
@@ -28,9 +24,8 @@ for palabra in lista_palabras:
         intentos=intentos+1
         if letra in palabra.lower():
             NLC=NLC+1
-            letras_correctas.append(letra)
-        else:
-            letras_incorrects.append(letra)
-            
+            aciertos=aciertos+1
+
 print(intentos) 
+print(aciertos)
 
