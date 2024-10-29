@@ -7,13 +7,13 @@ def adivinar_palabras(archivo):
     with open(archivo, 'r') as f:
         for palabra in f:
             palabra = palabra.strip().upper()
-            palabra_actual = ['X'] * len(palabra)
+            palabra_actual = ['_'] * len(palabra)
             letras_bien = ""
             letras_mal = ""
             intentos = 0
 
             for letra in abecedario:
-                if 'X' not in palabra_actual:
+                if '_' not in palabra_actual:
                     break
                 fallo = True
                 for i, caracter in enumerate(palabra):
