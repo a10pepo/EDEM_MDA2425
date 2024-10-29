@@ -2,6 +2,7 @@ import sys
 import os
 import mysql.connector
 from datetime import datetime
+import time
 
 db_config = {
     'user': os.getenv('DB_USER', 'user'),
@@ -14,6 +15,7 @@ def conectar_db():
     return mysql.connector.connect(**db_config)
 
 def crear_tabla():
+    time.sleep(30)
     conn = conectar_db()
     with conn.cursor() as micursor:
         
