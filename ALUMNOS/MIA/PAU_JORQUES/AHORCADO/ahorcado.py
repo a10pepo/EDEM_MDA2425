@@ -24,10 +24,10 @@ for aux in palabras:
     num_intentos_locales = 0
     for letra in abecedario:
         palabra.discard(letra)
-        if (len(palabra) == 0):
-            break
         num_intentos_totales += 1
         num_intentos_locales += 1
+        if (len(palabra) == 0):
+            break
     print(f'Se ha encontrado la palabra {aux} en {num_intentos_locales} intentos.')
 
 print(f'Se han necesitado {num_intentos_totales} intentos totales')
