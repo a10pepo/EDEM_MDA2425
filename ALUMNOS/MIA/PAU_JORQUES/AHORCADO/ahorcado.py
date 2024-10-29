@@ -12,18 +12,18 @@ except NameError:
     exit()
 
 palabras = []
-abecedario = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+abecedario = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "Ñ", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 num_intentos_totales = 0
 num_intentos_locales = 0
 
 for palabra in lineas:
-    palabras.append(palabra.strip())
+    palabras.append(palabra.strip().upper())
 
 for aux in palabras:
     palabra = set(aux)
     num_intentos_locales = 0
     for letra in abecedario:
-        palabra.discard(letra.upper())
+        palabra.discard(letra)
         if (len(palabra) == 0):
             break
         num_intentos_totales += 1
