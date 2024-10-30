@@ -1,21 +1,17 @@
-## EXTRA
+# Start services
 
-# Passing a parameter (with a volume)
+`docker-compose up`
 
-'docker run -v $(pwd)/palabras.txt:/app/palabras.txt ahorcado palabras.txt'
+# Run the app passing 'palabras.txt' as a parameter
 
-# Passing a parameter (with a volume)
+`docker-compose run app palabras.txt`
 
-Start services
-'docker-compose up' 
+# Enter the database
 
-Run the app passing palabras.txt as a parameter
-'docker-compose run app palabras.txt'
+`docker-compose exec db psql -U hangman hangman`
 
-Enter the database
-'docker-compose exec db psql -U hangman hangman'
+# Querie example
 
-Querie example
 """
   SELECT 
       palabra,
@@ -26,5 +22,3 @@ Querie example
   GROUP BY palabra
   ORDER BY attempts DESC;
 """
-
-
