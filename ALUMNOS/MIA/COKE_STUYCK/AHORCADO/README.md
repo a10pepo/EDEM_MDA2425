@@ -15,9 +15,7 @@
 """
   SELECT 
       palabra,
-      COUNT(*) as attempts,
-      MIN(intentos) as min_attempts,
-      MAX(intentos) as max_attempts
+      COUNT(*) as attempts
   FROM attempts 
   GROUP BY palabra
   ORDER BY attempts DESC;
