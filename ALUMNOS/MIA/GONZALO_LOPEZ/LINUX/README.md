@@ -12,7 +12,7 @@ Ejercicio de comandos en la consola de linux.
      
   2.Listar todos los archivos del directorio tmp.
   ls tmp
-   
+  
     
     
   3.Listar todos los archivos del directorio etc que empiecen por t 
