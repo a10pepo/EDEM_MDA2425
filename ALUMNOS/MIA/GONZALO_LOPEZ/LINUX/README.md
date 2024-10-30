@@ -10,7 +10,7 @@ Ejercicio de comandos en la consola de linux.
   	ls  bin
     
      
-    
+  
   2.Listar todos los archivos del directorio tmp.
   ls tmp
    
