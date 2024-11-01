@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: ahorcado_db
+    ports:
+      - "5432:5432"  # Exponemos el puerto 5432 de PostgreSQL
+    volumes:
+      - db_data:/var/lib/postgresql/data  # Persistencia de datos
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin_container
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com  # Correo de inicio de sesión
+      PGADMIN_DEFAULT_PASSWORD: admin  # Contraseña de inicio de sesión
+    ports:
+      - "8080:80"  # Acceso a pgAdmin en http://localhost:8080
+    depends_on:
+      - db
+    restart: unless-stopped
+
+volumes:
+  db_data:
+
