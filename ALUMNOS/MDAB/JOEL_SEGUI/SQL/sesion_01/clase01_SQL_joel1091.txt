@@ -1,0 +1,75 @@
+SELECT actor_id, first_name, last_name, last_update
+FROM actor
+
+--Buscar nombres que empiecen por N
+WHERE first_name LIKE '%N%';
+
+--Nombres que empiecen por N y acaben por n
+SELECT actor_id, first_name, last_name, last_update
+FROM actor
+WHERE first_name LIKE 'N%n';
+
+--Nombres que acaben con n
+SELECT actor_id, first_name, last_name, last_update
+FROM actor
+WHERE first_name LIKE '%n';
+
+--Nombres que contengan la n
+SELECT actor_id, first_name, last_name, last_update
+FROM actor
+WHERE first_name LIKE '%n%';
+
+--SQL no tiene en cuenta si es mayúscula o minúscula "-ilike"
+SELECT first_name
+FROM actor 
+WHERE first_name ILIKE '%n%'; --Si comienza o finalice tb te lo pilla
+
+--Que empiecen por n, que contengan un caracter y luego otra cosa
+SELECT first_name
+FROM actor 
+WHERE first_name ILIKE 'N_%';
+
+--Actor que no tenga apellido
+SELECT first_name, last_name
+FROM actor 
+WHERE last_name is NULL; --is NULL para saber si faltan datos
+
+--Contar el número de actores que hay en los datos
+SELECT COUNT(actor) AS total_actors
+FROM actor;
+
+--Sacar nombres únicos que tienen nuestros actores y contarlos
+SELECT COUNT (DISTINCT first_name)
+FROM actor;
+
+--Obtener el nombre más cercano a la última letra del abcedario//en teoria es para números
+SELECT MAX(first_name)
+FROM actor;
+
+-------------------------------------------------------------------------
+--AHORA VAMOS A TRABAJAR CON LA TABLA film
+
+--Sacar peliculas con un replacement_cost >2, q comence la peli per la J
+-- LA RENTA DURACION ENTRE 2 NUMS
+SELECT *
+FROM film
+WHERE replacement_cost > 2 AND title ILIKE 'J%' AND rental_duration BETWEEN 3 AND 5 AND release_year = 2006 AND "length" > 100 AND rental_rate > 2;
+
+--OPERACIONES
+--cuantas veces tengo q alquilar una peli para q me rente 
+
+--CEIL per a arredonir cap a dalt i ordenar descendentemente
+SELECT title, CEIL(replacement_cost/rental_rate) as Punto_eq
+FROM film
+ORDER BY Punto_eq DESC;
+
+--PARA DATOS RAROS HAY QUE PONER ESTO
+SELECT special_features[1]
+FROM film
+WHERE replacement_cost > 2;
+
+--COSES MES RARES-> PA PILLAR LA SEGONA PARAULA DEL DATO RARO
+SELECT * 
+FROM film
+WHERE special_features[2] ILIKE 'D%';
+
