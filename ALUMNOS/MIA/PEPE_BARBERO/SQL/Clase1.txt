@@ -1,0 +1,29 @@
+ELECT actor_id, first_name, last_name, last_update 
+FROM actor;
+-- ilike sirve para que sql no distinga entre mayus o minus
+-- _ funciona para determinar una restriccion
+
+SELECT count (actor_id) as total_actor FROM actor;
+
+
+SELECT COUNT (DISTINCT first_name) FROM actor;
+
+SELECT max (DISTINCT first_name) FROM actor;
+
+SELECT * FROM film;
+
+SELECT * FROM film 
+WHERE replacement_cost > 2 
+AND title ILIKE 'p_%' 
+AND rental_duration BETWEEN 1 AND 5
+AND release_year <= 2006
+AND length >= 100
+AND rental_rate > 2;
+
+
+SELECT title, CEIL (replacement_cost/rental_rate) AS BEP
+FROM film
+ORDER BY BEP DESC;
+
+Select * from film
+where special_features[2] ilike 'D%'
