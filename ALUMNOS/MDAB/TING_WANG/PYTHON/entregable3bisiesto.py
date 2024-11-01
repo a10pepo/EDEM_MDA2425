@@ -5,7 +5,9 @@ def esBisiesto(year:int) -> None:
     else :
         print(f' - {year} no es bisiesto')
 
-lista_year = [2020, 2021, 2022, 2023, 2024, 2025]
 
-for year in lista_year:
-    esBisiesto(year)
+if __name__== "entregable3bisiesto.py":
+    lista_year = [2020, 2021, 2022, 2023, 2024, 2025]
+    for year in lista_year:
+        esBisiesto(year)
+    

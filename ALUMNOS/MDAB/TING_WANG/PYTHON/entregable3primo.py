@@ -9,7 +9,9 @@ def esPrimo(numero:int) -> None:
              return
     print(f' - {numero} es primo')
 
-x = range(1,101)
-for numero in x:
-    esPrimo(numero)
+
+if __name__== "entregable3primo.py":
+    x = range(1,101)
+    for numero in x:
+        esPrimo(numero)
     
