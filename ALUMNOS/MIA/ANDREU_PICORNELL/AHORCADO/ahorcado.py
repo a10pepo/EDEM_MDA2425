@@ -28,5 +28,9 @@ for word in list_words:
         query = f"INSERT INTO ahorcado (palabra, letras_acertadas, letras_falladas, intentos, tiempo) VALUES ('{word}', '{succesful_letters}', '{error_letters}', {num_iterations}, NOW());"
         cur.execute( query )
 
+conexion.commit()
+
 print (f"Hemos descifrado todas la palabra en {num_iterations} intentos")
+cur.close()
+conexion.close()
 
