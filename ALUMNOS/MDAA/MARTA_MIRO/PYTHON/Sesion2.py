@@ -14,3 +14,5 @@ print("Has indicado que la inversión durará:", años_inversion, "años")
 resultado_final = cantidad_inversion * (1 + interes_decimal) ** años_inversion
 interes_generado = resultado_final - cantidad_inversion
 print((f"En {años_inversion} años habrás recibido {interes_generado}€ de interés.")) 
+
+.
