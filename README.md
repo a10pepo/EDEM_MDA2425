@@ -311,7 +311,7 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2024-11-12 20:24:47
+Last Checked: 2024-11-12 20:25:36
 
 
 Entregas Grupo MDA A
@@ -462,7 +462,7 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2024-11-12 20:24:47
+Last Checked: 2024-11-12 20:25:36
 
 Entregas Grupo MDA B
 <table>
@@ -505,7 +505,7 @@ Entregas Grupo MDA B
 <tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/CARLOS_OLIVER'>CARLOS_OLIVER</a></td>
 <td>❌</td>
-<td>❌</td>
+<td>✅</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
@@ -636,5 +636,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2024-11-12 20:24:47
+Last Checked: 2024-11-12 20:25:36
 
