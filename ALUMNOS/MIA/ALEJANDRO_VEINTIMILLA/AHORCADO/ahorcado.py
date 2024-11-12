@@ -1,9 +1,19 @@
+import psycopg2
 #leer lista de palabras
-
 p = open("palabras.txt", "r")
 archivo=p.read()
 lista_palabras = archivo.split(",")
 abecedario = "abcdefghijklmnñopqrstuvwxyz"
+
+#Conexion
+parametros = {
+    "host": "http://localhost",
+    "port": "5050",
+    "user": "postgres",
+    "password": "Welcome01",
+    "database": "Ahorcado"
+}
+conn = psycopg2.connect(**parametros)
 
 intentos=0
 aciertos=0

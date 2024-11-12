@@ -1,6 +1,5 @@
 FROM python:latest
- 
-COPY ahorcado.py ./
-COPY palabras.txt ./
+COPY ahorcado.py .
+COPY palabras.txt .
 
 CMD ["python","ahorcado.py"]
