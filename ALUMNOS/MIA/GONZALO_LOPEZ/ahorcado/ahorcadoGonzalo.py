@@ -22,6 +22,39 @@ for word in list_words: # 2. ITERAR PALABRAS E IMPRIMIR UNA
 print(numero_intentos)
 print(aciertos)
 
+import psycopg2
+host = "localhost5050"
+database="ahorcado"
+user="postgres"
+password="Welcome01"
+
+try:
+    connection = psycopg2.connect(
+        host='localhost',
+        database='ahorcado',
+        user='postgres',
+        password='Welcome01',
+        port='5050'
+
+    ) # Crear un cursor para ejecutar comandos SQL
+    cursor = connection.cursor()
+
+    # Ejecutar una consulta para verificar la conexión
+    cursor.execute("SELECT version();")
+    version = cursor.fetchone()
+    print("Conectado a PostgreSQL, versión:", version)
+
+
+except exception as e :
+    print('Ocurro un error al conectar la base de datos:',e)
+
+    
+finally:
+    # Cerrar el cursor y la conexión
+    if cursor:
+        cursor.close()
+    if connection:
+        connection.close()
 
 
 
