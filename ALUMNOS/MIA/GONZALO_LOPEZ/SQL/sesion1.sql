@@ -58,7 +58,6 @@ and release_year < 2006
 and length > 100
 and rental_rate>2;
 
-
 --operaciones
 --cuantas películas tengo que vender para recuperar su coste
 SELECT title,rental_rate,replacement_cost,floor(replacement_cost/rental_rate) as punto_equilibrio from film;
