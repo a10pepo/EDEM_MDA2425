@@ -1,6 +1,6 @@
 # Contenedores
 
-Para entregar este ejercicio, debes subir el Código generado a vuestro repositorio remoto de GitHub y realizar una Pull Request poniendo a *Alberto Hernandez (alhercan)* como reviewer.
+Para entregar este ejercicio, debes subir el Código generado a vuestro repositorio remoto de GitHub y realizar una Pull Request poniendo a *Jose Luis Gomez (MA-Barracas)* como reviewer.
 
 ## Objetivo
 

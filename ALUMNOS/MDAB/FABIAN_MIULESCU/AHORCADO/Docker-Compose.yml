@@ -1,0 +1,55 @@
+version: '3.5'
+
+services:
+  mysql:
+    container_name: mysql_container
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ahorcado_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - ahorcado_network
+    restart: unless-stopped
+
+  phpmyadmin:
+    container_name: phpmyadmin_container
+    image: phpmyadmin/phpmyadmin
+    environment:
+      PMA_HOST: mysql
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "8080:80"
+    networks:
+      - ahorcado_network
+    restart: unless-stopped
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - mysql
+    environment:
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_NAME: ahorcado_db
+      DB_USER: user
+      DB_PASSWORD: password
+    volumes:
+      - ./palabras.txt:/app/palabras.txt
+    networks:
+      - ahorcado_network
+    command: python ahorcado.py /app/palabras.txt
+
+networks:
+  ahorcado_network: 
+    driver: bridge
+
+volumes:
+  mysql_data:

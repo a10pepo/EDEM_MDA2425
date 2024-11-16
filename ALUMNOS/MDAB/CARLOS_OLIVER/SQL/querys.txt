@@ -1,0 +1,73 @@
+select actor_id, first_name, last_name, last_update
+from actor
+where first_name = 'Ed' or first_name = 'Nick';
+
+
+SELECT * 
+FROM actor 
+WHERE first_name LIKE 'N%' AND first_name LIKE '%n%';
+
+SELECT * 
+FROM actor 
+WHERE first_name ILIKE '%n%';
+
+SELECT * 
+FROM actor 
+WHERE first_name LIKE '%_n_%';
+
+SELECT * 
+FROM actor 
+WHERE first_name ILIKE 'n_%';
+
+
+SELECT * 
+FROM actor 
+WHERE last_name ILIKE '';
+
+SELECT count(*) as all_files
+FROM actor;
+
+
+SELECT COUNT(DISTINCT(first_name))
+from actor;
+
+SELECT MAX(DISTINCT(first_name))
+from actor;
+
+SELECT *
+from film
+WHERE replacement_cost > 2;
+
+
+SELECT replacement_cost, title
+FROM film
+WHERE replacement_cost > 2 AND title ILIKE 'C%';
+
+SELECT *
+FROM film
+WHERE replacement_cost > 2 
+AND title 
+ILIKE 'C%' 
+AND rental_duration 
+BETWEEN 0 AND 5
+AND release_year = 2006
+AND length > 100
+;
+
+
+SELECT *
+FROM film
+WHERE replacement_cost > 2 
+AND title 
+ILIKE 'C%' 
+AND rental_duration 
+BETWEEN 0 AND 5
+AND release_year = 2006
+AND length > 100
+AND rental_rate > 2
+;
+
+SELECT CEIL ((replacement_cost / rental_rate)) AS Breakpoint
+FROM film
+ORDER BY  Breakpoint DESC;
+
