@@ -16,4 +16,3 @@ for palabra in palabras: # Bucle para
                 break
 print(intentos)
 print(aciertos)
-
