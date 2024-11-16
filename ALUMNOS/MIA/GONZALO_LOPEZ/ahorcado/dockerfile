@@ -5,4 +5,5 @@ workdir /app
 COPY ahorcadoGonzalo.py .
 COPY palabras.txt .
 
+
 CMD ["python","ahorcadoGonzalo.py"]
