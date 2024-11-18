@@ -126,7 +126,6 @@ group by 1)
 select * from my_sub_query where total > 190;
 
 
-
 with my_sub_query as
 (select concat(first_name,'', last_name), 
 from staff s
