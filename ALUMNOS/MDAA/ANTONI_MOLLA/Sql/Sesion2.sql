@@ -7,7 +7,7 @@ FROM film f
 left join film_actor fa on f.film_id=fa.film_id
 left join actor a on fa.actor_id=a.actor_id
 Group by f.title
-order by actor_account desc;
+order by actor_account desc
 
 --Dia 2
 
