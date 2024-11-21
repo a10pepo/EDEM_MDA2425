@@ -1,0 +1,9 @@
+FROM ubuntu:latest
+
+RUN apt-get update && apt-get install -y python3
+
+WORKDIR /suma
+
+COPY sum.py /suma/sum.py
+
+ENTRYPOINT [ "python3", "sum.py" ]
