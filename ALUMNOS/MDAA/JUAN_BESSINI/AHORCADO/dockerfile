@@ -1,0 +1,15 @@
+# Usa una imagen base de Python
+FROM python:3.9-alpine
+
+# Actualiza el sistema
+#RUN apt-get update
+
+# Crea el directorio de trabajo
+WORKDIR /app
+
+# Copia el script Python al contenedor
+COPY python_ahorcado.py /app
+COPY palabras.txt /app
+
+# Define el comando predeterminado
+ENTRYPOINT ["python", "python_ahorcado.py", "palabras.txt"]
