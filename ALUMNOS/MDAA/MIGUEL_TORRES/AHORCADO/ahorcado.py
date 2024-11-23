@@ -12,20 +12,25 @@ def leer_archivo():
     
 palabras = leer_archivo()
 
-import pg8000
-con = pg8000.native.Connection("postgres", password = "Welcome01")
+import pg8000.native
+con = pg8000.native.Connection(user='postgres',database='DatosAhorcado', password = "Welcome01", host="postgres_container")
 
 intentos = 0
+letras_acertadas=""
+letras_falladas=""
 
 for palabra in palabras:
     longitud = len(palabra)
     for letra in diccionario:
         if longitud > 0:
-            con.run("INSERT INTO book (title) VALUES (:title)", title=title)
+            con.run("INSERT INTO juego_ahorcado(palabra) VALUES (:palabra)", palabra=palabra)
             intentos +=1
             if letra in palabra:
                 longitud = longitud - 1*palabra.count(letra)
-                #print(longitud)
+                letras_acertadas += letra
+            else:
+                letras_falladas +=letra
+
 
 print(intentos)
 
