@@ -2,10 +2,10 @@
 
 import sys
 import pg8000.native
-con = pg8000.native.Connection("postgres", password="Welcome01")
+con = pg8000.native.Connection("postgres", password="Welcome01", host="postgres")
 
 # Crear una tabla temporal
-con.run("CREATE TEMPORARY TABLE Tabla_ahorcado (palabra VARCHAR, letras_acertadas VARCHAR, letras_falladas VARCHAR, intentos VARCHAR, tiempo DATE)")
+con.run("CREATE TABLE IF NOT EXISTS tabla_ahorcado (palabra VARCHAR, letras_acertadas VARCHAR, letras_falladas VARCHAR, intentos VARCHAR, tiempo DATE)")
 
 # Abecedario como lista de letras
 abecedario = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", 
@@ -47,11 +47,13 @@ aciertos = 0
 fallos = 0
 
 for palabra in palabras:
+    #con.run("INSERT INTO tabla_ahorcado (palabra) VALUES (:A)", A=palabra)
     letras_encontradas = set()  # Rastrear letras acertadas
     letras_unicas = set(palabra)  # Letras únicas de la palabra
     
     for letra in abecedario_opt:
         intentos += 1
+        con.run("INSERT INTO tabla_ahorcado (intentos) VALUES (:B)", B=intentos)
         
         if letra in palabra:
             aciertos += 1
@@ -66,15 +68,5 @@ for palabra in palabras:
 print(intentos)
 # print(letras_encontradas)
 # print(letras_unicas)
-
-# Rellenar la tabla
-for palabra in ("Ender's Game", "The Magus"):
-    con.run("INSERT INTO Tabla_ahorcado (palabra) VALUES (:palabra)", title=title)
-
-# Imprime los valores
-for row in con.run("SELECT * FROM book"):
-     print(row)
-[1, "Ender's Game"]
-[2, 'The Magus']
 
 con.close()

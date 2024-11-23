@@ -4,6 +4,9 @@ FROM python:3.9-alpine
 # Actualiza el sistema
 #RUN apt-get update
 
+# Instala pg8000 con pip
+RUN pip install pg8000
+
 # Crea el directorio de trabajo
 WORKDIR /app
 

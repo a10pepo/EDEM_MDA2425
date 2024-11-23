@@ -29,6 +29,12 @@ services:
     networks:
       - postgres
     restart: unless-stopped
+  
+  ahorcado:
+    build: .
+    container_name: ahorcado_container
+    networks:
+      - postgres
  
 networks:
   postgres:
