@@ -1,0 +1,6 @@
+FROM python:3.12.2
+WORKDIR /AHORCADO
+COPY ahorcado.py /AHORCADO
+ENTRYPOINT ["python","ahorcado.py"]
+
+import pg8000.native
