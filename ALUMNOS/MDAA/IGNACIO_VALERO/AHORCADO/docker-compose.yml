@@ -15,7 +15,13 @@ services:
     networks:
       - postgres
     restart: unless-stopped
-   
+
+  ahorcado:
+    build: .
+    container_name: ahorcado
+    networks:
+      - postgres
+
   pgadmin:
     container_name: pgadmin_container
     image: dpage/pgadmin4:4.16
