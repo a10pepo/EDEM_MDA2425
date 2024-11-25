@@ -1,6 +1,4 @@
 --- sesion 3
-
-
 SELECT 
     f.title AS "Film Title", 
     COUNT(fa.actor_id) AS "Actor Count"
