@@ -4,7 +4,7 @@
 
 <div>
 
-### Hi Hi
+### Hi EDu
 
 Since I became a member of GitHub, I've made **6838** commits, raised **460** issues, submitted **120** pull requests, earned **1288** stars across **126** personal projects, and contributed to **23** public repositories.
 
