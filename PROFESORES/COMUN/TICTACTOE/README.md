@@ -44,7 +44,7 @@ docker-compose up -d
 Una vez todo esté levantado y puedas acceder a pgAdmin, deberías ejectuar el siguiente commando para arrancar el juego:
 
 ```
-docker-compose run --rm ahorcado
+docker-compose run --rm tictactoe
 ```
 
 ¿Se ha levantado todo correctamente? ¿Se guardan los movimientos en la base de datos? Si es así, ¡enhorabuena! Has completado el ejercicio, si no es así, sigue intentándolo... te has dejado algo por arreglar.
