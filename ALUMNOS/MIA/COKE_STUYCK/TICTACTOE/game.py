@@ -39,20 +39,15 @@ def get_computer_move(board):
     return random.choice(available_moves)
 
 def insert_move_to_db(conn, move_text):
-    try:
-        cursor = conn.cursor()
-        cursor.execute("""
-        INSERT INTO games (
-            timestamp,
-            move
-        )
-        VALUES (%s, %s)
-        """, (datetime.now(), move_text))
-        conn.commit()
-    except Exception as e:
-        print("Error: La base de datos no está lista, si estás en Fase 1 no es un problema")
-
-    
+    cursor = conn.cursor()
+    cursor.execute("""
+    INSERT INTO games (
+        timestamp,
+        move
+    )
+    VALUES (%s, %s)
+    """, (datetime.now(), move_text))
+    conn.commit()
 
 def setup_database(conn):
     cursor = conn.cursor()
@@ -65,16 +60,16 @@ def setup_database(conn):
     conn.commit()
 
 def main():
-    try:
-        # Connect to the PostgreSQL database
-        conn = pg8000.connect(user="postgres", password="Welcome01", host="postgres", port=5432, database="postgres")
-
-        # Setup the database
-        setup_database(conn)
-    except pg8000.exceptions.InterfaceError:
-        print("Error: La base de datos no está lista, si estás en Fase 1 no es un problema")
-        conn = None
-        
+    # Connect to the PostgreSQL database
+    conn = pg8000.connect(
+        user="postgres",
+        password="Welcome01",
+        host="postgres",
+        port=5432,
+        database="tictactoe"
+    )
+    # Setup the database
+    setup_database(conn)
 
     board = [["1", "2", "3"], ["4", "5", "6"], ["7", "8", "9"]]
     current_player = "X"
