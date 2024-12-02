@@ -1,21 +1,25 @@
-version: '3.5'
- 
 services:
   postgres:
     container_name: postgres_container
     image: postgres:12.1
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-postgres}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-pass01}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-Welcome01}
+      POSTGRES_DB: tictactoe
       PGDATA: /data/postgres
     volumes:
-       - postgres:/data/postgres
+      - postgres:/data/postgres
     ports:
-      - "5450:5450"
+      - "5432:5432"
     networks:
       - postgres
     restart: unless-stopped
-   
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
   pgadmin:
     container_name: pgadmin_container
     image: dpage/pgadmin4:4.16
@@ -24,29 +28,30 @@ services:
       PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
       PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
     volumes:
-       - pgadmin:/root/.pgadmin
+      - pgadmin:/root/.pgadmin
     ports:
-      - "5050:90"
+      - "5050:80"
     networks:
       - postgres
     restart: unless-stopped
     depends_on:
       - postgres
- 
-  ahorcado:
-    build: Dockerfile
+
+  tictactoe:
+    build: .
     stdin_open: true # docker run -i
     tty: true        # docker run -t
-    container_name: ahorcado_container
+    container_name: tictactoe_container
     depends_on:
-      - post   
+      postgres:
+        condition: service_healthy
     networks:
-      - ahorcado
+      - postgres
 
 networks:
   postgres:
     driver: bridge
- 
+
 volumes:
     postgres:
     pgadmin:
