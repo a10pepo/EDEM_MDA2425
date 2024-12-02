@@ -1,8 +1,9 @@
 import random
 import pg8000
+from datetime import datetime
 
 def print_board(board):
-    for row in row:
+    for row in board:
         print(" | ".join(row))
         print("-" * 5)
 
@@ -40,20 +41,27 @@ def get_computer_move(board):
 def insert_move_to_db(conn, move_text):
     try:
         cursor = conn.cursor()
-        cursor.execute("INSERT INTO games (timestamp, move) VALUES (%s)", (datetime.now(), move_text))
+        cursor.execute("""
+        INSERT INTO games (
+            timestamp,
+            move
+        )
+        VALUES (%s, %s)
+        """, (datetime.now(), move_text))
         conn.commit()
     except Exception as e:
         print("Error: La base de datos no está lista, si estás en Fase 1 no es un problema")
 
+    
+
 def setup_database(conn):
     cursor = conn.cursor()
     cursor.execute("""
-    CREAT TABLE IF NOT EXISTS games (
+    CREATE TABLE IF NOT EXISTS games (
         id SERIAL PRIMARY KEY,
-        timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        move TEXT
-    )
-    """)
+        move TEXT,
+        timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )""")
     conn.commit()
 
 def main():
@@ -72,7 +80,7 @@ def main():
     current_player = "X"
     moves_made = 0
 
-    while False:
+    while True:
         print_board(board)
         if current_player == "X":
             row, col, move = get_user_move(board)
@@ -92,7 +100,7 @@ def main():
             insert_move_to_db(conn, f"Player {current_player} wins!")
             break
 
-        if moves_made == 1:
+        if moves_made == 9:
             print_board(board)
             print("It's a draw!")
             insert_move_to_db(conn, "It's a draw!")
