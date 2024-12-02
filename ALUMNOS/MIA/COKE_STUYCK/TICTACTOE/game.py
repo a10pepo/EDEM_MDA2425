@@ -1,11 +1,31 @@
 import random
 import pg8000
 from datetime import datetime
+import functions
+from termcolor import colored
+import time
 
+# def print_board(board):
+#     print("\n")
+#     for row in board:
+#         print(" | ".join(row))
+#         print("-" * 9)
+        
 def print_board(board):
+    print(" ", "\n", "-" * 13)
     for row in board:
-        print(" | ".join(row))
-        print("-" * 5)
+        print(" | ", end="")
+        for cell in row:
+            if cell == "X":
+                colored_x = colored('X', 'green', attrs=['bold'])
+                print(colored_x, end="")
+            elif cell == "O":
+                colored_o = colored('O', 'red', attrs=['bold'])
+                print(colored_o, end="")
+            else:
+                print(cell, end="")
+            print(" | ", end="")
+        print(" ", "\n", "-" * 13)
 
 def check_winner(board, player):
     # Check rows, columns and diagonals
@@ -22,17 +42,17 @@ def check_winner(board, player):
 def get_user_move(board):
     while True:
         try:
-            move = int(input("Enter the number of the cell (1-9): "))
+            move = int(input("\nEnter the number of the cell (1-9): "))
             if move in range(1, 10):
                 row, col = (move - 1) // 3, (move - 1) % 3
                 if board[row][col] not in ["X", "O"]:
                     return row, col, move
                 else:
-                    print("Cell already taken. Choose another cell.")
+                    print("\nCell already taken. Choose another cell.")
             else:
-                print("Invalid input. Please enter a number between 1 and 9.")
+                print("\nInvalid input. Please enter a number between 1 and 9.")
         except ValueError:
-            print("Invalid input. Please enter a number between 1 and 9.")
+            print("\nInvalid input. Please enter a number between 1 and 9.")
 
 def get_computer_move(board):
     available_moves = [(r, c, (r * 3 + c + 1)) for r in range(3) for c in range(3) if board[r][c] not in ["X", "O"]]
@@ -74,14 +94,17 @@ def main():
     board = [["1", "2", "3"], ["4", "5", "6"], ["7", "8", "9"]]
     current_player = "X"
     moves_made = 0
+    
+    functions.make_header('TIC TAC TOE', 'Moves are logged in the database')
 
     while True:
         print_board(board)
         if current_player == "X":
             row, col, move = get_user_move(board)
         else:
+            time.sleep(1)
             row, col, move = get_computer_move(board)
-            print(f"Computer chose cell {move}")
+            print(f"\nComputer chose cell {move}")
 
         board[row][col] = current_player
         moves_made += 1
@@ -91,8 +114,13 @@ def main():
 
         if check_winner(board, current_player):
             print_board(board)
-            print(f"Player {current_player} wins!")
-            insert_move_to_db(conn, f"Player {current_player} wins!")
+            if current_player == "X":
+                colored_x_winner = colored('\nPlayer X wins!\n\n', 'green', attrs=['bold'])
+                print(colored_x_winner, end="")
+            else:
+                colored_o_winner = colored('\nPlayer O wins!\n\n', 'red', attrs=['bold'])
+                print(colored_o_winner, end="")
+            insert_move_to_db(conn, f"\nPlayer {current_player} wins!")
             break
 
         if moves_made == 9:
