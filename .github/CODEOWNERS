@@ -1,3 +1,4 @@
+
 /Alumnos/MDAA/*/DOCKER/** @a10pepo @MA-Barracas
 /Alumnos/MDAB/*/DOCKER/** @a10pepo @MA-Barracas
 /Alumnos/MIA/*/DOCKER/** @a10pepo @MA-Barracas
@@ -38,7 +39,54 @@
 /Alumnos/MDAB/*/TERRAFORM/** @a10pepo
 /Alumnos/MIA/*/TERRAFORM/** @a10pepo
 
-/Alumnos/MDAA/*/DBT/** @a10pepo 
-/Alumnos/MDAB/*/DBT/** @a10pepo
-/Alumnos/MIA/*/DBT/** @a10pepo
+/Alumnos/MDAA/*/DBT/** @a10pepo @Rosalln
+/Alumnos/MDAB/*/DBT/** @a10pepo @Rosalln
+/Alumnos/MIA/*/DBT/** @a10pepo @Rosalln
 
+/Alumnos/MDAA/*/ML0_INTRO/** @a10pepo
+/Alumnos/MDAB/*/ML0_INTRO/** @a10pepo
+/Alumnos/MIA/*/ML0_INTRO/** @a10pepo
+
+/Alumnos/MDAA/*/ML1_REG/** @a10pepo @MA-Barracas
+/Alumnos/MDAB/*/ML1_REG/** @a10pepo @MA-Barracas
+/Alumnos/MIA/*/ML1_REG/** @a10pepo @MA-Barracas
+
+/Alumnos/MDAA/*/ML2_CLA/** @a10pepo
+/Alumnos/MDAB/*/ML2_CLA/** @a10pepo
+/Alumnos/MIA/*/ML2_CLA/** @a10pepo
+
+/Alumnos/MDAA/*/ML3_CLUSTERING/** @a10pepo
+/Alumnos/MDAB/*/ML3_CLUSTERING/** @a10pepo
+/Alumnos/MIA/*/ML3_CLUSTERING/** @a10pepo
+
+/Alumnos/MDAA/*/ML4_DIM/** @a10pepo
+/Alumnos/MDAB/*/ML4_DIM/** @a10pepo
+/Alumnos/MIA/*/ML4_DIM/** @a10pepo
+
+/Alumnos/MDAA/*/MLLIB/** @a10pepo
+/Alumnos/MDAB/*/MLLIB/** @a10pepo
+/Alumnos/MIA/*/MLLIB/** @a10pepo
+
+/Alumnos/MDAA/*/MLOPS/** @a10pepo @daruai
+/Alumnos/MDAB/*/MLOPS/** @a10pepo @daruai
+/Alumnos/MIA/*/MLOPS/** @a10pepo @daruai
+
+/Alumnos/MDAA/*/RN1_ANN/** @a10pepo
+/Alumnos/MDAB/*/RN1_ANN/** @a10pepo
+/Alumnos/MIA/*/RN1_ANN/** @a10pepo
+
+/Alumnos/MDAA/*/RN2_CNN/** @a10pepo @ralogon
+/Alumnos/MDAB/*/RN2_CNN/** @a10pepo @ralogon
+/Alumnos/MIA/*/RN2_CNN/** @a10pepo @ralogon
+
+/Alumnos/MDAA/*/RN3_RNN/** @a10pepo
+/Alumnos/MDAB/*/RN3_RNN/** @a10pepo
+/Alumnos/MIA/*/RN3_RNN/** @a10pepo
+
+/Alumnos/MDAA/*/RN4_NLP/** @a10pepo
+/Alumnos/MDAB/*/RN4_NLP/** @a10pepo
+/Alumnos/MIA/*/RN4_NLP/** @a10pepo
+
+/Alumnos/MDAA/*/ESTADISTICA/** @a10pepo @miguelruadelbarrio
+/Alumnos/MDAB/*/ESTADISTICA/** @a10pepo @miguelruadelbarrio
+/Alumnos/MIA/*/ESTADISTICA/** @a10pepo @miguelruadelbarrio
