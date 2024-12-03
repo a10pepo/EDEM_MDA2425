@@ -1,4 +1,5 @@
 
+
 /Alumnos/MDAA/*/DOCKER/** @a10pepo @MA-Barracas
 /Alumnos/MDAB/*/DOCKER/** @a10pepo @MA-Barracas
 /Alumnos/MIA/*/DOCKER/** @a10pepo @MA-Barracas
@@ -75,9 +76,9 @@
 /Alumnos/MDAB/*/RN1_ANN/** @a10pepo
 /Alumnos/MIA/*/RN1_ANN/** @a10pepo
 
-/Alumnos/MDAA/*/RN2_CNN/** @a10pepo @ralogon
-/Alumnos/MDAB/*/RN2_CNN/** @a10pepo @ralogon
-/Alumnos/MIA/*/RN2_CNN/** @a10pepo @ralogon
+/Alumnos/MDAA/*/RN2_CNN/** @a10pepo 
+/Alumnos/MDAB/*/RN2_CNN/** @a10pepo 
+/Alumnos/MIA/*/RN2_CNN/** @a10pepo 
 
 /Alumnos/MDAA/*/RN3_RNN/** @a10pepo
 /Alumnos/MDAB/*/RN3_RNN/** @a10pepo
