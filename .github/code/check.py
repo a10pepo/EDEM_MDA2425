@@ -2,9 +2,11 @@ import os
 import datetime
 
 
-deliverables=os.listdir(os.path.join(os.getcwd(), "PROFESORES"))
 
 def check_class(folder_path):
+    class_type=folder_path.split("/")[-1][0:3]
+    deliverables=os.listdir(os.path.join(os.getcwd(), "PROFESORES"+"/"+class_type))
+    deliverables=deliverables+os.listdir(os.path.join(os.getcwd(), "PROFESORES"+"/COMUN"))
     alumnos={}
     for alumno in os.listdir(folder_path):
         file_path = os.path.join(folder_path, alumno)
@@ -29,28 +31,18 @@ def check_names(folder_path):
             files = os.listdir(file_path)
             for element in files:
                 print(element)
-                         
-
-                    # else:
-                    #     print("File not allowed "+file_path+" Elment: "+element.upper())             
 
 
 def generate_table(clase,alumnos):
+    class_type=clase[0:3]
+    deliverables=os.listdir(os.path.join(os.getcwd(), "PROFESORES"+"/"+class_type))
+    deliverables=deliverables+os.listdir(os.path.join(os.getcwd(), "PROFESORES"+"/COMUN"))    
     print("Generating Table")
     try:
         table="<table>\n<tr><th>Alumno</th>"
         for element in deliverables:
             table+="\n<th>"+element+"</th>"
         table+="\n</tr>\n"
-        # table+="<tr>\n"
-        # table+="<td> Modulos </td>\n"
-        # table+="<td color='#dee2d0' style='text-align: center;font-weight: bold' colspan='5'> M0 - Fundamentos </td>\n"
-        # table+="<td color='#a5cbaa' style='text-align: center;font-weight: bold' colspan='2'> M1.1 - Tratamiento Tradicional </td>\n"
-        # table+="<td color='#9bc99e' style='text-align: center;font-weight: bold' colspan='2'> M1.2 - Streaming On Prem </td>\n"
-        # table+="<td color='#779777' style='text-align: center;font-weight: bold' colspan='3'> M1.3 - Cloud Approach </td>\n"
-        # table+="<td color='#5f7b6e' style='text-align: center;font-weight: bold' colspan='1'> M2.1 - Estadística </td>\n"
-        # table+="<td color='#5f7b6e' style='text-align: center;font-weight: bold' colspan='2'> M2.2 - ML / DL </td>\n"
-        # table+="</tr>\n"
         table+="<tr>\n"  
         for alumno in sorted(alumnos):
             table+="<tr>\n<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/"+clase+"/"+alumno+"'>"+str.upper(alumno)+"</a></td>"
