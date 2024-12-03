@@ -65,6 +65,10 @@ RN4_NLP:
 - changed-files:
   - any-glob-to-any-file: ['ALUMNOS/MDAA/*/RN4_NLP/**', 'ALUMNOS/MDAB/*/RN4_NLP/**', 'ALUMNOS/MIA/*/RN4_NLP/**']
 
+ESTADISTICA:
+- changed-files:
+  - any-glob-to-any-file: ['ALUMNOS/MDAA/*/ESTADISTICA/**', 'ALUMNOS/MDAB/*/ESTADISTICA/**', 'ALUMNOS/MIA/*/ESTADISTICA/**']
+
 entregable:
 - changed-files:
   - any-glob-to-any-file: 'ALUMNOS/**'
