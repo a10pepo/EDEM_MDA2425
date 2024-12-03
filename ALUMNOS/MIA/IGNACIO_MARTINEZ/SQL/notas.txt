@@ -1,3 +1,0 @@
-select x, count(x)
-FROM TABLE
-Group by x
