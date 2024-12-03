@@ -1,0 +1,52 @@
+version: '3.5'
+ 
+services:
+  postgres:
+    container_name: postgres_container
+    image: postgres:12.1
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-pass01}
+      PGDATA: /data/postgres
+    volumes:
+       - postgres:/data/postgres
+    ports:
+      - "5450:5450"
+    networks:
+      - postgres
+    restart: unless-stopped
+   
+  pgadmin:
+    container_name: pgadmin_container
+    image: dpage/pgadmin4:4.16
+    platform: linux/amd64
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+    volumes:
+       - pgadmin:/root/.pgadmin
+    ports:
+      - "5050:90"
+    networks:
+      - postgres
+    restart: unless-stopped
+    depends_on:
+      - postgres
+ 
+  ahorcado:
+    build: Dockerfile
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    container_name: ahorcado_container
+    depends_on:
+      - post   
+    networks:
+      - ahorcado
+
+networks:
+  postgres:
+    driver: bridge
+ 
+volumes:
+    postgres:
+    pgadmin:
