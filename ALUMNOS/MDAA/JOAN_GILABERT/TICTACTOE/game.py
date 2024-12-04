@@ -20,7 +20,7 @@ def check_winner(board, player):
     return False
 
 def get_user_move(board):
-    while True: #mientras no sea falso:
+    while True: 
         try:
             move = int(input("Enter the number of the cell (1-9): "))   #Entra un número del 1 al 9 y se almacena en move, este será el número de la celda
             if move in range(1, 10):    #si move esta en el rango de 10 a 1

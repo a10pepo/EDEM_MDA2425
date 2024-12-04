@@ -9,7 +9,6 @@ WORKDIR /app
 # Copy the current directory contents into the container at /app
 
 COPY game.py /app
-COPY requirements.txt /app
 
 # Run the Tic Tac Toe game
 CMD ["python", "game.py"]
