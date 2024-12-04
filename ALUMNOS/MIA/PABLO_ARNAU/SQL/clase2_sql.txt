@@ -1,0 +1,113 @@
+--OBTENER POR LA COLUMNA 'RATING' EL TOTAL DE PELICULAS, EL PRECIO MEDIO, 
+--EL PRECIO MÍNIMO, EL PRECIO MÁXIMO, DURACIÓN MEDIA, PELICULA MÁS ANTIGUA Y PELÍCULA MÁS NUEVA
+
+select rating, count (film_id) from film group by rating;
+
+select rating, round (avg (rental_rate),2) as precio_medio from film group by rating;
+
+select rating, min (rental_rate) as precio_min from film group by rating;
+
+select rating, max (rental_rate) as precio_max from film group by rating;
+
+select rating, round (avg (length),2) as duracion_media from film group by rating;
+
+select rating, max (release_year) as pelicula_antigua from film group by rating;
+
+select rating, min (release_year) as pelicula_masnueva from film group by rating;
+
+
+-- USAMOS AHORA EL HAVING (AGRUPAR GRUPOS, SE NECESITA GROUP BY PREVIO)
+select rating, count (film_id) from film group by rating having count(film_id) > 200;
+
+select rating, round (avg (rental_rate),2) as precio_medio 
+from film 
+group by rating 
+having avg(rental_rate)>3;
+
+select rating, avg (rental_rate) as precio_medio 
+from film 
+group by rating 
+having avg(rental_rate)>3;
+
+
+select rating, round (avg (length),2) as duracion_media 
+from film 
+group by rating 
+having avg(length)>115;
+
+--Relacionamos tablas con las columna ID
+
+select title, name, a.language_id, b.language_id
+from film a
+left join language b on a.language_id = b.language_id;
+
+select name,title
+from film a
+right join language b on a.language_id = b.language_id;
+
+-- Me quito las películas nulas
+select title,first_name,last_name
+from  film f
+left join film_actor fa on f.film_id = fa.film_id
+left join actor a on fa.actor_id = a.actor_id
+where fa.actor_id is not null;
+
+-- Me quitaria las peliculas nulas ya que he usado los actores
+select first_name,last_name,title
+from  film f
+left join film_actor fa on f.film_id = fa.film_id
+right join actor a on fa.actor_id = a.actor_id;
+
+-- Con el right me quito las películas que no tienen actores
+select title, count (a.actor_id)
+from  film f
+right join film_actor fa on f.film_id = fa.film_id
+left join actor a on fa.actor_id = a.actor_id
+group by title;
+
+
+--Saco los actores de cada pelicula agrupo y ordeno por mas actores a menos
+select title, count (a.actor_id)
+from  film f
+left join film_actor fa on f.film_id = fa.film_id
+left join actor a on fa.actor_id = a.actor_id
+group by title
+order by count (a.actor_id) desc;
+
+-- Quiero sacar las que tengan mas de 10 actores
+select title, count (a.actor_id)
+from  film f
+left join film_actor fa on f.film_id = fa.film_id
+left join actor a on fa.actor_id = a.actor_id
+group by title
+having count (a.actor_id)>10
+order by count (a.actor_id) desc;
+
+-- cuantas películas han hecho por actor ordenado de mayor a menor nº películas
+select a.actor_id, count (f.film_id),first_name,last_name
+from  film f
+left join film_actor fa on f.film_id = fa.film_id
+left join actor a on fa.actor_id = a.actor_id
+group by a.actor_id
+order by count (f.film_id) desc;
+
+--creamos una tabla con n columnas y asignamos el tipo de valor
+create table if not exists reviews_pablo 
+(	film_id int,
+	customer_id int,
+	review_date date,
+	review_description varchar(100));
+
+-- insertamos datos en la tabla
+
+insert into reviews_pablo (film_id,customer_id, review_date,review_description)
+values (4,7,'2023-11-10','la pelicula es un poco aburrida');
+
+-- comprobamos 
+
+select *
+from reviews_pablo;
+	
+	
+
+
