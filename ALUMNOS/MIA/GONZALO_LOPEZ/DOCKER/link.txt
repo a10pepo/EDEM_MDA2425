@@ -1,0 +1,1 @@
+docker pull gonzalo22112011/python-sumar:latest
