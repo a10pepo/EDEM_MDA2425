@@ -31,6 +31,44 @@ DBT:
 - changed-files:
   - any-glob-to-any-file: ['ALUMNOS/MDAA/*/DBT/**','ALUMNOS/MDAB/*/DBT/**','ALUMNOS/MIA/*/DBT/**']  
 
+ML0_INTRO:
+- changed-files:
+  - any-glob-to-any-file: ['ALUMNOS/MDAA/*/ML0_INTRO/**', 'ALUMNOS/MDAB/*/ML0_INTRO/**', 'ALUMNOS/MIA/*/ML0_INTRO/**']
+ML1_REG:
+- changed-files:
+  - any-glob-to-any-file: ['ALUMNOS/MDAA/*/ML1_REG/**', 'ALUMNOS/MDAB/*/ML1_REG/**', 'ALUMNOS/MIA/*/ML1_REG/**']
+ML2_CLA:
+- changed-files:
+  - any-glob-to-any-file: ['ALUMNOS/MDAA/*/ML2_CLA/**', 'ALUMNOS/MDAB/*/ML2_CLA/**', 'ALUMNOS/MIA/*/ML2_CLA/**']
+ML3_CLUSTERING:
+- changed-files:
+  - any-glob-to-any-file: ['ALUMNOS/MDAA/*/ML3_CLUSTERING/**', 'ALUMNOS/MDAB/*/ML3_CLUSTERING/**', 'ALUMNOS/MIA/*/ML3_CLUSTERING/**']
+ML4_DIM:
+- changed-files:
+  - any-glob-to-any-file: ['ALUMNOS/MDAA/*/ML4_DIM/**', 'ALUMNOS/MDAB/*/ML4_DIM/**', 'ALUMNOS/MIA/*/ML4_DIM/**']
+MLLIB:
+- changed-files:
+  - any-glob-to-any-file: ['ALUMNOS/MDAA/*/MLLIB/**', 'ALUMNOS/MDAB/*/MLLIB/**', 'ALUMNOS/MIA/*/MLLIB/**']
+MLOPS:
+- changed-files:
+  - any-glob-to-any-file: ['ALUMNOS/MDAA/*/MLOPS/**', 'ALUMNOS/MDAB/*/MLOPS/**', 'ALUMNOS/MIA/*/MLOPS/**']
+RN1_ANN:
+- changed-files:
+  - any-glob-to-any-file: ['ALUMNOS/MDAA/*/RN1_ANN/**', 'ALUMNOS/MDAB/*/RN1_ANN/**', 'ALUMNOS/MIA/*/RN1_ANN/**']
+RN2_CNN:
+- changed-files:
+  - any-glob-to-any-file: ['ALUMNOS/MDAA/*/RN2_CNN/**', 'ALUMNOS/MDAB/*/RN2_CNN/**', 'ALUMNOS/MIA/*/RN2_CNN/**']
+RN3_RNN:
+- changed-files:
+  - any-glob-to-any-file: ['ALUMNOS/MDAA/*/RN3_RNN/**', 'ALUMNOS/MDAB/*/RN3_RNN/**', 'ALUMNOS/MIA/*/RN3_RNN/**']
+RN4_NLP:
+- changed-files:
+  - any-glob-to-any-file: ['ALUMNOS/MDAA/*/RN4_NLP/**', 'ALUMNOS/MDAB/*/RN4_NLP/**', 'ALUMNOS/MIA/*/RN4_NLP/**']
+
+ESTADISTICA:
+- changed-files:
+  - any-glob-to-any-file: ['ALUMNOS/MDAA/*/ESTADISTICA/**', 'ALUMNOS/MDAB/*/ESTADISTICA/**', 'ALUMNOS/MIA/*/ESTADISTICA/**']
+
 entregable:
 - changed-files:
   - any-glob-to-any-file: 'ALUMNOS/**'
