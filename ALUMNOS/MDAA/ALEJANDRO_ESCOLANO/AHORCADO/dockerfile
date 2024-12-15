@@ -1,0 +1,8 @@
+FROM python:3.14.0a2-slim-bullseye
+WORKDIR /app
+
+RUN pip install pg8000
+COPY ahorcado.py /app
+COPY palabras.txt /app
+
+CMD ["python", "ahorcado.py", "palabras.txt"]
