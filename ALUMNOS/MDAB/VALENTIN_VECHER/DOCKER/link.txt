@@ -1,0 +1,1 @@
+docker pull valenvgon/python-sumar:latest
