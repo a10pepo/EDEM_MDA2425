@@ -1,0 +1,3 @@
+FROM python:latest
+COPY suma.py .
+ENTRYPOINT ["python", "suma.py"]

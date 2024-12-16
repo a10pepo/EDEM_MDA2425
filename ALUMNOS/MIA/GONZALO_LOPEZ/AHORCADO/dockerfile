@@ -1,0 +1,9 @@
+from python:3.11-slim
+
+workdir /app
+
+COPY ahorcadoGonzalo.py .
+COPY palabras.txt .
+
+
+CMD ["python","ahorcadoGonzalo.py"]
