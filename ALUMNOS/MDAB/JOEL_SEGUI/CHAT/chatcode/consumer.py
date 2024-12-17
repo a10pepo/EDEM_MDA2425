@@ -11,7 +11,7 @@ config = {
 consumer = Consumer(config)
 
 # Suscribirse a un tópico
-topic = 'chat'  # El nombre del tópico
+topic = 'censura'  # El nombre del tópico
 consumer.subscribe([topic])
 
 # Loop infinito de consumo de mensajes del topic
