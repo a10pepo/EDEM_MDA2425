@@ -1,0 +1,71 @@
+--Respondemos a las preguntas de las diapositivas (la que explica JOIN)
+--1--
+Select title, count(fa.actor_id)
+from film as f
+Left Join film_actor as fa on f.film_id = fa.film_id
+group by title;
+--2--
+Select title, count(fa.actor_id)
+from film as f
+Left Join film_actor as fa on f.film_id = fa.film_id
+group by title
+having count(actor_id)>2
+order by count asc
+--3--
+Select title, count(fa.actor_id)
+from film as f
+Left Join film_actor as fa on f.film_id = fa.film_id
+group by title
+order by count desc limit 1;
+--Empezamos a trabajar con la clausula alter table
+Alter table if exists reviews
+add column review_starts int2;
+
+Alter table if exists reviews
+rename review_starts to aaaaaaa
+
+--Vamos a crear vistas--
+create view mas_actores as 
+Select title, count(fa.actor_id)
+from film as f
+Left Join film_actor as fa on f.film_id = fa.film_id
+group by title
+order by count desc limit 1;
+--Utilizamos la vista--
+select * from mas_actores;
+
+--Crearemos una vista para sacar los 3 mejores clientes automáticamente
+create view mejores_clientes as
+Select cu.customer_id, first_name, last_name, sum(pa.amount)
+from customer as cu
+Left Join payment as pa on cu.customer_id = pa.customer_id
+group by cu.customer_id, first_name, last_name
+order by sum desc limit 3;
+--Ejecuto--
+select * from mejores_clientes
+
+--Crearemos una vista para sacar los 3 peores clientes automáticamente--
+create view peores_clientes as
+Select cu.customer_id, first_name, last_name, sum(pa.amount)
+from customer as cu
+Left Join payment as pa on cu.customer_id = pa.customer_id
+group by cu.customer_id, first_name, last_name
+order by sum asc limit 3;
+--Ejecuto--
+select * from peores_clientes
+
+--Hago la union para que se ejecuten las dos y lo ordeno--
+select * from mejores_clientes
+union
+select * from peores_clientes
+order by sum asc
+
+--Trabajamos con subconsultas--
+select film_id, title 
+from film 
+where language_id in (
+	select language_id
+	from language 
+	where name ='English')
+	
+--Subconsultas con with--
