@@ -1,0 +1,5 @@
+1.Creamos un directorio nuevo donde instalar el entorno virtual
+2.Creamos el archivo requirements.txt con las librerias que deseamos instalar en este caso get y request
+3.Ejecutamos (python -m venv .venv) en el terminal en nuestra carpeta creada anteriormente
+4.Ejecutamos (pip install -r requirements.txt) para instalar las librerias introducidas en el requirements.txt
+5.Para comprobar que se ha instalado el request correctamente hacemos un request con un archivo python llamado app.py a una web
