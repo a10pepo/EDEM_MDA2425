@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: jaffle_shop  # Nombre de la fuente de datos
+    description: A clone of a Postgres application database.
+    database: dbt   # Base de datos en la que se encuentra
+    schema: dev_data # Esquema dentro de la base de datos
+    tables:
+      - name: customers  # Nombre de la tabla que estás utilizando
+        description: Raw customers data.  # Descripción de la tabla
+        loaded_at_field: loaded_at_field # Campo para verificar la frescura de los datos
+        freshness:
+          warn_after: {count: 3, period: minute}  # Advertencia si no se actualiza después de 3 minutos
+          error_after: {count: 4, period: minute}  # Error si no se actualiza después de 4 minutos
+        columns:
+          - name: id
+            description: Primary key for customers.  # Descripción de la columna
+      - name: payments  # Otra tabla de la fuente
+        description: Raw payments data.  # Descripción de la tabla
+      - name: orders  # Otra tabla de la fuente
+        description: Raw orders data.  # Descripción de la tabla
