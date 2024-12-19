@@ -1,0 +1,8 @@
+FROM python:3.10
+
+WORKDIR /app
+
+COPY ahorcado.py .
+COPY palabras.txt .
+
+CMD ["python", "ahorcado.py"]
