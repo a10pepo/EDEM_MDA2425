@@ -1,0 +1,10 @@
+pandas
+seaborn
+numpy
+matplotlib
+matplotlib-inline
+plotly
+wordcloud
+scipy
+ipython
+nbformat
