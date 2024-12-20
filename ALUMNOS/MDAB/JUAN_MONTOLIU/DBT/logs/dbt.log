@@ -1,0 +1,16 @@
+[0m08:19:37.064384 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103222860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10412a2f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104129bd0>]}
+
+
+============================== 08:19:37.071857 | 46d5db0b-92ce-4b46-8594-82aff9919771 ==============================
+[0m08:19:37.071857 [info ] [MainThread]: Running with dbt=1.9.1
+[0m08:19:37.072740 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'debug': 'False', 'profiles_dir': '/Users/juanmontoliuarrando/Desktop/MDA/dbt-postgres2', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt init jaffle_shop', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m08:19:37.073275 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m08:19:37.073762 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '46d5db0b-92ce-4b46-8594-82aff9919771', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10412a2f0>]}
+[0m08:19:37.115127 [info ] [MainThread]: A project called jaffle_shop already exists here.
+[0m08:19:37.153340 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.2032085, "process_in_blocks": "0", "process_kernel_time": 0.417439, "process_mem_max_rss": "87851008", "process_out_blocks": "0", "process_user_time": 1.797066}
+[0m08:19:37.156106 [debug] [MainThread]: Command `dbt init` succeeded at 08:19:37.155462 after 0.21 seconds
+[0m08:19:37.157457 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103222860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104128640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10412af20>]}
+[0m08:19:37.158868 [debug] [MainThread]: Flushing usage events
+[0m08:19:37.594639 [debug] [MainThread]: An error was encountered while trying to flush usage events

@@ -1,0 +1,14 @@
+config:
+    use_colors: True 
+jaffle_shop:
+  outputs:
+    dev:
+      type: postgres
+      threads: 1
+      host: localhost
+      port: 5433
+      user: "admin"
+      pass: "root"
+      dbname: "dbt"
+      schema: dev
+  target: dev
