@@ -1,0 +1,49 @@
+version: "3.9"
+services:
+  postgres:
+    image: postgres
+    container_name: postgres_container
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - app_network
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+    networks:
+      - app_network
+
+  python-script:
+    build: .
+    container_name: ahoracado-script
+    depends_on:
+      - postgres
+    volumes:
+      - ./ahorcado.py:/app/ahorcado.py
+      - ./palabras.txt:/app/palabras.txt
+      - ./entrypoint.sh:/app/entrypoint.sh
+    entrypoint: ["/bin/sh", "/app/entrypoint.sh"]  
+    networks:
+      - app_network
+
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  app_network:
+    driver: bridge
