@@ -1,0 +1,44 @@
+SELECT * from actor WHERE first_name = 'Ed' or first_name = 'Nick';
+
+-- Aqui estamos buscando a Ed o Nick
+
+SELECT * from actor WHERE first_name iLIKE 'n%';
+
+-- El porcentaje detras  nos esta diciendo que empiece con N
+
+SELECT * from actor WHERE first_name iLIKE '%n';
+
+-- El porcentaje delante nos esta diciendo que termine con N
+
+SELECT * from actor WHERE first_name iLIKE '%n%';
+
+--Si esta el porcentaje delante y detras es para que este en cualquier sitio de una palabra
+
+SELECT * from actor WHERE first_name LIKE 'N_%';
+
+--Si ponemos _ es para que busque una persona que tenga N y despues _
+
+SELECT * from actor WHERE last_name is null;
+
+--Si ponemos 'null' es para que busque una persona la columna last_name sea vacia
+
+SELECT count(*) as Numero_de_actores from actor;
+
+--Si ponemos 'SELECT count(*)' que cuente todas las filas de actores.
+
+SELECT count (DISTINCT first_name) as Distintos_nombres from actor;
+
+--Si ponemos 'count(*)' y queremos algo como que cuente solo una cosa, se mete dentro del parentesis del count.
+
+SELECT count (DISTINCT first_name) as Distintos_nombres from actor;
+
+SELECT MIN (first_name) from actor;
+
+SELECT * from film where replacement_cost > 2 and title Like 'A%' and rental_duration >= 3 and rental_duration <= 5 and release_year = 2006
+and length > 100;
+
+SELECT title, ceil (replacement_cost / rental_rate) as new_operation from film
+
+SELECT title, ceil (replacement_cost / rental_rate) as new_operation from film ORDER BY new_operation DESC
+
+-- Si vemos la columna special_features o full text, para coger la columna que nos haga falta ponemos select special_features[1] o fulltext [3]
