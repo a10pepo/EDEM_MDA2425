@@ -34,11 +34,11 @@ services:
 
   kafka-ui:
     image: provectuslabs/kafka-ui:v0.6.0
-    container_name: kafka-ui-entregable
+    container_name: kafka-ui-3
     depends_on:
       - kafka
     ports:
-      - "8081:8081"
+      - "8080:8080"
     restart: always
     environment:
       - KAFKA_CLUSTERS_0_NAME=base
