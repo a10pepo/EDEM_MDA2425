@@ -1,4 +1,4 @@
-from kafka import KafkaConsumer
+from confluent_kafka import Producer
 import json
 
 class KafkaMessageConsumer:

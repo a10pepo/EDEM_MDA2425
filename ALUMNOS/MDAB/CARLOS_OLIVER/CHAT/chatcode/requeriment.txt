@@ -1,0 +1,2 @@
+streamlit
+confluent_kafka

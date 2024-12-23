@@ -1,12 +1,10 @@
 import streamlit as st
 from streamlit_chat import message
 from datetime import datetime
-import threading
-import time
 import random
-import queue
+from kafka_producer import send_message_ui, create_pruductor
 
-USER='nickname'
+USER='Charly'
 
 # Initialize chat history in session state if it doesn't exist
 if 'chat_history' not in st.session_state:
@@ -17,8 +15,12 @@ if 'chat_history' not in st.session_state:
 
 def on_input_change():
     user_input = st.session_state.user_input
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    st.session_state.chat_history.append({'author': USER, 'data': user_input, 'timestamp': timestamp})
+    if user_input.strip():
+        st.session_state['chat_history'] = [
+        {'author': 'bot', 'data': 'plan text with line break', 'timestamp': datetime.now().strftime("%Y-%m-%d %H:%M:%S")},
+        {'author': 'bot', 'data': 'Line 1 \n Line 2 \n Line 3', 'timestamp': datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
+    ]
+
 
 def on_btn_click():
     del st.session_state.chat_history[:]

@@ -1,18 +1,14 @@
-from kafka import KafkaProducer
-import json
+from confluent_kafka import Producer
 
-class KafkaMessageProducer:
-    def __init__(self, topic, server="localhost:9092"):
-        self.producer = KafkaProducer(
-            bootstrap_servers=server,
-            value_serializer=lambda v: json.dumps(v).encode("utf-8"),
-        )
-        self.topic = topic
+def send_message_ui(producer, topic, value, key):
+    producer.produce(topic=topic, value=value, key=key)
+    producer.flush()
 
-    def send_message(self, message):
-        self.producer.send(self.topic, message)
-        self.producer.flush()
+def create_pruductor():
+    config = {
+    'bootstrap.servers': '172.28.183.140:9092',  # Cambia esto con la dirección de tu servidor Kafka
+    'client.id': 'python-producer'
+        }
+    return Producer(config)
 
-# Ejemplo de uso:
-# producer = KafkaMessageProducer(topic="chat_topic")
-# producer.send_message({"user": "Carlos", "message": "¡Hola a todos!"})
+
