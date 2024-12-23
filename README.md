@@ -489,7 +489,7 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2024-12-23 12:21:15
+Last Checked: 2024-12-23 12:21:56
 
 
 Entregas Grupo MDA A
@@ -683,7 +683,7 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2024-12-23 12:21:15
+Last Checked: 2024-12-23 12:21:56
 
 Entregas Grupo MDA B
 <table>
@@ -827,7 +827,7 @@ Entregas Grupo MDA B
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/JUAN_MONTOLIU'>JUAN_MONTOLIU</a></td>
 <td>❌</td>
 <td>❌</td>
-<td>❌</td>
+<td>✅</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
@@ -927,5 +927,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2024-12-23 12:21:15
+Last Checked: 2024-12-23 12:21:56
 
