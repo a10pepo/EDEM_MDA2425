@@ -1,0 +1,58 @@
+openapi: 3.0.0
+info:
+  title: Robot Temperature API
+  description: API para gestionar y consultar las mediciones de temperatura de un robot.
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080
+    description: Servidor local
+paths:
+  /getLastMeassureBySensor/{sensor}:
+    get:
+      summary: Obtiene la última medición de un sensor específico
+      description: Devuelve la última medición registrada en la base de datos para un sensor dado.
+      parameters:
+        - name: sensor
+          in: path
+          required: true
+          description: ID del sensor
+          schema:
+            type: string
+      responses:
+        200:
+          description: Última medición del sensor obtenida con éxito
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: string
+                    description: ID del sensor
+                  fechamuestreo:
+                    type: string
+                    format: date-time
+                    description: Fecha de muestreo
+                  unidad:
+                    type: string
+                    description: Unidad de medida (e.g., Celsius)
+                  medicion:
+                    type: number
+                    description: Valor medido
+              example:
+                code: "sensor123"
+                fechamuestreo: "2024-12-24T15:30:00Z"
+                unidad: "Celsius"
+                medicion: 45.3
+        404:
+          description: Invalid ID supplied
+          content:
+            application/json:
+              example:
+                error: "Invalid sensor ID supplied"
+        400:
+          description: Sensor not found
+          content:
+            application/json:
+              example:
+                error: "Sensor not found in the database"
