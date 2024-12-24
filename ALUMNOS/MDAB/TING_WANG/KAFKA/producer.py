@@ -57,3 +57,4 @@ with open('IMDB_Movies_Dataset.csv', mode='r', encoding='utf-8') as file:
 producer.flush()
 if producer.flush() != 0:
     print("Some messages failed to be delivered")
+

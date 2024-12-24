@@ -54,11 +54,6 @@ Consumer topic movies (left) and Consumer topic movies_rating (right)
 ![alt text](images/image-1.png)
 (3) KSQL
 <br>
-Stream:
-<br>
-![create stream](images/image-2.png)
-
-
-
+![alt text](images/image-3.png)
 
 

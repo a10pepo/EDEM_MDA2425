@@ -31,14 +31,12 @@ try:
             else:
                 print("Error al recibir mensaje: {}".format(msg.error()))
         else:
-            # Deserializar el mensaje JSON recibido
             movie_data = json.loads(msg.value().decode('utf-8'))
 
             # Filtrar las películas con rating > 8
             if float(movie_data['Average Rating']) > 8:
                 print(f"Movie {movie_data['Title']} has a rating above 8, sending to 'movies_rating'.")
                 
-                # Enviar el dato filtrado a un nuevo tópico
                 producer.produce(topic=topic_processed, value=json.dumps(movie_data).encode('utf-8'))
                 producer.flush()
 
