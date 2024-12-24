@@ -1,7 +1,5 @@
 # List of codeowners based on project team
 
-* @a10pepo
-
 /Alumnos/MDAA/*/DOCKER/** @a10pepo @MA-Barracas
 /Alumnos/MDAB/*/DOCKER/** @a10pepo @MA-Barracas
 /Alumnos/MIA/*/DOCKER/** @a10pepo @MA-Barracas
