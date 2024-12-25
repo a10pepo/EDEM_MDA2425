@@ -14,7 +14,7 @@ Producer: Envía datos JSON al topic de Kafka movies_imdb
 Consumer: recibe y lee los datos enviados por el producer. Procesa los datos y solo selecciona aquellas películas con un "Average Rating"> 8 y los envía a un nuevo topic (movies_rating).
 KSQL: Procesa los datos del topic. Creación de un stream.
 ````
-sql
+ksql
 CREATE STREAM movies_stream_rating ( 
     Title VARCHAR, 
     "Average Rating" DOUBLE, 
@@ -25,6 +25,18 @@ CREATE STREAM movies_stream_rating (
     Languages VARCHAR
     ) 
 WITH (KAFKA_TOPIC = 'movies_rating', 
+    VALUE_FORMAT = 'JSON');
+
+CREATE STREAM movies_stream ( 
+    Title VARCHAR, 
+    "Average Rating" DOUBLE, 
+    Director VARCHAR, 
+    Metascore DOUBLE, 
+    "Release Date" VARCHAR, 
+    "Country of Origin" VARCHAR, 
+    Languages VARCHAR
+    ) 
+WITH (KAFKA_TOPIC = 'movies', 
     VALUE_FORMAT = 'JSON');
 ````
 
@@ -53,7 +65,8 @@ WITH (KAFKA_TOPIC = 'movies_rating',
 Consumer topic movies (left) and Consumer topic movies_rating (right)
 ![alt text](images/image-1.png)
 (3) KSQL
+He creado dos streams
 <br>
 ![alt text](images/image-3.png)
-
+![alt text](images/image-4.png)
 
