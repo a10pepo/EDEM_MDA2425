@@ -1,87 +1,86 @@
 from flask import Flask, request, jsonify
-from confluent_kafka import Producer, Consumer, KafkaException
+from confluent_kafka import Producer, Consumer, KafkaError
 import json
 import time
 
 app = Flask(__name__)
 
-#Configuración de kafka
-KAFKA_BROKER = "kafka:29092" #como estamos usando la api en un docker, se ejecuta fuera del pc, por tanto ya no es localhost.
-KAFKA_INPUT_TOPIC = "chat"
-KAFKA_OUTPUT_TOPIC = "chat_controlled"
-KAFKA_GROUP = "python-consumer-group"
+# Configuración de Kafka
+KAFKA_SERVERS = 'kafka:29092'
+TOPICS = ['chat', 'chat_controlled']
 
-#Configuracion del productor
-producer_conf = {
-    'bootstrap.servers': KAFKA_BROKER,
-    'client.id': 'flask-producer'
+# Configuración del productor
+producer_config = {
+    'bootstrap.servers': KAFKA_SERVERS,
+    'client.id': 'flask-producer-chat'
 }
-producer = Producer(producer_conf)
 
 # Configuración del consumidor
-consumer_conf = {
-    'bootstrap.servers': KAFKA_BROKER,
-    'group.id': KAFKA_GROUP,
+consumer_config = {
+    'bootstrap.servers': KAFKA_SERVERS,
+    'group.id': 'flask-consumer-group-chat',
     'auto.offset.reset': 'earliest'
 }
-consumer = Consumer(consumer_conf)
-consumer.subscribe([KAFKA_OUTPUT_TOPIC])
-
 
 # Endpoint para enviar mensajes a Kafka
 @app.route('/send', methods=['POST'])
 def send_message():
     try:
         data = request.json
-        author = data.get('author', 'unknown')
-        message = data.get('message', '')
+        message = data.get("message")
+        author = data.get("author")
 
-        # Estructura del mensaje
-        payload = {
+        if not message or not author:
+            return jsonify({"status": "error", "message": "Faltan campos obligatorios"}), 400
+
+        producer = Producer(producer_config)
+        kafka_message = {
             "author": author,
-            "data": message,
+            "message": message,
             "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")
         }
+        message_bytes = json.dumps(kafka_message).encode('utf-8')
 
-        # Enviar a Kafka
-        producer.produce(
-            KAFKA_INPUT_TOPIC,
-            key=author.encode('utf-8'),
-            value=json.dumps(payload).encode('utf-8')
-        )
+        for topic in TOPICS:
+            producer.produce(topic=topic, value=message_bytes, key=author.encode('utf-8'))
+
         producer.flush()
-        return jsonify({"status": "success", "message": "Message sent"}), 200
+        return jsonify({"status": "success", "message": "Mensaje enviado a Kafka"}), 200
 
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)}), 500
-
 
 # Endpoint para recibir mensajes de Kafka
 @app.route('/receive', methods=['GET'])
 def receive_messages():
-    """
-    Endpoint para recibir mensajes validados de Kafka (topic 'chat_controlled').
-    """
-    messages = []
     try:
-        while True:
-            msg = consumer.poll(1.0)  # Esperar 1 segundo para recibir mensajes
-            if msg is None:
-                break
-            if msg.error():
-                if msg.error().code() == KafkaException._PARTITION_EOF:
-                    break
-                else:
-                    raise KafkaException(msg.error())
-            else:
-                data = json.loads(msg.value().decode('utf-8'))
-                messages.append(data)
+        consumer = Consumer(consumer_config)
+        consumer.subscribe(TOPICS)
+        messages = []
 
-        return jsonify({"status": "success", "messages": messages}), 200
+        for _ in range(10):  # Limitar la cantidad de mensajes recibidos
+            msg = consumer.poll(1.0)
+
+            if msg is None:
+                continue
+
+            if msg.error():
+                if msg.error().code() != KafkaError._PARTITION_EOF:
+                    raise Exception(msg.error())
+            else:
+                kafka_message = json.loads(msg.value().decode('utf-8'))
+                messages.append({
+                    "topic": msg.topic(),
+                    "author": kafka_message['author'],
+                    "message": kafka_message['message'],
+                    "timestamp": kafka_message['timestamp']
+                })
+
+        consumer.close()
+        return jsonify(messages), 200
 
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)}), 500
-
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)

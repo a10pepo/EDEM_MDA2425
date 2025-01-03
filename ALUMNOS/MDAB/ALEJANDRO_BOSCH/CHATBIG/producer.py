@@ -2,7 +2,7 @@ from confluent_kafka import Producer
 import json
 import time
 
-def send_message(message, author):
+def send_kafka_message(message, author):
     """
     Envía mensajes a ambos topics de Kafka
     """
@@ -44,7 +44,7 @@ if __name__ == "__main__":
             if mensaje.lower() == 'salir':
                 break
             autor = input("Tu nombre: ")
-            send_message(mensaje, autor)
+            send_kafka_message(mensaje, autor)
         except KeyboardInterrupt:
             break
         except Exception as e:
