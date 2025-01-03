@@ -1,9 +1,10 @@
-FROM python:3.11-slim
-
-RUN pip install pg8000
+FROM python:3.12-slim
 
 WORKDIR /app
 
 COPY game.py /app
+
+RUN pip install --no-cache -dir -r requirements.txt
+
 
 CMD [ "python3","game.py" ]
