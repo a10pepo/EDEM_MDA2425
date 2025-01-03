@@ -1,39 +1,23 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import *
-
 spark = SparkSession.builder.getOrCreate()
-# spark = SparkSession \
-#         .builder \
-#         .appName("Joins") \
-#         .master("local[*]") \
-#         .config("spark.ui.port", "4500") \
-#         .getOrCreate()
 
-
-exampleDF = spark.read.options(header='True', inferSchema='True').csv("/opt/project/resources/example.csv")
-
+from pyspark.sql.functions import *
 
 countryDF= spark.read.option("header", "true").option("inferSchema", "true").csv("/opt/project/resources/Country.csv")
 countryDF.printSchema()
-
 countryDF.show(3)
 
 indicatorDF= spark.read.option("header", "true").option("inferSchema", "true").csv("/opt/project/resources/HDI.csv")
 indicatorDF.printSchema()
-
-indicatorDF.show(3)
-
 indicator2019DF = indicatorDF.select("HDI Rank", "Country", "2019").orderBy("HDI Rank")
 indicator2019DF.show(3)
 
 happinessDF= spark.read.option("header", "true").option("inferSchema", "true").csv("/opt/project/resources/happiness_2019.csv")
 happinessDF.printSchema()
-
 happinessDF.show(3)
 
 terrorismDF= spark.read.option("header", "true").option("inferSchema", "true").csv("/opt/project/resources/terrorism.csv")
 terrorismDF.printSchema()
-
 terrorismColumnsDF = terrorismDF.select("eventid", "iyear", "imonth", "iday", "extended", "country","country_txt", "region", "region_txt", "city","multiple","success","suicide","attacktype1", "attacktype1_txt", "targtype1","targtype1_txt")
 terrorismColumnsDF.show(3)
 
