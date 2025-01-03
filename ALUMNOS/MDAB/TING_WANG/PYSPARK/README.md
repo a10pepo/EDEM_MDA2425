@@ -7,7 +7,7 @@ Al tratarse de archivos CSV demasiado grandes para subir a GitHub, dejo a contin
 
 ## Objetivo
 El objetivo es identificar patrones que muestren si el nivel de desarrollo humano, económico y social influye en los niveles de felicidad de los ciudadanos y si los incidentes de terrorismo pueden afectar negativamente la percepción de bienestar en esos países. Cómo estas tres variables (felicidad, índice de desarrollo y terrorismo) están relacionadas.
-### Transformaciones
+## Transformaciones
 En primer lugar, se ha realizado un análisis del dataset de terrorismo (países y regiones con más/menos casos; casos en Europa; evolución anual)y también del dataset de felicidad (correlación con las diferentes varaibles con el ranking).
 En segundo lugar, haciendo un join de los DF de felicidad y terrorismo, se ha intentado buscar la correlación con diferentes variables medidas para la felicidad con el número de casos de terrorismo. Introduciendo el DF de "Country", se han agrupado por "income group", llegando a la conclusión que los países de ingresos medios son los que más incidencias han tenido. Aún así, no hay una relación directamente lineal entre ingresos y ataques terroristas.
 Por último, se ha buscado la correlación de felicidad, eventos terroristas y el índice de desarrollo humano. Para saber si los países en donde más/menos ataques terroristas han habido están por encima/debajo de la media de felicidad y desarrollo.
