@@ -51,6 +51,14 @@ def get_computer_move(board):
     return random.choice(available_moves)
 
 # BBDD
+def insert_move_to_db(conn, move_text):
+    try:
+        cursor = conn.cursor()
+        cursor.execute("INSERT INTO games (timestamp, move) VALUES (%s, %s)", (datetime.now(), move_text))
+        conn.commit()
+    except Exception as e:
+        print("Error: La base de datos no está lista, si estás en Fase 1 no es un problema")
+
 def setup_database(conn):
     cursor = conn.cursor()
     cursor.execute("""
@@ -62,25 +70,15 @@ def setup_database(conn):
     """)
     conn.commit()
 
-def insert_move_to_db(conn, move_text):
-    try:
-        cursor = conn.cursor()
-        cursor.execute("INSERT INTO games (timestamp, move) VALUES (%s)", (datetime.now(), move_text))
-        conn.commit()
-    except Exception as e:
-        print("Error: La base de datos no está lista, si estás en Fase 1 no es un problema")
-
-
 def main():
-    conn = None
     try:
         # Connect to the PostgreSQL database
         conn = pg8000.connect(user="postgres", password="pass01", host="postgres", port=5432, database="tictactoe")
         print("Conexión exitosa")
         # Setup the database
         setup_database(conn)
-    except pg8000.exceptions.InterfaceError as e:
-        print(f"Error al conectar a la base de datos: {e}")
+    except pg8000.exceptions.InterfaceError:
+        print(f"Error al conectar a la base de datos")
         conn = None
         
     board = [["1", "2", "3"], ["4", "5", "6"], ["7", "8", "9"]]
