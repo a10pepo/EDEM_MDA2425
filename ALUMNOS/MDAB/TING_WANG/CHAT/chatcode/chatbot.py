@@ -1,29 +1,22 @@
 import streamlit as st
 from streamlit_chat import message
 from datetime import datetime
-import threading
 import time
 import random
 import queue
 from json import dumps
-from confluent_kafka import Producer, Consumer, KafkaError
+import json
+from confluent_kafka import Producer, KafkaError
 
 
-config_p = {
+config = {
     'bootstrap.servers': 'localhost:9092',
     'client.id': 'python-producer'
 }
-producer = Producer(config_p)
-
-config_c = {
-    'bootstrap.servers': 'localhost:9092',  
-    'group.id': 'python-consumer-group',
-    'auto.offset.reset': 'earliest'  
-}
-consumer = Consumer(config_c)
+producer = Producer(config)
 
 topic_kafka = 'chat'
-consumer.subscribe([topic_kafka])
+
 
 USER = 'Elena'
 
@@ -38,8 +31,12 @@ def on_input_change():
     user_input = st.session_state.user_input
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     st.session_state.chat_history.append({'author': USER, 'data': user_input, 'timestamp': timestamp})
-    
-    producer.produce(topic=topic_kafka, key=USER, value=user_input.encode('utf-8'))
+    message_data = {
+        "USER": USER,
+        "message": user_input,
+        "timestamp": timestamp
+    }
+    producer.produce(topic=topic_kafka, key=USER, value=json.dumps(message_data).encode('utf-8'))
     producer.flush()
 
 # Función para borrar el historial
@@ -57,33 +54,6 @@ def on_btn_click():
 #     random_message = random.choice(messages)
 #     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 #     st.session_state.chat_history.append({'author': USER, 'data': random_message, 'timestamp': timestamp})
-
-
-# Función para consumir mensajes de Kafka
-def consumer_input():
-    try:
-        while True:
-            msg = consumer.poll(1.0)
-            if msg is None:
-                continue
-            if msg.error():
-                if msg.error().code() == KafkaError._PARTITION_EOF:
-                    print("No hay más mensajes en esta partición.")
-                else:
-                    print(f"Error al recibir mensaje: {msg.error()}")
-            else:
-                message_data = msg.value().decode('utf-8')
-                timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                # Asegúrate de agregar el mensaje al historial de chat solo si 'chat_history' está inicializado
-                if 'chat_history' in st.session_state:
-                    st.session_state.chat_history.append({'author': 'bot', 'data': message_data, 'timestamp': timestamp})
-    except KeyboardInterrupt:
-        pass
-    finally:
-        consumer.close()
-
-threading.Thread(target=consumer_input, daemon=True).start()
-
 
 # Título de la aplicación
 st.title("Chat placeholder")
