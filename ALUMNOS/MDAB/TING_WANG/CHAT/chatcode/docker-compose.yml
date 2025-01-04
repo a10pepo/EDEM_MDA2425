@@ -52,39 +52,5 @@ services:
     volumes:
       - ./kafka-connectors:/usr/share/java/kafka-connectors
 
-  # Spark Master
-  spark-master:
-    image: bitnami/spark:latest
-    container_name: spark-master
-    environment:
-      - SPARK_MODE=master
-      - SPARK_RPC_AUTHENTICATION_ENABLED=no
-      - SPARK_RPC_ENCRYPTION_ENABLED=no
-    ports:
-      - "4040:4040" # Web UI
-      - "7077:7077" # Spark Master Port
-    volumes:
-      - ./chatcode:/opt/chatcode 
-    networks:
-      - spark-net
-
-  # Spark Worker
-  spark-worker:
-    image: bitnami/spark:latest
-    container_name: spark-worker
-    environment:
-      - SPARK_MODE=worker
-      - SPARK_MASTER_URL=spark://spark-master:7077
-      - SPARK_WORKER_CORES=1
-      - SPARK_WORKER_MEMORY=1G
-      - SPARK_DRIVER_MEMORY=128m
-      - SPARK_EXECUTOR_MEMORY=256m
-    depends_on:
-      - spark-master
-    networks:
-      - spark-net
-    volumes:
-      - ./chatcode:/opt/chatcode 
-
 networks:
   spark-net:
