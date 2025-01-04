@@ -19,9 +19,9 @@ consumer.subscribe([topic])
 # Loop infinito de consumo de mensajes del topic
 try:
     while True:
-        msg_consumer = consumer.poll(1.0)  # Lee nuevos mensajes cada 1 segundo
+        msg_consumer = consumer.poll(1.0) 
         
-        if msg_consumer is None: #si no hay mensage, siguiente (vuelve a empezar el while)
+        if msg_consumer is None:
             continue
         if msg_consumer.error():
             if msg_consumer.error().code() == KafkaError._PARTITION_EOF:
@@ -29,13 +29,9 @@ try:
             else:
                 print("Error al recibir mensaje: {}".format(msg_consumer.error()))
         else:
-            # Procesar el mensaje recibido. Aqui solo lo mostramos por pantall. En una App real se pueden hacer cualquier
-            # cosa con un mensaje. Ejmplos: Filtrarlo, modificarlo, guardarlo en una base de datos, 
-            #enviarlo a otra applicación, etc.
             print('Nuevo mensaje: {}'.format(msg_consumer.value().decode('utf-8')))
 
 except KeyboardInterrupt:
     pass
 finally:
-    # Cerrar el consumidor al parar la Applicacion Python
     consumer.close()

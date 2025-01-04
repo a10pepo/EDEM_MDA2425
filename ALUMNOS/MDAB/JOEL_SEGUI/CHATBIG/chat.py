@@ -4,8 +4,9 @@ import threading
 import random
 import asyncio
 import json #Para serializar los msg en formato diccionario
+from confluent_kafka import Consumer, KafkaError
 
-#Mi script
+#PRODUCTOR
 from producer import create_producer, send_message
 
 producer = create_producer()
@@ -13,7 +14,19 @@ topic = "chat"
 user_key = "Joel S.F."
 bot_key = "Kafka_bot"
 
+#CONSUMIDOR
+def create_consumer():
+    config = {
+        'bootstrap.servers': 'localhost:9092', 
+        'group.id': 'python-consumer-group', 
+        'auto.offset.reset': 'earliest'   
+    }
+    return Consumer(config)
 
+consumer = create_consumer()
+consumer.subscribe([topic])
+
+#--------
 ui.page_opts(
     title="Hello EDEM Chat",
     fillable=True,
@@ -48,8 +61,20 @@ async def add_kafka_messages():
         "Random message incoming!"
     ]
     while True:
+        msg_consumer = consumer.poll(1.0)
+
+        if msg_consumer is None: 
+            continue
+        if msg_consumer.error():
+            if msg_consumer.error().code() == KafkaError._PARTITION_EOF:
+                print("No hay más mensajes en esta partición.")
+            else:
+                print("Error al recibir mensaje: {}".format(msg_consumer.error()))
+        else:
+            msg_consumer.value().decode('utf-8')
+
+       
         await asyncio.sleep(20)
-        # STEP 1 Recibir
         random_message = random.choice(messages)
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
