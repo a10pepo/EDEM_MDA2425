@@ -4,6 +4,21 @@ import threading
 import random
 import asyncio
 
+from datetime import datetime
+from json import dumps
+import json
+from confluent_kafka import Producer, KafkaError
+
+
+config = {
+    'bootstrap.servers': 'localhost:9092',
+    'client.id': 'python-producer'
+}
+producer = Producer(config)
+
+topic = 'chat'
+
+
 ui.page_opts(
     title="Hello EDEM Chat",
     fillable=True,
