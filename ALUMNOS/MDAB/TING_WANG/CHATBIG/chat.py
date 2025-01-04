@@ -34,7 +34,16 @@ chat.ui()
 async def _():  
     # Simply echo the user's input back to them
     # STEP 1 Enviar
-    await chat.append_message(f"You said: {chat.user_input()}") 
+    user_message = chat.user_input()
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    message_data = {
+        "message": user_message,
+        "timestamp": timestamp
+    }
+    await chat.append_message(f"You said: {message_data}") 
+    
+    producer.produce(topic=topic, value=json.dumps(message_data).encode('utf-8'))
+    producer.flush()
 
 async def add_kafka_messages():
     messages = [
