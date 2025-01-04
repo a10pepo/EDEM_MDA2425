@@ -72,7 +72,6 @@ async def add_kafka_messages():
                 print("Error al recibir mensaje: {}".format(msg_consumer.error()))
         else:
             msg_consumer.value().decode('utf-8')
-
        
         await asyncio.sleep(20)
         random_message = random.choice(messages)
