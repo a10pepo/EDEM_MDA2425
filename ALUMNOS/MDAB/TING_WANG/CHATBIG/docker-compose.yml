@@ -52,7 +52,7 @@ services:
       - "4040:4040"
       - "7077:7077"
     volumes:
-      - ../project:/opt/project
+      - ./checkpoints:/checkpoint_dir   
     networks:
       - app-network
 
@@ -71,7 +71,7 @@ services:
     networks:
       - app-network
     volumes:
-      - ../project:/opt/project
+      - ./checkpoints:/checkpoint_dir   
 
 
 networks:
