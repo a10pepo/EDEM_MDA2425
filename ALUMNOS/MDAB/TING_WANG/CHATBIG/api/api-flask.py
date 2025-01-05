@@ -7,7 +7,7 @@ from confluent_kafka import Producer, Consumer, KafkaError
 app = Flask(__name__)
 
 config = {
-    'bootstrap.servers': 'localhost:9092',
+    'bootstrap.servers': 'kafka:9092',
     'client.id': 'python-producer'
 }
 producer = Producer(config)
@@ -33,7 +33,7 @@ def send_message():
 
 
 config_c = {
-    'bootstrap.servers': 'localhost:9092',  
+    'bootstrap.servers': 'kafka:9092',  
     'group.id': 'python-consumer-group',
     'auto.offset.reset': 'earliest'  
 }
@@ -58,6 +58,6 @@ def get_messages():
 
 if __name__ == '__main__':
     try:
-        app.run(debug=True, host='localhost', port=5000)
+        app.run(debug=True, host='0.0.0.0', port=5000)
     finally:
         consumer.close()
