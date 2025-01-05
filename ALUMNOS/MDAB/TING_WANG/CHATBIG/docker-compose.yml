@@ -7,50 +7,40 @@ services:
       ZOOKEEPER_TICK_TIME: 2000
     ports:
       - 2181:2181
+    networks:
+      - app-network
 
   kafka: 
     image: confluentinc/cp-kafka:7.3.3
+    container_name: kafka
     depends_on:
       - zookeeper
     ports:
-      - 9092:9092
+      - 29092:29092
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://localhost:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:29092
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    networks:
+      - app-network
 
-  # kafka-ui:
-  #   image: provectuslabs/kafka-ui:latest
-  #   container_name: kafka-ui-3
-  #   depends_on:
-  #     - kafka
-  #   ports:
-  #     - "8080:8080"
-  #   restart: always
-  #   environment:
-  #     - KAFKA_CLUSTERS_0_NAME=base
-  #     - KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=kafka:29092
-
-  # kafka-connect:
-  #   image: confluentinc/cp-kafka-connect:7.3.3
-  #   depends_on:
-  #     - kafka
-  #   ports:
-  #     - "8083:8083"
-  #   environment:
-  #     - CONNECT_BOOTSTRAP_SERVERS=kafka:29092
-  #     - CONNECT_REST_ADVERTISED_LISTENER=http://localhost:8083
-  #     - CONNECT_GROUP_ID="spark-connect-group"
-  #     - CONNECT_CONFIG_STORAGE_TOPIC="connect-configs"
-  #     - CONNECT_OFFSET_STORAGE_TOPIC="connect-offsets"
-  #     - CONNECT_STATUS_STORAGE_TOPIC="connect-status"
-  #     - CONNECT_KEY_CONVERTER=org.apache.kafka.connect.storage.StringConverter
-  #     - CONNECT_VALUE_CONVERTER=org.apache.kafka.connect.storage.StringConverter
-  #   volumes:
-  #     - ./kafka-connectors:/usr/share/java/kafka-connectors
+  api-flask:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    environment:
+      KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+    ports:
+      - "5000:5000"
+    networks:
+      - app-network
+    container_name: api-flask
+    depends_on:
+      - kafka
+    
 
 networks:
-  spark-net:
+  app-network:
