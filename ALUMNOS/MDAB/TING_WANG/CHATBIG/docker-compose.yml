@@ -40,7 +40,39 @@ services:
     container_name: api-flask
     depends_on:
       - kafka
-    
+
+  spark-master:
+    image: bitnami/spark:latest
+    container_name: spark-master
+    environment:
+      - SPARK_MODE=master
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+    ports:
+      - "4040:4040"
+      - "7077:7077"
+    volumes:
+      - ../project:/opt/project
+    networks:
+      - app-network
+
+  spark-worker:
+    image: bitnami/spark:latest
+    container_name: spark-worker
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
+      - SPARK_WORKER_CORES=1
+      - SPARK_WORKER_MEMORY=1G
+      - SPARK_DRIVER_MEMORY=128m
+      - SPARK_EXECUTOR_MEMORY=256m
+    depends_on:
+      - spark-master
+    networks:
+      - app-network
+    volumes:
+      - ../project:/opt/project
+
 
 networks:
   app-network:
