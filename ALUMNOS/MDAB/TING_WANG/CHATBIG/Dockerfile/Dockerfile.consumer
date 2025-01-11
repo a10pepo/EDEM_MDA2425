@@ -1,0 +1,6 @@
+FROM python:latest
+WORKDIR /app
+COPY consumer-badwords.py .
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+CMD ["python", "consumer-badwords.py"]
