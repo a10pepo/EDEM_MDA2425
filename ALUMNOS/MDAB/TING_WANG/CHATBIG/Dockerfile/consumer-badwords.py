@@ -3,14 +3,13 @@ import json
 from datetime import datetime
 import requests
 
-
+## Suscription to Kafka (direct flow, not through API)
 config_c = {
     'bootstrap.servers': 'kafka:9092',  
     'group.id': 'python-consumer-group',
     'auto.offset.reset': 'earliest'  
 }
 consumer = Consumer(config_c)
-
 topic_in = 'chat'
 consumer.subscribe([topic_in])
 
@@ -21,11 +20,9 @@ config_p = {
 producer = Producer(config_p)
 topic_out = "chat_controlled"
 
-
+## samples of bad words
 bad_words = ['asshole', 'bitch', 'cunt', 'jerk']  
 
-def contains_bad_word(message, bad_words):
-    return any(bad_word in message for bad_word in bad_words)
 
 def replace_bad_words(message, bad_words):
     filtered_message = message
@@ -59,13 +56,11 @@ try:
 
         message_data = json.loads(msg.value().decode('utf-8'))
         original_message = message_data.get("message", "")
-        print(f"Mensaje recibido: {original_message}")
 
         filtered_message = replace_bad_words(original_message, bad_words)
-        print(f"Mensaje filtrado: {filtered_message}")
         produce_filtered_message(filtered_message)
 
 except KeyboardInterrupt:
-    print("Consumer detenido.")
+    print("Consumer stopped.")
 finally:
     consumer.close()
