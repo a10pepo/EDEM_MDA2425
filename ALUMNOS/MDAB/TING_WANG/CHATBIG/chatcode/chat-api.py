@@ -36,7 +36,7 @@ async def _():
     # STEP 2 filtered message
     filtered_message = None
     for i in range(5):
-        filtered_response = requests.get(FILTERED_API_URL, timeout=2.0)
+        filtered_response = requests.get(FILTERED_API_URL, timeout=5.0)
 
         if filtered_response.status_code == 200:
             filtered_message = filtered_response.json().get("message", "")
