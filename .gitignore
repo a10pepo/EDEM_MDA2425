@@ -4,3 +4,5 @@
 .DS_Store
 Alumnos/.DS_Store
 __pycache__
+node_modules
+
