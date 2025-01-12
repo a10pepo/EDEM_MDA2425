@@ -1,0 +1,2 @@
+pymongo
+psycopg2-binary
