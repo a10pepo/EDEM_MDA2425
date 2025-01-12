@@ -23,12 +23,15 @@ topic_out = "chat_controlled"
 ## samples of bad words
 bad_words = ['asshole', 'bitch', 'cunt', 'jerk']  
 
-
 def replace_bad_words(message, bad_words):
-    filtered_message = message
-    for word in bad_words:
-        filtered_message = filtered_message.replace(word, '*' * len(word))
-    return filtered_message
+    bad_words_set = set(word.lower() for word in bad_words)
+    words = message.split()
+    filtered_words = [
+        '*' * len(word) if word.lower() in bad_words_set else word
+        for word in words
+    ]
+    return ' '.join(filtered_words)
+
 
 def produce_filtered_message(filtered_message):
     message_data = {
@@ -43,7 +46,7 @@ def produce_filtered_message(filtered_message):
 
 try:
     while True:
-        msg = consumer.poll(1.0)
+        msg = consumer.poll(0)
 
         if msg is None:
             continue
