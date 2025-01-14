@@ -1,6 +1,6 @@
 resource "local_file" "pet" {
-    filename = var.filename_pet
-    content = var.content_pet
+    filename = "pets.txt"
+    content = var.content_pet["statement2"]
 }
 resource "local_file" "cat" {
     filename = var.filename_cat

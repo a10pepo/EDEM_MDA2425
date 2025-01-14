@@ -4,8 +4,11 @@ variable "filename_pet" {
     description = "the path of local file"
 }
 variable "content_pet" {
-    default = "We love pets!"
-    type = string
+    default = {
+        "statement1" = "We love pets!"
+        "statement2" = "We love animals!"
+    }
+    type = map
     description = "the content of the file"
 }
 variable "filename_cat" {
