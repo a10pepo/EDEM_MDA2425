@@ -10,6 +10,8 @@ services:
       - SINGLE_USER_CREDENTIALS_USERNAME=admin
       - SINGLE_USER_CREDENTIALS_PASSWORD=ctsBtRBKHRAx69EqUghvvgEvjnaLjFEB
     user: "0:0"
+    networks:
+      - chuck-network
 
   mongo:
     image: mongo
@@ -19,6 +21,8 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
+    networks:
+      - chuck-network
    
   mongo-express:
     image: mongo-express
@@ -29,6 +33,8 @@ services:
       ME_CONFIG_MONGODB_ADMINUSERNAME: root
       ME_CONFIG_MONGODB_ADMINPASSWORD: example
       ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
+    networks:
+      - chuck-network
   
   postgres:
     container_name: postgres_container
@@ -42,6 +48,9 @@ services:
     ports:
       - "5432:5432"
     restart: unless-stopped
+    networks:
+      - chuck-network
+    
    
   pgadmin:
     container_name: pgadmin_container
@@ -54,11 +63,19 @@ services:
     ports:
       - "${PGADMIN_PORT:-5050}:80"
     restart: unless-stopped
+    networks:
+      - chuck-network
+    
 
   chuck:
     build: .
     container_name: chuck_container
-  
+    networks:
+      - chuck-network
+
+networks:
+  chuck-network:
+    driver: bridge
   
 volumes:
     postgres:
