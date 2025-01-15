@@ -1,3 +1,0 @@
-pg8000
-pymongo
-re
