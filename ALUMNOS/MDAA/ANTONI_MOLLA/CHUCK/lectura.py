@@ -18,6 +18,7 @@ create_table=("""CREATE TABLE IF NOT EXISTS chuck (
 
 con.run(create_table)
 
+
 # print(x)
 
 jokes=[]
@@ -31,7 +32,7 @@ for document in mycol.find():
 
     
     
-    print(jokes)
+    #print(jokes)
 
 
 #Lista palabras
