@@ -4,7 +4,7 @@ import re
 import pg8000.native
 
 
-con = pg8000.native.Connection(user="postgres", password="Welcome01",host='postgres')
+con = pg8000.native.Connection(user="postgres", password="Welcome01",host='localhost')
 myclient=pymongo.MongoClient("mongodb://root:example@localhost:27017/")
 mybd=myclient["Chuck"]
 mycol=mybd["Database_Chuck"]

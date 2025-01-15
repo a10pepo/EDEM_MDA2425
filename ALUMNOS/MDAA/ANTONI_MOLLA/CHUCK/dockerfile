@@ -7,4 +7,4 @@ COPY lectura.py /app
 
 RUN pip install pymongo pg8000
 
-CMD ["python3", "mongo.py"]
+CMD ["python3", "lectura.py"]
