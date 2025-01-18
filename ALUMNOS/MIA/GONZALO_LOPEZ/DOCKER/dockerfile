@@ -1,0 +1,9 @@
+FROM python:3.9-slim
+
+
+COPY sumar.py /sumar.py
+
+ENTRYPOINT [ "python3","/sumar.py" ]
+
+CMD [ "10","20" ] 
+
