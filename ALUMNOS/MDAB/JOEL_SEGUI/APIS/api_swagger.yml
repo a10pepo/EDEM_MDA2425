@@ -1,0 +1,106 @@
+openapi: 3.0.0
+info:
+  title: API de Sensores
+  description: API para obtener datos de sensores y la última medición de cada sensor.
+  version: 1.0.0
+paths:
+  /sensor_data:
+    get:
+      summary: Obtener todas las mediciones de los sensores
+      responses:
+        '200':
+          description: Listado de todas las mediciones de los sensores
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                      description: ID del sensor
+                    date:
+                      type: string
+                      format: date
+                      description: Fecha de la medición
+                    unit:
+                      type: string
+                      description: Unidad de la medición
+                    measurement:
+                      type: number
+                      format: float
+                      description: Valor de la medición
+  /sensor_data/{id}:
+    get:
+      summary: Obtener medición de un sensor por ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID del sensor
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Mediciones del sensor
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  date:
+                    type: string
+                    format: date
+                  unit:
+                    type: string
+                  measurement:
+                    type: number
+                    format: float
+        '404':
+          description: Sensor no encontrado
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Sensor does not exist"
+  /getLastMeasureBySensor:
+    get:
+      summary: Obtener la última medición de todos los sensores
+      responses:
+        '200':
+          description: Última medición de los sensores
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                    description: ID del sensor
+                  fechamuestreo:
+                    type: string
+                    format: date
+                    description: Fecha de la medición
+                  unidad:
+                    type: string
+                    description: Unidad de la medición
+                  medicion:
+                    type: number
+                    format: float
+                    description: Valor de la medición
+        '400':
+          description: No se encontró ninguna medición válida
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Sensor not found"
