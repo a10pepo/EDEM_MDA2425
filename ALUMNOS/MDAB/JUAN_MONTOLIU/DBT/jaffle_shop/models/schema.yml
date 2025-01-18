@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: stg_orders  # Nombre del modelo
+    columns:
+      - name: order_id  # Nombre de la columna
+        tests:
+          - unique  # Test de unicidad
+          - not_null  # Test de no nullidad
+      - name: status  # Otra columna
+        tests:
+          - accepted_values:
+              values:
+                - completed
+                - shipped
+                - returned
+                - return_pending
+                - placed
+      - name: customer_id  # Otra columna
+        tests:
+          - relationships:
+              to: ref('stg_customers')  # Relaciona esta columna con el modelo stg_customers
+              field: customer_id  # El campo que se debe comparar
