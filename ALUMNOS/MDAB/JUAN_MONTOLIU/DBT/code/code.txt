@@ -1,0 +1,207 @@
+------------------------------------
+            sources.yml
+------------------------------------
+
+version: 2
+
+sources:
+ - name: jaffle_shop
+   database: dbt
+   schema: dev_data
+   tables:
+     - name: customers
+
+--------------------------------------
+        stg_customers.sql
+---------------------------------------
+
+select
+   id as customer_id,
+   first_name,
+   last_name
+from
+   {{ source('jaffle_shop', 'customers') }}
+
+
+-----------------------------------------
+        dim_customers.sql
+-----------------------------------------
+
+with customers as (
+    select * from {{ ref('stg_customers') }}
+),
+
+orders as (
+   select * from {{ ref('stg_orders') }}
+),
+
+customer_orders as (
+   select
+       customer_id,
+       min(order_date) as first_order_date,
+       max(order_date) as most_recent_order_date,
+       count(order_id) as number_of_orders
+   from orders
+   group by customer_id
+),
+
+final as (
+   select
+       customers.customer_id,
+       customers.first_name,
+       customers.last_name,
+       customer_orders.first_order_date,
+       customer_orders.most_recent_order_date,
+       coalesce (customer_orders.number_of_orders, 0)
+       as number_of_orders
+
+   from customers
+   left join customer_orders using (customer_id)
+)
+select * from final
+
+
+---------------TESTS-----------------------------------------
+---------------------------------------------------
+        schema.yml
+---------------------------------------------------
+
+version: 2
+
+models:
+ - name: stg_orders
+   columns:
+     - name: order_id
+       tests:
+         - unique
+         - not_null
+     - name: status
+       tests:
+         - accepted_values:
+             values:
+               - completed
+               - shipped
+               - returned
+               - return_pending
+               - placed
+     - name: customer_id
+       tests:
+         - relationships:
+               to: ref('stg_customers')
+               field: customer_id
+
+
+---------------------------------------------------------
+        positive_total_payments.sql
+---------------------------------------------------------
+
+with payments as (
+   select *
+   from  {{ ref ('stg_payments') }}
+),
+test_data as (
+   select
+       order_id,
+       sum(amount) as total_amount
+   from payments 
+   group by order_id
+)
+select * from test_data
+where total_amount < 0
+
+--------------------------JINJA--------------------------------------
+----------------------------------------------------------
+        order_payments_method_amounts.sql
+----------------------------------------------------------
+
+{% set payment_methods = ["bank_transfer", "credit_card", "gift_card"] %}
+select
+   order_id,
+   {% for payment_method in payment_methods %}
+   sum(case when payment_method = '{{payment_method}}' then amount end) as {{payment_method}}_amount,
+   {% endfor %}
+   sum(amount) as total_amount
+from {{ ref ('stg_payments') }}
+group by order_id
+
+----------------------MACROS---------------------------------
+-------------------------------------------------------------
+       cents_to_dollars.sql
+-------------------------------------------------------------
+
+{% macro cents_to_dollars(column_name, scale=2) %}
+   ({{ column_name }} / 100)::numeric(16, {{ scale }})
+{% endmacro %}
+
+--------------------------------------------------------------
+      stg_payments.sql
+--------------------------------------------------------------
+
+select
+   id as payment_id,
+   orderid as order_id,
+   paymentmethod as payment_method,
+   status,
+   {{ cents_to_dollars('amount') }} as amount,
+   created as created_at
+from {{ source ('jaffle_shop', 'payments') }}
+
+------------------SOURCE FRESHNESS------------------------------
+----------------------------------------------------
+         queries
+-----------------------------------------------------
+
+ALTER TABLE dev_data.customers ADD COLUMN loaded_at_field TIMESTAMP;
+
+UPDATE dev_data.customers SET loaded_at_field = NOW();
+
+---------------------------------------------
+        sources.yml
+----------------------------------------------
+
+version: 2
+
+sources:
+ - name: jaffle_shop
+   database: dbt
+   schema: dev_data
+   tables:
+     - name: customers
+       loaded_at_field: loaded_at_field
+       freshness: 
+        warn_after: {count: 2, period: minute}
+        error_after: {count: 24, period: hour}
+     - name: payments
+     - name: orders
+
+
+--------------DOCUMENTATION---------------------
+------------------------------------------------
+      sources.yml
+------------------------------------------------
+
+version: 2
+
+models:
+  - name: stg_orders
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+      - name: status
+        tests:
+          - accepted_values:
+              values:
+                - completed
+                - shipped
+                - returned
+                - return_pending
+                - placed
+      - name: customer_id
+        tests:
+          - relationships:
+              to: ref('stg_customers')
+              field: customer_id
+
+ 
