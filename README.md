@@ -130,14 +130,14 @@ Entregas Grupo MIA
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
-<td>❌</td>
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
-<td>8.0</td>
+<td>✅</td>
+<td>10.0</td>
 </tr>
 <tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/Eduardo_Abad'>EDUARDO_ABAD</a></td>
@@ -406,14 +406,14 @@ Entregas Grupo MIA
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
 <td>❌</td>
 <td>✅</td>
 <td>✅</td>
-<td>❌</td>
 <td>✅</td>
-<td>✅</td>
-<td>✅</td>
-<td>8.0</td>
+<td>10.0</td>
 </tr>
 <tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/PEPE_BARBERO'>PEPE_BARBERO</a></td>
@@ -463,7 +463,7 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2025-01-18 13:26:19
+Last Checked: 2025-01-18 13:28:43
 
 
 Entregas Grupo MDA A
@@ -668,7 +668,7 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2025-01-18 13:26:19
+Last Checked: 2025-01-18 13:28:43
 
 Entregas Grupo MDA B
 <table>
@@ -926,5 +926,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2025-01-18 13:26:19
+Last Checked: 2025-01-18 13:28:43
 
