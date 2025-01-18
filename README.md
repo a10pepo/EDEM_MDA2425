@@ -132,7 +132,7 @@ Entregas Grupo MIA
 <td>✅</td>
 <td>❌</td>
 <td>❌</td>
-<td>❌</td>
+<td>✅</td>
 <td>✅</td>
 </tr>
 <tr>
@@ -220,7 +220,7 @@ Entregas Grupo MIA
 <td>✅</td>
 <td>❌</td>
 <td>✅</td>
-<td>❌</td>
+<td>✅</td>
 <td>❌</td>
 </tr>
 <tr>
@@ -264,7 +264,7 @@ Entregas Grupo MIA
 <td>✅</td>
 <td>❌</td>
 <td>✅</td>
-<td>❌</td>
+<td>✅</td>
 <td>✅</td>
 </tr>
 <tr>
@@ -511,7 +511,7 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2025-01-18 08:52:51
+Last Checked: 2025-01-18 08:55:20
 
 
 Entregas Grupo MDA A
@@ -705,7 +705,7 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2025-01-18 08:52:51
+Last Checked: 2025-01-18 08:55:20
 
 Entregas Grupo MDA B
 <table>
@@ -949,5 +949,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2025-01-18 08:52:51
+Last Checked: 2025-01-18 08:55:20
 
