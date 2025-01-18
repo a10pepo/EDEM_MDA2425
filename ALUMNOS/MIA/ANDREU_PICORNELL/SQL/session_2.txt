@@ -1,0 +1,96 @@
+--Número de películas por rating
+SELECT rating, COUNT(title)
+FROM film
+GROUP BY rating;
+
+--Precio medio del alquiler por rating
+SELECT rating, ROUND(AVG(rental_rate), 2)
+FROM film
+GROUP BY rating;
+
+--Precio mínimo del alquiler por rating
+SELECT rating, MIN(rental_rate)
+FROM film
+GROUP BY rating;
+
+--Precio máximo del alquiler por rating
+SELECT rating, MAX(rental_rate)
+FROM film
+GROUP BY rating;
+
+--Precio máximo del alquiler por rating
+SELECT rating, MAX(rental_rate)
+FROM film
+GROUP BY rating;
+
+--Duración media de la pelicula por rating
+SELECT rating, ROUND(AVG(length), 2)
+FROM film
+GROUP BY rating;
+
+--Año de la pelicula más antigua
+SELECT rating, year(MIN(release_year))
+FROM film
+GROUP BY rating;
+
+--Año de la pelicula más nueva
+SELECT rating, year(MAX(release_year))
+FROM film
+GROUP BY rating;
+
+--Número de películas por rating con más de 200 películas
+SELECT rating, COUNT(title)
+FROM film
+GROUP BY rating
+HAVING COUNT(title) > 200;
+
+--Precio medio del alquiler por rating con precio superior a 3
+SELECT rating, ROUND(AVG(rental_rate), 2)
+FROM film
+GROUP BY rating
+HAVING ROUND(AVG(rental_rate), 2) > 3;
+
+--Duración media de la pelicula por rating superior a 115 minutos
+SELECT rating, ROUND(AVG(length), 2)
+FROM film
+GROUP BY rating
+HAVING ROUND(AVG(length), 2) > 115;
+
+--Usando el JOIN
+SELECT a.rental_id, b.customer_id
+FROM rental a
+LEFT JOIN payment b ON a.customer_id = b.customer_id
+LEFT JOIN customer c ON a.customer_id = c.customer_id;
+
+--Usando el JOIN
+SELECT a.rental_id, b.customer_id
+FROM rental a
+LEFT JOIN payment b ON a.customer_id = b.customer_id
+LEFT JOIN customer c ON a.customer_id = c.customer_id;
+
+--Cantidad de peliculas por actor
+SELECT a.actor_id, a.first_name, a.last_name, COUNT(c.film_id)
+FROM actor a
+LEFT JOIN film_actor b ON a.actor_id = b.actor_id
+LEFT JOIN film c ON b.film_id = c.film_id
+GROUP BY a.actor_id;
+
+--Cantidad de peliculas por actor ordenadas
+SELECT a.actor_id, a.first_name, a.last_name, COUNT(c.film_id) AS total_movies
+FROM actor a
+LEFT JOIN film_actor b ON a.actor_id = b.actor_id
+LEFT JOIN film c ON b.film_id = c.film_id
+GROUP BY a.actor_id, a.first_name, a.last_name
+ORDER BY total_movies DESC;
+
+--Practicar CREATE TABLE
+CREATE TABLE IF NOT EXISTS reviews_an (
+    film_id serial4 NOT NULL,
+    customer_id serial4 NOT NULL,
+    review_date date NOT NULL,
+    review_description varchar(50) NOT NULL
+);
+
+--Practicar INSERT
+INSERT INTO reviews_an (film_id, customer_id, review_date, review_description)
+VALUES (4, 7, '2023-11-10', 'La pelicula es buena pero un poco aburrida');
