@@ -1,0 +1,5 @@
+confluent_kafka
+streamlit
+streamlit_chat
+random
+datetime
