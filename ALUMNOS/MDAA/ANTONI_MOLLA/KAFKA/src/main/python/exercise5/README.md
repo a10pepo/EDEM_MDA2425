@@ -30,14 +30,14 @@ Execute the exercise5/producer.py Python Producer Application. Check that it sho
 Then ensure the messages (each word of El Quijote's book) is being sent to the topic "palabras".
 
 ```sh
-docker-compose exec kafka kafka-console-consumer --topic palabras --from-beginning --bootstrap-server localhost:9092
+docker compose exec kafka kafka-console-consumer --topic palabras --from-beginning --bootstrap-server localhost:9092
 ```
 
 If the messages are arriving you are OK. Now Exit with Control-C. You are ready to start to query the messages with KSQL in next steps :)!!!
 
 ## Open KSql in a console
 ```sh
-docker-compose exec ksql-cli ksql http://host.docker.internal:8088
+docker compose exec ksql-cli ksql http://host.docker.internal:8088
 ````
 
 Check you can see an output like the below one:
@@ -104,6 +104,8 @@ SELECT palabra AS mi_palabra, LEN(palabra) AS longitud FROM palabras_stream WHER
 ### Do this Exercise on your own
 Select the messages from the stream where the message size is major than 10
 
+SELECT palabra AS mi_palabra, LEN(palabra) AS longitud FROM palabras_stream WHERE LEN(palabra) > 10 emit changes;
+
 ### Keep going on
 Filter words **starting** with the letter **"t"** in a stream named palabras_stream
 ```sql
@@ -114,6 +116,10 @@ WHERE palabra LIKE 't%' emit changes;
 
 ### Do this Exercise on your own
 Filter words **ending** with the letters **"go"** in a stream named palabras_stream
+
+SELECT palabra
+>FROM palabras_stream
+>WHERE palabra LIKE '%go' emit changes;
 
 ### Keep going on
 Create a KTable, to check out how many times a word has appeared in the El Quijote's book. Notice that while the words
@@ -136,8 +142,20 @@ SELECT * FROM mi_ktable EMIT CHANGES;
 ##### Exercise 5.1
 Find the words that starts with 'ca' **and** finishes with 'o' **and** the word is longer than 6 characters.
 
+SELECT palabra
+>FROM palabras_stream
+>WHERE palabra LIKE 'ca%' 
+>  AND palabra LIKE '%o' 
+>  AND LEN(palabra) > 6
+>EMIT CHANGES;
+
 ##### Exercise 5.2
 Select all the words, but transformed in Uppercase. Hint: use a select and using the function UCASE(...)
+
+SELECT UCASE(palabra) AS palabra_mayusculas
+FROM palabras_stream
+EMIT CHANGES;
+
 
 ##### Exercise 5.3 ADVANCED
 **Note:** If you are interested in learning more on KSQL you can find developer info here: https://docs.confluent.io/current/ksql/docs/developer-guide/syntax-reference.html

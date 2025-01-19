@@ -6,8 +6,16 @@ Este repositorio contiene ejercicios prácticos para trabajar con **Kafka Produc
 
 ### 1. Ejercicio de Producción de Datos
 
+docker compose exec kafka kafka-topics --create --topic transferencias --partitions 1 --replication-factor 1 --if-not-exists --bootstrap-server localhost:9092
+
 - **Objetivo**: Configurar un productor de Kafka que lea el JSON de transferencias bancarias y lo envíe como mensajes a un tópico de Kafka.
 - **Acción**: El productor envía cada transferencia como un mensaje JSON al tópico y muestra por consola cada mensaje enviado.
+
+#Crear productor
+docker compose exec kafka kafka-console-producer --topic transferencias --broker-list localhost:9092
+
+#Crear consumidor
+docker compose exec kafka kafka-console-consumer --topic transferencias --from-beginning --bootstrap-server localhost:9092
 
 ### 2. Ejercicio de Consumo de Datos
 

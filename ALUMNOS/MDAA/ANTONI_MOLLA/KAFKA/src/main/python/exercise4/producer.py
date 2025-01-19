@@ -33,3 +33,7 @@ producer.flush()
 if producer.flush() != 0:
     print("Some messages failed to be delivered")
 
+#La key en kafka es un identificador que se utiliza para particionar los mensajes, 
+# en este caso se ha utilizado el indice del mensaje
+
+#Si tienes dos keys iguales la informacion se guarda igual
