@@ -1,13 +1,22 @@
 # EDEM_MDA2425
 Common Repository for 2024-2025 Data Master
+
 <div align=center><img src="https://edem.eu/wp-content/uploads/2019/11/peces_edem.png" /></div>
+
 El objetivo de este repositorio es servir de guía y de punto de comunicación entre alumnos y profesorado. Los alumnos deberán seguir las instrucciones que se indican en este documento para realizar las entregas de los trabajos y proyectos que se vayan solicitando a lo largo del curso.
+
 ## Instrucciones para la entrega de trabajos y proyectos
+
 ### 1. Usando vuestra cuenta de Github
+
 ### 2. Crear una carpeta con vuestro nombre y apellidos
+
 Alumnos/PedroNieto/
+
 ### 3. Crear una carpeta por cada trabajo o proyecto
+
 Alumnos/PedroNieto/Trabajo1/
+
 ### 4. Subir los archivos correspondientes a cada trabajo o proyecto
 En cada commit, vuestro código será evaluado automáticamente por Github Actions. Si el código no pasa las pruebas, el commit será rechazado y no se podrá realizar la entrega. Si el código pasa las pruebas, el commit será aceptado y se podrá realizar la entrega.
 ### 5. Crear un Pull Request para que el profesor pueda revisar vuestros trabajos
@@ -36,7 +45,7 @@ En resumen, este bloque les dará una base sólida para ocupar puestos de Data E
 - Cloud
 - IAC Terraform
   
-  
+
 ### Estado de las entregas
 Entregas Grupo MIA
 <table>
