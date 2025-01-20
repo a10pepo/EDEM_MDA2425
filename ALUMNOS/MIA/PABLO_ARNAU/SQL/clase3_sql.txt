@@ -1,0 +1,107 @@
+--Películas ordenadas por cantidad de actores
+select title, count (a.actor_id)
+from  film f
+left join film_actor fa on f.film_id = fa.film_id
+left join actor a on fa.actor_id = a.actor_id
+group by title
+order by count (a.actor_id) desc;
+
+--Películas ordenadas por cantidad de actores mayor que 2
+select title, count (a.actor_id)
+from  film f
+left join film_actor fa on f.film_id = fa.film_id
+left join actor a on fa.actor_id = a.actor_id
+group by title
+having count (a.actor_id)>2
+order by count (a.actor_id) desc;
+
+--Películas que más actores tiene
+select title, count (a.actor_id)
+from  film f
+left join film_actor fa on f.film_id = fa.film_id
+left join actor a on fa.actor_id = a.actor_id
+group by title
+having count (a.actor_id)>2
+order by count (a.actor_id) desc
+limit 1;
+
+
+--Actores ordenados por cantidad de películas
+select first_name,last_name, count (f.film_id)
+from actor a
+left join film_actor fa on a.actor_id = fa.actor_id
+left join film f on fa.film_id = f.film_id
+group by first_name,last_name;
+
+-- Modificar la tabla reviews borro la columna review_date
+
+alter table reviews_pablo
+drop column review_date;
+
+-- Añado la columna review_date
+
+alter table reviews_pablo
+add column review_date date;
+
+-- Creamos una vista de la query anterior
+
+CREATE VIEW lista_actores_peliculas as
+select first_name,last_name, count (f.film_id)
+from actor a
+left join film_actor fa on a.actor_id = fa.actor_id
+left join film f on fa.film_id = f.film_id
+group by first_name,last_name;
+
+-- vemos la vista anterior
+select * from lista_actores_peliculas;
+
+-- 3 mejores clientes
+CREATE VIEW tres_mejores as
+select c.customer_id,c.first_name,c.last_name, sum(p.amount)
+from  customer c
+left join payment p on c.customer_id = p.customer_id
+group by c.customer_id,c.first_name,c.last_name
+order by sum(p.amount) desc
+limit 3;
+
+-- 3 peores clientes
+CREATE VIEW tres_peores as
+select c.customer_id,c.first_name,c.last_name, sum(p.amount)
+from  customer c
+left join payment p on c.customer_id = p.customer_id
+group by c.customer_id,c.first_name,c.last_name
+order by sum(p.amount)
+limit 3;
+
+--juntamos las dos vistas mejores y peores
+select * from tres_mejores
+union
+select * from tres_peores;
+
+--peliculas en ingles
+select title, language_id
+from film f
+where language_id in (select language_id from language l where l.name = 'English');
+
+-- clientes que la dirección empiez por A (no hay)
+select first_name, last_name, address_id
+from customer c
+where address_id in (select address_id from  address a where a.address like 'A%');
+
+
+-- clientes que se han gastado + 190 euros (no funciona)
+select first_name,last_name,customer_id
+from customer c
+where customer_id in (select customer_id from payment p group by customer_id having sum(p.amount)> 190);
+
+-- clausula with suma de los amount de + 190 €
+
+ WITH best_customers
+     AS (SELECT customer_id,
+                Sum(amount) AS total_amount
+         FROM   payment p
+         GROUP  BY 1
+         HAVING Sum(amount) > 190)
+ SELECT Sum(total_amount), count(customer_id)
+ FROM   best_customers;
+ 
