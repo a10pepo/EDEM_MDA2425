@@ -1,0 +1,9 @@
+FROM python:3.7
+
+WORKDIR /app
+
+COPY leer.py /app
+
+RUN pip3 install pymongo pg8000
+
+CMD ["python3", "leer.py"]
