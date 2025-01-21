@@ -100,7 +100,7 @@ def modificaralumno():
     nif= comprobarnif()
     Cortar = True
     while Cortar:
-        opcion = input("""
+        opcion = str(input("""
 Escoge que dato quieres modificar:
 1: Nombre
 2: Apellidos
@@ -108,23 +108,23 @@ Escoge que dato quieres modificar:
 4: Email
 5: Aprobado
 6: No modificar nada
-""")
+"""))
         if opcion == "1":
             alumnos[nif]["nombre"] = input("Dime el nombre")
             print("Nombre modificado")
-        if opcion == "2":
+        elif opcion == "2":
             alumnos[nif]["apellidos"] = input("Dime los apellidos")
             print("Apellidos modificados")
-        if opcion == "3":
+        elif opcion == "3":
             alumnos[nif]["telefono"] = comprobartelefono()
             print("telefono modificado")
-        if opcion == "4":
+        elif opcion == "4":
             alumnos[nif]["correo"] = comprobarcorreo()
             print("Correo modificado")
-        if opcion == "5":
+        elif opcion == "5":
             alumnos[nif]["nota"]
             print("Aprobado modificado")
-        if opcion == "6":
+        elif opcion == "6":
             Cortar = False
         else:
             print("Opcion incorrecta")
@@ -151,16 +151,19 @@ def listaralumnos():
         
 def aprobaralumno():
     nif= comprobarnif()
-    alumnos[nif]["aprobado"] = True
-
+    if nif in alumnos:
+        alumnos[nif]["aprobado"] = True
+    else:
+        print(f"No exciste un alumno registrado con el NIF= {nif}")
+        
 def aprobados():
     for nif in alumnos:
-        if nif["aprobado"]:
+        if alumnos[nif]["aprobado"]:
             print(alumnos[nif])
 
 def suspensos():
     for nif in alumnos:
-        if not nif["aprobado"]:
+        if not alumnos[nif]["aprobado"]:
             print(alumnos[nif])           
     
 
@@ -168,7 +171,7 @@ if __name__ == "__main__":
     print("Bienvenido al registro de alumnos")
     Cortar = True
     while Cortar:
-        opcion= input("""
+        opcion= str(input("""
 Selecciona una de las siguientes opciones:
 
 (1) Añadir un alumno --> Esto activará una serie de preguntas para completar el nuevo alumno
@@ -192,26 +195,26 @@ Selecciona una de las siguientes opciones:
 (10) Mostrar alumnos suspensos
 
 (X) Finalizar Programa
-""")
+"""))
         if opcion == "1":
             anyadiralumno()
-        if opcion == "2":
+        elif opcion == "2":
             eliminaralumno()
-        if opcion == "3":
+        elif opcion == "3":
             modificaralumno()
-        if opcion == "4":
+        elif opcion == "4":
             mostrardatospornif()
-        if opcion == "5":
+        elif opcion == "5":
             mostrardatosporemail()
-        if opcion == "6":
+        elif opcion == "6":
             listaralumnos()
-        if opcion == "7":
+        elif opcion == "7":
             aprobaralumno()
-        if opcion == "8":
+        elif opcion == "8":
             aprobados()
-        if opcion == "9":
+        elif opcion == "9":
             suspensos()
-        if opcion == "X":
+        elif opcion == "X":
             Cortar = False
         else:
             print("Opción incorrecta")
