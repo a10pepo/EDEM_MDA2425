@@ -3,12 +3,11 @@ version: '3.8'
 services:
   # Spark Master
   spark-master:
-    image: bitnami/spark:latest
+    image: bde2020/spark-master:latest
     container_name: spark-master
     environment:
+      - SPARK_MASTER_HOST=spark-master
       - SPARK_MODE=master
-      - SPARK_RPC_AUTHENTICATION_ENABLED=no
-      - SPARK_RPC_ENCRYPTION_ENABLED=no
     ports:
       - "4040:4040" # Web UI
       - "7077:7077" # Spark Master Port
@@ -19,10 +18,9 @@ services:
 
   # Spark Worker
   spark-worker:
-    image: bitnami/spark:latest
+    image: bde2020/spark-worker:latest
     container_name: spark-worker
     environment:
-      - SPARK_MODE=worker
       - SPARK_MASTER_URL=spark://spark-master:7077
       - SPARK_WORKER_CORES=1
       - SPARK_WORKER_MEMORY=1G
@@ -35,8 +33,33 @@ services:
     volumes:
       - ../project:/opt/project
 
+  mysql:
+    container_name: mysql
+    image: debezium/example-mysql:2.7.3.Final
+    ports:
+     - 3306:3306
+    environment:
+     - MYSQL_ROOT_PASSWORD=debezium
+     - MYSQL_DATABASE=pysparkdb
+     - MYSQL_USER=spark
+     - MYSQL_PASSWORD=password
+    networks:
+      - spark-net
+    restart: always
+
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    networks:
+      - spark-net
+
 networks:
   spark-net:
 
 
-# bash /opt/bitnami/spark/bin/spark-submit --master local /opt/project/src/python/e_wach_e2eSpark.py
+#docker exec -it spark-master bash
+# /spark/bin/spark-submit --jars /opt/project/jar/mysql.connector.jar /opt/project/src/python/e_wach_e2eSpark-MYSQL.py
+# docker exec -it spark-master /spark/bin/spark-submit --jars /opt/project/jar/mysql-connector-j-8.0.33.jar /opt/project/src/python/e_wach_e2eSpark-MYSQL.py

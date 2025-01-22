@@ -2,26 +2,51 @@ from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
 
 'Configuración Spark'
-spark = SparkSession.builder.getOrCreate()
+spark = SparkSession.builder.appName("PySpark Transformations").config("spark.jars", "/opt/project/jar/mysql-connector-j-8.0.33.jar").getOrCreate()
+
+# Función para guardar los DF en MySQL
+def save_to_mysql(df, table_name, jdbc_url, user,password):
+    df.write.format("jdbc") \
+        .option("url", jdbc_url) \
+        .option("driver", "com.mysql.cj.jdbc.Driver") \
+        .option("dbtable", table_name) \
+        .option("user", user) \
+        .option("password", password) \
+        .mode("overwrite") \
+        .save()
+    
+'Conexión MySQL'
+jdbc_url = "jdbc:mysql://mysql:3306/pysparkdb"
+mysql_user = "spark"
+mysql_password = "password"
 
 
 countryDF= spark.read.option("header", "true").option("inferSchema", "true").csv("/opt/project/resources/Country.csv")
-countryDF.printSchema()
-countryDF.show(3)
+# countryDF.printSchema()
+# countryDF.show(3)
 
 indicatorDF= spark.read.option("header", "true").option("inferSchema", "true").csv("/opt/project/resources/HDI.csv")
-indicatorDF.printSchema()
+# indicatorDF.printSchema()
 indicator2019DF = indicatorDF.select("HDI Rank", "Country", "2019").orderBy("HDI Rank")
-indicator2019DF.show(3)
+# indicator2019DF.show(3)
 
 happinessDF= spark.read.option("header", "true").option("inferSchema", "true").csv("/opt/project/resources/happiness_2019.csv")
-happinessDF.printSchema()
-happinessDF.show(3)
+# happinessDF.printSchema()
+# happinessDF.show(3)
 
 terrorismDF= spark.read.option("header", "true").option("inferSchema", "true").csv("/opt/project/resources/terrorism.csv")
 # terrorismDF.printSchema()
 terrorismColumnsDF = terrorismDF.select("eventid", "iyear", "imonth", "iday", "extended", "country","country_txt", "region", "region_txt", "city","multiple","success","suicide","attacktype1", "attacktype1_txt", "targtype1","targtype1_txt")
 # terrorismColumnsDF.show(3)
+
+
+'Save main DataFrames to MySQL'
+save_to_mysql(countryDF, "Country", jdbc_url, mysql_user, mysql_password)
+save_to_mysql(indicator2019DF, "indicator2019", jdbc_url, mysql_user, mysql_password)
+save_to_mysql(happinessDF, "happiness", jdbc_url, mysql_user, mysql_password)
+save_to_mysql(terrorismColumnsDF, "terrorism", jdbc_url, mysql_user, mysql_password)
+
+############################################
 
 """## Transformaciones
 
@@ -29,29 +54,29 @@ Countries with most cases of terrorism
 """
 
 WorstCountryTerrorismDF = terrorismColumnsDF.groupBy("country_txt").agg(count("*").alias("totalEvents")).orderBy(col("totalEvents").desc())
-WorstCountryTerrorismDF.show(5)
+# WorstCountryTerrorismDF.show(5)
 
 """Safest countries (less cases of terrorism)"""
 
 SafestCountryDF = terrorismColumnsDF.groupBy("country_txt").agg(count("*").alias("totalEvents")).orderBy(col("totalEvents"))
-SafestCountryDF.show(10)
+# SafestCountryDF.show(10)
 
 """Terrorism per region"""
 
 RegionTerrorismDF = terrorismColumnsDF.groupBy("region_txt").agg(count("*").alias("totalEvents")).orderBy(col("totalEvents").desc())
-RegionTerrorismDF.show(truncate=False)
+# RegionTerrorismDF.show(truncate=False)
 
 """Terrorism in European countries"""
 
 RegionTerrorismDF.filter((col("region_txt") == "Western Europe") | (col("region_txt") == "Eastern Europe")).show()
 
 EuropeTerrorismDF = terrorismColumnsDF.filter((col("region_txt") == "Western Europe") | (col("region_txt") == "Eastern Europe")).groupBy("region_txt", "country_txt").agg(count("*").alias("totalEvents")).orderBy(col("totalEvents").desc())
-EuropeTerrorismDF.show(10)
+# EuropeTerrorismDF.show(10)
 
 """Yearly evolution of terrorism cases"""
 
 yearEvolutionDF = terrorismColumnsDF.groupBy("iyear").agg(count("*").alias("totalEvents")).orderBy(col("iyear").desc())
-yearEvolutionDF.show()
+# yearEvolutionDF.show()
 
 """Year with most cases"""
 
@@ -66,15 +91,15 @@ happinessDF.filter(col("Healthy life expectancy") >= 1).orderBy(col("Healthy lif
 """Relation between happiness index and terrorism: there is not a clear correlation. Nevetheless, happier countries tend ot have less terrorism cases."""
 
 happinessTerrorismDF = happinessDF.join(SafestCountryDF, col("Country or region") == col("country_txt"), "inner").orderBy(col("Overall rank").desc()).orderBy("Overall rank").select("Overall rank", "Country or region", "Score", "totalEvents")
-happinessTerrorismDF.show(10)
-happinessTerrorismDF.orderBy(col("totalEvents").desc()).show(10)
-happinessTerrorismDF.orderBy(col("totalEvents").asc()).show(10)
+# happinessTerrorismDF.show(10)
+# happinessTerrorismDF.orderBy(col("totalEvents").desc()).show(10)
+# happinessTerrorismDF.orderBy(col("totalEvents").asc()).show(10)
 
 """Relation between corruption and terrorism: there is not a significant correlation"""
 
 corruptionTerrorismDF = happinessDF.join(SafestCountryDF, col("Country or region") == col("country_txt"), "inner").select("Overall rank", "Country or region", "GDP per capita", "Perceptions of corruption", "totalEvents")
-corruptionTerrorismDF.orderBy(col("Perceptions of corruption").asc()).show(10)
-corruptionTerrorismDF.orderBy(col("Perceptions of corruption").desc()).show(10)
+# corruptionTerrorismDF.orderBy(col("Perceptions of corruption").asc()).show(10)
+# corruptionTerrorismDF.orderBy(col("Perceptions of corruption").desc()).show(10)
 
 """Is GDP per capita correlated with terrorism? Overall, countries with higher GDP per capita tend to have less terrorism cases (except some countries like USA)."""
 
@@ -82,6 +107,7 @@ GDPTerrorismDF = corruptionTerrorismDF.drop("Perceptions of corruption").orderBy
 GDPTerrorismDF.show(15)
 
 """However, if we look at the countries with the least cases, we see a mix of high income and low income countries. In low income countries, social unrest may focus more on basic survival and needs, while wealthier countries often experience more political or ideological violence due to stronger institutions and more divided politics.
+
 """
 
 GDPTerrorismDF.orderBy("totalEvents").show(15)
@@ -111,7 +137,9 @@ StatsDF = joinedDF.select(count("*").alias("count"),
                           lit(0.550).alias("HDI_threshold"),
 												 mean("Score").alias("Score_mean"),
                           mean("HDI_2019").alias("HDI_mean"))
-StatsDF.show()
+# StatsDF.show()
+save_to_mysql(StatsDF, "Stats", jdbc_url, mysql_user, mysql_password)
+
 
 avgHappinessDF = joinedDF.withColumn("Happier than average", col("Score")>=5)
 avgHappinessDF.orderBy(col("totalEvents").desc()).show(10)
@@ -120,3 +148,5 @@ avgHappinessDF.orderBy(col("totalEvents").asc()).show(10)
 avgHDI = joinedDF.withColumn("More developed than average", col("HDI_2019") >= 0.55)
 avgHDI.orderBy(col("totalEvents").desc()).show(10)
 avgHDI.orderBy(col("totalEvents").asc()).show(10)
+
+
