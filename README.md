@@ -521,7 +521,7 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2025-01-23 21:28:43
+Last Checked: 2025-01-24 08:24:48
 
 
 Entregas Grupo MDA A
@@ -726,7 +726,7 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2025-01-23 21:28:43
+Last Checked: 2025-01-24 08:24:48
 
 Entregas Grupo MDA B
 <table>
@@ -847,14 +847,14 @@ Entregas Grupo MDA B
 <td>✅</td>
 <td>❌</td>
 <td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>✅</td>
-<td>✅</td>
 <td>✅</td>
 <td>❌</td>
 <td>✅</td>
-<td>8.0</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>10.0</td>
 </tr>
 <tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/JOEL_SEGUI'>JOEL_SEGUI</a></td>
@@ -984,5 +984,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2025-01-23 21:28:43
+Last Checked: 2025-01-24 08:24:48
 
