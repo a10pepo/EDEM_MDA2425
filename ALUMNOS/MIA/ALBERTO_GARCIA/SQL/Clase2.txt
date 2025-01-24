@@ -1,0 +1,79 @@
+--Empezamos a trabajar con el group by
+select rating, count (title) from film
+group by rating;
+
+select rating, AVG(rental_rate) as precio_promedio from film
+group by rating;
+
+Select rating, min(rental_rate) from film
+group by rating;
+
+Select rating, max(rental_rate) from film
+group by rating;
+
+select rating, ceil( AVG(length)) as duracion_media from film
+group by rating;
+
+select rating, min(release_year) from film
+group by rating;
+
+select rating, max(release_year) from film
+group by rating;
+
+--Pasamos a trabajar con el having
+
+select rating, count(title) as numero from film
+group by rating
+having count(title) > 200;
+
+select rating, AVG(rental_rate) as precio_medio from film
+group by rating
+having AVG(rental_rate) >= 3;
+
+select rating, AVG(length) from film
+group by rating
+having AVG(rental_rate) >= 115;
+
+--Compenzamos a trabajar con los join
+
+--Con alias
+Select f.language_id, l.language_id 
+from film as f
+Left Join language as l on f.language_id = l.language_id;
+--Sin alias
+Select film.title, language.language_id --Vemos el idioma de cada película
+from film 
+Left Join language on film.language_id = language.language_id;
+--2 Left Joins
+Select f.film_id, fa.film_id, a.actor_id, fa.actor_id
+from film as f
+Left Join film_actor as fa on f.film_id = fa.film_id
+Left Join actor as a on fa.actor_id = a.actor_id;
+
+--Queremos poner en la misma sentencia las películas y cuantos actores tienen
+Select title, count(fa.actor_id)
+from film as f
+Left Join film_actor as fa on f.film_id = fa.film_id
+Left Join actor as a on fa.actor_id = a.actor_id
+group by title;
+--Ahora veremos en cuantas pelis ha estado cada actor (limitado a 2)
+Select first_name, count (fa.film_id)
+from actor as a
+Left Join film_actor as fa on a.actor_id = fa.actor_id
+Left Join film as f on fa.film_id = f.film_id
+group by first_name
+limit 2;
+
+--Ahora vamos a crear una tabla 
+
+create table if not exists reviews(
+	film_id serial4 NOT NULL,
+	customer_id serial4 NOT NULL,
+	review_date timestamp,
+	review_description varchar(60)
+	);
+	
+	select * from reviews;
+	
+	Insert into reviews(film_id,customer_id,review_date,review_description)
+	values (1234,4321,'2024-10-28 19:19','No estaba mal pero no muy buena');
