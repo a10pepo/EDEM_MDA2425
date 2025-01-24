@@ -1,0 +1,113 @@
+SELECT rating, count(title) FROM film group by (rating)
+
+-- SELECCIONAR el rating, que los cuente por el nombre de raiting, de la tabla film y te lo agrupe por ratings
+
+SELECT
+   rating,
+   count(title),
+   AVG (rental_rate) as Precio_medio,
+   MIN (rental_rate) as Minimo_Precio,
+   MAX (rental_rate) as Precio_Maximo,
+   AVG (length),
+   MAX(release_year),
+   MIN (release_year) 
+FROM
+   film 
+group by
+(rating)
+HAVING 
+ count(title) > 200
+
+
+SELECT
+   rating,
+   count(title),
+   AVG (rental_rate) as Precio_medio,
+   MIN (rental_rate) as Minimo_Precio,
+   MAX (rental_rate) as Precio_Maximo,
+   AVG (length),
+   MAX(release_year),
+   MIN (release_year) 
+FROM
+   film 
+group by
+(rating)
+HAVING
+AVG (rental_rate) > 3
+
+SELECT
+   rating,
+   count(title),
+   AVG (rental_rate) as Precio_medio,
+   MIN (rental_rate) as Minimo_Precio,
+   MAX (rental_rate) as Precio_Maximo,
+   AVG (length),
+   MAX(release_year),
+   MIN (release_year) 
+FROM
+   film 
+group by
+(rating)
+
+SELECT language.name ,film.title 
+FROM language 
+RIGHT JOIN film on language.language_id = film.language_id 
+RIGHT JOIN actor on language.language_id = actor_id
+
+ 
+SELECT first_name, COUNT(title) 
+FROM (
+    SELECT actor.first_name, film.title, film_actor.actor_id
+    FROM actor
+    LEFT JOIN film_actor ON actor.actor_id = film_actor.actor_id
+    LEFT JOIN film ON film_actor.film_id = film.film_id
+) AS ActorFilmData
+GROUP BY first_name;
+
+
+SELECT title, COUNT(first_name) 
+FROM (
+    SELECT actor.first_name, film.title, film_actor.actor_id
+    FROM actor
+    LEFT JOIN film_actor ON actor.actor_id = film_actor.actor_id
+    LEFT JOIN film ON film_actor.film_id = film.film_id
+) AS ActorFilmData
+GROUP BY title
+HAVING 
+COUNT (first_name) >3
+;
+
+CREATE TABLE reviews 
+(film_id serial4 NOT NULL,
+ customer_id varchar(50) NOT NULL,
+ review_date date NOT NULL,
+ review_description varchar(50))
+
+
+
+SELECT language.name ,film.title 
+FROM language 
+RIGHT JOIN film on film.language_id  = language.language_id
+
+
+INSERT INTO reviews (film_id, customer_id, review_date, review_description)
+VALUES (4, 7, '10-11-2023', '	La película es un poco aburrida')
+
+INSERT INTO reviews (film_id, customer_id, review_date, review_description)
+VALUES (5, 8, '03-05-2005', 'Superheroes')
+
+
+
+-- SELECCIONAR 
+SELECT * FROM reviews
+SELECT * FROM film
+SELECT * FROM actor
+SELECT * FROM language
+ 
+
+ 
+UPDATE reviews
+SET review_description = '	La película es un poco aburrida'
+WHERE review_description = 'La película es un poco aburrida';
+
+

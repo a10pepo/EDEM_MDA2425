@@ -1,0 +1,6 @@
+FROM python:3.9-slim
+WORKDIR /app
+COPY Num_parametros.py .
+
+#He probado con CMD y no deja, por lo que pruebo con ENTRYPOINT.
+ENTRYPOINT ["python", "Num_parametros.py"]
