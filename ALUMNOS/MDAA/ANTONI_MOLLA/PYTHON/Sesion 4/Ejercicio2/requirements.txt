@@ -1,0 +1,4 @@
+pandas
+pg8000
+kafka_Confluent
+#En terminal hariamos un pip install -r requirements.txt
