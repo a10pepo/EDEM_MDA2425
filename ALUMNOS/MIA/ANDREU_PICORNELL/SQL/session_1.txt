@@ -1,0 +1,72 @@
+SELECT * FROM ACTOR
+
+--- Aqui para que aparezcan los nombres con una 'n' en algún sitio sin ser inicio o final ---
+WHERE first_name LIKE '%n%';  
+
+--- Usando clausula de que comiencen por N, tengan un caracter en last name y luego tengo otra cosa----
+SELECT *
+FROM ACTOR
+WHERE first_name LIKE 'N_%';
+
+--- Como saber si un actor no tiene apellido ---
+SELECT *
+FROM ACTOR
+WHERE last_name is null;
+
+------ Como contar cuantos actores tengo y añadir una columna ---
+SELECT count (actor_id) as total_actores
+FROM actor;
+
+SELECT count (*)
+from actor;
+
+---Nombres únicos que tienen los actores ( ver solo un pablo y una maria )--- 
+SELECT COUNT (DISTINCT first_name) 
+FROM actor;
+
+--- El ultimo del abecedario del nombre de un actor --
+SELECT first_name
+FROM actor
+ORDER BY first_name DESC
+LIMIT 1;
+
+-- El primero del abecedario ---
+SELECT first_name
+FROM actor
+ORDER BY first_name ASC
+LIMIT 1;
+
+--- El nombre más largo ---
+SELECT first_name
+FROM actor
+ORDER BY LENGTH(first_name) DESC
+LIMIT 1;
+
+--- El nombre más corto ---
+SELECT first_name
+FROM actor
+ORDER BY LENGTH(first_name) ASC
+LIMIT 1;
+
+----- FILM el cual cuesta más de 2 euros, comienza con J-----
+SELECT *
+FROM film
+WHERE replacement_cost > 2 
+and title ilike 'J%' 
+and rental_duration > 0 
+and rental_duration < 5 
+and release_year = 2006 and length > 100
+and rental_rate > 2;
+
+-- Calcular ratio cuantas veces alquilar una pelicula para pagar su replacement_cost --
+SELECT title, ceil (replacement_cost / rental_rate ) as resultado_precio
+FROM film
+ORDER BY resultado_precio DESC;
+
+-- como selecionar la posición especial features  ---
+SELECT special_features [1] from film
+WHERE replacement_cost >2;
+
+-- Como seleccionar todas las peliculas con un special features de 2 posiciones --
+SELECT * FROM film
+WHERE special_features[2] LIKE 'D%'
