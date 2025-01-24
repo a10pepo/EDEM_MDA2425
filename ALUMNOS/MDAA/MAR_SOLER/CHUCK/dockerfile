@@ -1,0 +1,9 @@
+FROM python:3.7
+
+WORKDIR /app
+
+COPY mongo.py /app
+
+RUN pip install pymongo pg8000
+
+CMD ["python3", "mongo.py"]
