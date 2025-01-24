@@ -1,0 +1,16 @@
+# Imagen base de Python
+FROM python:3.9-slim
+
+# Crear un directorio de trabajo
+WORKDIR /app
+
+# Instalar dependencias del sistema necesarias
+RUN apt-get update && apt-get install -y gcc libpq-dev
+
+# Copiar los archivos necesarios
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY main.py .
+
+# Ejecutar el script
+CMD ["python", "main.py"]
