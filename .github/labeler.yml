@@ -31,6 +31,30 @@ DBT:
 - changed-files:
   - any-glob-to-any-file: ['ALUMNOS/MDAA/*/DBT/**','ALUMNOS/MDAB/*/DBT/**','ALUMNOS/MIA/*/DBT/**']  
 
+DEMO:
+- changed-files:
+  - any-glob-to-any-file: ['ALUMNOS/MDAA/*/DEMO/**', 'ALUMNOS/MDAB/*/DEMO/**', 'ALUMNOS/MIA/*/DEMO/**']
+
+TICTACTOE:
+- changed-files:
+  - any-glob-to-any-file: ['ALUMNOS/MDAA/*/TICTACTOE/**', 'ALUMNOS/MDAB/*/TICTACTOE/**', 'ALUMNOS/MIA/*/TICTACTOE/**']
+
+CHAT:
+- changed-files:
+  - any-glob-to-any-file: ['ALUMNOS/MDAA/*/CHAT/**', 'ALUMNOS/MDAB/*/CHAT/**', 'ALUMNOS/MIA/*/CHAT/**']
+
+CHUCK:
+- changed-files:
+  - any-glob-to-any-file: ['ALUMNOS/MDAA/*/CHUCK/**', 'ALUMNOS/MDAB/*/CHUCK/**', 'ALUMNOS/MIA/*/CHUCK/**']
+
+PYSPARK:
+- changed-files:
+  - any-glob-to-any-file: ['ALUMNOS/MDAA/*/PYSPARK/**', 'ALUMNOS/MDAB/*/PYSPARK/**', 'ALUMNOS/MIA/*/PYSPARK/**']
+
+TERRAFORM:
+- changed-files:
+  - any-glob-to-any-file: ['ALUMNOS/MDAA/*/TERRAFORM/**', 'ALUMNOS/MDAB/*/TERRAFORM/**', 'ALUMNOS/MIA/*/TERRAFORM/**']
+
 ML0_INTRO:
 - changed-files:
   - any-glob-to-any-file: ['ALUMNOS/MDAA/*/ML0_INTRO/**', 'ALUMNOS/MDAB/*/ML0_INTRO/**', 'ALUMNOS/MIA/*/ML0_INTRO/**']
