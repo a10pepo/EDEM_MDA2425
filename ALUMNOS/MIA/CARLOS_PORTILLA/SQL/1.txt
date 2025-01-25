@@ -1,0 +1,49 @@
+-- Buscar actores con nombre 'Ed' o 'Nick'
+SELECT * FROM actor WHERE first_name = 'Ed' OR first_name = 'Nick';
+
+-- Buscar actores cuyo nombre comience con 'N' (case-insensitive)
+SELECT * FROM actor WHERE first_name ILIKE 'n%';
+
+-- Buscar actores cuyo nombre termine con 'n' (case-insensitive)
+SELECT * FROM actor WHERE first_name ILIKE '%n';
+
+-- Buscar actores cuyo nombre contenga 'n' en cualquier posición (case-insensitive)
+SELECT * FROM actor WHERE first_name ILIKE '%n%';
+
+-- Buscar actores cuyo nombre comience con 'N' y tenga al menos un carácter después
+SELECT * FROM actor WHERE first_name LIKE 'N_%';
+
+-- Buscar actores cuyo apellido sea nulo
+SELECT * FROM actor WHERE last_name IS NULL;
+
+-- Contar el número total de actores
+SELECT COUNT(*) AS total_actors FROM actor;
+
+-- Contar el número de nombres distintos en la tabla de actores
+SELECT COUNT(DISTINCT first_name) AS unique_first_names FROM actor;
+
+-- Obtener el nombre más pequeño (alfabéticamente) de la tabla de actores
+SELECT MIN(first_name) AS min_first_name FROM actor;
+
+-- Buscar películas con un costo de reemplazo mayor a 2, título que comience con 'A',
+-- duración de alquiler entre 3 y 5 días, año de lanzamiento 2006 y duración mayor a 100 minutos
+SELECT * FROM film 
+WHERE replacement_cost > 2 
+  AND title LIKE 'A%' 
+  AND rental_duration BETWEEN 3 AND 5 
+  AND release_year = 2006 
+  AND length > 100;
+
+-- Calcular una nueva operación: costo de reemplazo dividido por la tasa de alquiler, redondeado hacia arriba
+SELECT title, CEIL(replacement_cost / rental_rate) AS cost_to_rent_ratio 
+FROM film;
+
+-- Ordenar las películas por la nueva operación en orden descendente
+SELECT title, CEIL(replacement_cost / rental_rate) AS cost_to_rent_ratio 
+FROM film 
+ORDER BY cost_to_rent_ratio DESC;
+
+-- Acceder a elementos específicos de columnas tipo array (special_features) o fulltext
+-- Ejemplo: seleccionar el primer elemento de special_features o el tercero de fulltext
+SELECT special_features[1] AS first_feature, fulltext[3] AS third_fulltext 
+FROM film;
