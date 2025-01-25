@@ -541,7 +541,7 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2025-01-25 10:20:27
+Last Checked: 2025-01-25 10:30:24
 
 
 Entregas Grupo MDA A
@@ -768,7 +768,7 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2025-01-25 10:20:27
+Last Checked: 2025-01-25 10:30:24
 
 Entregas Grupo MDA B
 <table>
@@ -837,7 +837,7 @@ Entregas Grupo MDA B
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
-<td>❌</td>
+<td>✅</td>
 <td>❌</td>
 <td>✅</td>
 <td>❌</td>
@@ -850,7 +850,7 @@ Entregas Grupo MDA B
 <td>✅</td>
 <td>✅</td>
 <td>8.0</td>
-<td>2.0</td>
+<td>4.0</td>
 </tr>
 <tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/CLAUDIA_ROMERO'>CLAUDIA_ROMERO</a></td>
@@ -1054,5 +1054,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2025-01-25 10:20:27
+Last Checked: 2025-01-25 10:30:24
 
