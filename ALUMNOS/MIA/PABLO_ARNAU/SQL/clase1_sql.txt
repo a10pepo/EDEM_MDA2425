@@ -1,0 +1,36 @@
+
+--busqueda que contenga una letra empiece o acabe, ilike para no distiguir en mayúsculas y minús..
+select actor_id,first_name,last_name from actor where first_name ilike '%n%';
+
+select first_name from actor where first_name ilike 'N_%';
+
+--buscar apellido nulo
+select first_name,last_name from actor where last_name is not null;
+
+--contar número de actores
+select count (actor_id) as conteo_actores from actor ;
+
+--nombres únicos que tienen los actores
+select count (distinct first_name) as nombres_unicos from actor;
+
+--MAX nombre de un actor en texto el max es la Z y el min es la A
+select max (distinct first_name) from actor;
+
+
+
+select title,replacement_cost,rental_duration,release_year,length,rental_rate
+from film 
+where replacement_cost>2 and title like 'P%' 
+and rental_duration between 0 and 5 
+and release_year = 2006 
+and length>150
+and rental_rate>2;
+
+
+select title,ceil (replacement_cost / rental_rate) as breakeven from film order by breakeven desc;
+
+select * from film;
+
+-- en este caso es un special_features y así se transforma a texto está como vector.
+select * from film
+where special_features[1] ilike 'T%';
