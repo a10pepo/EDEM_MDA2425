@@ -541,7 +541,7 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2025-01-25 10:49:34
+Last Checked: 2025-01-26 14:20:10
 
 
 Entregas Grupo MDA A
@@ -768,7 +768,7 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2025-01-25 10:49:34
+Last Checked: 2025-01-26 14:20:10
 
 Entregas Grupo MDA B
 <table>
@@ -1015,7 +1015,7 @@ Entregas Grupo MDA B
 <tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/TING_WANG'>TING_WANG</a></td>
 <td>❌</td>
-<td>❌</td>
+<td>✅</td>
 <td>❌</td>
 <td>✅</td>
 <td>❌</td>
@@ -1030,7 +1030,7 @@ Entregas Grupo MDA B
 <td>✅</td>
 <td>✅</td>
 <td>10.0</td>
-<td>4.0</td>
+<td>6.0</td>
 </tr>
 <tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/VALENTIN_VECHER'>VALENTIN_VECHER</a></td>
@@ -1054,5 +1054,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2025-01-25 10:49:34
+Last Checked: 2025-01-26 14:20:10
 
