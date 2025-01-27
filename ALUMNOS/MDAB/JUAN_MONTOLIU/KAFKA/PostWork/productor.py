@@ -3,41 +3,41 @@ import requests
 from json import dumps
 from confluent_kafka import Producer, KafkaError
 
-# Configuración del productor
+
 config = {
-    'bootstrap.servers': 'localhost:9092',  # Dirección del servidor Kafka
+    'bootstrap.servers': 'localhost:9092',
     'client.id': 'python-producer'
 }
 
-# Crear un productor
+
 producer = Producer(config)
 
-# Nombre del tópico
+
 topic_kafka = 'cultivos'
 
-# URL de la API
+
 api_url = "https://valencia.opendatasoft.com/api/explore/v2.1/catalog/datasets/superficie-cultivada-cultivos/exports/json?lang=es&timezone=Europe%2FBerlin"
 
-# Obtener datos de la API
+
 try:
     response = requests.get(api_url)
-    response.raise_for_status()  # Lanza un error si la respuesta no es exitosa (código 4xx o 5xx)
+    response.raise_for_status()  
 
-    data_list = response.json()  # Los datos se obtienen como una lista de JSONs
+    data_list = response.json()  
     print(f"Datos obtenidos de la API: {len(data_list)} registros")
 
-    # Enviar cada JSON como un mensaje
+
     for index, data in enumerate(data_list):
         try:
-            json_message = dumps(data)  # Convierte el diccionario en JSON
-            key = str(index)  # Clave del mensaje
-            producer.produce(topic=topic_kafka, value=json_message, key=key)  # Envía el mensaje
+            json_message = dumps(data) 
+            key = str(index) 
+            producer.produce(topic=topic_kafka, value=json_message, key=key)  
             print(f"Mensaje enviado: {json_message}")
-            time.sleep(1)  # Pausa para evitar inundar el topic
+            time.sleep(1) 
         except Exception as e:
             print(f"Error al enviar el mensaje con índice {index}: {str(e)}")
 
-    # Asegúrate de que todos los mensajes se envíen antes de salir
+
     producer.flush()
 
     print("Todos los mensajes han sido enviados.")
