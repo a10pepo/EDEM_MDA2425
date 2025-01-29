@@ -1,0 +1,11 @@
+FROM python:3.9-slim
+
+# Establecer el directorio de trabajo dentro del contenedor
+WORKDIR /app
+# Copiar el script Python al contenedor
+COPY script01.py .
+# Definir el comando por defecto al ejecutar el contenedor
+ENTRYPOINT ["python3", "script01.py"]
+
+#Poner los dos números que queremos que se sumen
+CMD [ "4","7" ]
