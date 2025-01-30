@@ -1,0 +1,61 @@
+openapi: 3.0.0
+info:
+  title: Robot Temperature Monitoring API
+  description: API to get the last temperature from a robot sensor.
+  version: 1.0.0
+paths:
+  /getLastMeassureBySensor/{sensor}:
+    get:
+      summary: Get the last temperature measurement for a specific sensor.
+      description: Returns the last temperature measurement for the sensor if found.
+      parameters:
+        - name: sensor
+          in: path
+          description: The ID of the sensor to fetch the last measurement for.
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with the last measurement data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: string
+                    description: The sensor ID.
+                  fechamuestreo:
+                    type: string
+                    description: The timestamp when the measurement was taken.
+                  unidad:
+                    type: string
+                    description: The unit of the measurement.
+                  medicion:
+                    type: number
+                    format: float
+                    description: The measurement value.
+        '400':
+          description: Sensor not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: 'Sensor not found'
+        '404':
+          description: Invalid sensor ID supplied.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: 'Invalid ID supplied'
+servers:
+  - url: http://localhost:5000
+    description: Local development server
