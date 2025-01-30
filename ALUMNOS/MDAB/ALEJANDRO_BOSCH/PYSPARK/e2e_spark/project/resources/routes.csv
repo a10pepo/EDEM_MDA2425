@@ -1,0 +1,101 @@
+route_id,route_name,start_point,end_point
+1,University Avenue Line,"San Diego, CA",/account
+2,Airport Direct,"Austin, TX",/terms-of-service
+3,East Side Flyer,"Chicago, IL",/products
+4,Forest Trail Line,"Jacksonville, FL",/admin
+5,University Avenue Line,"San Diego, CA",/account
+6,Suburban Expressway,"Chicago, IL",/support
+7,Riverfront Loop,"Philadelphia, PA",/careers
+8,Beachfront Boulevard,"Washington, D.C.",/help-center
+9,Downtown Express,"New York City, NY",/home
+10,Riverfront Loop,"Philadelphia, PA",/careers
+11,Park Avenue Path,"Jacksonville, FL",/checkout
+12,Riverfront Loop,"San Jose, CA",/careers
+13,Crosstown Connector,"Philadelphia, PA",/contact-us
+14,Seaside Stroll,"San Francisco, CA",/register
+15,Riverfront Loop,"Austin, TX",/careers
+16,Market Street Metro,"Houston, TX",/notifications
+17,West End Shuttle,"San Diego, CA",/services
+18,University Avenue Line,"Houston, TX",/account
+19,Suburban Expressway,"Phoenix, AZ",/support
+20,West End Shuttle,"Chicago, IL",/services
+21,Greenbelt Metro,"Philadelphia, PA",/sitemap
+22,West End Shuttle,"Austin, TX",/services
+23,City Center Circulator,"San Antonio, TX",/privacy-policy
+24,Mountain Ridge Route,"San Diego, CA",/blog
+25,Crosstown Connector,"San Francisco, CA",/contact-us
+26,Business District Rapid,"Chicago, IL",/cart
+27,City Center Circulator,"San Diego, CA",/privacy-policy
+28,Suburban Expressway,"Charlotte, NC",/support
+29,Market Street Metro,"San Francisco, CA",/notifications
+30,Lakeside Route,"Dallas, TX",/search
+31,Greenbelt Metro,"Phoenix, AZ",/sitemap
+32,Skyline Scenic,"Washington, D.C.",/dashboard
+33,University Avenue Line,"Washington, D.C.",/account
+34,Suburban Expressway,"Denver, CO",/support
+35,Skyline Scenic,"New York City, NY",/dashboard
+36,University Avenue Line,"New York City, NY",/account
+37,Airport Direct,"Chicago, IL",/terms-of-service
+38,Market Street Metro,"San Jose, CA",/notifications
+39,Market Street Metro,"Washington, D.C.",/notifications
+40,Historic District Tour,"San Jose, CA",/login
+41,Mountain Ridge Route,"Philadelphia, PA",/blog
+42,Beachfront Boulevard,"San Antonio, TX",/help-center
+43,Seaside Stroll,"Philadelphia, PA",/register
+44,Beachfront Boulevard,"Columbus, OH",/help-center
+45,Forest Trail Line,"Denver, CO",/admin
+46,Downtown Express,"Chicago, IL",/home
+47,Downtown Express,"Fort Worth, TX",/home
+48,East Side Flyer,"Jacksonville, FL",/products
+49,Crosstown Connector,"Seattle, WA",/contact-us
+50,Seaside Stroll,"Phoenix, AZ",/register
+51,Airport Direct,"San Antonio, TX",/terms-of-service
+52,Beachfront Boulevard,"Los Angeles, CA",/help-center
+53,Riverfront Loop,"Dallas, TX",/careers
+54,City Center Circulator,"San Diego, CA",/privacy-policy
+55,Business District Rapid,"Columbus, OH",/cart
+56,Greenbelt Metro,"Philadelphia, PA",/sitemap
+57,Crosstown Connector,"Philadelphia, PA",/contact-us
+58,Market Street Metro,"San Jose, CA",/notifications
+59,Harborview Drive,"Chicago, IL",/faq
+60,East Side Flyer,"San Diego, CA",/products
+61,City Center Circulator,"San Jose, CA",/privacy-policy
+62,Mountain Ridge Route,"Chicago, IL",/blog
+63,Uptown Local,"San Jose, CA",/about
+64,Historic District Tour,"Fort Worth, TX",/login
+65,Suburban Expressway,"Los Angeles, CA",/support
+66,Park Avenue Path,"Philadelphia, PA",/checkout
+67,Greenbelt Metro,"San Jose, CA",/sitemap
+68,Forest Trail Line,"Indianapolis, IN",/admin
+69,Riverfront Loop,"Charlotte, NC",/careers
+70,Seaside Stroll,"Chicago, IL",/register
+71,Crosstown Connector,"Columbus, OH",/contact-us
+72,Skyline Scenic,"Houston, TX",/dashboard
+73,Airport Direct,"Austin, TX",/terms-of-service
+74,Forest Trail Line,"Charlotte, NC",/admin
+75,Seaside Stroll,"Seattle, WA",/register
+76,East Side Flyer,"Denver, CO",/products
+77,Seaside Stroll,"San Antonio, TX",/register
+78,East Side Flyer,"Denver, CO",/products
+79,East Side Flyer,"San Jose, CA",/products
+80,Harborview Drive,"Denver, CO",/faq
+81,City Center Circulator,"Charlotte, NC",/privacy-policy
+82,Seaside Stroll,"Phoenix, AZ",/register
+83,Galleria Gallery Line,"Austin, TX",/settings
+84,Business District Rapid,"Denver, CO",/cart
+85,Old Town Trolley,"San Diego, CA",/messages
+86,Skyline Scenic,"Columbus, OH",/dashboard
+87,East Side Flyer,"Houston, TX",/products
+88,Lakeside Route,"Jacksonville, FL",/search
+89,West End Shuttle,"San Antonio, TX",/services
+90,Crosstown Connector,"Phoenix, AZ",/contact-us
+91,Business District Rapid,"San Antonio, TX",/cart
+92,Galleria Gallery Line,"New York City, NY",/settings
+93,Cultural Village Connector,"San Antonio, TX",/profile
+94,Forest Trail Line,"Indianapolis, IN",/admin
+95,Airport Direct,"Columbus, OH",/terms-of-service
+96,Lakeside Route,"San Francisco, CA",/search
+97,University Avenue Line,"San Antonio, TX",/account
+98,Airport Direct,"Washington, D.C.",/terms-of-service
+99,University Avenue Line,"Charlotte, NC",/account
+100,Lakeside Route,"Philadelphia, PA",/search
