@@ -1,0 +1,96 @@
+version: '3.7'
+
+services:
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    container_name: zookeeper
+    restart: always
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    networks:
+      - kafka_network
+
+  kafka:
+    image: confluentinc/cp-kafka:latest
+    container_name: kafka
+    restart: always
+    depends_on:
+      - zookeeper
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:29092
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,PLAINTEXT_HOST://0.0.0.0:29092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+    ports:
+      - "29092:29092"
+    networks:
+      - kafka_network
+
+  ksqldb-server:
+    image: confluentinc/cp-ksqldb-server:latest
+    container_name: ksqldb-server
+    restart: always
+    depends_on:
+      - kafka
+    environment:
+      KSQL_CONFIG_DIR: "/etc/ksql"
+      KSQL_BOOTSTRAP_SERVERS: "kafka:9092"
+      KSQL_KSQL_SERVICE_ID: "ksql-cluster"
+      KSQL_KSQL_STREAMS_AUTO_OFFSET_RESET: "earliest"
+      KSQL_KSQL_LOGGING_PROCESSING_STREAM_AUTO_CREATE: "true"
+      KSQL_KSQL_LOGGING_PROCESSING_TOPIC_AUTO_CREATE: "true"
+    ports:
+      - "8088:8088"
+    networks:
+      - kafka_network
+
+  ksqldb-cli:
+    image: confluentinc/cp-ksqldb-cli:latest
+    container_name: ksqldb-cli
+    depends_on:
+      - ksqldb-server
+    entrypoint: /bin/sh
+    tty: true
+    networks:
+      - kafka_network
+
+  schema-registry:
+    image: confluentinc/cp-schema-registry:latest
+    container_name: schema-registry
+    restart: always
+    depends_on:
+      - kafka
+    environment:
+      SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: "kafka:9092"
+      SCHEMA_REGISTRY_HOST_NAME: "schema-registry"
+    ports:
+      - "8081:8081"
+    networks:
+      - kafka_network
+
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: kafka-ui
+    restart: always
+    depends_on:
+      - kafka
+    environment:
+      KAFKA_CLUSTERS_0_NAME: "local"
+      KAFKA_CLUSTERS_0_BOOTSTRAP_SERVERS: "kafka:9092"
+      KAFKA_CLUSTERS_0_KSQLDB_0_URL: "http://ksqldb-server:8088"
+    ports:
+      - "8080:8080"
+    networks:
+      - kafka_network
+
+networks:
+  kafka_network:
+    driver: bridge
