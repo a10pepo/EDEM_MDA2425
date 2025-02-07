@@ -1,0 +1,179 @@
+-- Clausula Create Table
+--CREATE TABLE IF NOT EXISTS public.reviews_ng (
+--film_id int2 NOT NULL,
+--customer_id int2 NOT NULL,
+--review_date date NOT NULL,
+--review_description varchar,
+--CONSTRAINT reviews_pkey PRIMARY KEY (film_id, customer_id));
+
+-- Clausula Alter Table - Añadir una nueva columna a la tabla de reviews. Por ejemplo, numero de estrellas que le darias a una pelicula. Llamalo "review_starts" y con datatype int2
+--ALTER TABLE public.reviews_ng
+--ADD COLUMN review_stars int2;
+
+-- Renombrar una columna
+--ALTER TABLE public.reviews_ng
+--RENAME COLUMN review_description TO review_opinion;
+
+--Crear vistas
+--CREATE VIEW my_view_of_actor AS
+--SELECT actor_id, first_name, last_name, last_update
+--FROM public.actor
+--where first_name is not null;
+
+--Hacer un IF
+select length,
+case when length > 100 then 'Pelicula_larga'
+when length > 50 and length < 99 then 'Pelicula_media'
+else 'pelicula_corta' end
+from film;
+
+--Crea una vista: Mejor comprador (customer)
+--CREATE OR REPLACE VIEW top_customers AS
+SELECT
+    c.customer_id,
+    c.first_name AS customer_name,
+	SUM(p.amount) AS total_spent
+FROM
+    customer c    	
+JOIN
+    payment p ON c.customer_id = p.customer_id
+GROUP BY
+    c.customer_id, c.first_name
+ORDER BY
+    total_spent DESC;
+	
+SELECT * FROM top_customers;
+
+--Crea una vista: Mejor comprador (customer) y añade tiempo que tardan en devolver
+CREATE OR REPLACE VIEW top_customers AS
+SELECT
+    c.customer_id,
+    c.first_name AS customer_name,
+    SUM(p.amount) AS total_spent,
+    AVG(DATE_PART('day', r.return_date - r.rental_date)) AS avg_days_to_return
+FROM
+    customer c
+JOIN
+    payment p ON c.customer_id = p.customer_id
+JOIN
+    rental r ON c.customer_id = r.customer_id
+WHERE
+    r.return_date IS NOT NULL -- Solo considerar devoluciones completadas
+GROUP BY
+    c.customer_id, c.first_name
+ORDER BY
+    total_spent DESC;
+SELECT * FROM top_customers;
+
+-- View de los mejores customers
+SELECT *
+FROM top_customers
+LIMIT 5;
+
+--View de los peores customers (ojo que hay productos cartesianos...)
+SELECT *
+FROM top_customers
+ORDER BY total_spent ASC
+LIMIT 5;
+
+-- View down5 (bien hecha)
+CREATE or REPLACE VIEW down5 AS
+select concat(first_name, ' ', last_name) as nombre_completo, sum(p.amount)
+from payment p
+inner join customer c on c.customer_id = p.customer_id
+group by 1
+order by 2 desc
+limit 5;
+
+-- View top5 (bien hecha)
+CREATE or REPLACE VIEW top5 AS
+select concat(first_name, ' ', last_name) as nombre_completo, sum(p.amount)
+from payment p
+inner join customer c on c.customer_id = p.customer_id
+group by 1
+order by 2 asc
+limit 5;
+
+select * from down5
+union all
+select * from top5;
+
+--KPis
+--create or replace view kpis as
+--select avg(down5.suma_amount), 'down5' as tipo from down5
+--union all
+--select avg(top5.suma_amount), 'top5' as tipo from top5;
+--select * from kpis
+
+-- Ejemplos Subconsulta: conteo alquileres, suma amount, rental_duration > 3 dias
+SELECT 
+    customer_id,
+    COUNT(*) AS rental_count,
+    SUM(amount) AS total_amount,
+    AVG(rental_duration) AS avg_rental_duration
+FROM (
+    SELECT 
+        r.customer_id,
+        p.amount,
+        DATE_PART('day', r.return_date - r.rental_date) AS rental_duration
+    FROM 
+        rental r
+    JOIN 
+        payment p ON r.rental_id = p.rental_id
+    WHERE 
+        r.return_date IS NOT NULL
+) subquery
+WHERE rental_duration > 3
+GROUP BY customer_id
+ORDER BY total_amount DESC;
+
+-- Ejemplos Subconsulta
+with my_sub_query as
+(SELECT title, rental_rate, replacement_cost, round(replacement_cost / rental_rate, 2) as new_column
+FROM public.film),
+new_1 as
+(SELECT title, rental_rate, replacement_cost, round(replacement_cost / rental_rate, 2) as new_column
+FROM public.film)
+select * from new_1 where title = 'Ali Forever';
+
+
+--Ejemplo WITH - Clientes que pagan + de 190 (1)
+WITH clientes_que_pagan_mas_de_190 AS (
+    SELECT customer_id, SUM(amount) AS total_pagado
+    FROM payment
+    GROUP BY customer_id
+    HAVING SUM(amount) > 190
+)
+SELECT 
+    SUM(total_pagado) AS suma_total_amount,
+    COUNT(customer_id) AS numero_clientes
+FROM clientes_que_pagan_mas_de_190;
+
+--Ejemplo WITH - Clientes que pagan + de 190 (2) alternativa a (1)
+with sub as
+(select customer_id, sum(amount) as total
+from payment p 
+group by customer_id
+)
+select * from sub where total >190;
+
+-- Empleado del mes
+SELECT staff_id, COUNT(*) AS total_payments
+FROM payment
+GROUP BY staff_id
+ORDER BY total_payments DESC
+LIMIT 1;
+
+-- Empleado del mes - ¿Donde vive (ciudad)? ¿Cuantos clientes ha atendido (conteo por staff)? 
+WITH empleado_del_mes AS (
+    SELECT staff_id, COUNT(*) AS total_payments
+    FROM payment
+    GROUP BY staff_id
+    ORDER BY total_payments DESC
+    LIMIT 1
+)
+SELECT e.staff_id, s.first_name, s.last_name, a.address, a.district, c.city, a.postal_code
+FROM empleado_del_mes e
+JOIN staff s ON e.staff_id = s.staff_id
+JOIN address a ON s.address_id = a.address_id
+JOIN city c ON a.city_id = c.city_id;

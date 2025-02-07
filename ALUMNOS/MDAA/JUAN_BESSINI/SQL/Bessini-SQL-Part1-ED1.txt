@@ -1,0 +1,112 @@
+--¿Como se llaman los actoes que empiezan por la letra A?
+SELECT *
+FROM actor
+WHERE first_name LIKE 'A%';
+
+--¿Cuales son las peliculas que podemos alquilar por mas de 10€?
+
+SELECT title, rental_rate
+FROM film
+WHERE rental_rate > 10;
+
+--¿Cuantas peliculas podemos alquilar entre 5 y 10 euros?
+SELECT COUNT(*) AS peliculas_entre_5_y_10
+FROM film
+WHERE rental_rate BETWEEN 5 AND 10;
+
+--¿Cuantas peliculas podemos alquilar por menos de 5€ y con una duración menor a 100 min?
+SELECT COUNT(*) AS peliculas_baratas_y_cortas
+FROM film
+WHERE rental_rate < 5 AND length < 100;
+
+--El responsanle de tienda está interesado en conocer mejor las peliculas... Desea obtener un listado de las películas por orden de duración (de menos duración a más duración) y quiere conocer los títulos de las 5 películas más cortas del videoclub.
+SELECT title, length
+FROM film
+ORDER BY length ASC
+LIMIT 5;
+
+SELECT title, length
+FROM film
+ORDER BY length ASC;
+
+-- GROUP BY (por rating)
+-- El número de películas
+SELECT rating, COUNT(*) AS numero_peliculas
+FROM film
+GROUP BY rating;
+
+-- El precio medio de alquiler
+SELECT rating, AVG(rental_rate) AS precio_medio_alquiler
+FROM film
+GROUP BY rating;
+
+-- El precio minimo de alquiler
+SELECT MIN(rental_rate) AS precio_minimo_alquiler
+FROM film;
+
+-- Añadir un HAVING
+SELECT MIN(rental_rate) AS precio_minimo_alquiler_length_110
+FROM film
+GROUP BY length
+HAVING length > 110;
+
+--El numero de peliculas y quedate unicamente con aquellos rating que tengan mas de 200 peliculas
+SELECT rating, COUNT(*) AS numero_peliculas
+FROM film
+GROUP BY rating
+HAVING COUNT(*) > 200
+ORDER BY numero_peliculas DESC;
+
+--El precio medio de alquiler y quédate unicamente con aquellos rating que tenga un precio medio superior a 3
+SELECT rating, AVG(rental_rate) AS precio_medio_alquiler
+FROM film
+GROUP BY (rating)
+HAVING AVG(rental_rate) > 3;
+
+--La duración media de las peliculas y quédate con aquellos rating que tengan una duración media mayor a 115 min
+SELECT rating, AVG(length) AS length_media
+FROM film
+GROUP BY (rating)
+HAVING AVG(length) > 115;
+
+-- Clausula JOIN
+SELECT a.first_name AS nombre, b.address AS direccion, c.city as ciudad, d.country as pais
+FROM customer a
+Left join address b ON b.address_id = a.address_id
+Left join city c ON c.city_id = b.city_id
+Left join country d ON d.country_id = c.country_id;
+
+-- Clausula JOIN con SELECT y WHERE -pagina 22
+SELECT TITLE, a.last_name
+FROM film f
+INNER JOIN film_actor fc ON fc.film_id = f.film_id
+INNER JOIN actor a ON fc.actor_id = a.actor_id
+WHERE a.last_name like 'C%';
+
+-- Cuantos actores tiene cada pelicula?
+SELECT f.title AS pelicula, COUNT(a.actor_id) AS numero_actores
+FROM film f
+INNER JOIN film_actor fc ON fc.film_id = f.film_id
+INNER JOIN actor a ON fc.actor_id = a.actor_id
+GROUP BY f.title
+ORDER BY numero_actores DESC;
+
+-- Clausula Create Table
+CREATE TABLE IF NOT EXISTS public.reviews_ng (
+film_id int2 NOT NULL,
+customer_id int2 NOT NULL,
+review_date date NOT NULL,
+review_description varchar,
+CONSTRAINT reviews_pkey PRIMARY KEY (film_id, customer_id));
+
+-- Clausula Insert
+Insert into public.reviews_ng (film_id, customer_id, review_date, review_description)
+values (3, 5, '2024-11-15', 'Es fascinante');
+
+--Clausula Update
+UPDATE public.reviews_ng
+SET review_description = 'La película es bastante buena'
+WHERE customer_id = 5 and film_id = 3;
+
+DELETE
+FROM public.reviews_ng;
