@@ -541,7 +541,7 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2025-02-03 20:28:38
+Last Checked: 2025-02-09 17:10:52
 
 
 Entregas Grupo MDA A
@@ -779,7 +779,7 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2025-02-03 20:28:38
+Last Checked: 2025-02-09 17:10:52
 
 Entregas Grupo MDA B
 <table>
@@ -1038,7 +1038,7 @@ Entregas Grupo MDA B
 <tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/TING_WANG'>TING_WANG</a></td>
 <td>❌</td>
-<td>❌</td>
+<td>✅</td>
 <td>✅</td>
 <td>❌</td>
 <td>✅</td>
@@ -1079,5 +1079,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2025-02-03 20:28:38
+Last Checked: 2025-02-09 17:10:52
 
