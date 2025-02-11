@@ -1,0 +1,36 @@
+[0m19:10:24.511770 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C245935990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C24829B7C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C24829B070>]}
+
+
+============================== 19:10:24.527330 | 34731b3f-14e5-4428-862d-fc4757ad1703 ==============================
+[0m19:10:24.527330 [info ] [MainThread]: Running with dbt=1.8.9
+[0m19:10:24.527330 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\alejb\\.dbt', 'log_path': 'logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt compile --select expanded_delivery_events', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m19:10:24.527330 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m19:10:24.527330 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '34731b3f-14e5-4428-862d-fc4757ad1703', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C24829BFA0>]}
+[0m19:10:24.527330 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\alejb\desktop\MDA\MDA_2425\CLOUD INTRO\EDEM2425\gcp_datalake\excercise_end2end\analytical_layer\dbt_template\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m19:10:24.527330 [debug] [MainThread]: Command `dbt compile` failed at 19:10:24.527330 after 0.12 seconds
+[0m19:10:24.527330 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C245935990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C24829BFA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C24829B7C0>]}
+[0m19:10:24.527330 [debug] [MainThread]: Flushing usage events
+[0m19:11:43.784498 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C7C0F5A20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C7EA579D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C7EA56290>]}
+
+
+============================== 19:11:43.784498 | ef3b3b14-5bda-4b45-88c4-4682ac5e87a1 ==============================
+[0m19:11:43.784498 [info ] [MainThread]: Running with dbt=1.8.9
+[0m19:11:43.784498 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\alejb\\.dbt', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt compile --select expanded_delivery_events', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m19:11:43.794364 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m19:11:43.796375 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'ef3b3b14-5bda-4b45-88c4-4682ac5e87a1', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C7EA57C70>]}
+[0m19:11:43.796375 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\alejb\desktop\MDA\MDA_2425\CLOUD INTRO\EDEM2425\gcp_datalake\excercise_end2end\analytical_layer\dbt_template\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m19:11:43.800095 [debug] [MainThread]: Command `dbt compile` failed at 19:11:43.800095 after 0.17 seconds
+[0m19:11:43.801945 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C7C0F5A20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C7EA57C70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019C7EA579D0>]}
+[0m19:11:43.803842 [debug] [MainThread]: Flushing usage events

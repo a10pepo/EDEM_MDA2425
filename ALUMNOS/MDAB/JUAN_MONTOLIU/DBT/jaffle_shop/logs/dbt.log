@@ -21423,3 +21423,124 @@ drop view if exists "dbt"."dev"."dim_customers__dbt_backup" cascade
 [0m10:57:12.765897 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111d12740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111f8cc40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11410d870>]}
 [0m10:57:12.767012 [debug] [MainThread]: Flushing usage events
 [0m10:57:13.458408 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:57:35.687532 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000195DEABB830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000195DE69F560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000195DEAB8080>]}
+
+
+============================== 22:57:35.703474 | ca59833c-e392-47b1-a576-684b8c8d4c4e ==============================
+[0m22:57:35.703474 [info ] [MainThread]: Running with dbt=1.6.18
+[0m22:57:35.703474 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\alejb\\.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'c:\\EDEM_MDA2425\\ALUMNOS\\MDAB\\JUAN_MONTOLIU\\DBT\\jaffle_shop\\logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt ', 'send_anonymous_usage_stats': 'True'}
+[0m22:57:35.703474 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m22:57:35.703474 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'ca59833c-e392-47b1-a576-684b8c8d4c4e', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000195DEAB9EE0>]}
+[0m22:57:35.864029 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ca59833c-e392-47b1-a576-684b8c8d4c4e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000195DE69F560>]}
+[0m22:57:35.864029 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m22:57:35.864029 [debug] [MainThread]: Command `cli deps` succeeded at 22:57:35.864029 after 0.31 seconds
+[0m22:57:35.864029 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000195DE003CB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000195DE5D1280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000195DE50B830>]}
+[0m22:57:35.864029 [debug] [MainThread]: Flushing usage events
+[0m17:18:04.209775 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018A36B794F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018A36B7B710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018A36B7B9B0>]}
+
+
+============================== 17:18:04.214781 | eab03cd9-27d4-4c6a-8d64-a992cae0fd37 ==============================
+[0m17:18:04.214781 [info ] [MainThread]: Running with dbt=1.6.18
+[0m17:18:04.215782 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'c:\\EDEM_MDA2425\\ALUMNOS\\MDAB\\JUAN_MONTOLIU\\DBT\\jaffle_shop\\logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\alejb\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt ', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m17:18:04.216776 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m17:18:04.217780 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'eab03cd9-27d4-4c6a-8d64-a992cae0fd37', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018A367816D0>]}
+[0m17:18:04.364552 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'eab03cd9-27d4-4c6a-8d64-a992cae0fd37', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018A36B79850>]}
+[0m17:18:04.366552 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m17:18:04.367552 [debug] [MainThread]: Command `cli deps` succeeded at 17:18:04.366552 after 0.28 seconds
+[0m17:18:04.367552 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018A36853020>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018A3690F1D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018A355A6DB0>]}
+[0m17:18:04.368551 [debug] [MainThread]: Flushing usage events
+[0m11:51:42.179266 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021397B0B110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021397A1B950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002139794FFE0>]}
+
+
+============================== 11:51:42.179266 | 074ee63b-b525-4c14-a621-b38290e61dda ==============================
+[0m11:51:42.179266 [info ] [MainThread]: Running with dbt=1.6.18
+[0m11:51:42.179266 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'C:\\Users\\alejb\\.dbt', 'log_path': 'c:\\EDEM_MDA2425\\ALUMNOS\\MDAB\\JUAN_MONTOLIU\\DBT\\jaffle_shop\\logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt ', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m11:51:42.179266 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m11:51:42.179266 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '074ee63b-b525-4c14-a621-b38290e61dda', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213978AB110>]}
+[0m11:51:42.329226 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '074ee63b-b525-4c14-a621-b38290e61dda', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021397B24B00>]}
+[0m11:51:42.329226 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m11:51:42.329226 [debug] [MainThread]: Command `cli deps` succeeded at 11:51:42.329226 after 0.26 seconds
+[0m11:51:42.329226 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213977B1820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021397813020>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021397AE7E30>]}
+[0m11:51:42.329226 [debug] [MainThread]: Flushing usage events
+[0m17:46:03.797507 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027A009D9B50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027A009D88C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027A009D95E0>]}
+
+
+============================== 17:46:03.797507 | 4429934d-2121-41a5-b4c3-9514363c594f ==============================
+[0m17:46:03.797507 [info ] [MainThread]: Running with dbt=1.6.18
+[0m17:46:03.797507 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\alejb\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'c:\\EDEM_MDA2425\\ALUMNOS\\MDAB\\JUAN_MONTOLIU\\DBT\\jaffle_shop\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt ', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:46:03.811035 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m17:46:03.811035 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '4429934d-2121-41a5-b4c3-9514363c594f', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027A009DA060>]}
+[0m17:46:03.923510 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4429934d-2121-41a5-b4c3-9514363c594f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027A00492060>]}
+[0m17:46:03.923510 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m17:46:03.923510 [debug] [MainThread]: Command `cli deps` succeeded at 17:46:03.923510 after 0.23 seconds
+[0m17:46:03.923510 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027A003D5E20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027A0089E390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027A0089EB10>]}
+[0m17:46:03.923510 [debug] [MainThread]: Flushing usage events
+[0m20:32:07.664007 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D781613530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D7811AB950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D78168B3B0>]}
+
+
+============================== 20:32:07.671911 | 89efbf84-5f2d-467f-a9c7-6e2945fabb9d ==============================
+[0m20:32:07.671911 [info ] [MainThread]: Running with dbt=1.6.18
+[0m20:32:07.673365 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\alejb\\.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'c:\\EDEM_MDA2425\\ALUMNOS\\MDAB\\JUAN_MONTOLIU\\DBT\\jaffle_shop\\logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt ', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m20:32:07.673933 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m20:32:07.674990 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '89efbf84-5f2d-467f-a9c7-6e2945fabb9d', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D780BBEC00>]}
+[0m20:32:07.939856 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '89efbf84-5f2d-467f-a9c7-6e2945fabb9d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D78084E3F0>]}
+[0m20:32:07.944375 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m20:32:07.944375 [debug] [MainThread]: Command `cli deps` succeeded at 20:32:07.944375 after 0.43 seconds
+[0m20:32:07.944375 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D781757EC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D7815BFC80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D78084E3F0>]}
+[0m20:32:07.944375 [debug] [MainThread]: Flushing usage events
+[0m20:32:20.004268 [debug] [MainThread]: Error sending anonymous usage statistics. Disabling tracking for this execution. If you wish to permanently disable tracking, see: https://docs.getdbt.com/reference/global-configs#send-anonymous-usage-stats.
+[0m12:58:03.654984 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BD6B88B110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BD6B5C7FE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BD6B8894F0>]}
+
+
+============================== 12:58:03.662987 | bdfaca35-8f27-4586-94cd-656e2893d760 ==============================
+[0m12:58:03.662987 [info ] [MainThread]: Running with dbt=1.6.18
+[0m12:58:03.662987 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\alejb\\.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'c:\\EDEM_MDA2425\\ALUMNOS\\MDAB\\JUAN_MONTOLIU\\DBT\\jaffle_shop\\logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt ', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m12:58:03.662987 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m12:58:03.662987 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'bdfaca35-8f27-4586-94cd-656e2893d760', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BD6B5C6C00>]}
+[0m12:58:03.800839 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'bdfaca35-8f27-4586-94cd-656e2893d760', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BD6B889850>]}
+[0m12:58:03.800839 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m12:58:03.800839 [debug] [MainThread]: Command `cli deps` succeeded at 12:58:03.800839 after 0.27 seconds
+[0m12:58:03.800839 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BD6B86BAD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BD6B591DC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BD6B530B60>]}
+[0m12:58:03.800839 [debug] [MainThread]: Flushing usage events
+[0m15:52:10.662288 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002001901B110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020019018D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002001901B680>]}
+
+
+============================== 15:52:10.671793 | 7dbd7154-2d82-43a7-beb2-54a5ecac7560 ==============================
+[0m15:52:10.671793 [info ] [MainThread]: Running with dbt=1.6.18
+[0m15:52:10.672897 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\alejb\\.dbt', 'log_path': 'c:\\EDEM_MDA2425\\ALUMNOS\\MDAB\\JUAN_MONTOLIU\\DBT\\jaffle_shop\\logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt ', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:52:10.673962 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m15:52:10.674589 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '7dbd7154-2d82-43a7-beb2-54a5ecac7560', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020018EDEC00>]}
+[0m15:52:10.871590 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7dbd7154-2d82-43a7-beb2-54a5ecac7560', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020019019850>]}
+[0m15:52:10.871590 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m15:52:10.871590 [debug] [MainThread]: Command `cli deps` succeeded at 15:52:10.871590 after 0.37 seconds
+[0m15:52:10.887110 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020014F89580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020018D53830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020018AF95E0>]}
+[0m15:52:10.887110 [debug] [MainThread]: Flushing usage events
+[0m10:04:53.680744 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A20D86B110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A20D868D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A20D868DD0>]}
+
+
+============================== 10:04:53.689602 | 7f0837ab-e368-44fa-bed5-9f240490d485 ==============================
+[0m10:04:53.689602 [info ] [MainThread]: Running with dbt=1.6.18
+[0m10:04:53.689602 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\alejb\\.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'c:\\EDEM_MDA2425\\ALUMNOS\\MDAB\\JUAN_MONTOLIU\\DBT\\jaffle_shop\\logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt ', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m10:04:53.689602 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m10:04:53.689602 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '7f0837ab-e368-44fa-bed5-9f240490d485', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A20D72EC00>]}
+[0m10:04:53.866978 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7f0837ab-e368-44fa-bed5-9f240490d485', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A20D847D70>]}
+[0m10:04:53.866978 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m10:04:53.866978 [debug] [MainThread]: Command `cli deps` succeeded at 10:04:53.866978 after 0.33 seconds
+[0m10:04:53.874997 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A20D77B5C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A20D67C560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A20D701670>]}
+[0m10:04:53.874997 [debug] [MainThread]: Flushing usage events

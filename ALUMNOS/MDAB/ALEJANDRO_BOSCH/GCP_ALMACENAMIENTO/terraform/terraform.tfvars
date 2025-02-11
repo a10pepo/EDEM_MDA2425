@@ -1,0 +1,5 @@
+project_id = "custom-router-446418-k7"
+region     = "europe-west1"
+zone       = "europe-west1-b"
+subnetwork = "projects/custom-router-446418-k7/regions/europe-west1/subnetworks/default"
+service_account_email = "1090994698543-compute@developer.gserviceaccount.com"
