@@ -1,0 +1,4 @@
+cloud-sql-python-connector==0.9.3
+pymysql==1.0.2
+sqlalchemy==1.4.22
+faker==8.13.0
