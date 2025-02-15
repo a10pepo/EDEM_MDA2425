@@ -1,0 +1,3 @@
+https://hub.docker.com/repository/docker/migueltocu/pysum/tags
+
+docker pull migueltocu/pysum:latest
