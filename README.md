@@ -541,7 +541,7 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2025-02-15 08:58:34
+Last Checked: 2025-02-15 08:59:52
 
 
 Entregas Grupo MDA A
@@ -790,7 +790,7 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2025-02-15 08:58:34
+Last Checked: 2025-02-15 08:59:52
 
 Entregas Grupo MDA B
 <table>
@@ -1023,7 +1023,7 @@ Entregas Grupo MDA B
 <td>❌</td>
 <td>✅</td>
 <td>❌</td>
-<td>❌</td>
+<td>✅</td>
 <td>❌</td>
 <td>❌</td>
 <td>✅</td>
@@ -1034,7 +1034,7 @@ Entregas Grupo MDA B
 <td>✅</td>
 <td>✅</td>
 <td>10.0</td>
-<td>2.0</td>
+<td>4.0</td>
 </tr>
 <tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/RAUL_ALGORA'>RAUL_ALGORA</a></td>
@@ -1104,5 +1104,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2025-02-15 08:58:34
+Last Checked: 2025-02-15 08:59:52
 
