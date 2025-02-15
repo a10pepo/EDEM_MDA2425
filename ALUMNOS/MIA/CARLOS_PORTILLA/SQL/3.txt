@@ -1,0 +1,97 @@
+-- Respondemos a las preguntas de las diapositivas (la que explica JOIN)
+
+-- 1. Contar el número de actores por película
+SELECT title, COUNT(fa.actor_id) AS numero_actores
+FROM film AS f
+LEFT JOIN film_actor AS fa ON f.film_id = fa.film_id
+GROUP BY title;
+
+-- 2. Contar el número de actores por película y filtrar las que tienen más de 2 actores, ordenadas ascendentemente
+SELECT title, COUNT(fa.actor_id) AS numero_actores
+FROM film AS f
+LEFT JOIN film_actor AS fa ON f.film_id = fa.film_id
+GROUP BY title
+HAVING COUNT(fa.actor_id) > 2
+ORDER BY numero_actores ASC;
+
+-- 3. Encontrar la película con el mayor número de actores
+SELECT title, COUNT(fa.actor_id) AS numero_actores
+FROM film AS f
+LEFT JOIN film_actor AS fa ON f.film_id = fa.film_id
+GROUP BY title
+ORDER BY numero_actores DESC
+LIMIT 1;
+
+-- Trabajando con la cláusula ALTER TABLE
+-- Añadir una nueva columna a la tabla reviews
+ALTER TABLE IF EXISTS reviews
+ADD COLUMN review_stars INT2;
+
+-- Renombrar la columna review_starts a aaaaaaa
+ALTER TABLE IF EXISTS reviews
+RENAME COLUMN review_starts TO aaaaaaa;
+
+-- Crear vistas
+-- Vista para la película con más actores
+CREATE VIEW mas_actores AS
+SELECT title, COUNT(fa.actor_id) AS numero_actores
+FROM film AS f
+LEFT JOIN film_actor AS fa ON f.film_id = fa.film_id
+GROUP BY title
+ORDER BY numero_actores DESC
+LIMIT 1;
+
+-- Utilizar la vista mas_actores
+SELECT * FROM mas_actores;
+
+-- Crear una vista para los 3 mejores clientes
+CREATE VIEW mejores_clientes AS
+SELECT cu.customer_id, first_name, last_name, SUM(pa.amount) AS total_gastado
+FROM customer AS cu
+LEFT JOIN payment AS pa ON cu.customer_id = pa.customer_id
+GROUP BY cu.customer_id, first_name, last_name
+ORDER BY total_gastado DESC
+LIMIT 3;
+
+-- Ejecutar la vista mejores_clientes
+SELECT * FROM mejores_clientes;
+
+-- Crear una vista para los 3 peores clientes
+CREATE VIEW peores_clientes AS
+SELECT cu.customer_id, first_name, last_name, SUM(pa.amount) AS total_gastado
+FROM customer AS cu
+LEFT JOIN payment AS pa ON cu.customer_id = pa.customer_id
+GROUP BY cu.customer_id, first_name, last_name
+ORDER BY total_gastado ASC
+LIMIT 3;
+
+-- Ejecutar la vista peores_clientes
+SELECT * FROM peores_clientes;
+
+-- Unir las vistas de mejores y peores clientes y ordenar por total_gastado
+SELECT * FROM mejores_clientes
+UNION
+SELECT * FROM peores_clientes
+ORDER BY total_gastado ASC;
+
+-- Trabajando con subconsultas
+-- Seleccionar películas en inglés usando una subconsulta
+SELECT film_id, title
+FROM film
+WHERE language_id IN (
+    SELECT language_id
+    FROM language
+    WHERE name = 'English'
+);
+
+-- Subconsultas con WITH
+WITH peliculas_ingles AS (
+    SELECT film_id, title
+    FROM film
+    WHERE language_id IN (
+        SELECT language_id
+        FROM language
+        WHERE name = 'English'
+    )
+)
+SELECT * FROM peliculas_ingles;
