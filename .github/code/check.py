@@ -3,6 +3,8 @@ import datetime
 import traceback
 
 comun_obligatorio=["DOCKER","PYTHON","SQL","AHORCADO","LINUX"]
+mia1_obligatorio=["ESTADISTICA"]
+mda1_obligatorio=["APIS", "CHUCK", "DBT", "KAFKA", "PYSPARK"]
 
 
 def check_class(folder_path):
@@ -14,6 +16,8 @@ def check_class(folder_path):
     for alumno in os.listdir(folder_path):
         file_path = os.path.join(folder_path, alumno)
         comunes=0
+        mia1=0
+        mda1=0
         if os.path.isdir(file_path):
             delivs={}
             alumnos[alumno]=delivs
@@ -24,10 +28,20 @@ def check_class(folder_path):
                     alumnos[alumno][element]=True
                     if element in comun_obligatorio:
                         comunes+=1
+                    if "MIA" in class_type:
+                        if element in mia1_obligatorio:
+                            mia1+=1
+                    if "MDA" in class_type:
+                        if element in mda1_obligatorio:
+                            mda1+=1
                 else:
                     print("Entregable "+element+" NO Existe para el alumno "+alumno)
                     alumnos[alumno][element]=False
         alumnos[alumno]["NOTA COMUNES"]=comunes*10/len(comun_obligatorio)
+        if "MDA" in class_type:
+            alumnos[alumno]["MDA_M1"]=mda1*10/len(mda1_obligatorio)
+        if "MIA" in class_type:
+            alumnos[alumno]["MIA_M1"]=mia1*10/len(mia1_obligatorio)
     return alumnos
 
 def check_names(folder_path):
@@ -44,24 +58,31 @@ def generate_table(clase,alumnos):
     class_type=clase[0:3]
     deliverables=os.listdir(os.path.join(os.getcwd(), "PROFESORES"+"/"+class_type))
     deliverables=deliverables+os.listdir(os.path.join(os.getcwd(), "PROFESORES"+"/COMUN"))
-    deliverables=deliverables+["NOTA COMUNES"]    
+    deliverables=deliverables+["NOTA COMUNES"]
+    if "MDA" in class_type:
+        deliverables=deliverables+["MDA_M1"]
+    if "MIA" in class_type:
+        deliverables=deliverables+["MIA_M1"]
     print("Generating Table")
     try:
         table="<table>\n<tr><th>Alumno</th>"
         for element in deliverables:
-            table+="\n<th>"+element+"</th>"
+            if element in mda1_obligatorio+comun_obligatorio+mia1_obligatorio:
+                table+="\n<th>*"+element+"*</th>"
+            else:
+                table+="\n<th>"+element+"</th>"
         table+="\n</tr>\n"
         table+="<tr>\n"  
         for alumno in sorted(alumnos):            
             table+="<tr>\n<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/"+clase+"/"+alumno+"'>"+str.upper(alumno)+"</a></td>"
             for element in deliverables:
                 if alumnos[alumno][element]:
-                    if element=="NOTA COMUNES":
+                    if element in ("NOTA COMUNES","MDA_M1","MIA_M1"):
                         table+="\n<td>"+str(alumnos[alumno][element])+"</td>"
                     else:
                         table+="\n<td>✅</td>"
                 else:
-                    if element=="NOTA COMUNES":
+                    if element in ("NOTA COMUNES","MDA_M1","MIA_M1"):
                         table+="\n<td>0.0</td>"
                     else:
                         table+="\n<td>❌</td>"
