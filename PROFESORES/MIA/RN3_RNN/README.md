@@ -13,3 +13,4 @@ Se propone realizar un clasificador que discrimine entre vídeos de 5 deportes/a
 Mucho ánimo ;)
 
 Adrián Colomer
+
