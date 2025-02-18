@@ -1,4 +1,0 @@
-FROM python:3.12.6-slim
-WORKDIR /app
-COPY ejerdocker.py /app
-ENTRYPOINT ["python", "ejerdocker.py"]
