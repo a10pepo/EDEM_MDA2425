@@ -1,0 +1,6 @@
+# Use Case: Análisis de Depresión Estudiantil y Éxito en la Terapia
+
+Este análisis tiene como objetivo explorar la relación entre la depresión y el éxito en la terapia entre estudiantes. El dataset contiene información sobre los estudiantes y su historial de terapia. Se realiza un `join` entre los datos de los estudiantes y los de la terapia, luego se filtran los estudiantes que han sido diagnosticados con depresión. Posteriormente, se agrupan los estudiantes por ciudad y se cuenta cuántos tienen depresión y cuántos de esos han tenido éxito en la terapia. El resultado final es un conjunto de datos que muestra el número de estudiantes con depresión y cuántos de ellos han logrado superar la enfermedad en cada ciudad.
+
+### ¡Atención!
+Los datos extraídos y analizados son ficticios, por lo que no concuerdan con la realidad. Los datos de student_depression han sido extraídos de kaggle `https://www.kaggle.com/datasets/hopesb/student-depression-dataset`, y los datos relacionados con las terapias `[therapy]` han sido personalmente mockeados/inventados.
