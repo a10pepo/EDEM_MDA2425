@@ -1,0 +1,101 @@
+-- Trabajando con GROUP BY
+-- Contar el número de películas por rating
+SELECT rating, COUNT(title) AS numero_peliculas 
+FROM film
+GROUP BY rating;
+
+-- Calcular el precio promedio de alquiler por rating
+SELECT rating, AVG(rental_rate) AS precio_promedio 
+FROM film
+GROUP BY rating;
+
+-- Encontrar el precio mínimo de alquiler por rating
+SELECT rating, MIN(rental_rate) AS precio_minimo 
+FROM film
+GROUP BY rating;
+
+-- Encontrar el precio máximo de alquiler por rating
+SELECT rating, MAX(rental_rate) AS precio_maximo 
+FROM film
+GROUP BY rating;
+
+-- Calcular la duración media de las películas por rating (redondeada hacia arriba)
+SELECT rating, CEIL(AVG(length)) AS duracion_media 
+FROM film
+GROUP BY rating;
+
+-- Encontrar el año de lanzamiento más antiguo por rating
+SELECT rating, MIN(release_year) AS año_mas_antiguo 
+FROM film
+GROUP BY rating;
+
+-- Encontrar el año de lanzamiento más reciente por rating
+SELECT rating, MAX(release_year) AS año_mas_reciente 
+FROM film
+GROUP BY rating;
+
+-- Trabajando con HAVING
+-- Filtrar ratings con más de 200 películas
+SELECT rating, COUNT(title) AS numero_peliculas 
+FROM film
+GROUP BY rating
+HAVING COUNT(title) > 200;
+
+-- Filtrar ratings con un precio promedio de alquiler mayor o igual a 3
+SELECT rating, AVG(rental_rate) AS precio_promedio 
+FROM film
+GROUP BY rating
+HAVING AVG(rental_rate) >= 3;
+
+-- Filtrar ratings con una duración promedio mayor o igual a 115 minutos
+SELECT rating, AVG(length) AS duracion_promedio 
+FROM film
+GROUP BY rating
+HAVING AVG(length) >= 115;
+
+-- Trabajando con JOINs
+-- Usando alias para unir las tablas film y language
+SELECT f.language_id, l.language_id 
+FROM film AS f
+LEFT JOIN language AS l ON f.language_id = l.language_id;
+
+-- Sin alias: ver el idioma de cada película
+SELECT film.title, language.name AS idioma 
+FROM film
+LEFT JOIN language ON film.language_id = language.language_id;
+
+-- Dos LEFT JOINs: unir film, film_actor y actor
+SELECT f.film_id, fa.film_id, a.actor_id, fa.actor_id
+FROM film AS f
+LEFT JOIN film_actor AS fa ON f.film_id = fa.film_id
+LEFT JOIN actor AS a ON fa.actor_id = a.actor_id;
+
+-- Contar el número de actores por película
+SELECT f.title, COUNT(fa.actor_id) AS numero_actores
+FROM film AS f
+LEFT JOIN film_actor AS fa ON f.film_id = fa.film_id
+LEFT JOIN actor AS a ON fa.actor_id = a.actor_id
+GROUP BY f.title;
+
+-- Contar el número de películas en las que ha actuado cada actor (limitado a 2)
+SELECT a.first_name, COUNT(fa.film_id) AS numero_peliculas
+FROM actor AS a
+LEFT JOIN film_actor AS fa ON a.actor_id = fa.actor_id
+LEFT JOIN film AS f ON fa.film_id = f.film_id
+GROUP BY a.first_name
+LIMIT 2;
+
+-- Crear una tabla para reseñas
+CREATE TABLE IF NOT EXISTS reviews (
+    film_id INT NOT NULL,
+    customer_id INT NOT NULL,
+    review_date TIMESTAMP,
+    review_description VARCHAR(60)
+);
+
+-- Ver la tabla de reseñas
+SELECT * FROM reviews;
+
+-- Insertar una reseña en la tabla
+INSERT INTO reviews (film_id, customer_id, review_date, review_description)
+VALUES (1234, 4321, '2024-8-20 10:19', 'Meh');
