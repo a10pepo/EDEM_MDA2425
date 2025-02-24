@@ -541,7 +541,7 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2025-02-24 08:19:30
+Last Checked: 2025-02-24 08:22:36
 
 
 Entregas Grupo MDA A
@@ -790,7 +790,7 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2025-02-24 08:19:30
+Last Checked: 2025-02-24 08:22:36
 
 Entregas Grupo MDA B
 <table>
@@ -819,7 +819,7 @@ Entregas Grupo MDA B
 <tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/ALEJANDRO_BOSCH'>ALEJANDRO_BOSCH</a></td>
 <td>❌</td>
-<td>❌</td>
+<td>✅</td>
 <td>❌</td>
 <td>❌</td>
 <td>✅</td>
@@ -836,7 +836,7 @@ Entregas Grupo MDA B
 <td>✅</td>
 <td>✅</td>
 <td>10.0</td>
-<td>2.0</td>
+<td>4.0</td>
 </tr>
 <tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/ANGEL_MARTINEZ'>ANGEL_MARTINEZ</a></td>
@@ -1104,5 +1104,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2025-02-24 08:19:30
+Last Checked: 2025-02-24 08:22:36
 
