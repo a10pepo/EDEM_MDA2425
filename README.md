@@ -85,7 +85,7 @@ Entregas Grupo MIA
 <tr>
 <tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MIA/ALBERTO_GARCIA'>ALBERTO_GARCIA</a></td>
-<td>❌</td>
+<td>✅</td>
 <td>❌</td>
 <td>✅</td>
 <td>❌</td>
@@ -541,7 +541,7 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2025-02-15 09:11:35
+Last Checked: 2025-02-24 08:19:30
 
 
 Entregas Grupo MDA A
@@ -790,7 +790,7 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2025-02-15 09:11:35
+Last Checked: 2025-02-24 08:19:30
 
 Entregas Grupo MDA B
 <table>
@@ -822,7 +822,7 @@ Entregas Grupo MDA B
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
-<td>❌</td>
+<td>✅</td>
 <td>✅</td>
 <td>❌</td>
 <td>❌</td>
@@ -954,7 +954,7 @@ Entregas Grupo MDA B
 <td>✅</td>
 <td>❌</td>
 <td>❌</td>
-<td>❌</td>
+<td>✅</td>
 <td>✅</td>
 <td>✅</td>
 <td>❌</td>
@@ -1104,5 +1104,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2025-02-15 09:11:35
+Last Checked: 2025-02-24 08:19:30
 
