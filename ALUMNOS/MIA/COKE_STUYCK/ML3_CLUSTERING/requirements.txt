@@ -1,0 +1,10 @@
+pandas
+numpy
+seaborn
+matplotlib
+plotly
+scikit-learn
+imblearn
+mlxtend
+umap
+nbformat
