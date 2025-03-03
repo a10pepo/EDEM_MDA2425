@@ -25,4 +25,4 @@ Mi intención es que uséis este enlace como una herramienta más durante el cur
 
 Sentíos libres de entrar y comentarme cualquier aspecto del mismo o mejora que se os ocurra que pueda realizar y os ayude durante este Máster.
 
-¡Aquí la tenéis! **[Web para el curso](https://master-data-2023.vercel.app/)**
+¡Aquí la tenéis! **[Web para el curso](https://master-data-python.vercel.app/)**
