@@ -1,0 +1,13 @@
+
+# 1. Usamos la última versión disponible de Python.
+FROM python:latest
+
+# 2. Copiamos el archivo Python al contenedor.
+COPY sum.py /app/sum.py
+
+# 3. Establecemos el directorio de trabajo dentro del contenedor.
+WORKDIR /app
+
+# 4. Ejecutamos el script con los argumentos pasados desde la línea de comandos.
+ENTRYPOINT ["python", "sum.py"]
+
