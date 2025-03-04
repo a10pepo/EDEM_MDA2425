@@ -38,8 +38,7 @@ async def root():
 
 @app.get("/health")
 async def health():
-    if model:
-        return {"status": "ok"}
+    return {"status": "ok"}
 
 # 4. Create the prediction endpoint
 # The prediction endpoint is used to get predictions from the model
