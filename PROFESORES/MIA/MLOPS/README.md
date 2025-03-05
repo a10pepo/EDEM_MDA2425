@@ -14,8 +14,10 @@ Model registry: Durante clase veremos como utilizar MLFlow para registrar modelo
 Entregable: Captura de la interfaz de MLFlow con la comparativa entre modelos.
 
 ## Entregable 3
-Pipeline de entrenamiento: En este ejercicio crearás el código de entrenamiento de un modelo de clasificación para el dataset de IRIS utilizando Vertex AI pipelines. Para ello, sigue las instrucciones del notebook pipelines/kubeflow_exercise.ipynb.
+Pipeline de entrenamiento: En este ejercicio crearás el código de entrenamiento de un modelo de clasificación para el dataset de IRIS utilizando Metaflow. Para ello, sigue las instrucciones del notebook pipelines/metaflow-model-training.ipynb.
 
-Entregable: Entrega el código y una captura de la ejecución del pipeline de entrenamiento en vertex AI.
+Entregable: Entrega el código y una captura de los logs de ejecución del pipeline de entrenamiento.
+
+Recuerda que para poder ejecutar metaflow necesitas un sistema basado en unix (Linux o MacOS), Google Colab o Windows con WSL2.
 
 Contacto para cualquier duda: danielruizriquelme@gmail.com
