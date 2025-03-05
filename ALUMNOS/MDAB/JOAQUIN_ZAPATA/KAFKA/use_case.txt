@@ -1,0 +1,8 @@
+Use Case:
+simulate temperature sensor readings from different locations.
+
+Business Objective:
+Monitor temperature variations in different regions and detect anomalies like extreme heat or cold in real time.
+
+Dataset:
+Random temperature from Valencia, Madrid and Barcelona
