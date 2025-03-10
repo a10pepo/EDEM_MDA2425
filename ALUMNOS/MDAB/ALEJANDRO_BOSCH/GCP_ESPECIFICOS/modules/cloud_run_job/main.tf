@@ -113,22 +113,21 @@ EOT
 resource "google_cloud_scheduler_job" "daily_firestore_to_bq" {
   depends_on = [
     null_resource.docker_push_bq,
-    google_cloud_run_v2_job.firestore_to_bq,
-    google_project_iam_member.scheduler_run_invoker
+    google_cloud_run_v2_job.firestore_to_bq
   ]
   name     = "daily-firestore-to-bigquery-job-scheduler"
   project  = var.project_id
   region   = var.region
-  schedule = "0 0 * * *"  # Corregido el formato cron
+  schedule = "0 0 * * *"
   time_zone = "UTC"
  
   http_target {
     http_method = "POST"
-    uri = "https://${var.region}-run.googleapis.com/v2/projects/${var.project_id}/locations/${var.region}/jobs/${google_cloud_run_v2_job.firestore_to_bq.name}:run"  # Cambiado a v2
-   
-    oidc_token {
-      service_account_email = google_service_account.scheduler_service_account.email  # Usar la cuenta recién creada
-      audience = "https://${var.region}-run.googleapis.com/"
+    uri = "https://${var.region}-run.googleapis.com/v2/projects/${var.project_id}/locations/${var.region}/jobs/firestore-to-bigquery-job:run"
+    
+    # Autenticación con OAuth token desde la API
+    oauth_token {
+      service_account_email = google_service_account.scheduler_service_account.email
     }
   }
 }
@@ -141,7 +140,14 @@ resource "google_service_account" "scheduler_service_account" {
 
 # Asignar el rol de invoker de Cloud Run a la cuenta de servicio
 resource "google_project_iam_member" "scheduler_run_invoker" {
+  depends_on = [google_service_account.scheduler_service_account]
   project = var.project_id
   role    = "roles/run.invoker"
+  member  = "serviceAccount:${google_service_account.scheduler_service_account.email}"
+}
+
+resource "google_project_iam_member" "scheduler_sa_user" {
+  project = var.project_id
+  role    = "roles/iam.serviceAccountUser"
   member  = "serviceAccount:${google_service_account.scheduler_service_account.email}"
 }
