@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/272793336055864920/66fd8e60cf304876b06f164049e70216/artifacts
+end_time: 1741194142569
+entry_point_name: ''
+experiment_id: '272793336055864920'
+lifecycle_stage: active
+run_id: 66fd8e60cf304876b06f164049e70216
+run_name: mlflow-training-2025-03-05-18-02-11
+run_uuid: 66fd8e60cf304876b06f164049e70216
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741194131940
+status: 3
+tags: []
+user_id: pablo
