@@ -103,9 +103,6 @@ SELECT palabra AS mi_palabra, LEN(palabra) AS longitud FROM palabras_stream WHER
 
 ### Do this Exercise on your own
 Select the messages from the stream where the message size is major than 10
-```sql
-SELECT palabra AS mi_palabra, LEN(palabra) AS longitud FROM palabras_stream WHERE LEN(palabra) > 10 emit changes;
-```
 
 ### Keep going on
 Filter words **starting** with the letter **"t"** in a stream named palabras_stream
@@ -117,11 +114,6 @@ WHERE palabra LIKE 't%' emit changes;
 
 ### Do this Exercise on your own
 Filter words **ending** with the letters **"go"** in a stream named palabras_stream
-```sql
-SELECT palabra
-FROM palabras_stream
-WHERE palabra LIKE '%go' emit changes;
-```
 
 ### Keep going on
 Create a KTable, to check out how many times a word has appeared in the El Quijote's book. Notice that while the words
@@ -144,19 +136,8 @@ SELECT * FROM mi_ktable EMIT CHANGES;
 ##### Exercise 5.1
 Find the words that starts with 'ca' **and** finishes with 'o' **and** the word is longer than 6 characters.
 
-```sql
-SELECT palabra
-FROM palabras_stream
-WHERE palabra LIKE 'ca%' and palabra LIKE '%o' and LEN(palabra) > 6 emit changes;
-```
-
 ##### Exercise 5.2
 Select all the words, but transformed in Uppercase. Hint: use a select and using the function UCASE(...)
-
-```sql
-SELECT UCASE(palabra) AS nombre_mayus
-FROM palabras_stream emit changes;
-```
 
 ##### Exercise 5.3 ADVANCED
 **Note:** If you are interested in learning more on KSQL you can find developer info here: https://docs.confluent.io/current/ksql/docs/developer-guide/syntax-reference.html

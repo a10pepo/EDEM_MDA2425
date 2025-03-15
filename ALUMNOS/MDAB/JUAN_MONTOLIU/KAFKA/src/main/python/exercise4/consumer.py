@@ -3,7 +3,7 @@ from confluent_kafka import Consumer, KafkaError
 # Configuración del consumidor
 config = {
     'bootstrap.servers': 'localhost:9092',  
-    'group.id': 'python-consumer-group', ## nombre del grupo de "máquinas"=consumidores
+    'group.id': 'python-consumer-group',
     'auto.offset.reset': 'earliest'  
 }
 

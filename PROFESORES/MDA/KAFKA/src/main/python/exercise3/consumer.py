@@ -1,5 +1,6 @@
 from kafka import KafkaConsumer
 from json import loads
+
 from confluent_kafka import Consumer
 
 
@@ -14,12 +15,12 @@ def read_ccloud_config(config_file):
     return conf
 
 
-props = read_ccloud_config("client.properties")
+props = read_ccloud_config("exercise3/client.properties")
 props["group.id"] = "python-group-1"
 props["auto.offset.reset"] = "earliest"
 
 consumer = Consumer(props)
-consumer.subscribe(["edem_chat"])
+consumer.subscribe(["ARBOLES"])
 
 try:
     while True:
