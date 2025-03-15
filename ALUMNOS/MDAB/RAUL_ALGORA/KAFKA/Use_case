@@ -1,0 +1,9 @@
+Objetivo:
+Implementar un sistema que procese pedidos en tiempo real, donde los pedidos se generan, se filtran y se procesan en diferentes etapas para obtener información sobre pedidos finales que cumplen ciertos criterios.
+
+Actor Principal:
+
+Productor de Pedidos (Producer): Genera pedidos simulados y los envía a un topic de Kafka denominado raw_orders.
+Consumidor de Pedidos (Consumer 1): Recibe los pedidos de raw_orders, filtra aquellos que tienen una cantidad mayor a 2 y los envía a un topic llamado processed_orders.
+KSQL: Realiza operaciones en el stream de Kafka utilizando SQL para filtrar y transformar los datos.
+Consumidor Final (Consumer 2): Recibe los pedidos procesados que cumplen con ciertos criterios (precio > 100) y los muestra en tiempo real desde el stream final_orders.
