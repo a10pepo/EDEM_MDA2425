@@ -565,7 +565,7 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2025-03-15 17:29:37
+Last Checked: 2025-03-15 17:32:02
 
 
 Entregas Grupo MDA A
@@ -574,6 +574,7 @@ Entregas Grupo MDA A
 <th>GCP_ALMACENAMIENTO</th>
 <th>*CHUCK*</th>
 <th>*DBT*</th>
+<th>AWS_ALMACENAMIENTO</th>
 <th>GCP_ESPECIFICOS</th>
 <th>CHAT</th>
 <th>*PYSPARK*</th>
@@ -609,6 +610,7 @@ Entregas Grupo MDA A
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
@@ -621,6 +623,7 @@ Entregas Grupo MDA A
 <td>❌</td>
 <td>✅</td>
 <td>✅</td>
+<td>❌</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
@@ -646,6 +649,7 @@ Entregas Grupo MDA A
 <td>✅</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
 <td>✅</td>
 <td>❌</td>
 <td>✅</td>
@@ -664,6 +668,7 @@ Entregas Grupo MDA A
 </tr>
 <tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAA/IGNACIO_VALERO'>IGNACIO_VALERO</a></td>
+<td>❌</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
@@ -698,6 +703,7 @@ Entregas Grupo MDA A
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
@@ -712,6 +718,7 @@ Entregas Grupo MDA A
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAA/JUAN_BESSINI'>JUAN_BESSINI</a></td>
 <td>❌</td>
 <td>✅</td>
+<td>❌</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
@@ -744,6 +751,7 @@ Entregas Grupo MDA A
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
 <td>✅</td>
 <td>❌</td>
 <td>❌</td>
@@ -758,6 +766,7 @@ Entregas Grupo MDA A
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAA/MAR_SOLER'>MAR_SOLER</a></td>
 <td>❌</td>
 <td>✅</td>
+<td>❌</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
@@ -790,6 +799,7 @@ Entregas Grupo MDA A
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
 <td>✅</td>
 <td>❌</td>
 <td>✅</td>
@@ -813,6 +823,7 @@ Entregas Grupo MDA A
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
 <td>✅</td>
 <td>❌</td>
 <td>❌</td>
@@ -825,7 +836,7 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2025-03-15 17:29:37
+Last Checked: 2025-03-15 17:32:02
 
 Entregas Grupo MDA B
 <table>
@@ -833,6 +844,7 @@ Entregas Grupo MDA B
 <th>GCP_ALMACENAMIENTO</th>
 <th>*CHUCK*</th>
 <th>*DBT*</th>
+<th>AWS_ALMACENAMIENTO</th>
 <th>GCP_ESPECIFICOS</th>
 <th>CHAT</th>
 <th>*PYSPARK*</th>
@@ -857,6 +869,7 @@ Entregas Grupo MDA B
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
+<td>❌</td>
 <td>❌</td>
 <td>❌</td>
 <td>✅</td>
@@ -885,6 +898,7 @@ Entregas Grupo MDA B
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
 <td>✅</td>
 <td>❌</td>
 <td>❌</td>
@@ -905,6 +919,7 @@ Entregas Grupo MDA B
 <td>✅</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
 <td>✅</td>
 <td>❌</td>
 <td>✅</td>
@@ -923,6 +938,7 @@ Entregas Grupo MDA B
 </tr>
 <tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/CLAUDIA_ROMERO'>CLAUDIA_ROMERO</a></td>
+<td>❌</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
@@ -957,6 +973,7 @@ Entregas Grupo MDA B
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
@@ -972,6 +989,7 @@ Entregas Grupo MDA B
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
+<td>❌</td>
 <td>❌</td>
 <td>✅</td>
 <td>❌</td>
@@ -996,6 +1014,7 @@ Entregas Grupo MDA B
 <td>✅</td>
 <td>✅</td>
 <td>❌</td>
+<td>❌</td>
 <td>✅</td>
 <td>✅</td>
 <td>❌</td>
@@ -1018,6 +1037,7 @@ Entregas Grupo MDA B
 <td>✅</td>
 <td>❌</td>
 <td>✅</td>
+<td>❌</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
@@ -1046,6 +1066,7 @@ Entregas Grupo MDA B
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
 <td>✅</td>
 <td>❌</td>
 <td>❌</td>
@@ -1064,6 +1085,7 @@ Entregas Grupo MDA B
 <td>❌</td>
 <td>❌</td>
 <td>✅</td>
+<td>❌</td>
 <td>❌</td>
 <td>❌</td>
 <td>✅</td>
@@ -1092,6 +1114,7 @@ Entregas Grupo MDA B
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
 <td>✅</td>
 <td>❌</td>
 <td>❌</td>
@@ -1110,6 +1133,7 @@ Entregas Grupo MDA B
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
+<td>❌</td>
 <td>❌</td>
 <td>❌</td>
 <td>✅</td>
@@ -1135,6 +1159,7 @@ Entregas Grupo MDA B
 <td>✅</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
 <td>✅</td>
 <td>❌</td>
 <td>✅</td>
@@ -1153,5 +1178,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2025-03-15 17:29:37
+Last Checked: 2025-03-15 17:32:02
 
