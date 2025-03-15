@@ -1,0 +1,89 @@
+CREATE TABLE IF NOT EXISTS reviews_jg(
+	film_id integer NOT NULL,
+	customer_id integer NOT NULL,
+	review_date timestamp NOT NULL DEFAULT now(),
+	review_description varchar(50),
+	CONSTRAINT reviews_film_pkey PRIMARY KEY (film_id, customer_id)
+);
+
+--Añadir estrellas a la review
+alter table reviews_jg
+add column review_stars int;
+
+--Renombrar la columna
+alter table reviews_jg
+rename column review_description to review_opinion;
+
+--Cambiar tipo de dato
+alter table reviews_jg 
+alter column review_stars type varchar;
+
+create or replace VIEW joan_gilabert AS
+ SELECT a.actor_id, a.first_name, a.last_name, a.last_update, f.title, count(f.film_id)
+ FROM film_actor fa 
+LEFT JOIN actor a on fa.actor_id=a.actor_id
+LEFT JOIN film f on fa.film_id=f.film_id
+group by a.actor_id ;
+
+
+
+create or replace VIEW top5 AS
+ SELECT 
+ 		concat(first_name,' ' , last_name) as nombre_completo, 
+ 		sum(p.amount) as suma, 
+ 		round(avg(return_date::date - rental_date::date),2) as media_tiempo, 
+ 		count(i.film_id) as número_películas
+ FROM payment p 
+LEFT JOIN customer c on p.customer_id=c.customer_id
+LEFT JOIN rental r on r.rental_id=p.rental_id
+left join inventory i on i.inventory_id=r.inventory_id
+group by 1
+order by sum(p.amount) DESC
+limit 5;
+
+create or replace VIEW down5 AS
+ SELECT concat(first_name,' ' , last_name) as nombre_completo, 
+ 		sum(p.amount) as suma, 
+ 		round(avg(return_date::date - rental_date::date),2) as media_tiempo, 
+ 		count(i.film_id) as número_películas
+ FROM payment p 
+LEFT JOIN customer c on p.customer_id=c.customer_id
+LEFT JOIN rental r on r.rental_id=p.rental_id
+left join inventory i on i.inventory_id=r.inventory_id
+group by 1
+order by sum(p.amount) ASC
+limit 5;
+
+create view kpis as
+select avg(down5.suma), 'down5' as tipo from down5 
+union all
+select avg(top5.suma), 'top5' as tipo from top5;
+
+
+SELECT sum(p.amount), count(rental_id), round(sum(p.amount)/count(rental_id),2) as ticket_media from payment p 
+where customer_id in (
+	select customer_id from rental r where return_date::date - rental_date::date>3
+);
+
+with my_sub_query as
+ (SELECT customer_id, sum(amount) as total
+ FROM payment
+ group by customer_id
+)
+ select * from my_sub_query where total>190
+
+with sub as
+(select a.address, 
+		s.first_name, 
+		sum(p.amount) as total, 
+		count(p.customer_id) as clientes, 
+		round(avg(return_date::date - rental_date::date),2) as media
+from staff s
+left join payment p on p.staff_id=s.staff_id
+left join address a on a.address_id=s.address_id
+left join rental r on r.rental_id=p.rental_id
+group by 1,2
+order by total desc
+limit 1
+)
+select * from sub 

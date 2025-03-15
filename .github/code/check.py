@@ -1,6 +1,10 @@
 import os
 import datetime
+import traceback
 
+comun_obligatorio=["DOCKER","PYTHON","SQL","AHORCADO","LINUX"]
+mia1_obligatorio=["ESTADISTICA"]
+mda1_obligatorio=["APIS", "CHUCK", "DBT", "KAFKA", "PYSPARK"]
 
 
 def check_class(folder_path):
@@ -8,8 +12,12 @@ def check_class(folder_path):
     deliverables=os.listdir(os.path.join(os.getcwd(), "PROFESORES"+"/"+class_type))
     deliverables=deliverables+os.listdir(os.path.join(os.getcwd(), "PROFESORES"+"/COMUN"))
     alumnos={}
+    
     for alumno in os.listdir(folder_path):
         file_path = os.path.join(folder_path, alumno)
+        comunes=0
+        mia1=0
+        mda1=0
         if os.path.isdir(file_path):
             delivs={}
             alumnos[alumno]=delivs
@@ -17,10 +25,23 @@ def check_class(folder_path):
                 #print(file_path+"/"+element)
                 if os.path.exists(file_path+"/"+element) & os.path.isdir(file_path+"/"+element):
                     print("Entregable "+element+" Existe para el alumno "+alumno)
-                    alumnos[alumno][element]=True    
+                    alumnos[alumno][element]=True
+                    if element in comun_obligatorio:
+                        comunes+=1
+                    if "MIA" in class_type:
+                        if element in mia1_obligatorio:
+                            mia1+=1
+                    if "MDA" in class_type:
+                        if element in mda1_obligatorio:
+                            mda1+=1
                 else:
                     print("Entregable "+element+" NO Existe para el alumno "+alumno)
                     alumnos[alumno][element]=False
+        alumnos[alumno]["NOTA COMUNES"]=comunes*10/len(comun_obligatorio)
+        if "MDA" in class_type:
+            alumnos[alumno]["MDA_M1"]=mda1*10/len(mda1_obligatorio)
+        if "MIA" in class_type:
+            alumnos[alumno]["MIA_M1"]=mia1*10/len(mia1_obligatorio)
     return alumnos
 
 def check_names(folder_path):
@@ -29,33 +50,50 @@ def check_names(folder_path):
         if os.path.isdir(file_path):
             # list all files in directory
             files = os.listdir(file_path)
-            for element in files:
-                print(element)
+            # for element in files:
+            #     print(element)
 
 
 def generate_table(clase,alumnos):
     class_type=clase[0:3]
     deliverables=os.listdir(os.path.join(os.getcwd(), "PROFESORES"+"/"+class_type))
-    deliverables=deliverables+os.listdir(os.path.join(os.getcwd(), "PROFESORES"+"/COMUN"))    
+    deliverables=deliverables+os.listdir(os.path.join(os.getcwd(), "PROFESORES"+"/COMUN"))
+    deliverables=deliverables+["NOTA COMUNES"]
+    if "MDA" in class_type:
+        deliverables=deliverables+["MDA_M1"]
+    if "MIA" in class_type:
+        deliverables=deliverables+["MIA_M1"]
     print("Generating Table")
     try:
         table="<table>\n<tr><th>Alumno</th>"
         for element in deliverables:
-            table+="\n<th>"+element+"</th>"
+            if element in mda1_obligatorio+comun_obligatorio+mia1_obligatorio:
+                table+="\n<th>*"+element+"*</th>"
+            else:
+                table+="\n<th>"+element+"</th>"
         table+="\n</tr>\n"
         table+="<tr>\n"  
-        for alumno in sorted(alumnos):
+        for alumno in sorted(alumnos):            
             table+="<tr>\n<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/"+clase+"/"+alumno+"'>"+str.upper(alumno)+"</a></td>"
             for element in deliverables:
                 if alumnos[alumno][element]:
-                    table+="\n<td>✅</td>"
+                    if element in ("NOTA COMUNES","MDA_M1","MIA_M1"):
+                        table+="\n<td>"+str(alumnos[alumno][element])+"</td>"
+                    else:
+                        table+="\n<td>✅</td>"
                 else:
-                    table+="\n<td>❌</td>"
+                    if element in ("NOTA COMUNES","MDA_M1","MIA_M1"):
+                        table+="\n<td>0.0</td>"
+                    else:
+                        table+="\n<td>❌</td>"
+                    
             table+="\n</tr>\n"
         table+="</table>\n"
         table+="\nLast Checked: "+datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")+"\n"
-    except:
+
+    except Exception as e:
         print("error")
+        print(e)
     return table
 
 def modify_readme():
@@ -82,6 +120,7 @@ def modify_readme():
         except Exception as e:
             print("Error writing file")
             print(e)
+            traceback.print_exc()
             file.close()
             with open(os.path.join(os.getcwd(),'README.md'), 'w') as file_recov:
                 file_recov.write(data)
