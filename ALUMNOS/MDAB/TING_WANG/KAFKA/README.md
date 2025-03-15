@@ -55,5 +55,5 @@ Consumer topic movies (left) and Consumer topic movies_rating (right)
 (3) KSQL
 <br>
 ![alt text](images/image-3.png)
-
+![alt text](images/image-4.png)
 
