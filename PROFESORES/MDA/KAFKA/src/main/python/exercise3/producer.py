@@ -16,13 +16,13 @@ def read_ccloud_config(config_file):
 
 
 
-producer = Producer(read_ccloud_config("exercise3/client.properties"))
+producer = Producer(read_ccloud_config("client.properties"))
 
 
 # Send 100 messages where the key is the index and the message to send is "test message - index"
 # the topic name is myTopic
 
-topic_kafka = 'ARBOLES'
+topic_kafka = 'edem_chat'
 
 for e in range(100):
     data = {'New message - ': e*4}
