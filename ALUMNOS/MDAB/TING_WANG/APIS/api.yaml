@@ -1,0 +1,64 @@
+openapi: 3.0.0
+info:
+  title: Robot sensor
+  version: 1.0.0
+  description: Entregable API MDA2425
+
+paths:
+  /getLastMeassureBySensor/{sensor}:
+    get:
+      summary: Sensor measurement
+      description: Sensor's temperature measurement
+      parameters:
+        - name: sensor
+          in: path
+          description: sensor ID
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful measurement
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/measurement'
+        '400':
+          description: Sensor not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Sensor not found"
+        '404':
+          description: Invalid ID
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Invalid ID"
+
+components:
+  schemas:
+    Measure:
+      type: object
+      properties:
+        id_sensor:
+          type: string
+          example: "sensor1"
+        fechamuestreo:
+          type: string
+          example: "06-01-2025"
+        unidad:
+          type: string
+          example: "Celsius"
+        medicion:
+          type: number
+          example: 25
+  
