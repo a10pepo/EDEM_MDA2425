@@ -1,0 +1,10 @@
+FROM ubuntu:latest
+
+RUN apt-get update && apt-get install -y python3
+
+WORKDIR /app
+COPY script.py /app
+
+ENTRYPOINT ["python3", "script.py"]
+
+#Hay que hacer la injesta de datos de nifi manual(template...) sino no va a funcionar

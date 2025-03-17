@@ -1,0 +1,12 @@
+Bienvenido al programa, ¿qué quieres hacer?
+(1) Añadir un alumno
+(2) Eliminar alumno por NIF
+(3) Actualizar datos de un alumno por NIF
+(4) Mostrar datos de un alumno por NIF
+(5) Mostrar datos de un alumno por Email
+(6) Listar TODOS os alumnos
+(7) Aprobar Alumno por NIF
+(8) Suspender Alumno por NIF
+(9) Mostrar alumnos aprobados
+(10) Mostrar alumnos suspensos
+(X) Finalizar Programa
