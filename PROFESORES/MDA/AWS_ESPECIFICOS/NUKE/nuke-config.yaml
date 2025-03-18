@@ -1,0 +1,13 @@
+regions:
+  - global
+accounts:
+  "024442158794": 
+    filters:
+      IAMUser:
+        - "tech-user"
+      IAMUserPolicyAttachment:
+        - "tech-user -> AdministratorAccess"
+      IAMUserAccessKey:
+        - "tech-user -> AKIAQLMG5X3FJSCXBBPK"
+blocklist:
+- "999999999999"
