@@ -1,0 +1,4 @@
+apache-beam[gcp]==2.62.0
+google-cloud-firestore==2.20.0
+pandas==2.2.3
+geopy==2.4.1

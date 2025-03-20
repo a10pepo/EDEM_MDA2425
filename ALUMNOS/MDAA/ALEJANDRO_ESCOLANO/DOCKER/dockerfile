@@ -1,0 +1,11 @@
+# Usa una imagen base de Python
+FROM python:3.9-slim
+
+# Establece el directorio de trabajo en el contenedor
+WORKDIR /app
+
+# Copia el script de Python en el contenedor
+COPY suma.py .
+
+# Comando por defecto para ejecutar el script con argumentos
+ENTRYPOINT ["python", "suma.py"]
