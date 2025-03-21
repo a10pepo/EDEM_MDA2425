@@ -63,27 +63,26 @@ Finalmente, se ejecuta el dockerfile y se ejecutan los .py que se han usado ante
 
 ### EXTRA
 
-He usado Kubernetes, para desplegar las aplicaciones y permitir que las EL se ejecuten cada determinado tiempo.
+He usado Kubernetes, para desplegar las aplicaciones y permitir que las EL se ejecuten cada determinado tiempo, de manera automática y sin intervencion manual.
 
-Para ello, he creado una VM, he instalado microk8s y he copiado mi carpeta AWS_ALMACENAMIENTO con el comando scp.
+Para ello, he creado una VM, he instalado microk8s junto a docker y he copiado mi carpeta AWS_ALMACENAMIENTO con el comando scp a esta VM.
 
 En la carpeta kubernetes, se encuentra el dockerfile, que se ha subido a mi docker hub, junto a un deployment y service y los yaml de las diferentes apps que se encargan de las EL (cronjobs).
-Importante, los secrets de los diferentes yaml, los paso con el .env.
-
-Con el siguiente comando: 
+Importante, los secrets de los diferentes yaml, los paso con el env, con el siguiente comando: 
 ```bash
 kubectl create secret generic aws-secrets \
   --from-env-file=.env
 ```
+
 ![alt text](images/image-11.png)
 
 Arranco microk8s y espero a que el cluster este listo.
 ![alt text](images/image-12.png)
 
-Finalmente, creo el namespace, para poder tener mejor organizado y ailados diferentes recursos en el clúster
+Creo un namespace, para poder tener mejor organizado y aislados diferentes recursos en el clúster
 ![alt text](images/image-13.png)
 
-Finalmente, una vez esta creado el cronjob, me he descargado k9s, para poder acceder al clúster de manera más visual.
+Finalmente, una vez está creado el Cronjob, he descargado k9s, para poder acceder al clúster de manera más visual.
 ![alt text](images/image-14.png)
 
 
