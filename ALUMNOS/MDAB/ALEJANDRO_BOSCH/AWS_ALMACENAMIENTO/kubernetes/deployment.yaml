@@ -1,0 +1,74 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aws-e2e-deployment
+  namespace: data-processing
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: aws-e2e
+  template:
+    metadata:
+      labels:
+        app: aws-e2e
+    spec:
+      containers:
+      - name: aws-e2e
+        image: alejbc27/alboce-kubernetes:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
+        env:
+        - name: RDS_HOST
+          valueFrom:
+            secretKeyRef:
+              name: aws-secrets
+              key: RDS_HOST
+        - name: RDS_PORT
+          valueFrom:
+            secretKeyRef:
+              name: aws-secrets
+              key: RDS_PORT
+        - name: RDS_USER
+          valueFrom:
+            secretKeyRef:
+              name: aws-secrets
+              key: RDS_USER
+        - name: RDS_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: aws-secrets
+              key: RDS_PASSWORD
+        - name: RDS_DB
+          valueFrom:
+            secretKeyRef:
+              name: aws-secrets
+              key: RDS_DB
+        - name: AWS_REGION
+          valueFrom:
+            secretKeyRef:
+              name: aws-secrets
+              key: AWS_REGION
+        - name: AWS_DEFAULT_REGION
+          valueFrom:
+            secretKeyRef:
+              name: aws-secrets
+              key: AWS_DEFAULT_REGION
+        - name: AWS_ACCESS_KEY_ID
+          valueFrom:
+            secretKeyRef:
+              name: aws-secrets
+              key: AWS_ACCESS_KEY_ID
+        - name: AWS_SECRET_ACCESS_KEY
+          valueFrom:
+            secretKeyRef:
+              name: aws-secrets
+              key: AWS_SECRET_ACCESS_KEY
+        resources:
+          requests:
+            memory: "2Gi"
+            cpu: "1"
+          limits:
+            memory: "2Gi"
+            cpu: "1"
