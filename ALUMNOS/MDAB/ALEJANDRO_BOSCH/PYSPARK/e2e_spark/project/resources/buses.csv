@@ -1,0 +1,101 @@
+bus_id,route_id,capacity,status
+71,1,98,Awaiting Driver
+42,11,98,Delayed
+20,12,94,Delayed
+39,12,17,Cancelled
+8,16,83,Loading Passengers
+80,18,41,Delayed
+97,19,91,Under Maintenance
+57,2,40,Arrived
+72,2,70,En Route
+85,2,88,Cancelled
+28,20,28,Scheduled
+22,21,19,Loading Passengers
+56,21,53,Awaiting Driver
+98,21,47,Scheduled
+78,23,88,Out of Service
+76,24,87,Out of Service
+36,27,64,Out of Service
+13,29,47,Out of Service
+45,29,53,Arrived
+61,29,46,Under Maintenance
+23,31,6,Out of Service
+86,31,15,Awaiting Driver
+64,34,99,Scheduled
+74,34,20,Delayed
+93,36,37,Cancelled
+87,37,96,Out of Service
+81,38,17,Scheduled
+91,38,76,Scheduled
+11,4,35,Awaiting Driver
+21,41,94,Awaiting Driver
+25,41,25,Scheduled
+26,42,7,Loading Passengers
+24,43,52,Cancelled
+40,43,46,Out of Service
+43,43,31,In Service
+89,43,70,En Route
+9,44,48,Out of Service
+34,44,37,Cancelled
+99,44,64,Scheduled
+33,45,76,Arrived
+44,47,72,En Route
+55,47,77,En Route
+14,48,6,En Route
+27,49,70,Arrived
+48,49,86,Scheduled
+60,49,39,Under Maintenance
+63,49,9,Out of Service
+6,51,57,Out of Service
+96,52,66,Arrived
+70,53,41,Scheduled
+12,54,52,Under Maintenance
+31,55,58,In Service
+37,56,42,Out of Service
+82,56,91,In Service
+1,57,97,En Route
+3,57,46,In Service
+52,57,58,Out of Service
+59,58,57,Delayed
+10,60,90,Out of Service
+66,62,48,Under Maintenance
+65,64,42,Under Maintenance
+83,64,24,Cancelled
+100,65,86,Arrived
+46,66,26,Out of Service
+62,66,11,Cancelled
+73,66,1,Awaiting Driver
+30,68,48,In Service
+53,68,56,Loading Passengers
+68,68,9,In Service
+15,69,22,Delayed
+32,69,65,Loading Passengers
+67,7,30,Delayed
+2,71,22,Cancelled
+18,72,34,Awaiting Driver
+54,73,79,En Route
+47,74,14,Scheduled
+17,76,22,En Route
+4,77,38,En Route
+5,77,87,Scheduled
+50,77,74,Awaiting Driver
+84,79,94,Scheduled
+35,8,9,Loading Passengers
+58,80,65,Loading Passengers
+92,82,54,Out of Service
+69,83,4,Loading Passengers
+79,85,64,Delayed
+7,89,92,Arrived
+38,89,62,Arrived
+41,89,15,Awaiting Driver
+49,89,98,Arrived
+19,9,68,Arrived
+75,90,59,Under Maintenance
+16,91,98,Under Maintenance
+88,92,60,Scheduled
+29,94,47,En Route
+51,97,50,Awaiting Driver
+95,97,22,Delayed
+90,98,55,Loading Passengers
+94,98,38,En Route
+77,99,21,Awaiting Driver
