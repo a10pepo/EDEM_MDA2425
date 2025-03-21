@@ -1,0 +1,33 @@
+Terraform
+
+*.tfstate
+*.tfstate.backup
+.terraform/
+.terraform.lock.hcl
+
+Archivos sensibles
+
+*.key
+*.json
+*.pem
+*.p12
+*.cred
+*.config
+
+Archivos de credenciales de GCP
+
+~/.config/gcloud/
+
+Archivos de logs y salida temporal
+
+*.log
+*.out
+*.tmp
+
+Archivos de editores y entornos de desarrollo
+
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
