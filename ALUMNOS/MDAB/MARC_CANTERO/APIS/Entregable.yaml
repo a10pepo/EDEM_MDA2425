@@ -1,0 +1,62 @@
+openapi: 3.0.0
+info:
+  title: Robot Sensor API
+  description: API para obtener las últimas mediciones de un sensor en tiempo real.
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080
+    description: Servidor local de desarrollo
+
+paths:
+  /getLastMeassureBySensor/{sensor}:
+    get:
+      summary: Obtiene la última medición de un sensor
+      description: Devuelve la última medición registrada de un sensor específico.
+      parameters:
+        - name: sensor
+          in: path
+          description: ID del sensor a consultar
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Última medición del sensor
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: string
+                    description: ID del sensor
+                  fechamuestreo:
+                    type: string
+                    format: date-time
+                    description: Fecha y hora de la última medición
+                  unidad:
+                    type: string
+                    description: Unidad de la medición (e.g., °C, °F)
+                  medicion:
+                    type: number
+                    description: Valor de la medición
+        '404':
+          description: ID inválido suministrado
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid ID supplied"
+        '400':
+          description: Sensor no encontrado
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Sensor not found"
