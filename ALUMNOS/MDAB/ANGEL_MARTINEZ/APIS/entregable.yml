@@ -36,7 +36,6 @@ paths:
                 $ref: '#/components/schemas/Measure'
               example:
                 id_sensor: sensor1
-                fechamuestreo: "2025-01-06T15:30:00Z"
                 unidad: "Celsius"
                 medicion: 24.5
         '400':
@@ -69,11 +68,6 @@ components:
           type: string
           description: Identificador del sensor
           example: "sensor1"
-        fechamuestreo:
-          type: string
-          format: date-time
-          description: Fecha y hora de la medición
-          example: "2025-01-06T15:30:00Z"
         unidad:
           type: string
           description: Unidad de la medición
