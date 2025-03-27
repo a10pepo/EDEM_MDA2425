@@ -1,0 +1,80 @@
+version: '3.5'
+
+services:
+  postgres:
+    container_name: postgres_container
+    image: postgres:12.1
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-pass01}
+      PGDATA: /data/postgres
+    volumes:
+       - postgres:/data/postgres
+    ports:
+      - "5450:5450"
+    networks:
+      - postgres
+    restart: unless-stopped
+   
+  pgadmin:
+    container_name: pgadmin_container
+    image: dpage/pgadmin4:4.16
+    platform: linux/amd64
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+    volumes:
+       - pgadmin:/root/.pgadmin
+    ports:
+      - "5050:5050"
+    networks:
+      - postgres
+    restart: unless-stopped
+    depends_on:
+      - postgres
+
+  tictactoe:
+    build:
+      context: /Users/mauro/Documents/MIA/EDEM_MDA2425/ALUMNOS/MIA/MAURO_BALAGUER/TICTACTOE  # Ruta a tu Dockerfile
+      dockerfile: Dockerfile
+    stdin_open: true  # Docker run -i
+    tty: true         # Docker run -t
+    container_name: ahorcado_container
+    depends_on:
+      - postgres
+    networks:
+      - ahorcado
+
+  tictactoe:
+    build:
+      context: /Users/mauro/Documents/MIA/EDEM_MDA2425/ALUMNOS/MIA/MAURO_BALAGUER/TICTACTOE  # Ruta a tu Dockerfile
+      dockerfile: Dockerfile
+    container_name: tictactoe_container
+    stdin_open: true
+    tty: true
+    networks:
+      - ahorcado
+    ports:
+      - "8080:8080"  # O el puerto que necesites
+    depends_on:
+      - postgres
+    restart: unless-stopped
+
+networks:
+  postgres:
+    driver: bridge
+  ahorcado:
+    driver: bridge
+
+volumes:
+  postgres:
+  pgadmin:
+
+tictactoe:
+  build: Dockerfile
+  stdin_open: true
+  tty: true
+  container_name: tictactoe_container
+  depends_on:
+    - postgres
+  entrypoint: ["/wait-for-it.sh", "postgres_container:5450", "--", "your_start_command_here"]
