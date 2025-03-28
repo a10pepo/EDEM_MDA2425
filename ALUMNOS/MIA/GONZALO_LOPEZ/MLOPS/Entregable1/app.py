@@ -11,26 +11,44 @@ import joblib
 from fastapi import FastAPI
 from pydantic import BaseModel
 import uvicorn
+import pickle
+import numpy as np
+import os
+from typing import List
+
 
 # 1. Create the data model
 # The data model describes the format of the input and output data
 # The model is a simple dictionary with 4 float fields: sepal_length, sepal_width, petal_length, petal_width
 
 class IrisData(BaseModel):
-    # TODO: WRITE YOUR CODE HERE
     sepal_length: float
     sepal_width: float
     petal_length: float
     petal_width: float
+    # TODO: WRITE YOUR CODE HERE
+    
+class PredictRequest(BaseModel):
+    instances: List[IrisData]
+
+    class PredictResponse(BaseModel):
+        predictions: List[int]
 
     
 # 2. Load the model
 # The model is a serialized scikit-learn model
-# 2. Load the model
-load_model = joblib.load("model.pkl")
-
-
 # TODO: WRITE YOUR CODE HERE
+try:
+    with open("model.pkl", "rb") as f:
+        model = pickle.load(f)
+    print("✅ Modelo cargado correctamente.")
+except Exception as e:
+    print(f"❌ Error al cargar el modelo: {e}")
+
+
+HEALTH_ROUTE = os.getenv("AIP_HEALTH_ROUTE", "/health")
+PREDICT_ROUTE = os.getenv("AIP_PREDICT_ROUTE", "/predict")
+
 
 
 app = FastAPI()
@@ -42,11 +60,26 @@ async def root():
 # The health check endpoint is used to check if the server is up and running
 # If the model is loaded correctly, the endpoint should return {"status": "ok"}	
 
-@app.get("/health")
+
+@app.get(HEALTH_ROUTE, status_code=200, summary="Health Check")
 async def health():
-    # TODO: WRITE YOUR CODE HERE
-    if load_model: 
+        # TODO: WRITE YOUR CODE HERE
+    if model:
         return {"status": "ok"}
+    
+
+
+
+    
+
+@app.post(PREDICT_ROUTE,response_model=PredictResponse, summary="Make a Prediction")
+async def predict(request: PredictRequest):
+    inputs=np.asarray(request.instances)
+    inputs=[[x.sepal_length, x.sepal_width, x.petal_length, x.petal_width] for x in inputs]
+    y_pred=model.predict(inputs)
+    outputs=[int(x) for x in y_pred]
+    return PredictResponse(predictions=outputs)    
+    
 
 # 4. Create the prediction endpoint
 # The prediction endpoint is used to get predictions from the model
@@ -56,10 +89,14 @@ async def health():
 
 @app.post("/predict")
 async def predict(data: IrisData):
+    try:
+        input_data = np.array([[data.sepal_length, data.sepal_width, data.petal_length, data.petal_width]])
+        prediction = model.predict(input_data).tolist()
+        return {"prediction": prediction}
+    except Exception as e:
+        return {"error": f"Error al hacer la predicción: {str(e)}"}
     # TODO: WRITE YOUR CODE HERE
-    predicciones = load_model.predict([[data.sepal_length, data.sepal_width,data.petal_length,data.petal_width]])
-    return {'predicciones ': predicciones.tolist()}
-    
+
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
