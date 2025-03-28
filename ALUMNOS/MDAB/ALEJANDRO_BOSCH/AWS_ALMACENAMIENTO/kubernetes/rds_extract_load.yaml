@@ -1,0 +1,36 @@
+# -----------------------------------
+# CRONJOB: rds_e2e.py (Carga de datos en RDS)
+# -----------------------------------
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: rds-etl-cron
+  namespace: data-processing
+spec:
+  schedule: "0 */6 * * *"  # Cada 6 horas
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          initContainers:
+          - name: wait-for-rds
+            image: busybox
+            command: ['sh', '-c', 'until nc -zv $RDS_HOST $RDS_PORT; do sleep 2; done']
+            env:
+            - name: RDS_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: aws-secrets
+                  key: RDS_HOST
+            - name: RDS_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: aws-secrets
+                  key: RDS_PORT
+          containers:
+          - name: rds-etl
+            image: alejbc27/alboce-kubernetes:latest
+            command: ["python", "rds_e2e.py"]
+          restartPolicy: OnFailure
+
+
