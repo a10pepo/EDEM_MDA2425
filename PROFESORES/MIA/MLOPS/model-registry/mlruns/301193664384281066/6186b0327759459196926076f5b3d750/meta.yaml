@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/301193664384281066/6186b0327759459196926076f5b3d750/artifacts
+end_time: 1741194362896
+entry_point_name: ''
+experiment_id: '301193664384281066'
+lifecycle_stage: active
+run_id: 6186b0327759459196926076f5b3d750
+run_name: optuna-hp-36-2025-03-05-18-06-02
+run_uuid: 6186b0327759459196926076f5b3d750
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741194362724
+status: 3
+tags: []
+user_id: Usuario
