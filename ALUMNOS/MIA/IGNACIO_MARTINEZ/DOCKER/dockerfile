@@ -1,7 +1,0 @@
-FROM ubuntu:latest
-
-RUN apt-get update && apt-get -y install python3
-WORKDIR /data
-COPY python_script.py .
-
-CMD ["python3", "python_script.py"]
