@@ -21423,3 +21423,21 @@ drop view if exists "dbt"."dev"."dim_customers__dbt_backup" cascade
 [0m10:57:12.765897 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111d12740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111f8cc40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11410d870>]}
 [0m10:57:12.767012 [debug] [MainThread]: Flushing usage events
 [0m10:57:13.458408 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:03:20.342225 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x118195a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1195efd90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1195efed0>]}
+
+
+============================== 20:03:20.344874 | 36c06f3b-1d41-43ea-8b52-22c93a97ad4b ==============================
+[0m20:03:20.344874 [info ] [MainThread]: Running with dbt=1.9.3
+[0m20:03:20.345212 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/alexrevertanaya/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/Users/alexrevertanaya/Library/Mobile Documents/com~apple~CloudDocs/Varias/MDA/EDEM_MDA2425/ALUMNOS/MDAB/JUAN_MONTOLIU/DBT/jaffle_shop/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt ', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m20:03:20.345406 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m20:03:20.345599 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '36c06f3b-1d41-43ea-8b52-22c93a97ad4b', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119601cd0>]}
+[0m20:03:20.409970 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '36c06f3b-1d41-43ea-8b52-22c93a97ad4b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119363df0>]}
+[0m20:03:20.417136 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m20:03:20.417700 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m20:03:20.419205 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 0.11562367, "process_in_blocks": "0", "process_kernel_time": 0.106559, "process_mem_max_rss": "100352000", "process_out_blocks": "0", "process_user_time": 0.742625}
+[0m20:03:20.419421 [debug] [MainThread]: Command `cli deps` succeeded at 20:03:20.419370 after 0.12 seconds
+[0m20:03:20.419587 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11964d550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11964fa50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11950ee40>]}
+[0m20:03:20.419743 [debug] [MainThread]: Flushing usage events
+[0m20:03:21.163710 [debug] [MainThread]: An error was encountered while trying to flush usage events

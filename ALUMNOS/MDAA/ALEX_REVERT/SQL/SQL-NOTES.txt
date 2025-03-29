@@ -1,0 +1,158 @@
+select * from film f 
+where film_id =1;
+
+
+select rating, round (avg (rental_rate),2)
+from film
+group by 1
+having round(avg(rental_rate),2) > 3;
+
+select rating, round (avg(length),2)
+from film
+group by 1
+having avg(length) >115;
+
+
+
+
+CREATE TABLE IF NOT EXISTS public.reviews_ar (
+film_id int2 NOT NULL,
+customer_id int2 NOT NULL,
+review_date date NOT NULL,
+review_description varchar,
+CONSTRAINT reviews_pkey PRIMARY KEY (film_id, customer_id)
+);
+
+
+
+
+SELECT *
+FROM public.reviews_ar;
+
+SELECT film_id, customer_id, review_date, review_description, review_stars
+FROM public.reviews_ar;
+
+select * from actor_info ai ;
+
+select * from film f ;
+
+
+
+create view alex_revert_anaya as
+select actor_id, first_name, last_name, last_update
+FROM public.actor;
+
+
+
+select * from alex_revert_anaya ara ;
+
+create or replace view alex_revert_anaya as
+select actor_id, first_name, last_name, last_update
+FROM public.actor
+where first_name is not null 
+
+
+select * from alex_revert_anaya ara 
+
+create or replace view alex_revert_anaya as
+select fa.actor_id, first_name, last_name, actor.last_update, f.title
+FROM public.actor
+left join film_actor fa on actor.actor_id = fa.actor_id
+left join film f on fa.film_id = f.film_id 
+
+select * from alex_revert_anaya ara 
+
+
+--create or replace view alex_revert_anaya as
+select  c.first_name, c.last_name, sum(amount), avg(return_date-rental_date) 
+FROM  payment p 
+left join rental r on p.rental_id = r.rental_id 
+left join customer c on r.customer_id = c.customer_id
+group by 1,2
+order by 3 desc 
+limit 5 
+
+drop view alex_revert_anaya
+
+
+create or replace view alex_revert_anaya as
+select  c.first_name, c.last_name, sum(amount), avg(return_date-rental_date), count(f.film_id) 
+FROM  payment p 
+left join rental r on p.rental_id = r.rental_id 
+left join customer c on r.customer_id = c.customer_id
+left join inventory i on r.inventory_id = i.inventory_id 
+left join film f on i.film_id = f.film_id 
+group by 1,2
+order by 3 asc 
+limit 5 ;
+
+select * from alex_revert_anaya ;
+
+
+create or replace view top5 as
+select  c.first_name, c.last_name, sum(amount), avg(return_date-rental_date) 
+FROM  payment p 
+left join rental r on p.rental_id = r.rental_id 
+left join customer c on r.customer_id = c.customer_id
+group by 1,2
+order by 3 desc 
+limit 5 
+
+
+create or replace view down5 as
+select  c.first_name, c.last_name, sum(amount), avg(return_date-rental_date) 
+FROM  payment p 
+left join rental r on p.rental_id = r.rental_id 
+left join customer c on r.customer_id = c.customer_id
+group by 1,2
+order by 3 asc 
+limit 5 
+
+
+
+
+select avg(d2.sum), 'down5' as tipo from down5 d2 
+union all
+select avg(t.sum), 'top5' as tipo from top5 t 
+
+
+
+
+select * from payment p 
+left join customer c on c.customer_id = p.customer_id 
+where c.first_name like 'C%'
+
+
+
+
+select sum(p.amount), count(rental_id), sum(p.amount)/count(rental_id) as ticket_medio from payment p
+where customer_id in (
+select customer_id from rental r where return_date :: date - rental_date:: date >3
+)
+
+
+with my_sub_query as
+(SELECT title, rental_rate, replacement_cost, round(replacement_cost / rental_rate, 2) as new_column
+FROM public.film),
+new_1 as
+(SELECT title, rental_rate, replacement_cost, round(replacement_cost / rental_rate, 2) as new_column
+FROM public.film)
+select * from new_1 where title = 'Ali Forever'
+
+
+with my_sub_query as
+(select customer_id, sum(amount) as total from payment p 
+group by 1)
+(select * from my_sub_query
+where total > 190) 
+
+
+
+with sub as
+(select staff_id, sum(p.amount) as total 
+from payment p  
+group by 1
+order by 2 desc 
+limit 1)
+
+(select staff_id
