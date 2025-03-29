@@ -8,17 +8,6 @@ variable "region" {
     type = string 
 }
 
-variable "region" {
-  description = "Región de despliegue en GCP"
-  type        = string
-  default     = "europe-west1"
-}
-
-variable "zone" {
-  description = "Zona de despliegue en GCP (por ejemplo, europe-west1-b)"
-  type        = string
-}
-
 variable "topic_name_environment" {
     description = "Nombre del topic para el entorno"
     type =string 
@@ -39,7 +28,7 @@ variable "city_name" {
     type = string 
 }
 
-variable "num_vehicle" {
+variable "num_vehicles" {
     description = "Numero de vehiculos a los que queremos generar datos"
     type = number
 }
@@ -67,4 +56,8 @@ variable "artifact_repo_generator" {
 variable "image_name" {
   description = "Nombre de la imagen del Pub/sub del contenedor"
   type = string 
+}
+variable cloud_run_job_generator_name {
+  description = "Nombre del trabajo de Cloud Run"
+  type        = string
 }

@@ -19,8 +19,7 @@ import time
 import os
 import json 
 
-# B. Custom Classes
-from pubsub import PubSubMessages
+# B. Google Libraries
 from google.cloud import pubsub_v1
 
 """ Input Params """
@@ -32,7 +31,6 @@ telemetry_environment_topic = os.environ.get("TELEMETRY_ENVIRONMENT_TOPIC")
 city_name = os.environ.get("CITY_NAME")
 num_vehicles = os.environ.get("NUM_VEHICLES")
 
-''' '''
 
 class PubSubMessages:
 
@@ -301,6 +299,6 @@ if __name__ == "__main__":
         telemetry_driving_topic = telemetry_driving_topic,
         telemetry_environment_topic = telemetry_environment_topic,
         city_coordinates = location_payload,
-        num_vehicles = num_vehicles)
+        num_vehicles = int(num_vehicles))
     
     logging.info('Terminating the data generator.')

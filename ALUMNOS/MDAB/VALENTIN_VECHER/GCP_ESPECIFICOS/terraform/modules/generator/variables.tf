@@ -28,7 +28,7 @@ variable "city_name" {
     type = string 
 }
 
-variable "num_vehicle" {
+variable "num_vehicles" {
     description = "Numero de vehiculos a los que queremos generar datos"
     type = number
 }
@@ -55,5 +55,10 @@ variable "artifact_repo_generator" {
 
 variable "image_name" { 
     description = "Nombre de la imagen del contenedor"
+    type = string
+}
+
+variable "cloud_run_job_generator_name" {
+    description = "Nombre del job de cloud run"
     type = string
 }

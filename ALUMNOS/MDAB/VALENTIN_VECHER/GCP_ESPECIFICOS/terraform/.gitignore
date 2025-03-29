@@ -1,33 +1,56 @@
-Terraform
-
+# Terraform files
 *.tfstate
-*.tfstate.backup
+*.tfstate.*
 .terraform/
 .terraform.lock.hcl
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+crash.log
+crash.*.log
 
-Archivos sensibles
-
+# Archivos sensibles
 *.key
 *.json
 *.pem
 *.p12
 *.cred
 *.config
+*.env
+.env*
+secrets.*
+*password*
+*secret*
+*token*
 
-Archivos de credenciales de GCP
-
+# Archivos de credenciales de GCP
 ~/.config/gcloud/
+credentials.json
+service-account-*.json
+account.json
+application_default_credentials.json
+gcloud.json
+gcp-*.json
 
-Archivos de logs y salida temporal
-
+# Archivos de logs y salida temporal
 *.log
 *.out
 *.tmp
+.tmp/
+.cache/
 
-Archivos de editores y entornos de desarrollo
-
+# Archivos de editores y entornos de desarrollo
 .vscode/
 .idea/
 .DS_Store
 Thumbs.db
-
+*.swp
+*.swo
+*~
+.project
+.settings/
