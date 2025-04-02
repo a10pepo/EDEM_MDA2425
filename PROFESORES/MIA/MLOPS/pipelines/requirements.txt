@@ -1,5 +1,0 @@
-metaflow==2.13.9
-pandas==2.2.3
-numpy==1.26.4
-scikit-learn==1.6.1
-optuna==4.2.0
