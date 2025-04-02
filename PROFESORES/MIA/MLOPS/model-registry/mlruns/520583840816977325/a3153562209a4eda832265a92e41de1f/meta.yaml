@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/520583840816977325/a3153562209a4eda832265a92e41de1f/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '520583840816977325'
+lifecycle_stage: active
+run_id: a3153562209a4eda832265a92e41de1f
+run_name: serious-jay-145
+run_uuid: a3153562209a4eda832265a92e41de1f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741193744802
+status: 1
+tags: []
+user_id: Usuario
