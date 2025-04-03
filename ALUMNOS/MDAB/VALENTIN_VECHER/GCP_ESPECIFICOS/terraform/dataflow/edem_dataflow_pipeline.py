@@ -27,7 +27,7 @@ Professor: Javi Briones
 """ Import Libraries """
 
 # A. Apache Beam Libraries
-import apache_beam as beam 
+import apache_beam as beam
 from apache_beam.runners import DataflowRunner
 from apache_beam.options.pipeline_options import PipelineOptions
 import apache_beam.transforms.window as window

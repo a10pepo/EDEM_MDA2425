@@ -57,7 +57,12 @@ variable "image_name" {
   description = "Nombre de la imagen del Pub/sub del contenedor"
   type = string 
 }
-variable cloud_run_job_generator_name {
+variable "cloud_run_job_generator_name" {
   description = "Nombre del trabajo de Cloud Run"
   type        = string
+}
+
+variable "generator_path_to_image" {
+    description = "El path del docker para generar imagen del generador"
+    type = string 
 }

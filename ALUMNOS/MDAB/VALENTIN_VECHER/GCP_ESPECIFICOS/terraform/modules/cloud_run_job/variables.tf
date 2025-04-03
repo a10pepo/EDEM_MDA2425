@@ -1,3 +1,8 @@
+variable "generator_path_to_image" {
+    description = "El path del docker del generador"
+    type= string
+}
+
 variable "project_id" {
     description = "ID del proyecto de GCP"
     type = string
@@ -33,21 +38,6 @@ variable "num_vehicles" {
     type = number
 }
 
-variable "sub_env_name" {
-    description = "Nombre de la suscripcion para el entorno"
-    type = string
-}
-
-variable "sub_driv_name" {
-    description = "Nombre de la suscripcion para el entorno"
-    type = string
-}
-
-variable "sub_batt_name" {
-    description = "Nombre de la suscripcion para el entorno"
-    type = string
-}
-
 variable "artifact_repo_generator" {
     description = "Nombre del repo de artifact"
     type = string
@@ -62,3 +52,4 @@ variable "cloud_run_job_generator_name" {
     description = "Nombre del job de cloud run"
     type = string
 }
+
