@@ -1,0 +1,78 @@
+openapi: 3.0.0
+info:
+  title: Robot Sensor
+  version: 1.0.0
+  description: Entregable API MDA2425 - Consulta de mediciones de temperatura de sensores robotizados en tiempo real.
+
+servers:
+  - url: http://localhost:8080
+
+paths:
+  /getLastMeassureBySensor/{sensor}:
+    get:
+      summary: Obtener última medición de un sensor
+      description: Devuelve la última medición registrada del sensor indicado, incluyendo la fecha de muestreo, valor y unidad.
+      parameters:
+        - name: sensor
+          in: path
+          description: ID del sensor (por ejemplo: sensor1)
+          required: true
+          schema:
+            type: string
+            example: sensor1
+        - name: unidad
+          in: query
+          description: Filtro opcional por unidad (ej: Celsius, Fahrenheit)
+          required: false
+          schema:
+            type: string
+            example: Celsius
+      responses:
+        '200':
+          description: Medición obtenida correctamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Measure'
+              example:
+                id_sensor: sensor1
+                unidad: "Celsius"
+                medicion: 24.5
+        '400':
+          description: Sensor no encontrado
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Sensor not found"
+        '404':
+          description: ID inválido
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Invalid ID"
+
+components:
+  schemas:
+    Measure:
+      type: object
+      properties:
+        id_sensor:
+          type: string
+          description: Identificador del sensor
+          example: "sensor1"
+        unidad:
+          type: string
+          description: Unidad de la medición
+          example: "Celsius"
+        medicion:
+          type: number
+          description: Valor medido
+          example: 25.3
