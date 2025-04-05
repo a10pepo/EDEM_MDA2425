@@ -1,0 +1,40 @@
+# -----------------------------------
+# CRONJOB: iceberg_extract_load.py (Carga de datos en S3/Iceberg y Glue)
+# -----------------------------------
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: iceberg-etl-cron
+  namespace: data-processing
+spec:
+  schedule: "0 3 * * *"  # Todos los días a las 3 AM
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: iceberg-etl
+            image: alejbc27/alboce-kubernetes:latest
+            env:
+            - name: AWS_REGION
+              valueFrom:
+                secretKeyRef:
+                  name: aws-secrets
+                  key: AWS_REGION
+            - name: AWS_DEFAULT_REGION
+              valueFrom:
+                secretKeyRef:
+                  name: aws-secrets
+                  key: AWS_DEFAULT_REGION
+            - name: AWS_ACCESS_KEY_ID
+              valueFrom:
+                secretKeyRef:
+                  name: aws-secrets
+                  key: AWS_ACCESS_KEY_ID
+            - name: AWS_SECRET_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: aws-secrets
+                  key: AWS_SECRET_ACCESS_KEY
+            command: ["python", "iceberg_create_instert.py"]
+          restartPolicy: OnFailure
