@@ -1,3 +1,17 @@
+terraform {
+  backend "gcs"{
+    bucket = "vavego-terraform-state-project-javibrio-bucket"
+    prefix = "terraform/state"
+  }
+}
+
+
+module "bucket"{
+  source = "./modules/bucket"
+  bucket_name_dataflow = var.bucket_name_dataflow
+  location            = var.location
+}
+
 module "pubsub" {
   source                 = "./modules/pub_sub"
   project_id             = var.project_id
@@ -7,7 +21,6 @@ module "pubsub" {
   sub_env_name           = var.sub_env_name
   sub_driv_name          = var.sub_driv_name
   sub_batt_name          = var.sub_batt_name
-
 }
 
 module "artifact_registry" {

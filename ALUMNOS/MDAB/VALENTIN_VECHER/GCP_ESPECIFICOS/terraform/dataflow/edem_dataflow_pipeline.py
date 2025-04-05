@@ -42,6 +42,7 @@ from datetime import datetime
 import argparse
 import logging
 import json
+import os
 
 beam.options.pipeline_options.PipelineOptions.allow_non_parallel_instruction_output = True
 DataflowRunner.__test__ = False
@@ -415,6 +416,15 @@ class CloudVisionModelHandler(ModelHandler):
 def run():
 
     """ Input Arguments """
+    
+    project_id = os.getenv('PROJECT_ID')
+    battery_telemetry_subscription = os.getenv('BATTERY_TELEMETRY_SUBSCRIPTION')
+    driving_telemetry_subscription = os.getenv('DRIVING_TELEMETRY_SUBSCRIPTION')
+    environment_telemetry_subscription = os.getenv('ENVIRONMENT_TELEMETRY_SUBSCRIPTION')
+    firestore_collection = os.getenv('FIRESTORE_COLLECTION')
+    output_topic = os.getenv('OUTPUT_TOPIC')
+    image_api = os.getenv('IMAGE_API')
+    system_id = os.getenv('SYSTEM_ID')
 
     parser = argparse.ArgumentParser(description=('Input arguments for the Dataflow Streaming Pipeline.'))
 
