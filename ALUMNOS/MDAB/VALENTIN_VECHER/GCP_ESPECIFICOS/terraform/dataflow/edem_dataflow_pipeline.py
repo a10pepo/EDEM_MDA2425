@@ -414,18 +414,9 @@ class CloudVisionModelHandler(ModelHandler):
 """ Code: Dataflow Process """
 
 def run():
-
     """ Input Arguments """
     
-    project_id = os.getenv('PROJECT_ID')
-    battery_telemetry_subscription = os.getenv('BATTERY_TELEMETRY_SUBSCRIPTION')
-    driving_telemetry_subscription = os.getenv('DRIVING_TELEMETRY_SUBSCRIPTION')
-    environment_telemetry_subscription = os.getenv('ENVIRONMENT_TELEMETRY_SUBSCRIPTION')
-    firestore_collection = os.getenv('FIRESTORE_COLLECTION')
-    output_topic = os.getenv('OUTPUT_TOPIC')
-    image_api = os.getenv('IMAGE_API')
-    system_id = os.getenv('SYSTEM_ID')
-
+    # Definir el parser primero para obtener los argumentos
     parser = argparse.ArgumentParser(description=('Input arguments for the Dataflow Streaming Pipeline.'))
 
     parser.add_argument(
@@ -470,14 +461,35 @@ def run():
                 required=False,
                 help='System that evaluates the telemetry data of the car.')
 
+    # Parsear los argumentos
     args, pipeline_opts = parser.parse_known_args()
-
+    
+    # Priorizar variables de entorno sobre argumentos de línea de comandos
+    project_id = os.environ.get('PROJECT_ID') or args.project_id
+    battery_telemetry_subscription = os.environ.get('BATTERY_TELEMETRY_SUBSCRIPTION') or args.battery_telemetry_subscription
+    driving_telemetry_subscription = os.environ.get('DRIVING_TELEMETRY_SUBSCRIPTION') or args.driving_telemetry_subscription
+    environment_telemetry_subscription = os.environ.get('ENVIRONMENT_TELEMETRY_SUBSCRIPTION') or args.environment_telemetry_subscription
+    firestore_collection = os.environ.get('FIRESTORE_COLLECTION') or args.firestore_collection
+    output_topic = os.environ.get('OUTPUT_TOPIC') or args.output_topic
+    image_api = os.environ.get('IMAGE_API') or args.image_api
+    system_id = os.environ.get('SYSTEM_ID') or args.system_id
+    
+    # Registro de los valores que se utilizarán
+    logging.info(f"Using PROJECT_ID: {project_id}")
+    logging.info(f"Using BATTERY_TELEMETRY_SUBSCRIPTION: {battery_telemetry_subscription}")
+    logging.info(f"Using DRIVING_TELEMETRY_SUBSCRIPTION: {driving_telemetry_subscription}")
+    logging.info(f"Using ENVIRONMENT_TELEMETRY_SUBSCRIPTION: {environment_telemetry_subscription}")
+    logging.info(f"Using FIRESTORE_COLLECTION: {firestore_collection}")
+    logging.info(f"Using OUTPUT_TOPIC: {output_topic}")
+    logging.info(f"Using IMAGE_API: {image_api}")
+    logging.info(f"Using SYSTEM_ID: {system_id}")
+    
     """ Pipeline """
 
     # A. Pipeline Options
 
     options = PipelineOptions(pipeline_opts,
-        save_main_session=True, streaming=True, project=args.project_id)
+        save_main_session=True, streaming=True, project= project_id)
     
     # B. Pipeline Object
 
@@ -505,21 +517,21 @@ def run():
 
         battery_data = (
             p 
-                | "Read Battery Telemetry Data From PubSub" >> beam.io.ReadFromPubSub(subscription=args.battery_telemetry_subscription)
+                | "Read Battery Telemetry Data From PubSub" >> beam.io.ReadFromPubSub(subscription=battery_telemetry_subscription)
                 | "Parse JSON battery messages" >> beam.Map(ParsePubSubMessage)
                 | "Fixed Window for Battery Telemetry Data" >> beam.WindowInto(beam.window.FixedWindows(60))
         )
 
         driving_data = (
             p 
-                | "Read Driving Telemetry Data From PubSub" >> beam.io.ReadFromPubSub(subscription=args.driving_telemetry_subscription)
+                | "Read Driving Telemetry Data From PubSub" >> beam.io.ReadFromPubSub(subscription= driving_telemetry_subscription)
                 | "Parse JSON driving messages" >> beam.Map(ParsePubSubMessage)
                 | "Fixed Window for Driving Telemetry Data" >> beam.WindowInto(beam.window.FixedWindows(60))
         )
 
         environment_data = (
             p 
-                | "Read Environment Telemetry Data From PubSub" >> beam.io.ReadFromPubSub(subscription=args.environment_telemetry_subscription)
+                | "Read Environment Telemetry Data From PubSub" >> beam.io.ReadFromPubSub(subscription=environment_telemetry_subscription)
                 | "Parse JSON environment messages" >> beam.Map(ParsePubSubMessage)
                 | "Fixed Window for Environment Telemetry Data" >> beam.WindowInto(beam.window.FixedWindows(60))
         )
@@ -534,25 +546,25 @@ def run():
 
         (
             processed_data.non_critical_battery_users
-                | "Write non_critical_battery_users documents" >> beam.ParDo(FormatFirestoreDocument(mode='raw', firestore_collection=args.firestore_collection))
+                | "Write non_critical_battery_users documents" >> beam.ParDo(FormatFirestoreDocument(mode='raw', firestore_collection=firestore_collection))
         )
 
         send_data = (
             processed_data.critical_battery_users
-                | "Capture Traffic Image" >> beam.Map(getTrafficImage, api_url=args.image_api)
+                | "Capture Traffic Image" >> beam.Map(getTrafficImage, api_url=image_api)
                 | "Model Inference" >> RunInference(model_handler=CloudVisionModelHandler()) 
                 | "Calcular Autonomia" >> beam.ParDo(CalculateAutonomyDoFn())
         )
 
         (
             send_data
-                | "Encode notifications" >> beam.Map(lambda x: json.dumps({"inspector": args.system_id, "payload": x}).encode("utf-8"))
-                | "Write notifications to PubSub" >> beam.io.WriteToPubSub(topic=args.output_topic)
+                | "Encode notifications" >> beam.Map(lambda x: json.dumps({"inspector": system_id, "payload": x}).encode("utf-8"))
+                | "Write notifications to PubSub" >> beam.io.WriteToPubSub(topic=output_topic)
         )
 
         (
             send_data
-                | "Write critical_battery_users documents" >> beam.ParDo(FormatFirestoreDocument(mode='processed',firestore_collection=args.firestore_collection))
+                | "Write critical_battery_users documents" >> beam.ParDo(FormatFirestoreDocument(mode='processed',firestore_collection=firestore_collection))
         )
 
 
