@@ -109,3 +109,18 @@ variable "location" {
     description = "Ubicación del bucket"
     type        = string
 }
+
+variable "firestore_db_name" {
+  description = "Nombre de la base de datos Firestore"
+  type        = string
+}
+
+variable "firestore_pubsub_topic" {
+  description = "Nombre del topic de pub/sub para firestore"
+  type        = string
+}
+
+variable "firestore_pubsub_sub" {
+  description = "Nombre de la suscripcion de pub/sub para firestore"
+  type        = string
+}

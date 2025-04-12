@@ -21,6 +21,8 @@ module "pubsub" {
   sub_env_name           = var.sub_env_name
   sub_driv_name          = var.sub_driv_name
   sub_batt_name          = var.sub_batt_name
+  firestore_pubsub_topic = var.firestore_pubsub_topic
+  firestore_pubsub_sub   = var.firestore_pubsub_sub
 }
 
 module "artifact_registry" {
@@ -55,3 +57,10 @@ module "cloud_run_job" {
   cloud_run_job_firestore_to_bq_name = var.cloud_run_job_firestore_to_bq_name
   artifact_repo_firestore_to_bq      = var.artifact_repo_firestore_to_bq
 }
+
+module "firestore" {
+  source = "./modules/firestore"
+  project_id = var.project_id
+  firestore_db_name = var.firestore_db_name
+  location = var.location
+} 

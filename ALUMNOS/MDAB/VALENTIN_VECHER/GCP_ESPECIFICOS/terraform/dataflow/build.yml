@@ -1,0 +1,43 @@
+steps:
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    id: Build Dataflow Flex Template
+    args: ['dataflow', 'flex-template', 'build',
+           'gs://$_DATAFLOW_BASE_BUCKET/$_DATAFLOW_TEMPLATE_NAME.json',
+           '--image-gcr-path=$_REGION_ID-docker.pkg.dev/$PROJECT_ID/$_ARTIFACT_REGISTRY_REPOSITORY/$_ARTIFACT_REGISTRY_IMAGE_NAME:$COMMIT_SHA',
+           '--flex-template-base-image=PYTHON3',
+           '--sdk-language=PYTHON',
+           '--py-path=.',
+           '--env=FLEX_TEMPLATE_PYTHON_PY_FILE=$_DATAFLOW_PYTHON_FILE_PATH',
+           '--env=FLEX_TEMPLATE_PYTHON_REQUIREMENTS_FILE=$_DATAFLOW_REQUIREMENTS_FILE_PATH'
+    ]
+    waitFor: ['-']
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    id: Run Dataflow Flex Template
+    args: ['dataflow', 'flex-template', 'run', '$_DATAFLOW_JOB_NAME',
+           '--template-file-gcs-location=gs://$_DATAFLOW_BASE_BUCKET/$_DATAFLOW_TEMPLATE_NAME.json',
+           '--parameters=project_id=$PROJECT_ID,battery_telemetry_subscription=$_BATTERY_PUBSUB_SUBSCRIPTION_NAME,driving_telemetry_subscription=$_DRIVING_PUBSUB_SUBSCRIPTION_NAME,environment_telemetry_subscription=$_ENVIRONMENT_PUBSUB_SUBSCRIPTION_NAME,firestore_collection=$_FIRESTORE_COLLECTION_NAME_,output_topic=$_OUTPUT_PUBSUB_TOPIC_NAME,image_api=$_IMAGE_API_URL,system_id=$_SYSTEM_ID',
+           '--region=$_REGION_ID',
+           '--max-workers=1'
+    ]
+    waitFor: ['Build Dataflow Flex Template']
+options:
+  logging: STACKDRIVER_ONLY
+substitutions:
+  _DATAFLOW_BASE_BUCKET: bucket-dataflow-vavego-project-javibrio
+  _DATAFLOW_JOB_NAME: dataflow-job-$_DATAFLOW_TEMPLATE_NAME
+  _DATAFLOW_TEMPLATE_NAME: dataflow-template
+  _REGION_ID: europe-west1
+  _ARTIFACT_REGISTRY_REPOSITORY: dataflow-artifact
+  _ARTIFACT_REGISTRY_IMAGE_NAME: dataflow-image
+  _DATAFLOW_PYTHON_FILE_PATH: /Users/valentinvg/Documents/GitHub/EDEM_MDA2425/ALUMNOS/MDAB/VALENTIN_VECHER/GCP_ESPECIFICOS/terraform/dataflow/edem_dataflow_pipeline.py
+  _DATAFLOW_REQUIREMENTS_FILE_PATH: /Users/valentinvg/Documents/GitHub/EDEM_MDA2425/ALUMNOS/MDAB/VALENTIN_VECHER/GCP_ESPECIFICOS/terraform/dataflow/requirements.txt
+  _BATTERY_PUBSUB_SUBSCRIPTION_NAME: battery-sub
+  _DRIVING_PUBSUB_SUBSCRIPTION_NAME: driving-sub
+  _ENVIRONMENT_PUBSUB_SUBSCRIPTION_NAME: environment-sub
+  _FIRESTORE_COLLECTION_NAME_: all-telemetry-db-firestore
+  _OUTPUT_PUBSUB_TOPIC_NAME: firestore-pubsub-sub
+  _IMAGE_API_URL: https://europe-southwest1-serverless-edem.cloudfunctions.net/getTrafficImages
+  _SYSTEM_ID: vavego
+

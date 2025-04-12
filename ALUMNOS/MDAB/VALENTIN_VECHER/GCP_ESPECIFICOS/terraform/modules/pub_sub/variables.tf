@@ -32,3 +32,14 @@ variable "sub_batt_name" {
   description = "Nombre de la suscripcion para el entorno"
   type        = string
 }
+
+variable "firestore_pubsub_topic" {
+  description = "Nombre del topic de pub/sub para firestore"
+  type        = string
+}
+
+variable "firestore_pubsub_sub" {
+  description = "Nombre de la suscripcion de pub/sub para firestore"
+  type        = string
+}
+

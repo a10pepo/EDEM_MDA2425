@@ -33,8 +33,5 @@
 #     container_spec_gcs_path = "gs://${google_storage_bucket.dataflow_bucket_name}/templates/flex_template.json"
     
 #     on_delete = "cancel"
-
-
-
  
 # }
