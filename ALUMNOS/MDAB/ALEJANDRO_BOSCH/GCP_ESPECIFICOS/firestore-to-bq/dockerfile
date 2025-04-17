@@ -1,0 +1,18 @@
+# Use the lightweight version of Python to avoid compatibility issues
+FROM python:3.9-slim
+
+# Set the working directory
+WORKDIR /app
+
+# Copy necessary files into the container
+COPY requirements.txt requirements.txt
+COPY main.py main.py
+
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Grant execution permission to main.py
+RUN chmod +x main.py
+
+# Define the startup command
+CMD ["python", "main.py"]
