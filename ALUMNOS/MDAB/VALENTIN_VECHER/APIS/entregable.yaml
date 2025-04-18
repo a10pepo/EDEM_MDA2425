@@ -1,0 +1,79 @@
+openapi: 3.0.0
+info:
+  title: Robot Temperature Monitoring API
+  version: 1.0.0
+  description: An API to fetch the latest temperature measurement of a robot sensor.
+
+servers:
+  - url: http://localhost:8080
+    description: Local server
+
+paths:
+  /getLastMeassureBySensor/{sensor}:
+    get:
+      summary: Get the last temperature measurement by sensor ID
+      parameters:
+        - name: sensor
+          in: path
+          description: The ID of the sensor
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response with the last measurement
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: string
+                    description: ID of the sensor
+                  fechamuestreo:
+                    type: string
+                    description: Sampling date and time
+                  unidad:
+                    type: string
+                    description: Unit of measurement
+                  medicion:
+                    type: number
+                    description: Measured value
+        '400':
+          description: Sensor not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Sensor not found
+        '404':
+          description: Invalid ID supplied
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid ID supplied
+
+components:
+  schemas:
+    Measure:
+      type: object
+      properties:
+        id_sensor:
+          type: string
+          example: "sensor1"
+        fechamuestreo:
+          type: string
+          example: "07-01-2025"
+        unidad:
+          type: string
+          example: "Celsius"
+        medicion:
+          type: number
+          example: 1200
