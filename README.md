@@ -565,7 +565,7 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2025-04-20 08:06:18
+Last Checked: 2025-04-20 08:07:11
 
 
 Entregas Grupo MDA A
@@ -644,7 +644,7 @@ Entregas Grupo MDA A
 </tr>
 <tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAA/ANTONI_MOLLA'>ANTONI_MOLLA</a></td>
-<td>❌</td>
+<td>✅</td>
 <td>✅</td>
 <td>✅</td>
 <td>❌</td>
@@ -836,7 +836,7 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2025-04-20 08:06:18
+Last Checked: 2025-04-20 08:07:11
 
 Entregas Grupo MDA B
 <table>
@@ -1178,5 +1178,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2025-04-20 08:06:18
+Last Checked: 2025-04-20 08:07:11
 
