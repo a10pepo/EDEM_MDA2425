@@ -1,0 +1,12 @@
+# Usa una imagen base de Python
+FROM python:3.12
+
+# Establecer el directorio de trabajo en el contenedor
+WORKDIR /app
+
+# Copiar el script al contenedor
+COPY sum.py .
+
+# Definir el comando de ejecución con parámetros
+ENTRYPOINT ["python", "sum.py"]
+
