@@ -1,0 +1,14 @@
+FROM python:3.10-slim
+
+# Establece el directorio de trabajo en el contenedor
+WORKDIR /app
+
+# Copia el archivo de dependencias y las instala
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copia todo el contenido de la carpeta local al contenedor
+COPY . .
+
+# Define el ENTRYPOINT: al ejecutar el contenedor, se ejecutará el script
+ENTRYPOINT ["python", "edem_data_generators.py"]
