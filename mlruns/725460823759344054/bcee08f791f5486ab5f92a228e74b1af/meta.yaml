@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/725460823759344054/bcee08f791f5486ab5f92a228e74b1af/artifacts
+end_time: 1743066559858
+entry_point_name: ''
+experiment_id: '725460823759344054'
+lifecycle_stage: active
+run_id: bcee08f791f5486ab5f92a228e74b1af
+run_name: optuna-hp-23-2025-03-27-10-09-18
+run_uuid: bcee08f791f5486ab5f92a228e74b1af
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743066558088
+status: 3
+tags: []
+user_id: Usuario

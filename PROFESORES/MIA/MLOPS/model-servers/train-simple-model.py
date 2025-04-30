@@ -1,4 +1,4 @@
-# Trains a simple model and saves it to a file
+dir# Trains a simple model and saves it to a file
 # Dataset is the Iris dataset from sklearn
 # Model is a random forest classifier
 
