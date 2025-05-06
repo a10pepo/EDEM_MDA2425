@@ -1,31 +1,44 @@
 openapi: 3.0.0
 info:
-  title: Sensor Robot API
+  title: Robot Sensor API
   version: 1.0.0
-  description: API para obtener la última medición de un sensor de temperatura en un robot.
+  description: API para monitorear y recuperar la última medición de temperatura de un sensor de robot.
 
 paths:
   /getLastMeassureBySensor/{sensor}:
     get:
       summary: Obtener la última medición por ID de sensor
+      description: Retorna la última medición registrada por el sensor especificado.
       parameters:
         - name: sensor
           in: path
           required: true
-          description: ID del sensor
+          description: ID único del sensor.
           schema:
             type: string
       responses:
         '200':
-          description: Medición encontrada
+          description: Medición encontrada correctamente.
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Measure'
         '400':
-          description: Sensor no encontrado
+          description: ID inválido proporcionado.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+              example:
+                error: Invalid ID supplied
         '404':
-          description: ID inválido proporcionado
+          description: Sensor no encontrado.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+              example:
+                error: Sensor not found
 
 components:
   schemas:
@@ -38,10 +51,23 @@ components:
         fechamuestreo:
           type: string
           format: date-time
-          description: Fecha de muestreo
+          description: Fecha y hora de la medición
         unidad:
           type: string
-          description: Unidad de la medición
+          description: Unidad de medida (°C)
         medicion:
           type: number
-          description: Valor de la medición
+          description: Valor medido
+      required:
+        - code
+        - fechamuestreo
+        - unidad
+        - medicion
+
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+      required:
+        - error
