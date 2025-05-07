@@ -1,0 +1,14 @@
+#Se descarga una version de python
+FROM python:3.10-slim
+
+#Crea la carpeta /app, como directorio de trabajo
+WORKDIR /app
+
+#Copia todo lo que hay en la carpeta actual (aws_almacenamiento) y lo pega en /app
+COPY . /app
+
+#Ejecuta el comando pip install para instalar las dependencias
+RUN pip install -r requirements.txt 
+
+#Ejecuta los scripts en secuencia
+CMD ["sh", "-c", "python rds_e2e.py && python redshift_etl.py && python iceberg_create_insert.py"]
