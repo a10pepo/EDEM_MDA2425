@@ -1,0 +1,2 @@
+nohup bash -c 'HOST_IP=35.233.41.175  GCS_BUCKET_NAME=bucket-e2e-a PROJECT_ID=potent-ripple-452918-b1 python -m orders_app.orders_to_db.main' > output.log 2>&1 &
+nohup bash -c 'PROJECT_ID=potent-ripple-452918-b1 python -m delivery_app.main' > output.log 2>&1 &
