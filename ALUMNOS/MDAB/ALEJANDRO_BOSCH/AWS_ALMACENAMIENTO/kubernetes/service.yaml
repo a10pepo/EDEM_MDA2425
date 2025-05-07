@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: aws-e2e-service
+  namespace: data-processing
+spec:
+  selector:
+    app: aws-e2e
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5000
+  type: NodePort
