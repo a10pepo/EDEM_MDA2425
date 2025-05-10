@@ -1,0 +1,67 @@
+openapi: 3.0.0
+info:
+  title: Monitoreo Sensor API
+  version: 1.0.0
+  description: API
+
+servers:
+  - url: http://localhost:8080
+    description: Servidor local
+
+paths:
+  /getLastMeassureBySensor/{sensor}:
+    get:
+      summary: Última medición de temperatura
+      description: Devuelve la última medición registrada
+      parameters:
+        - name: sensor
+          in: path
+          description: ID del sensor
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Respuesta exitosa
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Measure'
+        '400':
+          description: Sensor no encontrado
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Sensor no encontrado"
+        '404':
+          description: Error de ID
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Error de ID"
+
+components:
+  schemas:
+    Measure:
+      type: object
+      properties:
+        id_sensor:
+          type: string
+          example: "sensor1"
+        fechamuestreo:
+          type: string
+          example: "25-03-2025"
+        unidad:
+          type: string
+          example: "Celsius"
+        medicion:
+          type: number
+          example: 22.6

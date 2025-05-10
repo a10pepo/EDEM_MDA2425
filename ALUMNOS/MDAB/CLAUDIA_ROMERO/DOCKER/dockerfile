@@ -1,0 +1,4 @@
+FROM python:3.12.6
+COPY script.py /app/script.py
+WORKDIR /app
+ENTRYPOINT ["python", "script.py"]
