@@ -1,0 +1,299 @@
+¿Qué porcentaje supone el coste de alquiler sobre el coste de reemplazar?
+SELECT title,rental_rate,replacement_cost,
+round(replacement_cost /rental_rate,2) asnew_column
+FROM public.film
+
+
+¿Cuántas veces tienen que alquilar cada película para igualar o superar el coste de reemplazar la película?
+SELECT title, rental_rate,replacement_cost,
+ceil(replacement_cost / rental_rate) as new_operation
+FROM public.film
+
+
+¿Cuántas películas disponibles?
+SELECT COUNT(DISTINCT film_id) AS peliculas_disponibles
+FROM inventory;
+
+
+¿Cual es el precio más caro? ¿Y el mas barato? ¿Cual es el precio medio de alquiler? ¿Qué variabilidad de precios tenemos?
+SELECT 
+    MAX(rental_rate) AS precio_mas_caro,
+    MIN(rental_rate) AS precio_mas_barato,
+    AVG(rental_rate) AS precio_medio,
+    STDDEV(rental_rate) AS variabilidad_precio
+FROM film;
+
+
+¿Cómo se llaman los actores que empiezan por la letra A?
+SELECT first_name, last_name
+FROM actor
+WHERE first_name ILIKE 'A%';
+
+
+¿Cuales son las películas que podemos alquilar por más de 10€?
+SELECT title, rental_rate
+FROM film
+WHERE rental_rate > 10;
+
+
+¿Cuantas películas podemos alquilar entre 5 y 10 euros?
+SELECT COUNT(*) AS cantidad
+FROM film
+WHERE rental_rate BETWEEN 5 AND 10;
+
+
+¿Cuantas películas podemos alquilar por menos de 5€ y con una duración menor a 100 minutos?
+SELECT COUNT(*) AS cantidad
+FROM film
+WHERE rental_rate < 5 AND length < 100;
+
+
+¿Qué precio de alquiler tienen las siguientes películas?
+Giant Troopers
+Gilbert Pelican
+Gilmore Boiled
+SELECT title, rental_rate
+FROM film
+WHERE title IN ('Giant Troopers', 'Gilbert Pelican', 'Gilmore Boiled');
+
+
+¿Qué rating tiene la película “Ali Forever”? ¿Cuánta es su duración?
+SELECT title, rating, length
+FROM film
+WHERE title = 'Ali Forever';
+
+
+¿Nos falta por informar algún precio de alquiler en nuestra base de
+datos?
+SELECT COUNT(*) AS peliculas_sin_precio
+FROM film
+WHERE rental_rate IS NULL;
+
+
+Obten por ‘rating’:
+○ El número de películas
+○ El precio medio de alquiler
+○ El mínimo precio de alquiler
+○ El máximo precio de alquiler
+○ La duración media de las películas
+○ El año de la película más antigua
+○ El año de la película más nueva
+SELECT 
+    rating,
+    COUNT(*) AS num_peliculas,
+    AVG(rental_rate) AS precio_medio,
+    MIN(rental_rate) AS precio_min,
+    MAX(rental_rate) AS precio_max,
+    AVG(length) AS duracion_media,
+    MIN(release_year) AS año_mas_antiguo,
+    MAX(release_year) AS año_mas_reciente
+FROM film
+GROUP BY rating
+ORDER BY rating;
+
+
+Obten por ‘rating’:
+○ El número de películas y quédate únicamente con aquellos
+rating que tengan más de 200 películas
+○ El precio medio de alquiler y quédate únicamente con aquellos
+rating que tenga un precio medio superior a 3
+○ La duración media de las películas y quédate con aquellos
+rating que tengan una duración media mayor a 115 minutos
+SELECT rating, COUNT(*) AS num_peliculas
+FROM film
+GROUP BY rating
+HAVING COUNT(*) > 200;
+SELECT rating, AVG(rental_rate) AS precio_medio
+FROM film
+GROUP BY rating
+HAVING AVG(rental_rate) > 3;
+SELECT rating, AVG(length) AS duracion_media
+FROM film
+GROUP BY rating
+HAVING AVG(length) > 100;
+
+
+Obtén las direcciones de aquellos clientes de nuestro videoclub
+Ahora, añade las ciudades de las que son nuestros clientes
+Añade también el país
+SELECT 
+    c.customer_id,
+    c.first_name,
+    c.last_name,
+    a.address,
+    ci.city,
+    co.country
+FROM customer c
+JOIN address a ON c.address_id = a.address_id
+JOIN city ci ON a.city_id = ci.city_id
+JOIN country co ON ci.country_id = co.country_id;
+
+
+Obtén solamente las películas que tienen un actor que tenga un apellido que empiece por la letra “C”
+SELECT DISTINCT f.title
+FROM film f
+JOIN film_actor fa ON f.film_id = fa.film_id
+JOIN actor a ON fa.actor_id = a.actor_id
+WHERE a.last_name ILIKE 'C%';
+
+
+Responde a las siguientes preguntas:
+- ¿Cuántos actores tiene cada película?
+- ¿Cuáles son las películas que tienen más de 2 actores?
+- ¿Cual es la película que tiene más actores?
+SELECT 
+    f.title,
+    COUNT(fa.actor_id) AS numero_actores
+FROM film f
+JOIN film_actor fa ON f.film_id = fa.film_id
+GROUP BY f.title
+ORDER BY numero_actores DESC;
+SELECT 
+    f.title,
+    COUNT(fa.actor_id) AS numero_actores
+FROM film f
+JOIN film_actor fa ON f.film_id = fa.film_id
+GROUP BY f.title
+HAVING COUNT(fa.actor_id) > 2
+ORDER BY numero_actores DESC;
+SELECT 
+    f.title,
+    COUNT(fa.actor_id) AS numero_actores
+FROM film f
+JOIN film_actor fa ON f.film_id = fa.film_id
+GROUP BY f.title
+ORDER BY numero_actores DESC
+LIMIT 1;
+
+
+Desde el videoclub estamos empezando a guardar las opiniones de los clientes referentes a una película. Esta información queremos guardarla en base de datos para que podamos analizarla:
+● film_id
+● customer_id
+● review_date
+● review_description
+Llama a esta tabla “reviews” seguido de la inicial de tu nombre y tu apellido. Por ejemlpo, reviews_ng sería el nombre que le daría.
+CREATE TABLE reviews_jc (
+    review_id SERIAL PRIMARY KEY,
+    film_id INT NOT NULL REFERENCES film(film_id),
+    customer_id INT NOT NULL REFERENCES customer(customer_id),
+    review_date DATE NOT NULL,
+    review_description TEXT
+);
+
+
+Cambia la opinión del cliente 7, que ha hecho de la película 4. Nos ha comunicado que su opinión era errónea.
+Su opinión es la siguiente: “La película es bastante divertida y para todo los públicos”
+UPDATE reviews_jc
+SET review_description = 'La película es bastante divertida y para todo los públicos'
+WHERE customer_id = 7 AND film_id = 4;
+
+
+Este cliente nos pide que borremos sus opiniones de nuestra base de datos, de manera que no queden registradas en la tabla
+DELETE FROM reviews_jc
+WHERE customer_id = 7;
+
+
+Añade una nueva columna a la tabla de reviews que te parezca interesante. Por ejemplo, el número de estrellas que le darías a una película. Puedes llamarle “review_stars” y con datatype int2
+Renombra una de las columnas de la tabla de reviews. Por ejemplo, renombra la columna “review_description” a “review_opinion”
+ALTER TABLE reviews_jc
+ADD COLUMN review_stars INT2;
+ALTER TABLE reviews_jc
+RENAME COLUMN review_description TO review_opinion;
+
+
+Debido a que ya no tenemos información de las reseñas que dejan los clientes en nuestra tabla, procedemos a borrarla.
+DROP TABLE IF EXISTS reviews_jc;
+
+
+Crea una vista que se llame como tu nombre y apellidos e introduce todos los campos que te resulten interesantes de las películas y sus actores.
+CREATE VIEW alejandro_escolano AS
+SELECT 
+    f.film_id,
+    f.title,
+    f.release_year,
+    f.rating,
+    f.length,
+    f.rental_rate,
+    a.first_name || ' ' || a.last_name AS actor_nombre
+FROM film f
+JOIN film_actor fa ON f.film_id = fa.film_id
+JOIN actor a ON fa.actor_id = a.actor_id;
+
+
+Obtén haciendo una subconsulta en la cláusula WHERE, todas aquellas películas que están en el idioma de inglés
+SELECT *
+FROM film
+WHERE language_id = (
+    SELECT language_id
+    FROM language
+    WHERE name = 'English'
+);
+
+
+Subconsultas
+- Obtén haciendo una subconsulta en la cláusula WHERE, todos aquellos clientes que viven en una dirección que empieza por A
+- Obtén haciendo una subconsulta en la cláusula WHERE, aquellos clientes que han se han gastado más de 190€
+SELECT *
+FROM customer
+WHERE address_id IN (
+    SELECT address_id
+    FROM address
+    WHERE address ILIKE 'A%'
+);
+SELECT *
+FROM customer
+WHERE customer_id IN (
+    SELECT customer_id
+    FROM payment
+    GROUP BY customer_id
+    HAVING SUM(amount) > 190
+);
+
+
+Obtén aquellos film_id que tienen más de un replacement_cost de 2€ y obtén el total de film_id.
+SELECT COUNT(DISTINCT film_id) AS total
+FROM film
+WHERE replacement_cost = 2
+GROUP BY film_id
+HAVING COUNT(*) > 1;
+
+
+Obtén haciendo una subconsulta en la cláusula WITH
+- La suma de los amount que de los clientes que han pagado más de 190€
+- El número de clientes que han pagado más de 190€
+WITH clientes_gastadores AS (
+    SELECT customer_id
+    FROM payment
+    GROUP BY customer_id
+    HAVING SUM(amount) > 190
+)
+SELECT SUM(amount) AS total_gastado
+FROM payment
+WHERE customer_id IN (SELECT customer_id FROM clientes_gastadores);
+WITH clientes_gastadores AS (
+    SELECT customer_id
+    FROM payment
+    GROUP BY customer_id
+    HAVING SUM(amount) > 190
+)
+SELECT COUNT(*) AS num_clientes
+FROM clientes_gastadores;
+
+
+Obtén haciendo una subconsulta en la cláusula WITH
+- El número de veces que un cliente ha alquilado una película.
+- El número de veces que un cliente ha alquilado una película en el año 2005 y en el 2006
+WITH alquileres AS (
+    SELECT customer_id, film_id, COUNT(*) AS veces
+    FROM rental r
+    JOIN inventory i ON r.inventory_id = i.inventory_id
+    GROUP BY customer_id, film_id
+)
+SELECT * FROM alquileres;
+WITH alquileres_por_año AS (
+    SELECT customer_id, EXTRACT(YEAR FROM rental_date) AS año, COUNT(*) AS total
+    FROM rental
+    WHERE EXTRACT(YEAR FROM rental_date) IN (2005, 2006)
+    GROUP BY customer_id, EXTRACT(YEAR FROM rental_date)
+)
+SELECT * FROM alquileres_por_año;
