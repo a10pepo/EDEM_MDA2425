@@ -1,0 +1,22 @@
+[
+    {
+        "name": "vehicle_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "event",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "timestamp",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "payload",
+        "type": "JSON",
+        "mode": "NULLABLE"
+    }
+]
