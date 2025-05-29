@@ -1,0 +1,65 @@
+openapi: 3.0.0
+info:
+  title: API Sensor del Robot
+  version: 1.0.0
+  description: API para obtener la última medición de temperatura registrada por el sensor del robot.
+paths:
+  /getLastMeassureBySensor/{sensor}:
+    get:
+      summary: Recuperar última medición del sensor
+      description: Devuelve la última lectura de temperatura registrada por el sensor especificado.
+      parameters:
+        - name: sensor
+          in: path
+          description: Identificador único del sensor
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Medición recuperada correctamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Measure'
+        '400':
+          description: Sensor no encontrado
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Sensor not found"
+        '404':
+          description: ID inválido
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Invalid ID"
+components:
+  schemas:
+    Measure:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Identificador del sensor
+          example: "sensor1"
+        unidad:
+          type: string
+          description: Unidad de medida utilizada
+          example: "Celsius"
+        medicion:
+          type: number
+          description: Valor de la medición de temperatura
+          example: 31
+      required:
+        - code
+        - unidad
+        - medicion

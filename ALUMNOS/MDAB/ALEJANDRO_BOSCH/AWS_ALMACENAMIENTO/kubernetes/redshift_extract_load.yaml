@@ -1,0 +1,48 @@
+# -----------------------------------
+# CRONJOB: redshift_etl.py (Carga de datos de RDS a Redshift)
+# -----------------------------------
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: redshift-etl-cron
+  namespace: data-processing
+spec:
+  schedule: "0 2 * * *"  # Todos los días a las 2 AM
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          initContainers:
+          - name: wait-for-rds
+            image: busybox
+            command: ['sh', '-c', 'until nc -zv $RDS_HOST $RDS_PORT; do sleep 2; done']
+            env:
+            - name: RDS_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: aws-secrets
+                  key: RDS_HOST
+            - name: RDS_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: aws-secrets
+                  key: RDS_PORT
+          - name: wait-for-redshift
+            image: busybox
+            command: ['sh', '-c', 'until nc -zv $REDSHIFT_HOST $REDSHIFT_PORT; do sleep 5; done']
+            env:
+            - name: REDSHIFT_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: redshift-secrets
+                  key: REDSHIFT_HOST
+            - name: REDSHIFT_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: redshift-secrets
+                  key: REDSHIFT_PORT
+          containers:
+          - name: redshift-etl
+            image: alejbc27/alboce-kubernetes:latest
+            command: ["python", "redshift_etl.py"]
+          restartPolicy: OnFailure
