@@ -1,0 +1,47 @@
+openapi: 3.0.0
+info:
+  title: Robot Temperature Sensor API
+  description: API to retrieve real-time temperature measurements of a robot.
+  version: 1.0.0
+servers:
+  - url: https://api.company.com/v1
+    description: Production server
+
+paths:
+  /getLastMeassureBySensor/{sensor}:
+    get:
+      summary: Get the last temperature measurement for a specific sensor
+      description: Retrieves the latest temperature measurement for the given sensor.
+      parameters:
+        - name: sensor
+          in: path
+          required: true
+          description: The ID of the sensor
+          schema:
+            type: string
+      responses:
+        200:
+          description: Successful response with the latest measurement
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: string
+                    description: ID of the sensor
+                  fechamuestreo:
+                    type: string
+                    format: date-time
+                    description: Sampling timestamp
+                  unidad:
+                    type: string
+                    description: Measurement unit
+                  medicion:
+                    type: number
+                    format: float
+                    description: Sensor reading
+        400:
+          description: Sensor not found
+        404:
+          description: Invalid ID supplied
