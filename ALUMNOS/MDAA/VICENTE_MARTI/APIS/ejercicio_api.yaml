@@ -1,0 +1,50 @@
+openapi: 3.0.3
+info:
+  title: API Sensor de temperatura
+  description: Permite obtener la  medición de temperatura.
+  version: 1.0.0
+
+paths:
+  /getLastMeassureBySensor/{sensor}:
+    get:
+      summary: Obtener la medición de temperatura
+      parameters:
+        - name: sensor
+          in: path
+          required: true
+          description: Id del sensor
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Measure.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Measure'
+        '400':
+          description: Sensor not found
+        '404':
+          description: Invalid ID supplied
+
+components:
+  schemas:
+    Measure:
+      type: object
+      properties:
+        code:
+          type: string
+          description: ID del sensor
+          example: "sensor_123"
+        fechamuestreo:
+          type: string
+          description: Fecha de la medición
+          example: "2025-05-25T10:30:00Z"
+        unidad:
+          type: string
+          description: Unidad de medida
+          example: "Celsius"
+        medicion:
+          type: number
+          description: Valor de la medición
+          example: 36.7
