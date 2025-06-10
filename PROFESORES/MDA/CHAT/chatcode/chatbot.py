@@ -5,8 +5,13 @@ import threading
 import time
 import random
 import queue
+from confluent_kafka import Consumer, KafkaError
+from confluent_kafka import Producer, KafkaError
+from pyspark.sql import SparkSession
 
-USER='nickname'
+
+
+USER='Alejandro Bosch'
 
 # Initialize chat history in session state if it doesn't exist
 if 'chat_history' not in st.session_state:
@@ -63,4 +68,67 @@ with chat_placeholder.container():
 
 with st.container():
     st.text_input("User Input:", on_change=on_input_change, key="user_input")
+
+ # Configuración del productor
+config = {
+    'bootstrap.servers': 'localhost:9092',  # Cambia esto con la dirección de tu servidor Kafka
+    'client.id': 'python-producer-pedro'
+}
+
+# Crear un productor
+producer = Producer(config)
+
+
+# Send 100 messages where the key is the index and the message to send is "test message - index"
+# the topic name ismyTopic
+
+topic_kafka = ['chat', 'censura']
+key = "mensaje"
+for topic in topic_kafka:
+    producer.produce(topic=topic, value=data, key=key)  # Send bytes
+
+
+# Optionally, you can check if there are any messages that failed to be delivered:
+if producer.flush() != 0:
+    print("Some messages failed to be delivered")
+
+# Configuración del consumidor
+config = {
+    'bootstrap.servers': 'localhost:9092',  
+    'group.id': 'python-consumer-group',
+    'auto.offset.reset': 'earliest'  
+}
+
+# Crear un consumidor
+consumer = Consumer(config)
+
+# Suscribirse a un tópico
+topic = 'chat'  # El nombre del tópico
+consumer.subscribe(['chat', 'censura'])
+
+# Leer mensajes de los tópicos
+try:
+    while True:
+        msg = consumer.poll(1.0)  # Tiempo de espera para recibir mensajes
+        
+        if msg is None:
+            continue
+        if msg.error():
+            if msg.error().code() == KafkaError._PARTITION_EOF:
+                print("No hay más mensajes en esta partición.")
+            else:
+                print(f"Error al recibir mensaje: {msg.error()}")
+        else:
+            # Identificar el tópico del mensaje
+            topic = msg.topic()
+            data = msg.value().decode('utf-8')
+            print(f"Nuevo mensaje del tópico {topic}: {data}")
+
+except KeyboardInterrupt:
+    pass
+finally:
+    # Cerrar el consumidor
+    consumer.close()
+
+
 
