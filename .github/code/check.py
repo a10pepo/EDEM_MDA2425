@@ -19,8 +19,6 @@ def check_class(folder_path):
     
     for alumno in os.listdir(folder_path):
         file_path = os.path.join(folder_path, alumno)
-        if alumno.startswith('ANTONI'):
-            print("TEST")
         comunes=0
         mia1=0
         mda1=0
