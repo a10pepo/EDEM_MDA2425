@@ -541,7 +541,7 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2025-06-14 15:11:58
+Last Checked: 2025-06-14 15:12:59
 
 
 Entregas Grupo MDA A
@@ -645,6 +645,31 @@ Entregas Grupo MDA A
 <td>10.0</td>
 <td>10.0</td>
 <td>10.0</td>
+</tr>
+<tr>
+<td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAA/CARLOS_OLIVER'>CARLOS_OLIVER</a></td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>5.0</td>
 </tr>
 <tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAA/IGNACIO_VALERO'>IGNACIO_VALERO</a></td>
@@ -798,7 +823,7 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2025-06-14 15:11:58
+Last Checked: 2025-06-14 15:12:59
 
 Entregas Grupo MDA B
 <table>
@@ -1154,5 +1179,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2025-06-14 15:11:58
+Last Checked: 2025-06-14 15:12:59
 
