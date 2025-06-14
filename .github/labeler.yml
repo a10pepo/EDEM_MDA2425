@@ -55,14 +55,6 @@ TERRAFORM:
 - changed-files:
   - any-glob-to-any-file: ['ALUMNOS/MDAA/*/TERRAFORM/**', 'ALUMNOS/MDAB/*/TERRAFORM/**', 'ALUMNOS/MIA/*/TERRAFORM/**']
 
-AWS_ALMACENAMIENTO:
-- changed-files:
-  - any-glob-to-any-file: ['ALUMNOS/MDAA/*/AWS_ALMACENAMIENTO/**', 'ALUMNOS/MDAB/*/AWS_ALMACENAMIENTO/**', 'ALUMNOS/MIA/*/AWS_ALMACENAMIENTO/**']  
-
-GCP_ALMACENAMIENTO:
-- changed-files:
-  - any-glob-to-any-file: ['ALUMNOS/MDAA/*/GCP_ALMACENAMIENTO/**', 'ALUMNOS/MDAB/*/GCP_ALMACENAMIENTO/**', 'ALUMNOS/MIA/*/GCP_ALMACENAMIENTO/**']  
-
 ML0_INTRO:
 - changed-files:
   - any-glob-to-any-file: ['ALUMNOS/MDAA/*/ML0_INTRO/**', 'ALUMNOS/MDAB/*/ML0_INTRO/**', 'ALUMNOS/MIA/*/ML0_INTRO/**']
@@ -104,3 +96,4 @@ ESTADISTICA:
 entregable:
 - changed-files:
   - any-glob-to-any-file: 'ALUMNOS/**'
+
