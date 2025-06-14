@@ -1,4 +1,4 @@
-# Entregable End2End GCP Almacenamiento
+# Entregable End2End AWS Almacenamiento
 
 ## Descripción
 
