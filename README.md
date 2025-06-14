@@ -541,7 +541,7 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2025-06-14 14:52:27
+Last Checked: 2025-06-14 14:57:31
 
 
 Entregas Grupo MDA A
@@ -681,7 +681,7 @@ Entregas Grupo MDA A
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
-<td>❌</td>
+<td>✅</td>
 <td>❌</td>
 <td>❌</td>
 <td>✅</td>
@@ -694,7 +694,7 @@ Entregas Grupo MDA A
 <td>✅</td>
 <td>10.0</td>
 <td>4.0</td>
-<td>0.0</td>
+<td>5.0</td>
 </tr>
 <tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAA/JUAN_BESSINI'>JUAN_BESSINI</a></td>
@@ -798,7 +798,7 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2025-06-14 14:52:27
+Last Checked: 2025-06-14 14:57:31
 
 Entregas Grupo MDA B
 <table>
@@ -1154,5 +1154,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2025-06-14 14:52:27
+Last Checked: 2025-06-14 14:57:31
 
