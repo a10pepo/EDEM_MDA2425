@@ -541,7 +541,7 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2025-06-14 15:12:59
+Last Checked: 2025-06-14 15:14:05
 
 
 Entregas Grupo MDA A
@@ -681,7 +681,7 @@ Entregas Grupo MDA A
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
-<td>❌</td>
+<td>✅</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
@@ -694,7 +694,7 @@ Entregas Grupo MDA A
 <td>❌</td>
 <td>4.0</td>
 <td>0.0</td>
-<td>0.0</td>
+<td>5.0</td>
 </tr>
 <tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAA/JOAN_GILABERT'>JOAN_GILABERT</a></td>
@@ -823,7 +823,7 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2025-06-14 15:12:59
+Last Checked: 2025-06-14 15:14:05
 
 Entregas Grupo MDA B
 <table>
@@ -1179,5 +1179,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2025-06-14 15:12:59
+Last Checked: 2025-06-14 15:14:05
 
