@@ -1,0 +1,127 @@
+--Clase 2
+select * from film where rental_rate between 2 and 3
+and title like 'A%' and title like '%s';
+
+SELECT nombre_cliente 
+from cliente
+where calle_cliente is null;
+
+--Ejercicio 3
+select first_name from actor where first_name like 'A%';
+
+select title from film where rental_rate >10;
+select title from film where rental_rate between 5 and 10;
+
+--Ejercicio 4
+select rental_rate from film where title = 'Giant Troopers' and 'Gilbert Pelican';
+
+select title, rating, rental_duration from film where title like 'Ali Forever'
+
+--Ejercicio 5
+select title, length from film order by length ASC
+select title, length from film order by length ASC limit 5
+--Para poner length sin que sea campo reservado
+select f.length
+from film as f
+--Group by
+select rental_rate, count(*) from film group by rental_rate
+select rental_rate, count(*) from film group by 1
+
+--Ejercicio 6
+
+Select rating, count(title) from film group by rating;
+Select rating, avg(rental_rate) from film group by rating;
+select rating, min(rental_rate) from film group by rating;
+select rating, max(rental_rate) from film group by rating;
+select rating, avg(length) from film group by rating;
+select rating, min(release_year) from film group by rating;
+select rating, max(release_year) from film group by rating;
+
+--Ejemplo Having
+Select rating, count(title),avg(rental_rate),min(rental_rate),max(rental_rate),avg(length),min(release_year),max(release_year) from film group by rating having avg(length)>120;
+
+select rating, avg(length) from film group by rating having avg(length)>120;
+
+--Ejercicio 7
+select rating, count(title) from film group by 1 having count(title) > 200;
+select rating, avg(rental_rate) from film group by 1 having avg(rental_rate) > 3;
+select rating, avg(length) from film group by 1 having avg(length) > 115;
+
+select rating, count(title), avg(rental_rate),avg(length) from film group by 1
+having count(title) > 200 and avg(rental_rate) > 3 and avg(length) > 115;
+
+--JOIN
+--Ejercicio 8
+
+select customer.first_name, customer.last_name, address.address
+from customer 
+left join address on customer.address_id = address.address_id;
+
+--Ahora añadimos la ciudad
+select customer.first_name, customer.last_name, address.address, city.city, country.country
+from customer 
+left join address on customer.address_id = address.address_id
+left join city on address.city_id = city.city_id
+left join country on city.country_id = country.country_id
+
+--Ejercicio 9
+select film.title, actor.first_name, actor.last_name,
+from film
+left join film_actor on film.film_id = film_actor.film_id
+left join actor on film_actor.actor_id = actor.actor_id
+where actor.last_name like 'C%'
+
+--Haciendo el ejercicio 9 bien hecho
+select film.title
+from film
+left join film_actor on film.film_id = film_actor.film_id
+left join actor on film_actor.actor_id = actor.actor_id
+where actor.last_name like 'C%'
+group by film.title
+having count (actor.last_name)=1;
+
+--Ejercicio 9 pag 23.
+--Actores en cada pelicula
+select film.title, count(actor.actor_id)
+from film
+left join film_actor on film.film_id = film_actor.film_id
+left join actor on film_actor.actor_id = actor.actor_id
+group by film.title;
+
+--peliculas con más de 2 actores
+select film.title
+from film
+left join film_actor on film.film_id = film_actor.film_id
+left join actor on film_actor.actor_id = actor.actor_id
+group by film.title
+having count (actor.actor_id)> 2;
+--pelicula que tiene mas actores
+select film.title, count(actor.actor_id)
+from film
+left join film_actor on film.film_id = film_actor.film_id
+left join actor on film_actor.actor_id = actor.actor_id
+group by film.title
+order by count(actor.actor_id) DESC
+limit 1;
+
+--Create Table
+Create Table public.reviews_iv(
+film_id integer NOT NULL,
+customer_id integer NOT NULL,
+review_date timestamp NOT NULL DEFAULT now(),
+review_description varchar (100),
+Constraint reviews_iv_pkey Primary key (customer_id,film_id)
+);
+--INSERT TABLE
+INSERT INTO public.reviews_iv (film_id,customer_id,review_description)
+VALUES (1234,1222,'Buena film');
+--UPADATE
+UPDATE public.reviews_iv
+SET review_description = 'Me gusta'
+WHERE customer_id = 1222 and film_id = 1234;
+--DELETE
+DELETE
+FROM public.reviews_iv
+WHERE review_description = 'Me gusta';
+--borrar tabla entera
+DROP table public.reviews_iv;
