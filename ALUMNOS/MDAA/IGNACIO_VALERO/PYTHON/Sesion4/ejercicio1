@@ -1,0 +1,33 @@
+# sesion4_ejercicio1.py
+
+def es_primo(numero):
+    """Devuelve True si el número es primo, False si no lo es."""
+    if numero < 2:
+        return False
+    for i in range(2, int(numero ** 0.5) + 1):
+        if numero % i == 0:
+            return False
+    return True
+
+def mostrar_primos_en_rango(inicio, fin):
+    """Muestra por consola todos los números primos en el rango [inicio, fin]."""
+    print(f"Números primos entre {inicio} y {fin}:")
+    for n in range(inicio, fin + 1):
+        if es_primo(n):
+            print(n, end=" ")
+    print()
+
+def es_bisiesto(año):
+    """Devuelve True si el año es bisiesto, False si no lo es."""
+    return (año % 4 == 0 and año % 100 != 0) or (año % 400 == 0)
+
+
+# Ejemplo de uso:
+if __name__ == "__main__":
+    mostrar_primos_en_rango(1, 100)
+
+    test_numero = 29
+    print(f"¿Es {test_numero} un número primo? {es_primo(test_numero)}")
+
+    test_año = 2024
+    print(f"¿Es {test_año} un año bisiesto? {es_bisiesto(test_año)}")

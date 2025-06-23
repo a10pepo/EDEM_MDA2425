@@ -1,0 +1,20 @@
+def main():
+    print("Paso 1")
+    print("Hola. Bienvenido al sistema de cálculo de inversiones.")
+    cantidad = float(input("¿Cuánto quieres invertir? (€): "))
+
+    print("\nPaso 2")
+    interes = float(input("¿Cuál es el interés anual? (%): "))
+
+    print("\nPaso 3")
+    años = int(input("¿Cuántos años vas a mantener la inversión?: "))
+
+    # Cálculo del interés compuesto
+    cantidad_final = cantidad * (1 + interes / 100) ** años
+    intereses_generados = cantidad_final - cantidad
+
+    print("\nPaso 4 - Final")
+    print(f"En {años} años habrás recibido {intereses_generados:.2f}€ de interés")
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,80 @@
+openapi: 3.0.3
+info:
+  title: Sensor de Temperatura para Robots
+  version: 1.0.0
+  description: API para consultar la medición más reciente de temperatura de un sensor robotizado.
+
+paths:
+  /lastMeasurement/{sensorId}:
+    get:
+      summary: Obtener última medición del sensor
+      description: Devuelve la medición más reciente registrada por el sensor identificado.
+      parameters:
+        - name: sensorId
+          in: path
+          required: true
+          description: Identificador único del sensor
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Medición obtenida con éxito
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Measurement'
+        '400':
+          description: ID de sensor inválido
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMsg'
+              example:
+                message: "ID inválido proporcionado"
+        '404':
+          description: Sensor no encontrado en la base de datos
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorMsg'
+              example:
+                message: "Sensor no encontrado"
+
+components:
+  schemas:
+    Measurement:
+      type: object
+      properties:
+        sensorCode:
+          type: string
+          description: Código identificador del sensor
+          example: "sensor_abc123"
+        timestamp:
+          type: string
+          format: date-time
+          description: Fecha y hora de la medición
+          example: "2025-06-22T15:30:00Z"
+        unit:
+          type: string
+          description: Unidad de medida (ej. Celsius)
+          example: "°C"
+        value:
+          type: number
+          format: float
+          description: Valor numérico de la medición
+          example: 37.5
+      required:
+        - sensorCode
+        - timestamp
+        - unit
+        - value
+
+    ErrorMsg:
+      type: object
+      properties:
+        message:
+          type: string
+          description: Mensaje de error descriptivo
+          example: "Error en la solicitud"
+      required:
+        - message

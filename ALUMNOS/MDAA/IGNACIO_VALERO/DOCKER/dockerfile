@@ -1,0 +1,8 @@
+FROM python:3.9-slim
+
+COPY suma.py /app/suma.py
+
+WORKDIR /app
+
+ENTRYPOINT ["python", "/app/suma.py"]
+CMD []
