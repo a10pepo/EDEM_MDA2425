@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  python-scripts:
+    build: .
+    volumes:
+      - .:/app
+    depends_on:
+      - metabase
+
+  metabase:
+    image: metabase/metabase
+    ports:
+      - "3000:3000"
+    environment:
+      MB_DB_FILE: /metabase.db
+    volumes:
+      - metabase-data:/metabase.db
+
+volumes:
+  metabase-data:
