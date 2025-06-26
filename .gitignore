@@ -7,4 +7,5 @@ __pycache__
 node_modules
 .terraform
 *.tfstate
-
+PROFESORES/MDA/AWS_ESPECIFICOS/personal
+PROFESORES/MDA/AWS_ESPECIFICOS/personal_account.sh

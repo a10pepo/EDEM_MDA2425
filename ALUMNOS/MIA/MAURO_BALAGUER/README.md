@@ -1,4 +1,4 @@
-<h1># 👋 # Hi, I'm Mauro Balaguer!</h1>
+<h1> 👋 Hi, I'm Mauro Balaguer!</h1>
 
 
 🎓 Currently pursuing my AI master at EDEM (https://edem.eu)
