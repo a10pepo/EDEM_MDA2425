@@ -1,0 +1,9 @@
+
+sqlalchemy
+psycopg2-binary
+polars
+pydantic
+pydantic-settings
+boto3
+pyiceberg
+python-dotenv

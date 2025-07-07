@@ -1,0 +1,101 @@
+id,user_id,product_id,product_name,amount,order_date,status
+1,64,1,Chopping Board,46,2024-06-19,REJECTED
+2,69,2,Mini Projector for Smartphones,57,2024-06-01,PAID
+3,6,3,Chili Lime Shrimp,53,2024-06-11,DISPATCHED
+4,28,4,Cinnamon Roll Dough,51,2024-06-16,AWAITING_PICKUP
+5,52,5,LED Under Cabinet Lighting,64,2024-06-07,PROCESSING
+6,4,6,Chia Seed Pudding Mix,50,2024-06-15,PARTIALLY_SHIPPED
+7,95,7,Frozen Broccoli,42,2024-06-09,REFUNDED
+8,5,8,Herb Seasoned Croutons,60,2024-06-05,DELIVERED
+9,26,9,Spinach Artichoke Dip,53,2024-06-06,RETURNED
+10,37,10,Quinoa and Kale Salad Kit,51,2024-06-10,FAILED
+11,50,11,Organic Almond Flour,49,2024-06-18,IN_TRANSIT
+12,20,12,Chickpea Flour,49,2024-06-08,ON_HOLD
+13,73,13,Black Bean Spaghetti,51,2024-06-02,CANCELLED
+14,35,14,Organic Green Tea,49,2024-06-17,COMPLETED
+15,14,15,Electrolyte Water Bottle,55,2024-06-03,PENDING
+16,66,16,Honey Sesame Chicken Mix,47,2024-06-14,AWAITING_SHIPMENT
+17,45,17,Buffalo Cauliflower Bites,67,2024-06-13,PARTIALLY_PAID
+18,54,18,Personalized Keychain,48,2024-06-12,AWAITING_PAYMENT
+19,10,19,Ribbed Knit Dress,54,2024-06-20,EXPIRED
+20,62,20,Wooden Children's Play Kitchen,50,2024-06-04,SHIPPED
+21,47,21,Electric Can Opener,47,2024-06-10,FAILED
+22,70,22,Foot Spa Bath Massager,39,2024-06-18,IN_TRANSIT
+23,88,23,Smart Light Bulbs,48,2024-06-01,PAID
+24,8,24,High-Quality Yoga Block,60,2024-06-16,AWAITING_PICKUP
+25,58,25,Lemon Herb Quinoa,53,2024-06-03,PENDING
+26,11,26,Throw Pillow Covers,42,2024-06-17,COMPLETED
+27,30,27,Garam Masala Spice Blend,50,2024-06-05,DELIVERED
+28,36,28,Trackpad for Laptop,59,2024-06-20,EXPIRED
+29,68,29,Magnetic Spice Jars,56,2024-06-06,RETURNED
+30,93,30,USB Flash Drive,61,2024-06-04,SHIPPED
+31,97,31,Classic Black Dress,46,2024-06-15,PARTIALLY_SHIPPED
+32,92,32,Animal Paw Print Soap Dispenser,42,2024-06-19,REJECTED
+33,44,33,Electric Air Pump,45,2024-06-11,DISPATCHED
+34,67,34,Tortilla Chips,38,2024-06-02,CANCELLED
+35,25,35,Portable Solar Path Lights,46,2024-06-14,AWAITING_SHIPMENT
+36,94,36,Organic Coconut Flour,54,2024-06-13,PARTIALLY_PAID
+37,81,37,Athletic Sports Bra,37,2024-06-09,REFUNDED
+38,15,38,Nail Polish Set,54,2024-06-07,PROCESSING
+39,75,39,Portable Hand Warmer,37,2024-06-12,AWAITING_PAYMENT
+40,56,40,Oven-Baked Potato Chips,62,2024-06-08,ON_HOLD
+41,1,41,Granola,49,2024-06-02,CANCELLED
+42,18,42,Coconut Almond Granola,36,2024-06-14,AWAITING_SHIPMENT
+43,79,43,Mobile Workbench,50,2024-06-16,AWAITING_PICKUP
+44,74,44,Fruit and Nut Medley,53,2024-06-09,REFUNDED
+45,61,45,Thyme,56,2024-06-01,PAID
+46,65,46,Cereal Dispenser with Portion Control,32,2024-06-06,RETURNED
+47,89,47,Chipotle Sauce,34,2024-06-13,PARTIALLY_PAID
+48,91,48,Cranberry Almond Biscotti,60,2024-06-03,PENDING
+49,80,49,Savory Breakfast Sausage,48,2024-06-10,FAILED
+50,53,50,Pet Grooming Brush,59,2024-06-12,AWAITING_PAYMENT
+51,2,51,White Rice,44,2024-06-18,IN_TRANSIT
+52,85,52,Knitted Infinity Scarf,55,2024-06-19,REJECTED
+53,87,53,Coconut Granola,31,2024-06-05,DELIVERED
+54,71,54,Compact Dishwasher,43,2024-06-11,DISPATCHED
+55,78,55,Smoked Gouda Cheese,53,2024-06-04,SHIPPED
+56,83,56,Basil-infused Olive Oil,60,2024-06-17,COMPLETED
+57,3,57,Maple Bacon Jerky,68,2024-06-07,PROCESSING
+58,24,58,Pet Hair Vacuum Attachment,53,2024-06-08,ON_HOLD
+59,98,59,Organic Brown Rice Cakes,59,2024-06-15,PARTIALLY_SHIPPED
+60,13,60,Inflatable Party Cooler,39,2024-06-20,EXPIRED
+61,32,61,Luxury Bathrobe,50,2024-06-20,EXPIRED
+62,46,62,Active Racerback Tank,49,2024-06-10,FAILED
+63,7,63,Portable Hammock,38,2024-06-14,AWAITING_SHIPMENT
+64,49,64,Sweet Corn Fritters,45,2024-06-04,SHIPPED
+65,76,65,Homemade Salsa,63,2024-06-19,REJECTED
+66,34,66,Kids' Dinosaur-Themed Lunchbox,38,2024-06-07,PROCESSING
+67,9,67,Soft Plush Throw Blanket,59,2024-06-01,PAID
+68,19,68,Stuffed Grape Leaves,53,2024-06-13,PARTIALLY_PAID
+69,55,69,Wireless Gaming Headset,64,2024-06-15,PARTIALLY_SHIPPED
+70,96,70,Energy Protein Bars,46,2024-06-09,REFUNDED
+71,72,71,Italian Meatballs,22,2024-06-05,DELIVERED
+72,77,72,Compact Hair Dryer,62,2024-06-08,ON_HOLD
+73,17,73,Vegetable Stir Fry Mix,62,2024-06-06,RETURNED
+74,43,74,Pineapple Coconut Yogurt,63,2024-06-16,AWAITING_PICKUP
+75,33,75,Desk Organizer Set,52,2024-06-02,CANCELLED
+76,84,76,Mini Indoor Hydroponic Garden,51,2024-06-18,IN_TRANSIT
+77,21,77,Lemon Pepper Seasoning,61,2024-06-17,COMPLETED
+78,29,78,Essential Oils Diffuser Necklace,49,2024-06-11,DISPATCHED
+79,42,79,Nature Explorer Lens Kit,58,2024-06-03,PENDING
+80,41,80,Frozen Mixed Vegetables,48,2024-06-12,AWAITING_PAYMENT
+81,60,81,Folding Backpack Chair,36,2024-06-10,FAILED
+82,86,82,Chickpea Pancakes,17,2024-06-09,REFUNDED
+83,57,83,Spicy Chicken Wings,56,2024-06-08,ON_HOLD
+84,100,84,Teriyaki Chicken Stir-Fry,45,2024-06-04,SHIPPED
+85,27,85,Fishing Rod,38,2024-06-15,PARTIALLY_SHIPPED
+86,39,86,Garlic & Herb Goat Cheese,29,2024-06-18,IN_TRANSIT
+87,40,87,Sweet Cherry Tomatoes,58,2024-06-14,AWAITING_SHIPMENT
+88,31,88,Folding Pocket Knife,50,2024-06-05,DELIVERED
+89,90,89,Outdoor Adventure Kit,45,2024-06-01,PAID
+90,16,90,Veggie Burger Patties,62,2024-06-07,PROCESSING
+91,48,91,Tomato Basil Pasta Sauce,57,2024-06-13,PARTIALLY_PAID
+92,23,92,Multifunctional Baby Bottle Warmer,58,2024-06-03,PENDING
+93,59,93,Wall-Mounted Bookshelf,47,2024-06-12,AWAITING_PAYMENT
+94,22,94,Dog Walking Waist Pack,52,2024-06-17,COMPLETED
+95,38,95,Patterned Knit Scarf,46,2024-06-06,RETURNED
+96,51,96,Kids' Gardening Tools Set,57,2024-06-02,CANCELLED
+97,99,97,Gluten-Free Pancake Mix,57,2024-06-19,REJECTED
+98,12,98,Air Fryer,50,2024-06-16,AWAITING_PICKUP
+99,63,99,Floral Summer Dress,56,2024-06-11,DISPATCHED
+100,82,100,Organic Granola Cereal,43,2024-06-20,EXPIRED
