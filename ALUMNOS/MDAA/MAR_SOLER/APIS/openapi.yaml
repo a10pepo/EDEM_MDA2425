@@ -1,0 +1,230 @@
+openapi: 3.0.0
+info:
+  title: API de Recetas
+  version: 1.0.0
+  description: Sistema de gestión para un libro de recetas culinarias.
+
+servers:
+  - url: http://localhost:3000
+    description: Servidor de desarrollo
+
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-KEY
+
+  schemas:
+    Receta:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "receta456"
+        nombre:
+          type: string
+          example: "Lasaña de Carne a la Boloñesa"
+        autor:
+          type: string
+          example: "Nonna Isabella"
+        descripcion:
+          type: string
+          example: "Una lasaña clásica con capas de pasta, rica salsa boloñesa, bechamel cremosa y queso parmesano gratinado."
+        ingredientes:
+          type: array
+          items:
+            type: object
+            properties:
+              nombre:
+                type: string
+                example: "Láminas de lasaña"
+              cantidad:
+                type: string
+                example: "12 unidades"
+        pasos:
+          type: array
+          items:
+            type: string
+            example: "1. Preparar la salsa boloñesa sofriendo la carne picada con verduras y tomate."
+        tiempoPreparacion:
+          type: integer
+          description: "Tiempo total en minutos"
+          example: 120
+        dificultad:
+          type: string
+          enum: [Fácil, Media, Difícil]
+          example: "Media"
+        categoria:
+          type: string
+          example: "Cocina Italiana"
+        imagenUrl:
+          type: string
+          format: uri
+          example: "http://example.com/images/lasana.jpg"
+      required:
+        - nombre
+        - ingredientes
+        - pasos
+        - autor
+
+    Resena:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "resena789"
+        recetaId:
+          type: string
+          example: "receta456"
+        usuario:
+          type: string
+          example: "comensalFeliz"
+        calificacion:
+          type: integer
+          description: "Calificación de 1 a 5"
+          example: 5
+        comentario:
+          type: string
+          example: "¡Deliciosa! Me recordó a la lasaña de mi abuela."
+      required:
+        - recetaId
+        - usuario
+        - calificacion
+
+paths:
+  /recetas:
+    get:
+      summary: Obtener la lista de recetas
+      description: Permite filtrar por categoría y dificultad.
+      parameters:
+        - name: categoria
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: dificultad
+          in: query
+          required: false
+          schema:
+            type: string
+            enum: [Fácil, Media, Difícil]
+      responses:
+        '200':
+          description: Lista de recetas obtenida con éxito
+    post:
+      summary: Añadir una nueva receta
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Receta'
+      responses:
+        '201':
+          description: Receta creada exitosamente
+
+  /recetas/{id}:
+    get:
+      summary: Obtener detalles de una receta por ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Detalles de la receta
+    put:
+      summary: Actualizar una receta por ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Receta'
+      responses:
+        '200':
+          description: Receta actualizada exitosamente
+    delete:
+      summary: Eliminar una receta por ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Receta eliminada exitosamente
+
+  /recetas/{id}/resenas:
+    get:
+      summary: Obtener las reseñas de una receta
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Lista de reseñas de la receta.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Resena'
+    post:
+      summary: Añadir una nueva reseña a una receta
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Resena'
+      responses:
+        '201':
+          description: Reseña creada exitosamente
+
+  /categorias:
+    get:
+      summary: Obtener la lista de todas las categorías de recetas
+      responses:
+        '200':
+          description: Lista de categorías obtenida con éxito
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+                  example: "Cocina Italiana"
+
+  /autores/{autorId}/recetas:
+    get:
+      summary: Obtener recetas de un autor específico
+      parameters:
+        - name: autorId
+          in: path
+          required: true
+          description: El ID o nombre del autor
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Lista de recetas del autor obtenida con éxito

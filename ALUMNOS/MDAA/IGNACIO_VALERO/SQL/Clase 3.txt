@@ -1,0 +1,141 @@
+select film.title
+from film
+left join film_actor on film.film_id = film_actor.film_id
+left join actor on film_actor.actor_id = actor.actor_id
+group by film.title
+having count (actor.actor_id)> 2;
+
+Create Table public.reviews_iv(
+film_id integer NOT NULL,
+customer_id integer NOT NULL,
+review_date timestamp NOT NULL DEFAULT now(),
+review_description varchar (100), 
+Constraint reviews_iv_pkey Primary key (customer_id,film_id)
+);
+
+--Ejercicio 13
+
+--Añadir columna
+alter table public.reviews_iv add column review_stars int2;
+
+select * from public.reviews_iv;
+--Cambiar a el nombre de una tabla
+ALTER TABLE 
+public.reviews_iv
+RENAME COLUMN 
+review_description
+TO 
+review_opinion;
+--cambiar el tipo
+ ALTER TABLE public.reviews_iv
+ALTER COLUMN review_stars TYPE VARCHAR;
+--eliminarla
+ ALTER TABLE 
+public.reviews_iv
+DROP COLUMN 
+review_stars;
+
+--COMO ES UN IF EN SQL
+select length,
+case when length > 100 then 'Pelicula_Larga'
+when length > 50 and length < 99 then 'Pelicula_Media'
+else 'Pelicula Corta' END
+from film;
+
+--VIEWS
+select * from Ignacio_Valero 
+
+--Creamos una vista
+ create or replace VIEW Ignacio_Valero AS
+ SELECT title, first_name, last_name
+ FROM public.film
+ left join film_actor on film.film_id = film_actor.film_id
+left join actor on film_actor.actor_id = actor.actor_id
+ where first_name like 'Tom';
+
+--Vista de clientes que más pagan
+create or replace VIEW Top5 AS
+ select c.first_name || ' ' || last_name as nombre_completo, sum(p.amount) amount,round( avg(r.return_date:: date - r.rental_date:: date)) as difference_in_days, count(r.rental_id) as peliculas_alquiladas
+ FROM public.customer c 
+ left join payment p on c.customer_id = p.customer_id
+left join rental r on p.rental_id = r.rental_id
+group by c.customer_id
+order by amount desc
+limit 5;
+--Clientes que menos pagan
+create or replace VIEW Down5 AS
+ select c.first_name || ' ' || last_name as nombre_completo, sum(p.amount) amount, round(avg(r.return_date:: date - r.rental_date:: date)) as difference_in_days,count(r.rental_id) as peliculas_alquiladas
+ FROM public.customer c 
+ left join payment p on c.customer_id = p.customer_id
+left join rental r on p.rental_id = r.rental_id
+group by c.customer_id
+order by amount ASC
+limit 5;
+--Si queremos borrar una view
+drop view Top5
+drop view Down5
+--Para ver los tops
+select *, 'Top5' as tipo from Top5
+union all
+select *, 'Down5' as tipo from Down5
+
+--Para ver los tops
+create view kpis as
+select avg(Top5.amount) , 'Top5' as tipo from Top5
+union all
+select avg(Down5.amount) , 'Down5' as tipo from Down5;
+
+select * from kpis;
+
+--Subconsultas
+select sum(p.amount) from payment p
+left join customer c on c.customer_id =p.customer_id
+where c.first_name  ilike 'C%';
+ 
+select sum(p.amount) from payment p
+where customer_id in (
+	select customer_id from customer c where first_name  ilike 'C%'
+)
+
+--Numero de alquileres y suma amount cuya duracion de alquiler sea mayor a 3 dias
+select sum(p.amount),count(rental_id),() from payment p
+where rental_id in (
+	select rental_id  from rental r where round(r.return_date:: date - r.rental_date:: date) > 3
+);
+
+--WITH
+with my_sub_query as
+(SELECT title, rental_rate, replacement_cost, round(replacement_cost / rental_rate, 2) as new_column
+FROM public.film),
+new_1 as
+(SELECT title, rental_rate, replacement_cost, round(replacement_cost / rental_rate, 2) as new_column
+FROM public.film)
+select * from new_1 where title = 'Ali Forever'
+
+--Ejercicio pag 67
+
+with sub as
+(select customer_id, sum(amount) as total
+from payment p 
+group by customer_id
+)
+select * from sub where total >190;
+
+--Empleado del mes
+with sub_1_best_employeer as
+(select staff_id,sum(amount) as total
+from payment p
+group by staff_id
+order by total desc
+limit 1
+)
+--Donde vive
+,sub2 as
+(select a.address as address, s.staff_id
+from staff s
+left join address a on a.address_id = s.address_id
+)
+--PARA UNIRLAS
+select * from sub_1_best_employeer
+inner join sub2 on sub_1_best_employeer.staff_id =sub2.staff_id
+

@@ -1,0 +1,3 @@
+pandas
+pg8000
+kafka_Confluent

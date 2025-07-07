@@ -1,0 +1,17 @@
+# comprobar_bisiestos.py
+
+def es_bisiesto(año):
+    return (año % 4 == 0 and año % 100 != 0) or (año % 400 == 0)
+
+def comprobar_lista_bisiestos(lista_años):
+    print("Comprobando si los años son bisiestos:\n")
+    for año in lista_años:
+        if es_bisiesto(año):
+            print(f"{año} es un año bisiesto.")
+        else:
+            print(f"{año} no es un año bisiesto.")
+
+if __name__ == "__main__":
+    # Puedes modificar esta lista con los años que desees verificar
+    lista_de_años = [1900, 2000, 2020, 2023, 2024, 2100]
+    comprobar_lista_bisiestos(lista_de_años)
