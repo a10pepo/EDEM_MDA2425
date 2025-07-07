@@ -1,0 +1,22 @@
+# Usa una imagen base de Python. Simple y directa.
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+CMD ["sh", "-c", "\
+    echo '[1/4] Creando esquemas en PostgreSQL...' && \
+    python src/db/create_tables.py && \
+    echo '[2/4] Cargando datos iniciales en PostgreSQL...' && \
+    python src/load/load_postgres.py && \
+    echo '[3/4] Ejecutando ETL hacia Redshift...' && \
+    python src/load/to_redshift.py && \
+    echo '[4/4] Creando/Actualizando tablas Iceberg...' && \
+    python src/load/to_iceberg.py && \
+    echo 'PIPELINE COMPLETADO EXITOSAMENTE' \
+"]
