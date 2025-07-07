@@ -1,0 +1,2 @@
+pyspark
+mysql-connector-python
