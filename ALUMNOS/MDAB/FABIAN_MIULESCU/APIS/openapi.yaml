@@ -1,0 +1,83 @@
+openapi: 3.0.0
+info:
+  title: Robot Temperature Sensor API
+  version: 1.0.0
+  description: |
+    API to retrieve the latest temperature measurement from a robot sensor in real time.
+paths:
+  /getLastMeasureBySensor/{sensor}:
+    get:
+      summary: Get the latest measurement by sensor ID
+      operationId: getLastMeasureBySensor
+      parameters:
+        - name: sensor
+          in: path
+          description: Sensor ID
+          required: true
+          schema:
+            type: string
+          example: "sensor-001"
+      responses:
+        '200':
+          description: Measurement retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Measurement'
+              examples:
+                sampleMeasurement:
+                  summary: Successful response example
+                  value:
+                    sensorId: "sensor-001"
+                    timestamp: "2025-07-01T12:34:56Z"
+                    unit: "Celsius"
+                    value: 36.7
+        '400':
+          description: Sensor not found
+          content:
+            application/json:
+              examples:
+                sensorNotFound:
+                  summary: Sensor not found example
+                  value:
+                    code: 400
+                    message: "Sensor not found"
+        '404':
+          description: Invalid ID supplied
+          content:
+            application/json:
+              examples:
+                invalidId:
+                  summary: Invalid ID example
+                  value:
+                    code: 404
+                    message: "Invalid ID supplied"
+components:
+  schemas:
+    Measurement:
+      type: object
+      properties:
+        sensorId:
+          type: string
+          description: Sensor ID
+        timestamp:
+          type: string
+          format: date-time
+          description: Measurement timestamp
+        unit:
+          type: string
+          description: Measurement unit (e.g., "Celsius")
+        value:
+          type: number
+          format: float
+          description: Measurement value
+      required:
+        - sensorId
+        - timestamp
+        - unit
+        - value
+      example:
+        sensorId: "sensor-001"
+        timestamp: "2025-07-01T12:34:56Z"
+        unit: "Celsius"
+        value: 36.7
