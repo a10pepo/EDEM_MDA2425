@@ -1,0 +1,15 @@
+SELECT actor_id, first_name, last_name, last_update
+FROM public.actor;
+
+select avg(rental_rate) from film;
+
+--max, min y avg de rental rate
+select avg(rental_rate) as media_rental_rate, min(rental_rate) as min_rr, max(rental_rate) as max_rr
+from film;
+
+select title, rental_rate, replacement_cost, round(rental_rate/replacement_cost, 2) as percentage from public.film
+select title, floor(replacement_cost/rental_rate) from public.film
+
+SELECT title, replacement_cost/rental_rate, ceil(replacement_cost/rental_rate) AS veces_alquilar FROM film
+
+select * from film where rental_rate >2 where rental_rate <3
