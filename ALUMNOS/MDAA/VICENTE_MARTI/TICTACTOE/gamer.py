@@ -1,4 +1,5 @@
 import random
+from datetime import datetime
 import pg8000.native
 
 def print_board(board):
@@ -7,7 +8,6 @@ def print_board(board):
         print("-" * 5)
 
 def check_winner(board, player):
-    # Check rows, columns and diagonals
     for row in board:
         if all([cell == player for cell in row]):
             return True
@@ -38,35 +38,29 @@ def get_computer_move(board):
     return random.choice(available_moves)
 
 def insert_move_to_db(conn, move_text):
+    if conn is None:
+        return
     try:
-        cursor = conn.cursor()
-        cursor.execute("INSERT INTO games (timestamp, move) VALUES (%s)", (datetime.now(), move_text))
-        conn.commit()
+        conn.run("INSERT INTO games (move) VALUES (:move)", {"move": move_text})
     except Exception as e:
         print("Error: La base de datos no está lista, si estás en Fase 1 no es un problema")
 
 def setup_database(conn):
-    cursor = conn.cursor()
-    cursor.execute("""
-    CREAT TABLE IF NOT EXISTS games (
+    conn.run("""
+    CREATE TABLE IF NOT EXISTS games (
         id SERIAL PRIMARY KEY,
         timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         move TEXT
     )
     """)
-    conn.commit()
 
 def main():
     try:
-        # Connect to the PostgreSQL database
-        conn = pg8000.connect(user="postgres", password="pass01", host="postgres", port=5432, database="postgres")
-
-        # Setup the database
+        conn = pg8000.native.Connection(user="postgres", password="pass01", host="postgres", port=5432, database="postgres")
         setup_database(conn)
-    except pg8000.exceptions.InterfaceError:
+    except pg8000.dbapi.InterfaceError:
         print("Error: La base de datos no está lista, si estás en Fase 1 no es un problema")
         conn = None
-        
 
     board = [["1", "2", "3"], ["4", "5", "6"], ["7", "8", "9"]]
     current_player = "X"
@@ -99,6 +93,7 @@ def main():
             break
 
         current_player = "O" if current_player == "X" else "X"
+
     if conn:
         conn.close()
 
