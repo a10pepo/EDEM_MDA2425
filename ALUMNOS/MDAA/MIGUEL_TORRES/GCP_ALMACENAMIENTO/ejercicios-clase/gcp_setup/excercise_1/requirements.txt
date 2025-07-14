@@ -1,0 +1,5 @@
+requests
+psycopg2-binary
+clickhouse-driver
+google-auth
+google-cloud-pubsub

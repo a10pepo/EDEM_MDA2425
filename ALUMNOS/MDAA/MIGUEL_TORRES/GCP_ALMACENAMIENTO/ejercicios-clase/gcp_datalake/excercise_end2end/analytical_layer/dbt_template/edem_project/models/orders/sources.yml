@@ -1,0 +1,9 @@
+version: 3
+
+sources:
+  - name: orders_bronze
+    tables:
+      - name: orders
+      - name: products
+      - name: customers
+      - name: order_products
