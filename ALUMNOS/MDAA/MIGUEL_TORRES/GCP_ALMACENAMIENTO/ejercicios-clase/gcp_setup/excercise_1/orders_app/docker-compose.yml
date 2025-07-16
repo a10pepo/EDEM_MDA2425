@@ -1,0 +1,25 @@
+version: '3.9'
+
+services:
+  operational_db:
+    image: postgres:latest
+    container_name: oltp_db
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: ecommerce
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro 
+    restart: always
+
+  adminer:
+    image: adminer:latest
+    container_name: adminer
+    ports:
+      - "8090:8080"
+    restart: always
+
+volumes:
+  postgres_data:
