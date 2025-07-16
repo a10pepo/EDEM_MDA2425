@@ -1,0 +1,13 @@
+# Use an official Python runtime as a parent image
+FROM python:3.12.6
+
+# Set the working directory in the container
+RUN pip install pg8000
+
+WORKDIR /app
+
+# Copy the current directory contents into the container at /app
+COPY . /app
+
+# Run the Tic Tac Toe game
+CMD ["python", "game.py"]
