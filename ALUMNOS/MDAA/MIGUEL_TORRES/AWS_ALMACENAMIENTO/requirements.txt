@@ -1,0 +1,4 @@
+psycopg2-binary==2.9.9
+pandas==2.0.3
+boto3==1.34.0
+pyiceberg==0.5.1
