@@ -1,0 +1,30 @@
+version: '3'
+services:
+  postgres:
+    container_name: container-pg-2
+    image: postgres
+    hostname: localhost
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: dbt
+    volumes:
+      - postgres-data-2:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  pgadmin:
+    container_name: container-pgadmin-2
+    image: dpage/pgadmin4
+    depends_on:
+      - postgres
+    ports:
+      - "5051:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    restart: unless-stopped
+
+volumes:
+  postgres-data-2:
