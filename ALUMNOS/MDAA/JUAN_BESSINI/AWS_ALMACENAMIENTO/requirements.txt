@@ -1,0 +1,6 @@
+psycopg2-binary
+python-dotenv
+numpy
+pandas
+pyarrow
+pyiceberg[glue]
