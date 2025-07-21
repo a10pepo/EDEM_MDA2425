@@ -1,0 +1,84 @@
+import sys
+
+def calcular_inversion():
+    while True:
+        print("\nPaso 1")
+        cantidad_str = input("¿Cuánto quieres invertir? (€) [X para salir]: ")
+        if cantidad_str.upper() == "X":
+            salir()
+
+        try:
+            cantidad = float(cantidad_str)
+            if cantidad <= 0:
+                raise ValueError
+            break
+        except ValueError:
+            print("Por favor, introduce una cantidad válida.")
+
+    while True:
+        print("\nPaso 2")
+        interes_str = input("¿Cuál es el interés anual? (%) [X para salir]: ")
+        if interes_str.upper() == "X":
+            salir()
+
+        try:
+            interes = float(interes_str)
+            if interes < 0:
+                raise ValueError
+            break
+        except ValueError:
+            print("Por favor, introduce un interés válido.")
+
+    while True:
+        print("\nPaso 3")
+        anios_str = input("¿Cuántos años vas a mantener la inversión? [X para salir]: ")
+        if anios_str.upper() == "X":
+            salir()
+
+        try:
+            anios = int(anios_str)
+            if anios <= 0:
+                raise ValueError
+            break
+        except ValueError:
+            print("Por favor, introduce un número válido de años.")
+
+    # Cálculo del interés compuesto
+    cantidad_final = cantidad * (1 + interes / 100) ** anios
+    intereses_generados = cantidad_final - cantidad
+
+    print("\nPaso 4 - Final")
+    print(f"En {anios} años habrás recibido {intereses_generados:.2f}€ de interés.")
+
+def salir():
+    print("\n¡Nos vemos!")
+    sys.exit()
+
+def menu_principal():
+    while True:
+        print("\nHola. Bienvenido al sistema de cálculo de inversiones. ¿Qué quieres hacer?")
+        print("[1] Calcular una inversión")
+        print("[X] Salir")
+        opcion = input("> ").strip().upper()
+
+        if opcion == "1":
+            calcular_inversion()
+            # Menú después del cálculo
+            while True:
+                print("\n¿Qué quieres hacer ahora?")
+                print("[1] Calcular una nueva inversión")
+                print("[X] Salir")
+                siguiente = input("> ").strip().upper()
+                if siguiente == "1":
+                    break
+                elif siguiente == "X":
+                    salir()
+                else:
+                    print("Opción no válida. Por favor elige [1] o [X].")
+        elif opcion == "X":
+            salir()
+        else:
+            print("Opción no válida. Por favor elige [1] o [X].")
+
+if __name__ == "__main__":
+    menu_principal()
