@@ -1,0 +1,21 @@
+FROM python:3.9-slim
+
+ENV PYTHONUNBUFFERED=1
+
+WORKDIR /app
+
+COPY requirements.txt /app/requirements.txt
+COPY utils /app/utils
+COPY analytical_layer /app/analytical_layer
+COPY analytical_layer/docker/cron_run.sh /app/cron_run.sh
+COPY analytical_layer/docker/start_cron.sh /app/start_cron.sh
+
+# Normalize line endings to LF
+RUN apt-get update && apt-get install -y dos2unix && \
+    dos2unix /app/cron_run.sh /app/start_cron.sh
+
+RUN pip install --no-cache-dir -r /app/requirements.txt 
+
+RUN apt-get update && apt-get install -y cron && rm -rf /var/lib/apt/lists/* && chmod +x /app/cron_run.sh /app/start_cron.sh
+
+CMD ["/app/start_cron.sh"]

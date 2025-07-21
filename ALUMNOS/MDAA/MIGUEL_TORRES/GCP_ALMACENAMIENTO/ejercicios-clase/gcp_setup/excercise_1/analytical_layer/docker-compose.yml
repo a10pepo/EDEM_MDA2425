@@ -1,0 +1,37 @@
+version: '3.9'
+
+services:
+  analytical_db:
+    image: clickhouse/clickhouse-server:latest
+    container_name: olap_db
+    ports:
+      - "8124:8123"  # HTTP interface
+      - "9001:9000"  # REST Interface
+    environment:
+      CLICKHOUSE_USER: user        
+      CLICKHOUSE_PASSWORD: password   
+      CLICKHOUSE_DB: analytics_db
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    restart: always
+
+  metabase:
+    image: metabase/metabase:v0.44.6
+    container_name: metabase
+    depends_on:
+      - analytical_db
+    ports:
+      - "3000:3000"
+    environment:
+      MB_DB_TYPE: h2 
+      MB_DB_FILE: /metabase-data/metabase.db
+      MB_PLUGINS_DIR: /plugins
+    volumes:
+      - metabase_data:/metabase-data
+      - ./plugins:/plugins
+    restart: always
+
+volumes:
+  clickhouse_data:
+  metabase_data:
