@@ -1,0 +1,78 @@
+openapi: 3.0.0
+info:
+  title: Industrial Robot Sensor API
+  version: 1.0.0
+  description: API for retrieving real-time temperature measurements from industrial robot sensors
+servers:
+  - url: http://localhost:3000/api
+    description: Local development server
+  - url: https://robot-sensors.company.com/api
+    description: Production server
+paths:
+  /getLastMeassureBySensor/{sensor}:
+    get:
+      summary: Retrieve latest sensor measurement
+      description: Fetches the most recent temperature reading from a specified robot sensor
+      parameters:
+        - name: sensor
+          in: path
+          description: Unique identifier of the sensor
+          required: true
+          schema:
+            type: string
+            example: "TEMP_SENSOR_01"
+      responses:
+        '200':
+          description: Successfully retrieved sensor measurement
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: string
+                    description: Sensor identifier
+                    example: "TEMP_SENSOR_01"
+                  fechamuestreo:
+                    type: string
+                    description: Timestamp of measurement
+                    example: "2024-01-15T14:30:25Z"
+                  unidad:
+                    type: string
+                    description: Unit of measurement
+                    example: "°C"
+                  medicion:
+                    type: number
+                    description: Temperature value
+                    example: 68.5
+                required:
+                  - code
+                  - fechamuestreo
+                  - unidad
+                  - medicion
+        '400':
+          description: Sensor not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Sensor not found"
+                  timestamp:
+                    type: string
+                    example: "2024-01-15T14:30:25Z"
+        '404':
+          description: Invalid ID supplied
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid ID supplied"
+                  details:
+                    type: string
+                    example: "Sensor ID must be a valid string"
