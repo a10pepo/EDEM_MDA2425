@@ -541,7 +541,7 @@ Entregas Grupo MIA
 </tr>
 </table>
 
-Last Checked: 2025-07-21 10:30:34
+Last Checked: 2025-07-21 10:31:09
 
 
 Entregas Grupo MDA A
@@ -823,7 +823,7 @@ Entregas Grupo MDA A
 </tr>
 </table>
 
-Last Checked: 2025-07-21 10:30:34
+Last Checked: 2025-07-21 10:31:09
 
 Entregas Grupo MDA B
 <table>
@@ -1064,7 +1064,7 @@ Entregas Grupo MDA B
 <td>✅</td>
 <td>❌</td>
 <td>❌</td>
-<td>❌</td>
+<td>✅</td>
 <td>❌</td>
 <td>✅</td>
 <td>❌</td>
@@ -1075,7 +1075,7 @@ Entregas Grupo MDA B
 <td>✅</td>
 <td>10.0</td>
 <td>8.0</td>
-<td>0.0</td>
+<td>5.0</td>
 </tr>
 <tr>
 <td><a href='https://github.com/a10pepo/EDEM_MDA2425/tree/main/ALUMNOS/MDAB/MARC_CANTERO'>MARC_CANTERO</a></td>
@@ -1179,5 +1179,5 @@ Entregas Grupo MDA B
 </tr>
 </table>
 
-Last Checked: 2025-07-21 10:30:34
+Last Checked: 2025-07-21 10:31:09
 
