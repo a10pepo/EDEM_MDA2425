@@ -1,0 +1,6 @@
+psycopg2
+dotenv
+pyarrow
+pyiceberg[glue]
+s3fs
+pandas

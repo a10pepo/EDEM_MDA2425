@@ -1,0 +1,6 @@
+FROM python:3.12.6-slim
+WORKDIR /app
+RUN pip install pg8000
+COPY ahorcado.py /app
+COPY palabras.txt /app
+CMD ["python", "ahorcado.py", "palabras.txt"]
